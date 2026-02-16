@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# mon-agenceweb.fr
 
-## Getting Started
+Site vitrine de l'agence web, construit avec Next.js 16 et exporté en site statique.
 
-First, run the development server:
+## Stack technique
+
+- **Framework** : Next.js 16 (App Router, export statique)
+- **React** : 19
+- **Styling** : Tailwind CSS 4
+- **Langage** : TypeScript 5
+
+## Développement local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Le site statique est généré dans le dossier `out/`.
 
-To learn more about Next.js, take a look at the following resources:
+## Déploiement sur o2switch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Le déploiement est automatisé via GitHub Actions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Configuration (une seule fois)
 
-## Deploy on Vercel
+1. Aller dans **Settings > Secrets and variables > Actions** du repo GitHub
+2. Ajouter ces 3 secrets :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Secret | Valeur |
+|--------|--------|
+| `FTP_HOST` | Votre serveur FTP o2switch (ex: `ftp.mon-agenceweb.fr` ou l'IP du serveur) |
+| `FTP_USERNAME` | Votre identifiant FTP o2switch |
+| `FTP_PASSWORD` | Votre mot de passe FTP o2switch |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Fonctionnement
+
+- **Push sur `main`** : build + déploiement automatique sur o2switch via FTP
+- **Push sur `claude/*`** : build uniquement (vérification que tout compile)
+- **Manuel** : lancer le workflow depuis l'onglet Actions de GitHub
+
+### Déploiement manuel (sans CI/CD)
+
+Si besoin de déployer manuellement :
+
+1. Builder localement : `npm run build`
+2. Uploader le contenu du dossier `out/` à la racine de votre hébergement o2switch via FileZilla ou le gestionnaire de fichiers cPanel
