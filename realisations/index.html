@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos réalisations | Mon Agence Web</title>
+  <meta name="description" content="Découvrez nos réalisations : sites web, SEO, WhatsApp Business, IA et campagnes mailing. Des résultats concrets pour nos clients.">
+  <meta property="og:site_name" content="Mon Agence Web">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nos réalisations | Mon Agence Web">
+  <meta property="og:description" content="Découvrez nos réalisations : sites web, SEO, WhatsApp Business, IA et campagnes mailing. Des résultats concrets pour nos clients.">
+  <meta property="og:url" content="https://mon-agenceweb.fr/realisations/">
+  <link rel="canonical" href="https://mon-agenceweb.fr/realisations/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- WebPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Nos réalisations | Mon Agence Web",
+    "description": "Découvrez nos réalisations : sites web, SEO, WhatsApp Business, IA et campagnes mailing. Des résultats concrets pour nos clients.",
+    "url": "https://mon-agenceweb.fr/realisations/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mon Agence Web",
+      "url": "https://mon-agenceweb.fr",
+      "email": "contact@mon-agenceweb.fr"
+    }
+  }
+  </script>
+</head>
+<body class="antialiased">
+
+  <!-- ============================================================ -->
+  <!-- HEADER                                                       -->
+  <!-- ============================================================ -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200/50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navigation principale">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2 group" aria-label="Mon Agence Web - Accueil">
+          <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-lg group-hover:scale-105 transition-transform">
+            M
+          </div>
+          <span class="text-lg font-bold text-dark hidden sm:block">
+            Mon Agence<span class="text-primary">Web</span>
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="/" class="text-gray-600 hover:text-primary font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Accueil</a>
+          <a href="/services/" class="text-gray-600 hover:text-primary font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Services</a>
+          <a href="/offres/" class="text-gray-600 hover:text-primary font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Offres</a>
+          <a href="/realisations/" class="text-primary font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary">Réalisations</a>
+          <a href="/contact/" class="text-gray-600 hover:text-primary font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Contact</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="hidden lg:block">
+          <a href="/contact/" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Audit rapide
+          </a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-gray-600 hover:text-primary transition-colors" aria-label="Ouvrir le menu" aria-expanded="false">
+          <svg class="w-6 h-6 icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="w-6 h-6 icon-close hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="lg:hidden pb-4 animate-fade-in hidden">
+        <div class="flex flex-col gap-2">
+          <a href="/" class="text-gray-600 hover:text-primary hover:bg-primary/5 font-medium px-4 py-3 rounded-xl transition-all">Accueil</a>
+          <a href="/services/" class="text-gray-600 hover:text-primary hover:bg-primary/5 font-medium px-4 py-3 rounded-xl transition-all">Services</a>
+          <a href="/offres/" class="text-gray-600 hover:text-primary hover:bg-primary/5 font-medium px-4 py-3 rounded-xl transition-all">Offres</a>
+          <a href="/realisations/" class="text-primary bg-primary/5 font-medium px-4 py-3 rounded-xl transition-all">Réalisations</a>
+          <a href="/contact/" class="text-gray-600 hover:text-primary hover:bg-primary/5 font-medium px-4 py-3 rounded-xl transition-all">Contact</a>
+          <a href="/contact/" class="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold mt-2 hover:bg-primary-dark transition-colors">
+            Audit rapide
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- MAIN CONTENT                                                 -->
+  <!-- ============================================================ -->
+  <main>
+
+    <!-- ========================================================== -->
+    <!-- HERO                                                       -->
+    <!-- ========================================================== -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+          Portfolio
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark leading-tight mb-6">
+          Nos réalisations <br>
+          <span class="text-primary">Des résultats concrets.</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          Chaque projet est unique. Découvrez comment nous avons aidé nos clients à atteindre leurs objectifs digitaux.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- PROJECTS GRID                                              -->
+    <!-- ========================================================== -->
+    <section class="py-20 lg:py-28 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-dark mb-4">
+            Nos projets récents
+          </h2>
+          <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+            Des solutions sur-mesure pour des entreprises ambitieuses.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Project 1: Boulangerie Dorée -->
+          <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1">
+            <div class="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">Artisanat</span>
+              <h3 class="text-xl font-bold text-dark mt-3 mb-2 group-hover:text-primary transition-colors">Boulangerie Dorée</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Création d'un site vitrine avec boutique en ligne et référencement local pour une boulangerie artisanale. Résultat : +180% de visites en 3 mois.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Site web</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">E-commerce</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">SEO local</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Cabinet Conseil Horizon -->
+          <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1">
+            <div class="aspect-video bg-gradient-to-br from-secondary/20 to-success/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-secondary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-secondary bg-secondary/10 px-3 py-1 rounded-full">Services B2B</span>
+              <h3 class="text-xl font-bold text-dark mt-3 mb-2 group-hover:text-primary transition-colors">Cabinet Conseil Horizon</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Site corporate avec stratégie SEO complète pour un cabinet de conseil. Résultat : première page Google sur 12 mots-clés stratégiques.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Site web</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">SEO</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Référencement</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Clinique Vétérinaire du Parc -->
+          <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1">
+            <div class="aspect-video bg-gradient-to-br from-success/20 to-accent/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-success/40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-success bg-success/10 px-3 py-1 rounded-full">Santé</span>
+              <h3 class="text-xl font-bold text-dark mt-3 mb-2 group-hover:text-primary transition-colors">Clinique Vétérinaire du Parc</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Site web avec prise de rendez-vous WhatsApp automatisée. Résultat : 40% de réduction des appels téléphoniques et meilleure satisfaction client.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Site web</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">WhatsApp</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Automatisation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Agence Immobilière Prestige -->
+          <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1">
+            <div class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-accent/40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">Immobilier</span>
+              <h3 class="text-xl font-bold text-dark mt-3 mb-2 group-hover:text-primary transition-colors">Agence Immobilière Prestige</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Site immobilier avec chatbot IA pour qualifier les prospects automatiquement. Résultat : +65% de leads qualifiés par mois.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Site web</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">IA</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Génération de leads</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Restaurant Le Comptoir -->
+          <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1">
+            <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">Restauration</span>
+              <h3 class="text-xl font-bold text-dark mt-3 mb-2 group-hover:text-primary transition-colors">Restaurant Le Comptoir</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Campagnes mailing hebdomadaires pour fidéliser la clientèle. Résultat : taux d'ouverture de 42% et +25% de réservations.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Mailing</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Fidélisation</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Communication</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Studio Yoga Sérénité -->
+          <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1">
+            <div class="aspect-video bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-secondary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-secondary bg-secondary/10 px-3 py-1 rounded-full">Bien-être</span>
+              <h3 class="text-xl font-bold text-dark mt-3 mb-2 group-hover:text-primary transition-colors">Studio Yoga Sérénité</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Site web avec réservation en ligne, SEO local et WhatsApp pour la gestion des cours. Résultat : +90% de réservations en ligne.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Site web</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">SEO local</span>
+                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">WhatsApp</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- TESTIMONIALS                                               -->
+    <!-- ========================================================== -->
+    <section class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+            Témoignages
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-dark mb-4">
+            Ce que disent nos clients
+          </h2>
+          <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+            La satisfaction de nos clients est notre meilleure carte de visite.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Testimonial 1: Sophie Martin -->
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="flex gap-1 mb-4">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-6 italic">
+              &ldquo;Notre nouveau site a complètement transformé notre image. Les commandes en ligne ont explosé dès le premier mois. Un travail remarquable !&rdquo;
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">S</div>
+              <div>
+                <p class="font-bold text-dark text-sm">Sophie Martin</p>
+                <p class="text-gray-400 text-xs">Gérante, Boulangerie Dorée</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2: Marc Lefèvre -->
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="flex gap-1 mb-4">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-6 italic">
+              &ldquo;Grâce au référencement, nous sommes passés de la page 5 à la première page de Google. Les demandes de devis ont triplé. Merci !&rdquo;
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary font-bold text-sm">M</div>
+              <div>
+                <p class="font-bold text-dark text-sm">Marc Lefèvre</p>
+                <p class="text-gray-400 text-xs">Directeur, Cabinet Conseil Horizon</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3: Julie Moreau -->
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="flex gap-1 mb-4">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-6 italic">
+              &ldquo;Le WhatsApp automatisé a changé notre quotidien. Les clients prennent rendez-vous 24h/24 et nous gagnons un temps précieux.&rdquo;
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center text-success font-bold text-sm">J</div>
+              <div>
+                <p class="font-bold text-dark text-sm">Julie Moreau</p>
+                <p class="text-gray-400 text-xs">Vétérinaire, Clinique du Parc</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4: Pierre Durand -->
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="flex gap-1 mb-4">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-6 italic">
+              &ldquo;Le chatbot IA qualifie nos prospects pendant que nous nous concentrons sur les visites. Un vrai gain d'efficacité pour notre agence.&rdquo;
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-sm">P</div>
+              <div>
+                <p class="font-bold text-dark text-sm">Pierre Durand</p>
+                <p class="text-gray-400 text-xs">Fondateur, Agence Immobilière Prestige</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5: Isabelle Roux -->
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="flex gap-1 mb-4">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-6 italic">
+              &ldquo;Les campagnes mailing nous ont permis de fidéliser notre clientèle. Le taux d'ouverture dépasse les 40%, c'est exceptionnel !&rdquo;
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">I</div>
+              <div>
+                <p class="font-bold text-dark text-sm">Isabelle Roux</p>
+                <p class="text-gray-400 text-xs">Propriétaire, Restaurant Le Comptoir</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6: Antoine Bernard -->
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="flex gap-1 mb-4">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-6 italic">
+              &ldquo;Un site magnifique, un SEO au top et le WhatsApp qui gère les inscriptions tout seul. Mon studio n'a jamais été aussi rempli.&rdquo;
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary font-bold text-sm">A</div>
+              <div>
+                <p class="font-bold text-dark text-sm">Antoine Bernard</p>
+                <p class="text-gray-400 text-xs">Fondateur, Studio Yoga Sérénité</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- CTA SECTION                                                -->
+    <!-- ========================================================== -->
+    <section class="py-20 lg:py-28 gradient-primary">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+          Votre projet sera le prochain ?
+        </h2>
+        <p class="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+          Rejoignez nos clients satisfaits et donnez une nouvelle dimension à votre présence digitale.
+        </p>
+        <a href="/contact/" class="inline-flex items-center gap-2 bg-white text-primary hover:text-primary-dark px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl hover:-translate-y-0.5">
+          Lancer mon projet
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="bg-dark text-white" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <a href="/" class="flex items-center gap-2 mb-4" aria-label="Mon Agence Web - Accueil">
+            <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-lg">
+              M
+            </div>
+            <span class="text-lg font-bold">
+              Mon Agence<span class="text-primary-light">Web</span>
+            </span>
+          </a>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">
+            Votre partenaire digital pour des sites web performants, un référencement efficace et une croissance durable.
+          </p>
+          <a href="mailto:contact@mon-agenceweb.fr" class="text-primary-light hover:text-white transition-colors text-sm">
+            contact@mon-agenceweb.fr
+          </a>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="font-bold text-lg mb-4">Services</h3>
+          <ul class="space-y-3" role="list">
+            <li><a href="/sites-qui-vendent/" class="text-gray-400 hover:text-white transition-colors text-sm">Sites qui vendent</a></li>
+            <li><a href="/google/" class="text-gray-400 hover:text-white transition-colors text-sm">Référencement Google</a></li>
+            <li><a href="/whatsapp/" class="text-gray-400 hover:text-white transition-colors text-sm">WhatsApp Business</a></li>
+            <li><a href="/ia/" class="text-gray-400 hover:text-white transition-colors text-sm">Intelligence artificielle</a></li>
+            <li><a href="/mailing/" class="text-gray-400 hover:text-white transition-colors text-sm">Campagnes mailing</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h3 class="font-bold text-lg mb-4">Entreprise</h3>
+          <ul class="space-y-3" role="list">
+            <li><a href="/offres/" class="text-gray-400 hover:text-white transition-colors text-sm">Nos offres</a></li>
+            <li><a href="/realisations/" class="text-gray-400 hover:text-white transition-colors text-sm">Réalisations</a></li>
+            <li><a href="/contact/" class="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+            <li><a href="/legal/" class="text-gray-400 hover:text-white transition-colors text-sm">Mentions légales</a></li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div>
+          <h3 class="font-bold text-lg mb-4">Prêt à démarrer ?</h3>
+          <p class="text-gray-400 text-sm mb-6">
+            Recevez un audit gratuit de votre présence en ligne.
+          </p>
+          <a href="/contact/" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-primary/25">
+            Demander un audit
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; 2026 Mon Agence Web. Tous droits réservés.
+        </p>
+        <div class="flex items-center gap-6">
+          <a href="/legal/" class="text-gray-500 hover:text-white transition-colors text-sm">
+            Mentions légales
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
