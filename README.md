@@ -18,38 +18,18 @@ npm run dev
 
 Ouvrir [http://localhost:3000](http://localhost:3000).
 
-## Build
+## Build et déploiement sur o2switch
 
 ```bash
+# Activer Node.js sur o2switch
+source /home/zajr1824/nodevenv/mon-agenceweb.fr/20/bin/activate
+
+# Installer les dépendances
+cd ~/mon-agenceweb.fr
+npm install
+
+# Builder le site statique (optimisé mémoire, utilise Babel au lieu de SWC)
 npm run build
 ```
 
 Le site statique est généré dans le dossier `out/`.
-
-## Déploiement sur o2switch
-
-Le déploiement est automatisé via GitHub Actions.
-
-### Configuration (une seule fois)
-
-1. Aller dans **Settings > Secrets and variables > Actions** du repo GitHub
-2. Ajouter ces 3 secrets :
-
-| Secret | Valeur |
-|--------|--------|
-| `FTP_HOST` | Votre serveur FTP o2switch (ex: `ftp.mon-agenceweb.fr` ou l'IP du serveur) |
-| `FTP_USERNAME` | Votre identifiant FTP o2switch |
-| `FTP_PASSWORD` | Votre mot de passe FTP o2switch |
-
-### Fonctionnement
-
-- **Push sur `main`** : build + déploiement automatique sur o2switch via FTP
-- **Push sur `claude/*`** : build uniquement (vérification que tout compile)
-- **Manuel** : lancer le workflow depuis l'onglet Actions de GitHub
-
-### Déploiement manuel (sans CI/CD)
-
-Si besoin de déployer manuellement :
-
-1. Builder localement : `npm run build`
-2. Uploader le contenu du dossier `out/` à la racine de votre hébergement o2switch via FileZilla ou le gestionnaire de fichiers cPanel
