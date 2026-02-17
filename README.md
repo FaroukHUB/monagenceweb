@@ -1,35 +1,60 @@
 # mon-agenceweb.fr
 
-Site vitrine de l'agence web, construit avec Next.js 16 et exporté en site statique.
+Site vitrine statique en HTML + Tailwind CSS.
 
 ## Stack technique
 
-- **Framework** : Next.js 16 (App Router, export statique)
-- **React** : 19
-- **Styling** : Tailwind CSS 4
-- **Langage** : TypeScript 5
+- **HTML** statique (pas de framework)
+- **Tailwind CSS 4** (compilé via CLI)
+- **JavaScript** vanilla (menu mobile + FAQ accordion)
 
-## Développement local
+## Développement
 
 ```bash
 npm install
 npm run dev
 ```
 
-Ouvrir [http://localhost:3000](http://localhost:3000).
+Ouvre les fichiers HTML directement dans le navigateur.
+Le CSS se recompile automatiquement à chaque modification.
 
-## Build et déploiement sur o2switch
+## Build pour production
 
 ```bash
-# Activer Node.js sur o2switch
-source /home/zajr1824/nodevenv/mon-agenceweb.fr/20/bin/activate
-
-# Installer les dépendances
-cd ~/mon-agenceweb.fr
 npm install
-
-# Builder le site statique (optimisé mémoire, utilise Babel au lieu de SWC)
 npm run build
 ```
 
-Le site statique est généré dans le dossier `out/`.
+Le CSS minifié est généré dans `css/style.css`.
+
+## Déploiement sur o2switch (SSH)
+
+```bash
+source /home/zajr1824/nodevenv/mon-agenceweb.fr/20/bin/activate
+cd ~/mon-agenceweb.fr
+git pull
+npm install
+npm run build
+```
+
+Tous les fichiers HTML + CSS + JS sont directement servis par Apache. Pas de build lourd, pas de WebAssembly, pas de problème de mémoire.
+
+## Structure
+
+```
+├── index.html              # Page d'accueil
+├── services/index.html     # Nos services
+├── offres/index.html       # Nos offres et tarifs
+├── realisations/index.html # Réalisations
+├── contact/index.html      # Contact
+├── sites-qui-vendent/      # Service: sites web
+├── google/                 # Service: SEO
+├── whatsapp/               # Service: WhatsApp Business
+├── ia/                     # Service: Intelligence artificielle
+├── mailing/                # Service: Campagnes email
+├── legal/                  # Mentions légales
+├── css/style.css           # CSS compilé (généré)
+├── js/main.js              # JavaScript (menu + FAQ)
+├── src/input.css           # Source Tailwind CSS
+└── images/                 # Images
+```
