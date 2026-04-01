@@ -1,29 +1,48 @@
 <?php
 /**
  * Optimiseur d'images : Redimensionne + Convertit en WebP
- * Compatible hebergement mutualise (PHP GD uniquement)
+ * Utilise ImageMagick (convert) car GD manque de memoire sur mutualise
  *
  * Usage SSH :  php convert-webp.php
- * Usage web :  https://mon-agenceweb.fr/convert-webp.php (puis supprimer)
  */
 
-// --- CONFIG ---
-$imgDir    = __DIR__ . '/img';
-$maxWidth  = 1200;   // Largeur max en pixels
-$qualityJpg = 82;    // Qualite JPG redimensionne
-$qualityWebp = 80;   // Qualite WebP
-
-$isCli = (php_sapi_name() === 'cli');
-if (!$isCli) {
-    header('Content-Type: text/plain; charset=utf-8');
-}
-
-// Augmenter la memoire pour les grosses images
-ini_set('memory_limit', '512M');
-set_time_limit(300);
+$imgDir     = __DIR__ . '/img';
+$maxWidth   = 1200;
+$qualityJpg = 82;
+$qualityWebp = 80;
 
 echo "=== Optimisation des images ===\n";
 echo "Max: {$maxWidth}px | JPG: q{$qualityJpg} | WebP: q{$qualityWebp}\n\n";
+
+// Detecter l'outil disponible
+$hasConvert = false;
+$convertCmd = '';
+
+// Tester convert (ImageMagick)
+exec('which convert 2>/dev/null', $out, $ret);
+if ($ret === 0 && !empty($out[0])) {
+    $hasConvert = true;
+    $convertCmd = trim($out[0]);
+    echo "Outil: ImageMagick ($convertCmd)\n\n";
+}
+
+if (!$hasConvert) {
+    // Tester magick (ImageMagick v7)
+    exec('which magick 2>/dev/null', $out2, $ret2);
+    if ($ret2 === 0 && !empty($out2[0])) {
+        $hasConvert = true;
+        $convertCmd = trim($out2[0]);
+        echo "Outil: ImageMagick v7 ($convertCmd)\n\n";
+    }
+}
+
+if (!$hasConvert) {
+    echo "ERREUR: Ni 'convert' ni 'magick' trouves.\n";
+    echo "Essaie: which convert && which magick\n";
+    echo "\nAlternative manuelle : redimensionne tes images a 1200px\n";
+    echo "sur https://squoosh.app avant de les uploader.\n";
+    exit(1);
+}
 
 $files = array_merge(
     glob("$imgDir/*.jpg"),
@@ -45,85 +64,51 @@ $count = 0;
 foreach ($files as $file) {
     $info     = pathinfo($file);
     $basename = $info['basename'];
-    $ext      = strtolower($info['extension']);
     $originalSize = filesize($file);
+    $webpPath = $info['dirname'] . '/' . $info['filename'] . '.webp';
 
     echo "--- $basename (" . round($originalSize / 1024) . " Ko) ---\n";
 
-    // Charger l'image
-    switch ($ext) {
-        case 'jpg':
-        case 'jpeg':
-            $image = @imagecreatefromjpeg($file);
-            break;
-        case 'png':
-            $image = @imagecreatefrompng($file);
-            break;
-        default:
-            continue 2;
-    }
+    // ETAPE 1 : Redimensionner le JPG/PNG (ecrase l'original)
+    $cmd1 = escapeshellcmd($convertCmd) . ' '
+        . escapeshellarg($file)
+        . " -resize '{$maxWidth}x>' -quality {$qualityJpg} -strip "
+        . escapeshellarg($file);
 
-    if (!$image) {
-        echo "  ERREUR: impossible de lire l'image (memoire insuffisante ?)\n\n";
+    exec($cmd1 . ' 2>&1', $output1, $ret1);
+
+    if ($ret1 !== 0) {
+        echo "  ERREUR resize: " . implode(' ', $output1) . "\n\n";
         continue;
     }
 
-    $w = imagesx($image);
-    $h = imagesy($image);
-    echo "  Original: {$w}x{$h}\n";
-
-    // ETAPE 1 : Redimensionner si trop large
-    if ($w > $maxWidth) {
-        $newW = $maxWidth;
-        $newH = (int) round($h * ($maxWidth / $w));
-        $resized = imagecreatetruecolor($newW, $newH);
-
-        // Preserver transparence PNG
-        if ($ext === 'png') {
-            imagealphablending($resized, false);
-            imagesavealpha($resized, true);
-        }
-
-        imagecopyresampled($resized, $image, 0, 0, 0, 0, $newW, $newH, $w, $h);
-        imagedestroy($image);
-        $image = $resized;
-
-        // Ecraser le JPG original avec la version redimensionnee
-        if ($ext === 'jpg' || $ext === 'jpeg') {
-            imagejpeg($image, $file, $qualityJpg);
-        } elseif ($ext === 'png') {
-            imagepng($image, $file, 8);
-        }
-
-        $newSize = filesize($file);
-        echo "  Redimensionne: {$newW}x{$newH} (" . round($newSize / 1024) . " Ko)\n";
-    }
+    clearstatcache(true, $file);
+    $resizedSize = filesize($file);
+    echo "  Redimensionne: " . round($resizedSize / 1024) . " Ko\n";
 
     // ETAPE 2 : Convertir en WebP
-    $webpPath = $info['dirname'] . '/' . $info['filename'] . '.webp';
+    $cmd2 = escapeshellcmd($convertCmd) . ' '
+        . escapeshellarg($file)
+        . " -quality {$qualityWebp} "
+        . escapeshellarg($webpPath);
 
-    if (function_exists('imagewebp')) {
-        $success = imagewebp($image, $webpPath, $qualityWebp);
+    exec($cmd2 . ' 2>&1', $output2, $ret2);
 
-        if ($success && file_exists($webpPath)) {
-            $webpSize = filesize($webpPath);
-            $saved = $originalSize - $webpSize;
-            $totalSaved += $saved;
-            $pct = round($saved / $originalSize * 100);
-            echo "  WebP: " . round($webpSize / 1024) . " Ko ({$pct}% plus leger que l'original)\n";
-            $count++;
-        } else {
-            echo "  ERREUR: echec conversion WebP\n";
-        }
+    if ($ret2 === 0 && file_exists($webpPath)) {
+        $webpSize = filesize($webpPath);
+        $saved = $originalSize - $webpSize;
+        $totalSaved += $saved;
+        $pct = round($saved / $originalSize * 100);
+        echo "  WebP: " . round($webpSize / 1024) . " Ko ({$pct}% plus leger)\n";
+        $count++;
     } else {
-        echo "  SKIP WebP (imagewebp non disponible)\n";
+        echo "  ERREUR WebP: " . implode(' ', $output2) . "\n";
     }
 
-    imagedestroy($image);
     echo "\n";
 }
 
 echo "=== TERMINE ===\n";
 echo "$count image(s) traitee(s)\n";
-echo "Espace total economise: " . round($totalSaved / 1024 / 1024, 1) . " Mo\n";
-echo "\nSupprime ce fichier apres utilisation : rm convert-webp.php\n";
+echo "Espace economise: " . round($totalSaved / 1024 / 1024, 1) . " Mo\n";
+echo "\nSupprime ce fichier : rm convert-webp.php\n";
