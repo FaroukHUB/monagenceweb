@@ -1,28 +1,29 @@
 <?php
 /**
- * Convertisseur JPG/PNG → WebP
- * Compatible hébergement mutualisé (pas besoin de sudo)
+ * Optimiseur d'images : Redimensionne + Convertit en WebP
+ * Compatible hebergement mutualise (PHP GD uniquement)
  *
  * Usage SSH :  php convert-webp.php
- * Usage web :  https://mon-agenceweb.fr/convert-webp.php (puis supprimer le fichier)
+ * Usage web :  https://mon-agenceweb.fr/convert-webp.php (puis supprimer)
  */
 
-$imgDir  = __DIR__ . '/img';
-$quality = 82;
-$isCli   = (php_sapi_name() === 'cli');
+// --- CONFIG ---
+$imgDir    = __DIR__ . '/img';
+$maxWidth  = 1200;   // Largeur max en pixels
+$qualityJpg = 82;    // Qualite JPG redimensionne
+$qualityWebp = 80;   // Qualite WebP
 
+$isCli = (php_sapi_name() === 'cli');
 if (!$isCli) {
     header('Content-Type: text/plain; charset=utf-8');
 }
 
-// Vérifier que GD + WebP sont disponibles
-if (!function_exists('imagewebp')) {
-    echo "ERREUR : La fonction imagewebp() n'est pas disponible.\n";
-    echo "Contacte ton hébergeur pour activer le support WebP dans GD.\n";
-    exit(1);
-}
+// Augmenter la memoire pour les grosses images
+ini_set('memory_limit', '512M');
+set_time_limit(300);
 
-echo "Conversion des images en WebP (qualite $quality)...\n\n";
+echo "=== Optimisation des images ===\n";
+echo "Max: {$maxWidth}px | JPG: q{$qualityJpg} | WebP: q{$qualityWebp}\n\n";
 
 $files = array_merge(
     glob("$imgDir/*.jpg"),
@@ -33,20 +34,23 @@ $files = array_merge(
     glob("$imgDir/*.PNG")
 );
 
+if (empty($files)) {
+    echo "Aucune image trouvee dans $imgDir\n";
+    exit(0);
+}
+
+$totalSaved = 0;
 $count = 0;
 
 foreach ($files as $file) {
     $info     = pathinfo($file);
-    $output   = $info['dirname'] . '/' . $info['filename'] . '.webp';
     $basename = $info['basename'];
     $ext      = strtolower($info['extension']);
+    $originalSize = filesize($file);
 
-    if (file_exists($output)) {
-        echo "SKIP  $basename (deja converti)\n";
-        continue;
-    }
+    echo "--- $basename (" . round($originalSize / 1024) . " Ko) ---\n";
 
-    // Charger l'image selon le type
+    // Charger l'image
     switch ($ext) {
         case 'jpg':
         case 'jpeg':
@@ -54,44 +58,72 @@ foreach ($files as $file) {
             break;
         case 'png':
             $image = @imagecreatefrompng($file);
-            if ($image) {
-                // Préserver la transparence
-                imagepagenalpha($image, true);
-                imagealphablending($image, true);
-            }
             break;
         default:
             continue 2;
     }
 
     if (!$image) {
-        echo "ERREUR  $basename (impossible de lire l'image)\n";
+        echo "  ERREUR: impossible de lire l'image (memoire insuffisante ?)\n\n";
         continue;
     }
 
-    // Convertir en WebP
-    $success = imagewebp($image, $output, $quality);
-    imagedestroy($image);
+    $w = imagesx($image);
+    $h = imagesy($image);
+    echo "  Original: {$w}x{$h}\n";
 
-    if ($success && file_exists($output)) {
-        $originalSize = filesize($file);
-        $webpSize     = filesize($output);
-        $reduction    = round(($originalSize - $webpSize) / $originalSize * 100);
+    // ETAPE 1 : Redimensionner si trop large
+    if ($w > $maxWidth) {
+        $newW = $maxWidth;
+        $newH = (int) round($h * ($maxWidth / $w));
+        $resized = imagecreatetruecolor($newW, $newH);
 
-        echo "OK    $basename -> " . $info['filename'] . ".webp";
-        echo "  ({$reduction}% plus leger : " . round($originalSize/1024) . "Ko -> " . round($webpSize/1024) . "Ko)\n";
-        $count++;
-    } else {
-        echo "ERREUR  $basename (echec conversion)\n";
+        // Preserver transparence PNG
+        if ($ext === 'png') {
+            imagealphablending($resized, false);
+            imagesavealpha($resized, true);
+        }
+
+        imagecopyresampled($resized, $image, 0, 0, 0, 0, $newW, $newH, $w, $h);
+        imagedestroy($image);
+        $image = $resized;
+
+        // Ecraser le JPG original avec la version redimensionnee
+        if ($ext === 'jpg' || $ext === 'jpeg') {
+            imagejpeg($image, $file, $qualityJpg);
+        } elseif ($ext === 'png') {
+            imagepng($image, $file, 8);
+        }
+
+        $newSize = filesize($file);
+        echo "  Redimensionne: {$newW}x{$newH} (" . round($newSize / 1024) . " Ko)\n";
     }
+
+    // ETAPE 2 : Convertir en WebP
+    $webpPath = $info['dirname'] . '/' . $info['filename'] . '.webp';
+
+    if (function_exists('imagewebp')) {
+        $success = imagewebp($image, $webpPath, $qualityWebp);
+
+        if ($success && file_exists($webpPath)) {
+            $webpSize = filesize($webpPath);
+            $saved = $originalSize - $webpSize;
+            $totalSaved += $saved;
+            $pct = round($saved / $originalSize * 100);
+            echo "  WebP: " . round($webpSize / 1024) . " Ko ({$pct}% plus leger que l'original)\n";
+            $count++;
+        } else {
+            echo "  ERREUR: echec conversion WebP\n";
+        }
+    } else {
+        echo "  SKIP WebP (imagewebp non disponible)\n";
+    }
+
+    imagedestroy($image);
+    echo "\n";
 }
 
-echo "\n";
-if ($count > 0) {
-    echo "$count image(s) convertie(s) en WebP.\n";
-} else {
-    echo "Aucune nouvelle image a convertir.\n";
-    echo "Place tes .jpg/.png dans le dossier img/ puis relance.\n";
-}
-
-echo "\n⚠️  IMPORTANT : Supprime ce fichier apres utilisation (rm convert-webp.php)\n";
+echo "=== TERMINE ===\n";
+echo "$count image(s) traitee(s)\n";
+echo "Espace total economise: " . round($totalSaved / 1024 / 1024, 1) . " Mo\n";
+echo "\nSupprime ce fichier apres utilisation : rm convert-webp.php\n";
