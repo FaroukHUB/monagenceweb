@@ -5,12 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mon-agenceweb.fr — Du sur-mesure sans compromis</title>
     <meta name="description" content="Développeur web indépendant — Sites sur mesure, SaaS, intégration IA. 5 ans d'expérience, du code propre et des résultats concrets.">
+    <meta name="author" content="Farouk — mon-agenceweb.fr">
     <meta name="theme-color" content="#0A0A0A">
     <link rel="canonical" href="https://mon-agenceweb.fr">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mon-agenceweb.fr">
+    <meta property="og:title" content="mon-agenceweb.fr — Développeur web sur mesure">
+    <meta property="og:description" content="Sites sur mesure, SaaS, e-commerce et intégration IA. 5 ans d'expérience, 10+ projets livrés. Du sur-mesure sans compromis.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="mon-agenceweb.fr">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="mon-agenceweb.fr — Développeur web sur mesure">
+    <meta name="twitter:description" content="Sites sur mesure, SaaS, e-commerce et intégration IA. Du sur-mesure sans compromis, de l'idée au code.">
+    <meta name="twitter:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "description": "Développeur web indépendant — Sites sur mesure, SaaS, intégration IA."
+            },
+            {
+                "@type": "ProfessionalService",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "description": "Développement web sur mesure — Laravel, WooCommerce, SaaS, intégration IA. 5 ans d'expérience.",
+                "founder": {
+                    "@type": "Person",
+                    "name": "Farouk"
+                },
+                "foundingDate": "2021",
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "France"
+                },
+                "serviceType": [
+                    "Développement web sur mesure",
+                    "Création de sites e-commerce",
+                    "Développement SaaS",
+                    "Intégration IA"
+                ],
+                "knowsAbout": ["Laravel", "WooCommerce", "SaaS", "IA", "PHP", "Tailwind CSS", "Livewire", "Filament"],
+                "sameAs": []
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
 
@@ -79,7 +139,7 @@
     <section class="section produits" id="projets">
         <header class="section-header">
             <span class="section-label reveal">01</span>
-            <h2 class="section-title reveal">Produits</h2>
+            <h2 class="section-title reveal">Produits <span class="sr-only">SaaS et e-commerce développés sur mesure</span></h2>
         </header>
 
         <!-- ResaDZ -->
@@ -95,7 +155,7 @@
                     <span>IA Grok</span>
                     <span>Tailwind</span>
                 </div>
-                <a href="https://resadz.com" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                <a href="https://resadz.com" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet ResaDZ">Voir le projet &rarr;</a>
             </div>
             <div class="projet-grand-visual" aria-hidden="true">
                 <span class="projet-grand-number">01</span>
@@ -115,7 +175,7 @@
                     <span>GPS</span>
                     <span>Livewire</span>
                 </div>
-                <a href="https://marvelous.mon-agenceweb.fr" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                <a href="https://marvelous.mon-agenceweb.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Marvelous">Voir le projet &rarr;</a>
             </div>
             <div class="projet-grand-visual" aria-hidden="true">
                 <span class="projet-grand-number">02</span>
@@ -135,7 +195,7 @@
                     <span>Custom Code</span>
                     <span>SEO</span>
                 </div>
-                <a href="https://collectionloriginal.com" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                <a href="https://collectionloriginal.com" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Collection L'Original">Voir le projet &rarr;</a>
             </div>
             <div class="projet-grand-visual" aria-hidden="true">
                 <span class="projet-grand-number">03</span>
@@ -153,98 +213,97 @@
         <div class="realisations-grid">
             <article class="real-card reveal">
                 <div class="real-card-img">
-                    <!-- Remplacer src par une capture du site -->
-                    <img src="img/mbcars.jpg" alt="MBcars DZ — Capture du site">
+                    <img src="img/mbcars.jpg" alt="MBcars DZ — Plateforme de location de voiture en Algérie" loading="lazy" width="600" height="375">
                 </div>
                 <div class="real-card-inner">
                     <h4 class="real-card-title">MBcars DZ</h4>
                     <span class="real-card-type">Location de voiture — Algérie</span>
                     <p class="real-card-desc">Plateforme de consultation et réservation de véhicules. Interface claire, formulaire de demande simplifié. Développement entièrement sur mesure.</p>
-                    <a href="https://mbcarsdzrouiba.com" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                    <a href="https://mbcarsdzrouiba.com" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet MBcars DZ">Voir le projet &rarr;</a>
                 </div>
             </article>
 
             <article class="real-card reveal">
                 <div class="real-card-img">
-                    <img src="img/la-formule.jpg" alt="La Formule — Capture du site">
+                    <img src="img/la-formule.jpg" alt="La Formule — Site vitrine restauration rapide" loading="lazy" width="600" height="375">
                 </div>
                 <div class="real-card-inner">
                     <h4 class="real-card-title">La Formule</h4>
                     <span class="real-card-type">Site vitrine fast food</span>
                     <p class="real-card-desc">Menu intégré, bouton d'appel direct, GPS, liens plateformes de livraison, recherche produit intelligente.</p>
-                    <a href="https://laformule.mon-agenceweb.fr" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                    <a href="https://laformule.mon-agenceweb.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet La Formule">Voir le projet &rarr;</a>
                 </div>
             </article>
 
             <article class="real-card reveal">
                 <div class="real-card-img">
-                    <img src="img/la-formule-59.jpg" alt="La Formule 59 — Capture du site">
+                    <img src="img/la-formule-59.jpg" alt="La Formule 59 — Commande en ligne avec ticket WhatsApp" loading="lazy" width="600" height="375">
                 </div>
                 <div class="real-card-inner">
                     <h4 class="real-card-title">La Formule 59</h4>
                     <span class="real-card-type">Version avancée</span>
                     <p class="real-card-desc">Évolution de La Formule avec génération de tickets de commande envoyés directement sur WhatsApp au restaurant.</p>
-                    <a href="https://laformule59.mon-agenceweb.fr" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                    <a href="https://laformule59.mon-agenceweb.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet La Formule 59">Voir le projet &rarr;</a>
                 </div>
             </article>
 
             <article class="real-card reveal">
                 <div class="real-card-img">
-                    <img src="img/propretnet34.jpg" alt="Propretnet34 — Capture du site">
+                    <img src="img/propretnet34.jpg" alt="Propretnet34 — Site agence de nettoyage professionnel" loading="lazy" width="600" height="375">
                 </div>
                 <div class="real-card-inner">
                     <h4 class="real-card-title">Propretnet34</h4>
                     <span class="real-card-type">Agence de nettoyage</span>
                     <p class="real-card-desc">Site WordPress professionnel avec demande de devis en ligne et formulaire de contact.</p>
-                    <a href="https://propretnet34.fr" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                    <a href="https://propretnet34.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Propretnet34">Voir le projet &rarr;</a>
                 </div>
             </article>
 
             <article class="real-card reveal">
                 <div class="real-card-img">
-                    <img src="img/solarinnov34.jpg" alt="Solarinnov34 — Capture du site">
+                    <img src="img/solarinnov34.jpg" alt="Solarinnov34 — Site installateur panneaux solaires" loading="lazy" width="600" height="375">
                 </div>
                 <div class="real-card-inner">
                     <h4 class="real-card-title">Solarinnov34</h4>
                     <span class="real-card-type">Panneaux solaires</span>
                     <p class="real-card-desc">Site pour artisan spécialisé photovoltaïque — devis en ligne, informations techniques, contact.</p>
-                    <a href="https://solarinnov34.fr" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                    <a href="https://solarinnov34.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Solarinnov34">Voir le projet &rarr;</a>
                 </div>
             </article>
 
             <article class="real-card reveal">
                 <div class="real-card-img">
-                    <img src="img/atelier-pizza.jpg" alt="Atelier Pizza Roubaix — Capture du site">
+                    <img src="img/atelier-pizza.jpg" alt="Atelier Pizza Roubaix — Site vitrine pizzeria" loading="lazy" width="600" height="375">
                 </div>
                 <div class="real-card-inner">
                     <h4 class="real-card-title">Atelier Pizza Roubaix</h4>
                     <span class="real-card-type">Pizzeria</span>
                     <p class="real-card-desc">Menu avec prix, bouton d'appel direct, avis Google intégrés, géolocalisation.</p>
-                    <a href="https://atelier-pizza-roubaix.fr" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                    <a href="https://atelier-pizza-roubaix.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Atelier Pizza Roubaix">Voir le projet &rarr;</a>
                 </div>
             </article>
 
             <article class="real-card reveal">
                 <div class="real-card-img">
-                    <img src="img/trabexpress.jpg" alt="Trabexpress — Capture du site">
+                    <img src="img/trabexpress.jpg" alt="Trabexpress — Site société de livraison et transport" loading="lazy" width="600" height="375">
                 </div>
                 <div class="real-card-inner">
                     <h4 class="real-card-title">Trabexpress</h4>
                     <span class="real-card-type">Société de livraison</span>
                     <p class="real-card-desc">Site informatif et de contact pour société de transport et livraison.</p>
-                    <a href="https://trabexepress.fr" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                    <a href="https://trabexepress.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Trabexpress">Voir le projet &rarr;</a>
                 </div>
             </article>
 
             <article class="real-card reveal">
                 <div class="real-card-img">
-                    <img src="img/naguere.jpg" alt="Naguere — Capture du site">
+                    <img src="img/naguere.jpg" alt="Naguere — Site informatif avec boutique Amazon" loading="lazy" width="600" height="375">
                 </div>
                 <div class="real-card-inner">
                     <h4 class="real-card-title">Naguere</h4>
                     <span class="real-card-type">Site informatif</span>
                     <p class="real-card-desc">Site WordPress avec liens vers boutique Amazon partenaire.</p>
-                    <a href="https://naguere.fr" target="_blank" rel="noopener" class="projet-link">Voir le projet &rarr;</a>
+                    <a href="https://naguere.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Naguere">Voir le projet &rarr;</a>
                 </div>
             </article>
         </div>
