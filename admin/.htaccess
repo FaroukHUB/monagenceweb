@@ -1,0 +1,9 @@
+# Bloquer l'acces direct aux fichiers sensibles
+<FilesMatch "(config\.php|\.json)$">
+    Deny from all
+</FilesMatch>
+
+# Forcer HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
