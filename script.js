@@ -102,9 +102,8 @@
         showView(target);
         if (footer) footer.classList.add('is-visible');
 
-        // Run the effect
-        var effectFn = effects[effect] || effects.shatter;
-        effectFn(fxLayer, imgSrc, function () {
+        // Run premium transition
+        fxPremium(fxLayer, imgSrc, function () {
             fxLayer.className = 'fx-layer';
             fxLayer.innerHTML = '';
             fxLayer.style.backgroundImage = '';
@@ -174,297 +173,31 @@
     }
 
     /* ============================================
-       TRANSITION EFFECTS
+       PREMIUM TRANSITION
        ============================================ */
-    var effects = {
-        shatter: fxShatter,
-        tear: fxTear,
-        particles: fxParticles,
-        burn: fxBurn,
-        glitch: fxGlitch
-    };
-
-    /* --- SHATTER: image breaks into grid fragments that explode outward --- */
-    function fxShatter(layer, imgSrc, done) {
-        var rows = 5, cols = 7;
-        var frags = [];
-
-        layer.style.backgroundImage = 'none';
-
-        for (var r = 0; r < rows; r++) {
-            for (var c = 0; c < cols; c++) {
-                var f = document.createElement('div');
-                f.style.position = 'absolute';
-                f.style.left = (c / cols * 100) + '%';
-                f.style.top = (r / rows * 100) + '%';
-                f.style.width = (100 / cols + 0.5) + '%';
-                f.style.height = (100 / rows + 0.5) + '%';
-
-                if (imgSrc) {
-                    f.style.backgroundImage = 'url(' + imgSrc + ')';
-                    f.style.backgroundSize = (cols * 100) + '% ' + (rows * 100) + '%';
-                    var bpx = cols > 1 ? (c / (cols - 1) * 100) : 50;
-                    var bpy = rows > 1 ? (r / (rows - 1) * 100) : 50;
-                    f.style.backgroundPosition = bpx + '% ' + bpy + '%';
-                }
-
-                f.style.boxShadow = 'inset 0 0 0 2000px rgba(10,10,10,0.6)';
-                f.style.border = '1px solid rgba(200,168,75,0.06)';
-
-                var delay = Math.random() * 0.25;
-                f.style.transition = 'transform 0.9s ' + delay + 's cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.7s ' + delay + 's ease-out';
-
-                layer.appendChild(f);
-                frags.push(f);
-            }
-        }
-
-        // Force layout
-        layer.offsetHeight;
-
-        requestAnimationFrame(function () {
-            frags.forEach(function (f) {
-                var tx = (Math.random() - 0.5) * window.innerWidth * 1.2;
-                var ty = (Math.random() - 0.5) * window.innerHeight * 1.2;
-                var rot = (Math.random() - 0.5) * 200;
-                f.style.transform = 'translate(' + tx + 'px,' + ty + 'px) rotate(' + rot + 'deg) scale(0.2)';
-                f.style.opacity = '0';
-            });
-        });
-
-        setTimeout(done, 1200);
-    }
-
-    /* --- TEAR: splits vertically with jagged edge, halves slide apart --- */
-    function fxTear(layer, imgSrc, done) {
-        layer.style.backgroundImage = 'none';
-
-        var left = document.createElement('div');
-        var right = document.createElement('div');
-
-        var jagPoints = 12;
-        var lpoly = '0% 0%';
-        var rpoly = '';
-
-        for (var i = 0; i <= jagPoints; i++) {
-            var y = (i / jagPoints * 100);
-            var x = 48 + Math.random() * 6;
-            lpoly += ', ' + x + '% ' + y + '%';
-            rpoly += (rpoly ? ', ' : '') + x + '% ' + y + '%';
-        }
-        lpoly += ', 0% 100%';
-        rpoly += ', 100% 100%, 100% 0%';
-
-        var jaggedL = 'polygon(' + lpoly + ')';
-        var jaggedR = 'polygon(' + rpoly + ')';
-
-        [left, right].forEach(function (half) {
-            half.style.position = 'absolute';
-            half.style.inset = '0';
-            if (imgSrc) {
-                half.style.backgroundImage = 'url(' + imgSrc + ')';
-                half.style.backgroundSize = 'cover';
-                half.style.backgroundPosition = 'center';
-            }
-            half.style.boxShadow = 'inset 0 0 0 2000px rgba(10,10,10,0.6)';
-            half.style.transition = 'transform 0.9s cubic-bezier(0.16,1,0.3,1), opacity 0.8s ease-out';
-        });
-
-        left.style.clipPath = jaggedL;
-        left.style.webkitClipPath = jaggedL;
-        right.style.clipPath = jaggedR;
-        right.style.webkitClipPath = jaggedR;
-
-        // Gold tear line
-        var tearLine = document.createElement('div');
-        tearLine.style.cssText = 'position:absolute;left:49%;top:0;width:2px;height:100%;background:linear-gradient(to bottom,transparent,rgba(200,168,75,0.4),rgba(200,168,75,0.6),rgba(200,168,75,0.4),transparent);z-index:5;transition:opacity 0.5s 0.3s;';
-
-        layer.appendChild(left);
-        layer.appendChild(right);
-        layer.appendChild(tearLine);
-
-        layer.offsetHeight;
-
-        requestAnimationFrame(function () {
-            left.style.transform = 'translateX(-110%) rotate(-2deg)';
-            left.style.opacity = '0';
-            right.style.transform = 'translateX(110%) rotate(2deg)';
-            right.style.opacity = '0';
-            tearLine.style.opacity = '0';
-        });
-
-        setTimeout(done, 1000);
-    }
-
-    /* --- PARTICLES: golden embers rise as overlay dissolves --- */
-    function fxParticles(layer, imgSrc, done) {
-        // Dark overlay that fades
-        var overlay = document.createElement('div');
-        overlay.style.cssText = 'position:absolute;inset:0;transition:opacity 1s 0.3s ease-out;';
+    function fxPremium(layer, imgSrc, done) {
         if (imgSrc) {
-            overlay.style.backgroundImage = 'url(' + imgSrc + ')';
-            overlay.style.backgroundSize = 'cover';
-            overlay.style.backgroundPosition = 'center';
+            layer.style.backgroundImage = 'url(' + imgSrc + ')';
+            layer.style.backgroundSize = 'cover';
+            layer.style.backgroundPosition = 'center';
         }
-        overlay.style.boxShadow = 'inset 0 0 0 2000px rgba(10,10,10,0.7)';
+        layer.style.opacity = '1';
+        layer.style.transform = 'scale(1)';
+        layer.style.transition = 'opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+
+        // Dark overlay
+        var overlay = document.createElement('div');
+        overlay.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.6);';
         layer.appendChild(overlay);
 
-        layer.style.backgroundImage = 'none';
-
-        // Create particles
-        var count = 90;
-        for (var i = 0; i < count; i++) {
-            var p = document.createElement('div');
-            var size = 2 + Math.random() * 7;
-            p.style.position = 'absolute';
-            p.style.left = Math.random() * 100 + '%';
-            p.style.top = (40 + Math.random() * 60) + '%';
-            p.style.width = size + 'px';
-            p.style.height = size + 'px';
-            p.style.borderRadius = '50%';
-            p.style.background = 'radial-gradient(circle, rgba(200,168,75,0.9), rgba(200,168,75,0.3))';
-            p.style.boxShadow = '0 0 ' + (size * 2) + 'px rgba(200,168,75,0.3)';
-            p.style.opacity = '0';
-            var delay = Math.random() * 0.5;
-            var dur = 0.8 + Math.random() * 0.8;
-            p.style.transition = 'transform ' + dur + 's ' + delay + 's ease-out, opacity ' + dur + 's ' + delay + 's ease-out';
-            layer.appendChild(p);
-        }
-
-        layer.offsetHeight;
-
-        // Animate particles upward
-        var allParticles = layer.querySelectorAll('div:not(:first-child)');
-        allParticles.forEach(function (p) {
-            p.style.opacity = '0.8';
-            setTimeout(function () {
-                p.style.transform = 'translateY(' + (-200 - Math.random() * 500) + 'px) scale(0)';
-                p.style.opacity = '0';
-            }, 50);
-        });
-
-        // Fade overlay
-        setTimeout(function () {
-            overlay.style.opacity = '0';
-        }, 200);
-
-        setTimeout(done, 1500);
-    }
-
-    /* --- BURN: iris circle shrinks with golden glow --- */
-    function fxBurn(layer, imgSrc, done) {
-        layer.style.backgroundImage = 'none';
-
-        var inner = document.createElement('div');
-        inner.style.cssText = 'position:absolute;inset:0;';
-        if (imgSrc) {
-            inner.style.backgroundImage = 'url(' + imgSrc + ')';
-            inner.style.backgroundSize = 'cover';
-            inner.style.backgroundPosition = 'center';
-        }
-        inner.style.boxShadow = 'inset 0 0 0 2000px rgba(10,10,10,0.65)';
-        inner.style.clipPath = 'circle(100% at 50% 50%)';
-        inner.style.webkitClipPath = 'circle(100% at 50% 50%)';
-        inner.style.transition = 'clip-path 1.1s ease-in-out, -webkit-clip-path 1.1s ease-in-out';
-        layer.appendChild(inner);
-
-        // Gold glow ring
-        var ring = document.createElement('div');
-        ring.style.cssText = 'position:absolute;top:50%;left:50%;width:120vmax;height:120vmax;transform:translate(-50%,-50%);border-radius:50%;box-shadow:inset 0 0 100px 30px rgba(200,168,75,0.25);transition:all 1.1s ease-in-out;pointer-events:none;';
-        layer.appendChild(ring);
-
         layer.offsetHeight;
 
         requestAnimationFrame(function () {
-            inner.style.clipPath = 'circle(0% at 50% 50%)';
-            inner.style.webkitClipPath = 'circle(0% at 50% 50%)';
-            ring.style.width = '0';
-            ring.style.height = '0';
-            ring.style.boxShadow = 'inset 0 0 200px 100px rgba(200,168,75,0.6)';
-        });
-
-        setTimeout(done, 1200);
-    }
-
-    /* --- GLITCH: RGB splits + slice displacement + flicker --- */
-    function fxGlitch(layer, imgSrc, done) {
-        layer.style.backgroundImage = 'none';
-
-        // Create 3 color channel layers
-        var channels = [
-            { color: 'rgba(200,168,75,0.15)', blend: 'normal' },
-            { color: 'rgba(255,0,60,0.12)', blend: 'screen' },
-            { color: 'rgba(0,80,255,0.12)', blend: 'screen' }
-        ];
-
-        var channelEls = [];
-        channels.forEach(function (ch) {
-            var el = document.createElement('div');
-            el.style.position = 'absolute';
-            el.style.inset = '0';
-            if (imgSrc) {
-                el.style.backgroundImage = 'url(' + imgSrc + ')';
-                el.style.backgroundSize = 'cover';
-                el.style.backgroundPosition = 'center';
-            }
-            el.style.boxShadow = 'inset 0 0 0 2000px rgba(10,10,10,0.65)';
-            el.style.mixBlendMode = ch.blend;
-            layer.appendChild(el);
-            channelEls.push(el);
-        });
-
-        // Overlay tint on channels
-        channelEls[1].style.backgroundColor = 'rgba(255,0,60,0.08)';
-        channelEls[2].style.backgroundColor = 'rgba(0,80,255,0.08)';
-
-        var duration = 900;
-        var start = Date.now();
-        var glitchTimer;
-
-        function glitchStep() {
-            var elapsed = Date.now() - start;
-            var progress = Math.min(elapsed / duration, 1);
-
-            if (progress >= 1) {
-                layer.style.opacity = '0';
-                layer.style.transition = 'opacity 0.15s';
-                setTimeout(done, 180);
-                return;
-            }
-
-            var intensity = 1 - progress;
-
-            channelEls.forEach(function (el, i) {
-                var offset = (Math.random() - 0.5) * 50 * intensity;
-                el.style.transform = 'translateX(' + offset + 'px)';
-
-                // Random horizontal slice
-                if (Math.random() > 0.4) {
-                    var y1 = Math.random() * 100;
-                    var h = 3 + Math.random() * 15;
-                    el.style.clipPath = 'inset(' + y1 + '% 0 ' + Math.max(0, 100 - y1 - h) + '% 0)';
-                    el.style.webkitClipPath = el.style.clipPath;
-                } else {
-                    el.style.clipPath = 'none';
-                    el.style.webkitClipPath = 'none';
-                }
-            });
-
-            // Flicker
-            layer.style.opacity = Math.random() > 0.25 ? '1' : (0.4 + Math.random() * 0.3) + '';
-
-            glitchTimer = setTimeout(glitchStep, 40 + Math.random() * 30);
-        }
-
-        glitchStep();
-
-        // Safety timeout
-        setTimeout(function () {
-            clearTimeout(glitchTimer);
             layer.style.opacity = '0';
-            layer.style.transition = 'opacity 0.15s';
-            setTimeout(done, 180);
-        }, duration + 200);
+            layer.style.transform = 'scale(1.03)';
+        });
+
+        setTimeout(done, 850);
     }
 
     /* ============================================

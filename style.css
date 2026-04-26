@@ -244,7 +244,7 @@ picture { display: block; }
     overflow: hidden;
     cursor: none;
     transition: flex 0.6s var(--ease-out);
-    border-right: 1px solid rgba(200, 168, 75, 0.08);
+    border-right: 2px solid rgba(200, 168, 75, 0.45);
     outline: none;
 }
 
@@ -395,24 +395,7 @@ picture { display: block; }
     transform: translateX(4px);
 }
 
-/* Gold separator lines between panels */
-.panel::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(200, 168, 75, 0.1),
-        rgba(200, 168, 75, 0.6),
-        rgba(200, 168, 75, 0.8),
-        rgba(200, 168, 75, 0.6),
-        rgba(200, 168, 75, 0.1)
-    );
-    z-index: 3;
-}
+/* Remove pseudo-element separator (using border-right instead) */
 
 .panel:last-child::after {
     display: none;
