@@ -102,8 +102,9 @@
         showView(target);
         if (footer) footer.classList.add('is-visible');
 
-        // Run premium transition
-        fxPremium(fxLayer, imgSrc, function () {
+        // Run transition effect
+        var effectFn = effects[effect] || effects.crt;
+        effectFn(fxLayer, imgSrc, function () {
             fxLayer.className = 'fx-layer';
             fxLayer.innerHTML = '';
             fxLayer.style.backgroundImage = '';
@@ -173,31 +174,164 @@
     }
 
     /* ============================================
-       PREMIUM TRANSITION
+       TRANSITION EFFECTS (sober & premium)
        ============================================ */
-    function fxPremium(layer, imgSrc, done) {
-        if (imgSrc) {
-            layer.style.backgroundImage = 'url(' + imgSrc + ')';
-            layer.style.backgroundSize = 'cover';
-            layer.style.backgroundPosition = 'center';
-        }
-        layer.style.opacity = '1';
-        layer.style.transform = 'scale(1)';
-        layer.style.transition = 'opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+    var effects = {
+        crt: fxCrt,
+        wipe: fxWipe,
+        zoom: fxZoom,
+        split: fxSplit,
+        iris: fxIris
+    };
 
-        // Dark overlay
-        var overlay = document.createElement('div');
-        overlay.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.6);';
-        layer.appendChild(overlay);
+    function applyBg(el, imgSrc) {
+        if (imgSrc) {
+            el.style.backgroundImage = 'url(' + imgSrc + ')';
+            el.style.backgroundSize = 'cover';
+            el.style.backgroundPosition = 'center';
+        }
+        el.style.boxShadow = 'inset 0 0 0 2000px rgba(10,10,10,0.55)';
+    }
+
+    /* --- CRT TV OFF: compress vertical → line → dot → gone --- */
+    function fxCrt(layer, imgSrc, done) {
+        var screen = document.createElement('div');
+        screen.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;';
+        applyBg(screen, imgSrc);
+        layer.appendChild(screen);
+        layer.style.background = '#000';
+
+        // Brightness flash on compress
+        var flash = document.createElement('div');
+        flash.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0);transition:background 0.3s;pointer-events:none;z-index:2;';
+        layer.appendChild(flash);
+
+        layer.offsetHeight;
+
+        // Phase 1: compress vertically
+        screen.style.transition = 'transform 0.4s cubic-bezier(0.7,0,1,1), filter 0.4s';
+        screen.style.transformOrigin = 'center center';
+        flash.style.background = 'rgba(255,255,255,0.08)';
+        screen.style.transform = 'scaleY(0.008)';
+        screen.style.filter = 'brightness(2)';
+
+        // Phase 2: compress horizontally
+        setTimeout(function () {
+            screen.style.transition = 'transform 0.3s cubic-bezier(0.7,0,1,1), opacity 0.3s';
+            screen.style.transform = 'scaleY(0.008) scaleX(0)';
+            screen.style.opacity = '0';
+            flash.style.transition = 'opacity 0.3s';
+            flash.style.opacity = '0';
+        }, 420);
+
+        setTimeout(done, 750);
+    }
+
+    /* --- WIPE: horizontal bar sweeps top to bottom --- */
+    function fxWipe(layer, imgSrc, done) {
+        var screen = document.createElement('div');
+        screen.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;';
+        applyBg(screen, imgSrc);
+        layer.appendChild(screen);
+        layer.style.background = 'transparent';
+
+        layer.offsetHeight;
+
+        screen.style.transition = 'clip-path 0.8s cubic-bezier(0.65,0,0.35,1), -webkit-clip-path 0.8s cubic-bezier(0.65,0,0.35,1)';
+        screen.style.clipPath = 'inset(0 0 0 0)';
+        screen.style.webkitClipPath = 'inset(0 0 0 0)';
+
+        requestAnimationFrame(function () {
+            screen.style.clipPath = 'inset(0 0 100% 0)';
+            screen.style.webkitClipPath = 'inset(0 0 100% 0)';
+        });
+
+        setTimeout(done, 850);
+    }
+
+    /* --- ZOOM OUT: cinematic pull-back with fade --- */
+    function fxZoom(layer, imgSrc, done) {
+        var screen = document.createElement('div');
+        screen.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;';
+        applyBg(screen, imgSrc);
+        layer.appendChild(screen);
+        layer.style.background = 'transparent';
+
+        layer.offsetHeight;
+
+        screen.style.transition = 'transform 0.9s cubic-bezier(0.16,1,0.3,1), opacity 0.7s ease-out, filter 0.9s';
+        requestAnimationFrame(function () {
+            screen.style.transform = 'scale(0.92)';
+            screen.style.opacity = '0';
+            screen.style.filter = 'blur(4px)';
+        });
+
+        setTimeout(done, 900);
+    }
+
+    /* --- SPLIT: top half goes up, bottom half goes down --- */
+    function fxSplit(layer, imgSrc, done) {
+        var top = document.createElement('div');
+        var bot = document.createElement('div');
+        layer.style.background = 'transparent';
+
+        [top, bot].forEach(function (half) {
+            half.style.cssText = 'position:absolute;left:0;right:0;';
+            applyBg(half, imgSrc);
+            half.style.transition = 'transform 0.7s cubic-bezier(0.65,0,0.35,1), opacity 0.5s 0.2s ease-out';
+        });
+
+        top.style.top = '0';
+        top.style.height = '50%';
+        top.style.clipPath = 'inset(0 0 0 0)';
+        top.style.backgroundPosition = 'center top';
+
+        bot.style.bottom = '0';
+        bot.style.height = '50%';
+        bot.style.clipPath = 'inset(0 0 0 0)';
+        bot.style.backgroundPosition = 'center bottom';
+
+        // Thin gold line at the split
+        var line = document.createElement('div');
+        line.style.cssText = 'position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(200,168,75,0.4);transform:translateY(-50%);z-index:2;transition:opacity 0.4s 0.3s;';
+
+        layer.appendChild(top);
+        layer.appendChild(bot);
+        layer.appendChild(line);
 
         layer.offsetHeight;
 
         requestAnimationFrame(function () {
-            layer.style.opacity = '0';
-            layer.style.transform = 'scale(1.03)';
+            top.style.transform = 'translateY(-100%)';
+            top.style.opacity = '0';
+            bot.style.transform = 'translateY(100%)';
+            bot.style.opacity = '0';
+            line.style.opacity = '0';
         });
 
-        setTimeout(done, 850);
+        setTimeout(done, 800);
+    }
+
+    /* --- IRIS: circle closes to center, classic cinema --- */
+    function fxIris(layer, imgSrc, done) {
+        var screen = document.createElement('div');
+        screen.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;';
+        applyBg(screen, imgSrc);
+        layer.appendChild(screen);
+        layer.style.background = 'transparent';
+
+        screen.style.clipPath = 'circle(100% at 50% 50%)';
+        screen.style.webkitClipPath = 'circle(100% at 50% 50%)';
+
+        layer.offsetHeight;
+
+        screen.style.transition = 'clip-path 0.9s cubic-bezier(0.65,0,0.35,1), -webkit-clip-path 0.9s cubic-bezier(0.65,0,0.35,1)';
+        requestAnimationFrame(function () {
+            screen.style.clipPath = 'circle(0% at 50% 50%)';
+            screen.style.webkitClipPath = 'circle(0% at 50% 50%)';
+        });
+
+        setTimeout(done, 950);
     }
 
     /* ============================================
