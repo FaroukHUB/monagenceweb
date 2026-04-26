@@ -523,6 +523,11 @@
 
     if (burger && navLinksContainer) {
         burger.addEventListener('click', function () {
+            if (state === 'section') {
+                closeMobileMenu();
+                goHome();
+                return;
+            }
             var isOpen = burger.classList.toggle('is-open');
             navLinksContainer.classList.toggle('is-open');
             if (navOverlay) navOverlay.classList.toggle('is-active');
