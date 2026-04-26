@@ -1274,7 +1274,7 @@ picture { display: block; }
         flex: 1;
         min-height: 0;
         border-right: none;
-        border-bottom: 1px solid rgba(200, 168, 75, 0.08);
+        border-bottom: 2px solid rgba(200, 168, 75, 0.45);
     }
 
     .panel:last-child {
