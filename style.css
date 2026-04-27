@@ -1266,28 +1266,27 @@ picture { display: block; }
     }
 
     /* Panels stack vertically on mobile */
+    body.is-locked {
+        overflow: visible;
+    }
+
     .landing {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: block;
         padding-top: 55px;
     }
 
     .panels {
-        flex: 1 1 0%;
         display: flex;
         flex-direction: column;
-        min-height: 0;
         width: 100%;
     }
 
     .panel {
-        flex: 1 1 0%;
-        min-height: 0;
+        flex: none;
+        height: 28vh;
         border-right: none;
         border-bottom: 2px solid rgba(200, 168, 75, 0.45);
     }
