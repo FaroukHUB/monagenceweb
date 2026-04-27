@@ -1272,6 +1272,7 @@ picture { display: block; }
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         display: block;
+        padding-top: 60px;
     }
 
     .panels {
@@ -1282,7 +1283,7 @@ picture { display: block; }
 
     .panel {
         flex: none;
-        height: 33vh;
+        height: calc((100vh - 60px) / 5);
         border-right: none;
         border-bottom: 2px solid rgba(200, 168, 75, 0.45);
     }
