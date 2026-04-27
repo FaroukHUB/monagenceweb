@@ -1271,16 +1271,18 @@ picture { display: block; }
         height: 100vh;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        display: block;
     }
 
     .panels {
+        display: flex;
         flex-direction: column;
-        min-height: 100%;
+        width: 100%;
     }
 
     .panel {
         flex: none;
-        min-height: 30vh;
+        height: 33vh;
         border-right: none;
         border-bottom: 2px solid rgba(200, 168, 75, 0.45);
     }
