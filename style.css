@@ -1266,13 +1266,21 @@ picture { display: block; }
     }
 
     /* Panels stack vertically on mobile */
+    .landing {
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .panels {
         flex-direction: column;
+        min-height: 100%;
     }
 
     .panel {
-        flex: 1;
-        min-height: 0;
+        flex: none;
+        min-height: 30vh;
         border-right: none;
         border-bottom: 2px solid rgba(200, 168, 75, 0.45);
     }
