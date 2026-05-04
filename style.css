@@ -371,6 +371,13 @@ img { max-width: 100%; display: block; height: auto; }
     display: inline-flex; align-items: center; gap: 0.4rem;
 }
 .card-link:hover { gap: 0.8rem; }
+.card-date {
+    display: block; font-size: 0.75rem; font-weight: 500;
+    color: var(--accent); font-style: italic;
+}
+
+/* --- BLOG --- */
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 
 /* --- SERVICES --- */
 .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
@@ -469,13 +476,37 @@ img { max-width: 100%; display: block; height: auto; }
     padding: 3rem; text-align: center;
     font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.05em;
 }
-.footer address {
-    font-style: normal; margin-top: 0.5rem;
+.footer-links {
+    display: flex; justify-content: center; align-items: center;
+    gap: 0.8rem; margin-bottom: 1rem; flex-wrap: wrap;
 }
-.footer address a {
-    color: var(--accent); transition: opacity 0.3s;
+.footer-links a {
+    color: var(--text-muted); transition: color 0.3s;
 }
-.footer address a:hover { opacity: 0.7; }
+.footer-links a:hover { color: var(--accent); }
+.footer-sep { color: var(--text-muted); opacity: 0.4; }
+.footer-social {
+    display: flex; justify-content: center; gap: 1.2rem; margin-bottom: 1.2rem;
+}
+.footer-social a {
+    color: var(--text-muted); transition: color 0.3s, transform 0.3s;
+    display: flex;
+}
+.footer-social a:hover { color: var(--accent); transform: translateY(-2px); }
+
+/* --- LEGAL --- */
+.legal-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--dark); margin: 2.5rem 0 0.8rem;
+}
+.legal-content h2:first-child { margin-top: 0; }
+.legal-content p {
+    font-size: 0.95rem; color: var(--text-muted);
+    line-height: 1.8; margin-bottom: 1rem;
+}
+.legal-content a { color: var(--accent); text-decoration: underline; }
+.legal-content a:hover { opacity: 0.7; }
 
 /* --- UTILITY --- */
 .sr-only {
@@ -502,6 +533,7 @@ img { max-width: 100%; display: block; height: auto; }
     .real-grid { grid-template-columns: repeat(2, 1fr); }
     .services-grid { grid-template-columns: 1fr; }
     .stack-grid { grid-template-columns: repeat(2, 1fr); }
+    .blog-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {

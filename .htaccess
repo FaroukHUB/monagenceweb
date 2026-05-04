@@ -52,4 +52,4 @@ RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
 </Files>
 
 # --- Custom error pages ---
-ErrorDocument 404 /index.html
+ErrorDocument 404 /404.html

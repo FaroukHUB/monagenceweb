@@ -45,6 +45,8 @@
        NAV GLASS EFFECT ON SCROLL
        ============================================ */
     var scrollTicking = false;
+    var sections = document.querySelectorAll('section[id]');
+    var navAnchors = navLinks ? navLinks.querySelectorAll('a[href^="#"]') : [];
 
     window.addEventListener('scroll', function () {
         if (!scrollTicking) {
@@ -54,11 +56,30 @@
                 } else {
                     nav.classList.remove('is-scrolled');
                 }
+                updateActiveSection();
                 scrollTicking = false;
             });
             scrollTicking = true;
         }
     }, { passive: true });
+
+    function updateActiveSection() {
+        var scrollY = window.pageYOffset;
+        var navH = nav ? nav.offsetHeight : 0;
+        var current = '';
+        sections.forEach(function (s) {
+            if (s.offsetTop - navH - 100 <= scrollY) {
+                current = s.getAttribute('id');
+            }
+        });
+        navAnchors.forEach(function (a) {
+            if (a.getAttribute('href') === '#' + current) {
+                a.setAttribute('aria-current', 'page');
+            } else {
+                a.removeAttribute('aria-current');
+            }
+        });
+    }
 
     /* ============================================
        HAMBURGER MENU

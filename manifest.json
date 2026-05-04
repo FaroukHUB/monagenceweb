@@ -1,0 +1,22 @@
+{
+    "name": "mon-agenceweb.fr",
+    "short_name": "maw.",
+    "description": "Développeur web indépendant — Sites sur mesure, SaaS, intégration IA.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FAF7F2",
+    "theme_color": "#FAF7F2",
+    "lang": "fr",
+    "icons": [
+        {
+            "src": "img/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "img/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}

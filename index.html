@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics — remplacer G-XXXXXXXXXX par ton ID GA4 puis décommenter -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+    -->
     <title>mon-agenceweb.fr — Du sur-mesure sans compromis</title>
     <meta name="description" content="Développeur web indépendant — Sites sur mesure, SaaS, intégration IA. 5 ans d'expérience, du code propre et des résultats concrets.">
     <meta name="author" content="Farouk — mon-agenceweb.fr">
@@ -27,13 +32,14 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.min.css?v=5">
     <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
     <script type="application/ld+json">
@@ -66,6 +72,10 @@
                 "serviceType": ["Développement web sur mesure", "Création de sites e-commerce", "Développement SaaS", "Intégration IA", "Refonte de sites web", "Optimisation SEO"],
                 "knowsAbout": ["Laravel", "WooCommerce", "SaaS", "IA", "PHP", "Tailwind CSS", "Livewire", "Filament", "Claude API", "WordPress"],
                 "email": "contact@mon-agenceweb.fr",
+                "sameAs": [
+                    "https://www.instagram.com/mon_agenceweb/",
+                    "https://www.linkedin.com/in/farouk-mon-agenceweb/"
+                ],
                 "priceRange": "€€",
                 "paymentAccepted": "Virement bancaire, PayPal",
                 "hasOfferCatalog": {
@@ -100,6 +110,7 @@
             <a href="#realisations">Réalisations</a>
             <a href="#services">Services</a>
             <a href="#apropos">À propos</a>
+            <a href="#blog">Blog</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -129,7 +140,8 @@
     </section>
 
     <!-- STATS -->
-    <section class="stats">
+    <section class="stats" aria-labelledby="stats-heading">
+        <h2 id="stats-heading" class="sr-only">Chiffres clés</h2>
         <div class="stats-inner">
             <div class="stat reveal">
                 <span class="stat-number">5</span>
@@ -415,11 +427,49 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-        <div class="container container--narrow">
+    <!-- BLOG -->
+    <section class="section" id="blog">
+        <div class="container">
             <header class="section-header">
                 <span class="section-tag reveal">05</span>
+                <h2 class="section-title reveal">Blog</h2>
+                <p class="section-sub reveal reveal--d1">Conseils, retours d'expérience et veille tech.</p>
+            </header>
+
+            <div class="blog-grid">
+                <article class="card reveal">
+                    <div class="card-body">
+                        <span class="card-type">Laravel</span>
+                        <h4 class="card-title">Pourquoi Laravel est mon choix n°1 pour le sur-mesure</h4>
+                        <p class="card-desc">Architecture MVC, écosystème riche, Eloquent ORM — pourquoi Laravel reste imbattable pour les projets custom.</p>
+                        <span class="card-date">Bientôt disponible</span>
+                    </div>
+                </article>
+                <article class="card reveal">
+                    <div class="card-body">
+                        <span class="card-type">IA</span>
+                        <h4 class="card-title">Intégrer l'IA dans un site web : guide pratique</h4>
+                        <p class="card-desc">API Claude, GPT, Grok — comment j'intègre l'intelligence artificielle dans mes projets clients.</p>
+                        <span class="card-date">Bientôt disponible</span>
+                    </div>
+                </article>
+                <article class="card reveal">
+                    <div class="card-body">
+                        <span class="card-type">SEO</span>
+                        <h4 class="card-title">Score SEO de 37 à 95 : ma méthode en 5 étapes</h4>
+                        <p class="card-desc">Audit technique, optimisation on-page, performance — les étapes concrètes pour booster votre référencement.</p>
+                        <span class="card-date">Bientôt disponible</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--alt" id="contact">
+        <div class="container container--narrow">
+            <header class="section-header">
+                <span class="section-tag reveal">06</span>
                 <h2 class="section-title reveal">Démarrer un projet</h2>
                 <p class="section-sub reveal reveal--d1">Parlons de votre projet. Devis gratuit, réponse rapide.</p>
             </header>
@@ -464,12 +514,22 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2025–2026 mon-agenceweb.fr &middot; Farouk</p>
-        <address>
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
             <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
-        </address>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025–2026 mon-agenceweb.fr &middot; Farouk</p>
     </footer>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.min.js?v=5"></script>
 </body>
 </html>
