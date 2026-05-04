@@ -6,25 +6,22 @@
     <title>mon-agenceweb.fr — Du sur-mesure sans compromis</title>
     <meta name="description" content="Développeur web indépendant — Sites sur mesure, SaaS, intégration IA. 5 ans d'expérience, du code propre et des résultats concrets.">
     <meta name="author" content="Farouk — mon-agenceweb.fr">
-    <meta name="theme-color" content="#0A0A0A">
+    <meta name="theme-color" content="#0B1121">
     <link rel="canonical" href="https://mon-agenceweb.fr">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mon-agenceweb.fr">
     <meta property="og:title" content="mon-agenceweb.fr — Développeur web sur mesure">
-    <meta property="og:description" content="Sites sur mesure, SaaS, e-commerce et intégration IA. 5 ans d'expérience, 100+ projets livrés. Du sur-mesure sans compromis.">
+    <meta property="og:description" content="Sites sur mesure, SaaS, e-commerce et intégration IA. 5 ans d'expérience, 100+ projets livrés.">
     <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="mon-agenceweb.fr">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="mon-agenceweb.fr — Développeur web sur mesure">
-    <meta name="twitter:description" content="Sites sur mesure, SaaS, e-commerce et intégration IA. Du sur-mesure sans compromis, de l'idée au code.">
+    <meta name="twitter:description" content="Sites sur mesure, SaaS, e-commerce et intégration IA. Du sur-mesure sans compromis.">
     <meta name="twitter:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -32,9 +29,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 
-    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -50,23 +46,11 @@
                 "name": "mon-agenceweb.fr",
                 "url": "https://mon-agenceweb.fr",
                 "description": "Développement web sur mesure — Laravel, WooCommerce, SaaS, intégration IA. 5 ans d'expérience.",
-                "founder": {
-                    "@type": "Person",
-                    "name": "Farouk"
-                },
+                "founder": { "@type": "Person", "name": "Farouk" },
                 "foundingDate": "2021",
-                "areaServed": {
-                    "@type": "Country",
-                    "name": "France"
-                },
-                "serviceType": [
-                    "Développement web sur mesure",
-                    "Création de sites e-commerce",
-                    "Développement SaaS",
-                    "Intégration IA"
-                ],
-                "knowsAbout": ["Laravel", "WooCommerce", "SaaS", "IA", "PHP", "Tailwind CSS", "Livewire", "Filament"],
-                "sameAs": []
+                "areaServed": { "@type": "Country", "name": "France" },
+                "serviceType": ["Développement web sur mesure", "Création de sites e-commerce", "Développement SaaS", "Intégration IA"],
+                "knowsAbout": ["Laravel", "WooCommerce", "SaaS", "IA", "PHP", "Tailwind CSS", "Livewire", "Filament"]
             }
         ]
     }
@@ -79,502 +63,406 @@
     <div class="cursor-dot" aria-hidden="true"></div>
 
     <!-- NAV -->
-    <nav class="nav" role="navigation" id="mainNav">
-        <a href="#" class="nav-logo" id="navLogo">maw<span class="accent">.</span></a>
+    <nav class="nav" id="mainNav">
+        <a href="#" class="nav-logo">maw<span class="accent">.</span></a>
         <button class="nav-burger" aria-label="Menu" aria-expanded="false">
-            <span></span>
-            <span></span>
+            <span></span><span></span>
         </button>
-        <div class="nav-links" id="navLinks">
-            <a href="#" data-panel="produits">Produits</a>
-            <a href="#" data-panel="realisations">Réalisations</a>
-            <a href="#" data-panel="services">Services</a>
-            <a href="#" data-panel="apropos">À propos</a>
-            <a href="#" data-panel="contact">Contact</a>
+        <div class="nav-links">
+            <a href="#projets">Projets</a>
+            <a href="#realisations">Réalisations</a>
+            <a href="#services">Services</a>
+            <a href="#apropos">À propos</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
     <div class="nav-overlay" aria-hidden="true"></div>
 
-    <!-- LANDING PANELS -->
-    <section class="landing" id="landing" aria-label="Navigation par panneaux">
-        <div class="panels" id="panels">
-
-            <article class="panel" data-target="produits" data-effect="crt" role="button" tabindex="0" aria-label="Voir nos produits SaaS et E-commerce">
-                <div class="panel-bg"><img src="img/produit.png" alt="" aria-hidden="true"></div>
-                <div class="panel-overlay"></div>
-                <div class="panel-content">
-                    <span class="panel-idx">01</span>
-                    <h2 class="panel-title">Produits</h2>
-                    <p class="panel-sub">SaaS & E-commerce</p>
-                    <span class="panel-cta">Explorer <span class="panel-arrow">&rarr;</span></span>
-                </div>
-            </article>
-
-            <article class="panel" data-target="realisations" data-effect="wipe" role="button" tabindex="0" aria-label="Découvrir nos réalisations clients">
-                <div class="panel-bg"><img src="img/realisation.png" alt="" aria-hidden="true"></div>
-                <div class="panel-overlay"></div>
-                <div class="panel-content">
-                    <span class="panel-idx">02</span>
-                    <h2 class="panel-title">Réalisations</h2>
-                    <p class="panel-sub">100+ projets livrés</p>
-                    <span class="panel-cta">Découvrir <span class="panel-arrow">&rarr;</span></span>
-                </div>
-            </article>
-
-            <article class="panel" data-target="services" data-effect="zoom" role="button" tabindex="0" aria-label="Voir nos services">
-                <div class="panel-bg"><img src="img/service.png" alt="" aria-hidden="true"></div>
-                <div class="panel-overlay"></div>
-                <div class="panel-content">
-                    <span class="panel-idx">03</span>
-                    <h2 class="panel-title">Services</h2>
-                    <p class="panel-sub">Du code, de l'IA, du résultat</p>
-                    <span class="panel-cta">En savoir plus <span class="panel-arrow">&rarr;</span></span>
-                </div>
-            </article>
-
-            <article class="panel" data-target="apropos" data-effect="split" role="button" tabindex="0" aria-label="En savoir plus sur nous">
-                <div class="panel-bg"><img src="img/apropos.png" alt="" aria-hidden="true"></div>
-                <div class="panel-overlay"></div>
-                <div class="panel-content">
-                    <span class="panel-idx">04</span>
-                    <h2 class="panel-title">À propos</h2>
-                    <p class="panel-sub">5 ans d'expérience</p>
-                    <span class="panel-cta">Me connaître <span class="panel-arrow">&rarr;</span></span>
-                </div>
-            </article>
-
-            <article class="panel" data-target="contact" data-effect="iris" role="button" tabindex="0" aria-label="Nous contacter">
-                <div class="panel-bg"><img src="img/contact.png" alt="" aria-hidden="true"></div>
-                <div class="panel-overlay"></div>
-                <div class="panel-content">
-                    <span class="panel-idx">05</span>
-                    <h2 class="panel-title">Contact</h2>
-                    <p class="panel-sub">Démarrer un projet</p>
-                    <span class="panel-cta">Me contacter <span class="panel-arrow">&rarr;</span></span>
-                </div>
-            </article>
-
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow--2" aria-hidden="true"></div>
+        <div class="hero-content">
+            <span class="hero-label reveal">FAROUK — WEB DESIGN</span>
+            <h1 class="hero-title reveal">
+                <span class="hero-line">Du sur-mesure</span>
+                <span class="hero-line">sans compromis<span class="accent">,</span></span>
+                <span class="hero-line">de l'idée</span>
+                <span class="hero-line">au <span class="gold-text">code</span><span class="accent">.</span></span>
+            </h1>
+            <p class="hero-sub reveal reveal--d1">Des solutions digitales sur-mesure pour faire passer votre activité au niveau supérieur.</p>
+            <div class="hero-actions reveal reveal--d2">
+                <a href="#contact" class="btn btn--primary">Démarrer un projet <span class="btn-arrow">&rarr;</span></a>
+                <a href="#projets" class="btn btn--outline">Voir mes réalisations</a>
+            </div>
         </div>
+        <div class="hero-scroll" aria-hidden="true"><span></span></div>
+    </section>
 
-        <div class="landing-brand">
-            <p class="landing-tagline">Du sur-mesure sans compromis<span class="accent">,</span> de l'idée au code<span class="accent">.</span></p>
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-inner">
+            <div class="stat reveal">
+                <span class="stat-number">5</span>
+                <span class="stat-label">ans d'expérience</span>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat reveal reveal--d1">
+                <span class="stat-number">100<span class="accent">+</span></span>
+                <span class="stat-label">projets livrés</span>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat reveal reveal--d1">
+                <span class="stat-number">95</span>
+                <span class="stat-label">score SEO / 100</span>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat reveal reveal--d2">
+                <span class="stat-number stat-number--sm">Laravel &middot; WooCommerce &middot; SaaS &middot; IA</span>
+                <span class="stat-label">stack complète</span>
+            </div>
         </div>
     </section>
 
-    <!-- TRANSITION EFFECT LAYER -->
-    <div class="fx-layer" id="fxLayer" aria-hidden="true"></div>
+    <!-- PRODUITS -->
+    <section class="section" id="projets">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-tag reveal">01</span>
+                <h2 class="section-title reveal">Produits</h2>
+                <p class="section-sub reveal reveal--d1">SaaS, e-commerce et solutions sur mesure.</p>
+            </header>
 
-    <!-- SECTION VIEWS -->
-    <main class="main-content" id="mainContent" aria-hidden="true">
-
-        <!-- PRODUITS -->
-        <section class="view" id="view-produits" data-section="produits">
-            <div class="view-inner">
-                <header class="section-header">
-                    <span class="section-label reveal">01</span>
-                    <h2 class="section-title reveal">Produits <span class="sr-only">SaaS et e-commerce développés sur mesure</span></h2>
-                </header>
-
-                <article class="projet-grand reveal">
-                    <div class="projet-grand-content">
-                        <span class="projet-tag">SaaS — Plateforme</span>
-                        <h3 class="projet-grand-title">ResaDZ</h3>
-                        <p class="projet-grand-accroche">La première plateforme de location de voiture entre particuliers en Algérie.</p>
-                        <p class="projet-grand-desc">Mise en relation directe entre propriétaires de véhicules et conducteurs. Tableau de bord personnalisé pour chaque loueur, gestion des réservations, intégration IA (API Grok), paiement et contrats en ligne. Construit de zéro avec Laravel + Filament.</p>
-                        <div class="projet-stack">
-                            <span>Laravel</span><span>Filament</span><span>IA Grok</span><span>Tailwind</span>
-                        </div>
-                        <a href="https://resadz.com" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet ResaDZ">Voir le projet &rarr;</a>
+            <article class="projet reveal">
+                <div class="projet-info">
+                    <span class="projet-tag">SaaS — Plateforme</span>
+                    <h3 class="projet-name">ResaDZ</h3>
+                    <p class="projet-accroche">La première plateforme de location de voiture entre particuliers en Algérie.</p>
+                    <p class="projet-desc">Mise en relation directe entre propriétaires et conducteurs. Dashboard personnalisé, gestion des réservations, intégration IA (API Grok), paiement et contrats en ligne.</p>
+                    <div class="projet-stack">
+                        <span>Laravel</span><span>Filament</span><span>IA Grok</span><span>Tailwind</span>
                     </div>
-                    <div class="projet-grand-visual">
+                    <a href="https://resadz.com" target="_blank" rel="noopener" class="btn btn--outline btn--sm" aria-label="Voir ResaDZ">Voir le projet &rarr;</a>
+                </div>
+                <div class="projet-visual">
+                    <picture>
+                        <source srcset="img/resadz.webp" type="image/webp">
+                        <img src="img/resadz.jpg" alt="ResaDZ — Plateforme de location" loading="lazy" width="700" height="525">
+                    </picture>
+                </div>
+            </article>
+
+            <article class="projet projet--reverse reveal">
+                <div class="projet-info">
+                    <span class="projet-tag">SaaS — Multi-tenant</span>
+                    <h3 class="projet-name">Marvelous</h3>
+                    <p class="projet-accroche">Un système de commande en ligne adaptable à n'importe quelle cuisine.</p>
+                    <p class="projet-desc">Solution multi-tenant pour restaurants. Choix du type de cuisine, réception des commandes, notification client, dispatch livreur avec GPS.</p>
+                    <div class="projet-stack">
+                        <span>Laravel</span><span>Multi-tenant</span><span>GPS</span><span>Livewire</span>
+                    </div>
+                    <a href="https://marvelous.mon-agenceweb.fr" target="_blank" rel="noopener" class="btn btn--outline btn--sm" aria-label="Voir Marvelous">Voir le projet &rarr;</a>
+                </div>
+                <div class="projet-visual">
+                    <picture>
+                        <source srcset="img/marvelous.webp" type="image/webp">
+                        <img src="img/marvelous.jpg" alt="Marvelous — Commande en ligne multi-restaurant" loading="lazy" width="700" height="525">
+                    </picture>
+                </div>
+            </article>
+
+            <article class="projet reveal">
+                <div class="projet-info">
+                    <span class="projet-tag">E-commerce — WooCommerce</span>
+                    <h3 class="projet-name">Collection L'Original</h3>
+                    <p class="projet-accroche">Une boutique de parfums avec une expérience d'achat sur mesure.</p>
+                    <p class="projet-desc">Site e-commerce WooCommerce enrichi avec du code sur mesure. Catalogue, fiches produits optimisées, tunnel d'achat fluide.</p>
+                    <div class="projet-stack">
+                        <span>WooCommerce</span><span>PHP</span><span>Custom Code</span><span>SEO</span>
+                    </div>
+                    <a href="https://collectionloriginal.com" target="_blank" rel="noopener" class="btn btn--outline btn--sm" aria-label="Voir Collection L'Original">Voir le projet &rarr;</a>
+                </div>
+                <div class="projet-visual">
+                    <picture>
+                        <source srcset="img/collection-loriginal.webp" type="image/webp">
+                        <img src="img/collection-loriginal.jpg" alt="Collection L'Original — Boutique e-commerce" loading="lazy" width="700" height="525">
+                    </picture>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- REALISATIONS -->
+    <section class="section section--alt" id="realisations">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-tag reveal">02</span>
+                <h2 class="section-title reveal">Réalisations</h2>
+                <p class="section-sub reveal reveal--d1">Chaque projet est unique, chaque ligne de code est pensée pour performer.</p>
+            </header>
+
+            <div class="real-grid">
+                <article class="card reveal">
+                    <div class="card-img">
                         <picture>
-                            <source srcset="img/resadz.webp" type="image/webp">
-                            <img src="img/resadz.jpg" alt="ResaDZ — Plateforme de location de voiture entre particuliers en Algérie" loading="lazy" width="700" height="525">
+                            <source srcset="img/mbcars.webp" type="image/webp">
+                            <img src="img/mbcars.jpg" alt="MBcars DZ" loading="lazy" width="600" height="375">
                         </picture>
-                        <span class="projet-grand-number" aria-hidden="true">01</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">Location de voiture — Algérie</span>
+                        <h4 class="card-title">MBcars DZ</h4>
+                        <p class="card-desc">Plateforme de consultation et réservation de véhicules.</p>
+                        <a href="https://mbcarsdzrouiba.com" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
                     </div>
                 </article>
 
-                <article class="projet-grand projet-grand--reverse reveal">
-                    <div class="projet-grand-content">
-                        <span class="projet-tag">SaaS — Multi-tenant</span>
-                        <h3 class="projet-grand-title">Marvelous</h3>
-                        <p class="projet-grand-accroche">Un système de commande en ligne adaptable à n'importe quelle cuisine.</p>
-                        <p class="projet-grand-desc">Solution multi-tenant pour restaurants — le gérant choisit son type de cuisine depuis son tableau de bord. Réception des commandes sur tablette ou smartphone, notification client, dispatch livreur avec GPS, numéro de téléphone et détail complet de la commande.</p>
-                        <div class="projet-stack">
-                            <span>Laravel</span><span>Multi-tenant</span><span>GPS</span><span>Livewire</span>
-                        </div>
-                        <a href="https://marvelous.mon-agenceweb.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Marvelous">Voir le projet &rarr;</a>
-                    </div>
-                    <div class="projet-grand-visual">
+                <article class="card reveal">
+                    <div class="card-img">
                         <picture>
-                            <source srcset="img/marvelous.webp" type="image/webp">
-                            <img src="img/marvelous.jpg" alt="Marvelous — Système de commande en ligne multi-restaurant" loading="lazy" width="700" height="525">
+                            <source srcset="img/la-formule.webp" type="image/webp">
+                            <img src="img/la-formule.jpg" alt="La Formule" loading="lazy" width="600" height="375">
                         </picture>
-                        <span class="projet-grand-number" aria-hidden="true">02</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">Site vitrine fast food</span>
+                        <h4 class="card-title">La Formule</h4>
+                        <p class="card-desc">Menu intégré, bouton d'appel, GPS, recherche produit.</p>
+                        <a href="https://laformule.mon-agenceweb.fr" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
                     </div>
                 </article>
 
-                <article class="projet-grand reveal">
-                    <div class="projet-grand-content">
-                        <span class="projet-tag">E-commerce — WooCommerce</span>
-                        <h3 class="projet-grand-title">Collection L'Original</h3>
-                        <p class="projet-grand-accroche">Une boutique de parfums avec une expérience d'achat sur mesure.</p>
-                        <p class="projet-grand-desc">Site e-commerce WooCommerce enrichi avec du code sur mesure pour une expérience d'achat plus immersive. Catalogue, fiches produits optimisées, tunnel d'achat fluide.</p>
-                        <div class="projet-stack">
-                            <span>WooCommerce</span><span>PHP</span><span>Custom Code</span><span>SEO</span>
-                        </div>
-                        <a href="https://collectionloriginal.com" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Collection L'Original">Voir le projet &rarr;</a>
-                    </div>
-                    <div class="projet-grand-visual">
+                <article class="card reveal">
+                    <div class="card-img">
                         <picture>
-                            <source srcset="img/collection-loriginal.webp" type="image/webp">
-                            <img src="img/collection-loriginal.jpg" alt="Collection L'Original — Boutique e-commerce de parfums" loading="lazy" width="700" height="525">
+                            <source srcset="img/la-formule-59.webp" type="image/webp">
+                            <img src="img/la-formule-59.jpg" alt="La Formule 59" loading="lazy" width="600" height="375">
                         </picture>
-                        <span class="projet-grand-number" aria-hidden="true">03</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">Version avancée</span>
+                        <h4 class="card-title">La Formule 59</h4>
+                        <p class="card-desc">Tickets de commande envoyés sur WhatsApp au restaurant.</p>
+                        <a href="https://laformule59.mon-agenceweb.fr" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-img">
+                        <picture>
+                            <source srcset="img/propretnet34.webp" type="image/webp">
+                            <img src="img/propretnet34.jpg" alt="Propretnet34" loading="lazy" width="600" height="375">
+                        </picture>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">Agence de nettoyage</span>
+                        <h4 class="card-title">Propretnet34</h4>
+                        <p class="card-desc">Site WordPress avec demande de devis en ligne.</p>
+                        <a href="https://propretnet34.fr" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-img">
+                        <picture>
+                            <source srcset="img/solarinnov34.webp" type="image/webp">
+                            <img src="img/solarinnov34.jpg" alt="Solarinnov34" loading="lazy" width="600" height="375">
+                        </picture>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">Panneaux solaires</span>
+                        <h4 class="card-title">Solarinnov34</h4>
+                        <p class="card-desc">Site artisan photovoltaïque — devis et infos techniques.</p>
+                        <a href="https://solarinnov34.fr" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-img">
+                        <picture>
+                            <source srcset="img/atelier-pizza.webp" type="image/webp">
+                            <img src="img/atelier-pizza.jpg" alt="Atelier Pizza Roubaix" loading="lazy" width="600" height="375">
+                        </picture>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">Pizzeria</span>
+                        <h4 class="card-title">Atelier Pizza Roubaix</h4>
+                        <p class="card-desc">Menu avec prix, avis Google intégrés, géolocalisation.</p>
+                        <a href="https://atelier-pizza-roubaix.fr" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-img">
+                        <picture>
+                            <source srcset="img/trabexpress.webp" type="image/webp">
+                            <img src="img/trabexpress.jpg" alt="Trabexpress" loading="lazy" width="600" height="375">
+                        </picture>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">Société de livraison</span>
+                        <h4 class="card-title">Trabexpress</h4>
+                        <p class="card-desc">Site informatif et contact pour transport et livraison.</p>
+                        <a href="https://trabexepress.fr" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-img">
+                        <picture>
+                            <source srcset="img/dinaomra.webp" type="image/webp">
+                            <img src="img/dinaomra.png" alt="Omra France Sud" loading="lazy" width="600" height="375">
+                        </picture>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">Omra &amp; Voyages</span>
+                        <h4 class="card-title">Omra France Sud</h4>
+                        <p class="card-desc">Refonte complète. Sliders, classes de prix, restructuration.</p>
+                        <a href="https://www.omrafrancesud.fr/" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-img">
+                        <picture>
+                            <source srcset="img/dinamalou.webp" type="image/webp">
+                            <img src="img/dinamalou.png" alt="Dina et Malou" loading="lazy" width="600" height="375">
+                        </picture>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">E-commerce enfants</span>
+                        <h4 class="card-title">Dina et Malou</h4>
+                        <p class="card-desc">Boutique personnalisation vêtements enfants. Assistant IA.</p>
+                        <a href="https://dinaetmalou.com" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-img">
+                        <picture>
+                            <source srcset="img/naguere.webp" type="image/webp">
+                            <img src="img/naguere.jpg" alt="Naguere" loading="lazy" width="600" height="375">
+                        </picture>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-type">Site informatif</span>
+                        <h4 class="card-title">Naguere</h4>
+                        <p class="card-desc">Site WordPress avec liens boutique Amazon partenaire.</p>
+                        <a href="https://naguere.fr" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
                     </div>
                 </article>
             </div>
+        </div>
+    </section>
 
-            <div class="view-next">
-                <a href="#" class="view-next-link" data-panel="realisations">
-                    <span class="view-next-label">Section suivante</span>
-                    <span class="view-next-title">Réalisations &rarr;</span>
-                </a>
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-tag reveal">03</span>
+                <h2 class="section-title reveal">Services</h2>
+                <p class="section-sub reveal reveal--d1">Du concept à la réalisation, je crée des solutions digitales qui génèrent des résultats.</p>
+            </header>
+
+            <div class="services-grid">
+                <article class="svc-card reveal">
+                    <span class="svc-icon">01</span>
+                    <h4 class="svc-title">Sites Web</h4>
+                    <p class="svc-desc">Sites vitrines, institutionnels, e-commerce. Codé pour performer, optimisé pour convertir.</p>
+                </article>
+                <article class="svc-card reveal">
+                    <span class="svc-icon">02</span>
+                    <h4 class="svc-title">E-commerce</h4>
+                    <p class="svc-desc">WooCommerce et solutions custom. Tunnel d'achat optimisé, paiement sécurisé, SEO natif.</p>
+                </article>
+                <article class="svc-card reveal">
+                    <span class="svc-icon">03</span>
+                    <h4 class="svc-title">SaaS &amp; WebApps</h4>
+                    <p class="svc-desc">Plateformes multi-utilisateurs, tableaux de bord, logiques métier complexes et évolutives.</p>
+                </article>
+                <article class="svc-card reveal">
+                    <span class="svc-icon">04</span>
+                    <h4 class="svc-title">Intégration IA</h4>
+                    <p class="svc-desc">API GPT, Grok, Claude. Automatisations intelligentes au service de votre business.</p>
+                </article>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- REALISATIONS -->
-        <section class="view view--light" id="view-realisations" data-section="realisations">
-            <div class="view-inner">
-                <header class="section-header">
-                    <span class="section-label reveal">02</span>
-                    <h2 class="section-title reveal">Réalisations</h2>
-                </header>
+    <!-- A PROPOS -->
+    <section class="section section--alt" id="apropos">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-tag reveal">04</span>
+                <h2 class="section-title reveal">À propos</h2>
+            </header>
 
-                <div class="realisations-grid">
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/mbcars.webp" type="image/webp">
-                                <img src="img/mbcars.jpg" alt="MBcars DZ — Plateforme de location de voiture en Algérie" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">MBcars DZ</h4>
-                            <span class="real-card-type">Location de voiture — Algérie</span>
-                            <p class="real-card-desc">Plateforme de consultation et réservation de véhicules. Interface claire, formulaire de demande simplifié.</p>
-                            <a href="https://mbcarsdzrouiba.com" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet MBcars DZ">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/la-formule.webp" type="image/webp">
-                                <img src="img/la-formule.jpg" alt="La Formule — Site vitrine restauration rapide" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">La Formule</h4>
-                            <span class="real-card-type">Site vitrine fast food</span>
-                            <p class="real-card-desc">Menu intégré, bouton d'appel direct, GPS, liens plateformes de livraison, recherche produit.</p>
-                            <a href="https://laformule.mon-agenceweb.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet La Formule">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/la-formule-59.webp" type="image/webp">
-                                <img src="img/la-formule-59.jpg" alt="La Formule 59 — Commande en ligne avec ticket WhatsApp" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">La Formule 59</h4>
-                            <span class="real-card-type">Version avancée</span>
-                            <p class="real-card-desc">Évolution avec génération de tickets de commande envoyés directement sur WhatsApp au restaurant.</p>
-                            <a href="https://laformule59.mon-agenceweb.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet La Formule 59">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/propretnet34.webp" type="image/webp">
-                                <img src="img/propretnet34.jpg" alt="Propretnet34 — Site agence de nettoyage professionnel" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">Propretnet34</h4>
-                            <span class="real-card-type">Agence de nettoyage</span>
-                            <p class="real-card-desc">Site WordPress professionnel avec demande de devis en ligne et formulaire de contact.</p>
-                            <a href="https://propretnet34.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Propretnet34">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/solarinnov34.webp" type="image/webp">
-                                <img src="img/solarinnov34.jpg" alt="Solarinnov34 — Site installateur panneaux solaires" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">Solarinnov34</h4>
-                            <span class="real-card-type">Panneaux solaires</span>
-                            <p class="real-card-desc">Site pour artisan spécialisé photovoltaïque — devis en ligne, informations techniques.</p>
-                            <a href="https://solarinnov34.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Solarinnov34">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/atelier-pizza.webp" type="image/webp">
-                                <img src="img/atelier-pizza.jpg" alt="Atelier Pizza Roubaix — Site vitrine pizzeria" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">Atelier Pizza Roubaix</h4>
-                            <span class="real-card-type">Pizzeria</span>
-                            <p class="real-card-desc">Menu avec prix, bouton d'appel direct, avis Google intégrés, géolocalisation.</p>
-                            <a href="https://atelier-pizza-roubaix.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Atelier Pizza Roubaix">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/trabexpress.webp" type="image/webp">
-                                <img src="img/trabexpress.jpg" alt="Trabexpress — Site société de livraison et transport" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">Trabexpress</h4>
-                            <span class="real-card-type">Société de livraison</span>
-                            <p class="real-card-desc">Site informatif et de contact pour société de transport et livraison.</p>
-                            <a href="https://trabexepress.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Trabexpress">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/dinaomra.webp" type="image/webp">
-                                <img src="img/dinaomra.png" alt="Omra France Sud — Site spécialisé Omra et voyages" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">Omra France Sud</h4>
-                            <span class="real-card-type">Omra &amp; Voyages</span>
-                            <p class="real-card-desc">Refonte complète d'un site Omra. Sliders, classes de prix, restructuration. Réalisé sur Systeme.io.</p>
-                            <a href="https://www.omrafrancesud.fr/" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Omra France Sud">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/dinamalou.webp" type="image/webp">
-                                <img src="img/dinamalou.png" alt="Dina et Malou — E-commerce vêtements et accessoires enfants personnalisés" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">Dina et Malou</h4>
-                            <span class="real-card-type">E-commerce enfants</span>
-                            <p class="real-card-desc">Boutique de personnalisation de vêtements pour enfants. Catalogue, assistant IA, paiement et livraison.</p>
-                            <a href="https://dinaetmalou.com" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Dina et Malou">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-
-                    <article class="real-card reveal">
-                        <div class="real-card-img">
-                            <picture>
-                                <source srcset="img/naguere.webp" type="image/webp">
-                                <img src="img/naguere.jpg" alt="Naguere — Site informatif avec boutique Amazon" loading="lazy" width="600" height="375">
-                            </picture>
-                        </div>
-                        <div class="real-card-inner">
-                            <h4 class="real-card-title">Naguere</h4>
-                            <span class="real-card-type">Site informatif</span>
-                            <p class="real-card-desc">Site WordPress avec liens vers boutique Amazon partenaire.</p>
-                            <a href="https://naguere.fr" target="_blank" rel="noopener" class="projet-link" aria-label="Voir le projet Naguere">Voir le projet &rarr;</a>
-                        </div>
-                    </article>
-                </div>
+            <div class="apropos reveal">
+                <h3 class="apropos-headline">Développeur web indépendant, je transforme vos idées en solutions digitales <span class="gold-text">performantes</span>.</h3>
+                <p class="apropos-text">Depuis 5 ans, j'accompagne entreprises, startups et indépendants dans la création de leur présence en ligne. De l'architecture technique au pixel final, chaque projet est pensé pour durer.</p>
             </div>
 
-            <div class="view-next">
-                <a href="#" class="view-next-link" data-panel="services">
-                    <span class="view-next-label">Section suivante</span>
-                    <span class="view-next-title">Services &rarr;</span>
-                </a>
+            <div class="stack-grid">
+                <div class="stack-card reveal"><span class="stack-name">Laravel</span><span class="stack-detail">Backend &amp; API</span></div>
+                <div class="stack-card reveal"><span class="stack-name">WooCommerce</span><span class="stack-detail">E-commerce</span></div>
+                <div class="stack-card reveal"><span class="stack-name">Livewire &amp; Filament</span><span class="stack-detail">Interfaces réactives</span></div>
+                <div class="stack-card reveal"><span class="stack-name">Intelligence Artificielle</span><span class="stack-detail">GPT, Grok, Claude</span></div>
+                <div class="stack-card reveal"><span class="stack-name">Tailwind CSS</span><span class="stack-detail">Design system</span></div>
+                <div class="stack-card reveal"><span class="stack-name">SaaS Multi-tenant</span><span class="stack-detail">Architectures évolutives</span></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SERVICES -->
-        <section class="view" id="view-services" data-section="services">
-            <div class="view-inner">
-                <header class="section-header">
-                    <span class="section-label reveal">03</span>
-                    <h2 class="section-title reveal">Services</h2>
-                </header>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container container--narrow">
+            <header class="section-header">
+                <span class="section-tag reveal">05</span>
+                <h2 class="section-title reveal">Démarrer un projet</h2>
+                <p class="section-sub reveal reveal--d1">Parlons de votre projet. Devis gratuit, réponse rapide.</p>
+            </header>
 
-                <div class="services-grid">
-                    <article class="service-block reveal">
-                        <span class="service-number">01</span>
-                        <h4 class="service-title">Sites sur mesure</h4>
-                        <p class="service-desc">De la landing page au site institutionnel, codé pour performer.</p>
-                    </article>
-                    <article class="service-block reveal">
-                        <span class="service-number">02</span>
-                        <h4 class="service-title">E-commerce</h4>
-                        <p class="service-desc">WooCommerce et solutions custom, tunnel d'achat optimisé, SEO natif.</p>
-                    </article>
-                    <article class="service-block reveal">
-                        <span class="service-number">03</span>
-                        <h4 class="service-title">SaaS &amp; Applications web</h4>
-                        <p class="service-desc">Plateformes multi-utilisateurs, tableaux de bord, logiques métier complexes.</p>
-                    </article>
-                    <article class="service-block reveal">
-                        <span class="service-number">04</span>
-                        <h4 class="service-title">Intégration IA</h4>
-                        <p class="service-desc">API GPT, Grok, automatisations — l'IA au service de votre business.</p>
-                    </article>
-                </div>
-            </div>
-
-            <div class="view-next">
-                <a href="#" class="view-next-link" data-panel="apropos">
-                    <span class="view-next-label">Section suivante</span>
-                    <span class="view-next-title">À propos &rarr;</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- A PROPOS -->
-        <section class="view" id="view-apropos" data-section="apropos">
-            <div class="view-inner">
-                <header class="section-header">
-                    <span class="section-label reveal">04</span>
-                    <h2 class="section-title reveal">À propos</h2>
-                </header>
-
-                <div class="apropos-hero reveal">
-                    <h3 class="apropos-headline">Développeur web indépendant, je transforme vos idées en solutions digitales performantes.</h3>
-                    <p class="apropos-text">Depuis 5 ans, j'accompagne des entreprises, des startups et des indépendants dans la création de leur présence en ligne. De l'architecture technique au pixel final, chaque projet est pensé pour durer et performer.</p>
-                </div>
-
-                <div class="chiffres-section reveal">
-                    <div class="chiffres-track">
-                        <div class="chiffre">
-                            <span class="chiffre-number">5</span>
-                            <span class="chiffre-label">ans d'expérience</span>
-                        </div>
-                        <div class="chiffre-sep" aria-hidden="true"></div>
-                        <div class="chiffre">
-                            <span class="chiffre-number">100+</span>
-                            <span class="chiffre-label">projets livrés</span>
-                        </div>
-                        <div class="chiffre-sep" aria-hidden="true"></div>
-                        <div class="chiffre">
-                            <span class="chiffre-number">95</span>
-                            <span class="chiffre-label">score SEO / 100</span>
-                        </div>
+            <form class="contact-form reveal" action="https://formspree.io/f/mqegleqk" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required autocomplete="given-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
                     </div>
                 </div>
-
-                <div class="stack-section reveal">
-                    <h3 class="stack-title">Stack technique</h3>
-                    <div class="stack-grid">
-                        <div class="stack-item">
-                            <span class="stack-name">Laravel</span>
-                            <span class="stack-detail">Framework PHP — Backend &amp; API</span>
-                        </div>
-                        <div class="stack-item">
-                            <span class="stack-name">WooCommerce</span>
-                            <span class="stack-detail">E-commerce WordPress</span>
-                        </div>
-                        <div class="stack-item">
-                            <span class="stack-name">Livewire &amp; Filament</span>
-                            <span class="stack-detail">Interfaces réactives</span>
-                        </div>
-                        <div class="stack-item">
-                            <span class="stack-name">Intelligence Artificielle</span>
-                            <span class="stack-detail">GPT, Grok, Claude — Intégration API</span>
-                        </div>
-                        <div class="stack-item">
-                            <span class="stack-name">Tailwind CSS</span>
-                            <span class="stack-detail">Design system utilitaire</span>
-                        </div>
-                        <div class="stack-item">
-                            <span class="stack-name">SaaS Multi-tenant</span>
-                            <span class="stack-detail">Architectures évolutives</span>
-                        </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telephone">Téléphone <span class="form-opt">(optionnel)</span></label>
+                        <input type="tel" id="telephone" name="telephone" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget" required>
+                            <option value="" disabled selected>Sélectionner</option>
+                            <option value="< 500€">&lt; 500 &euro;</option>
+                            <option value="500-1500€">500 – 1 500 &euro;</option>
+                            <option value="1500-5000€">1 500 – 5 000 &euro;</option>
+                            <option value="5000€+">5 000 &euro; +</option>
+                        </select>
                     </div>
                 </div>
-            </div>
-
-            <div class="view-next">
-                <a href="#" class="view-next-link" data-panel="contact">
-                    <span class="view-next-label">Section suivante</span>
-                    <span class="view-next-title">Contact &rarr;</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="view view--light" id="view-contact" data-section="contact">
-            <div class="view-inner view-inner--narrow">
-                <header class="section-header">
-                    <span class="section-label reveal">05</span>
-                    <h2 class="section-title reveal">Démarrer un projet</h2>
-                </header>
-
-                <form class="contact-form reveal" action="https://formspree.io/f/mqegleqk" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="prenom">Prénom</label>
-                            <input type="text" id="prenom" name="prenom" required autocomplete="given-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required autocomplete="email">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="telephone">Téléphone <span class="form-optional">(optionnel)</span></label>
-                            <input type="tel" id="telephone" name="telephone" autocomplete="tel">
-                        </div>
-                        <div class="form-group">
-                            <label for="budget">Budget estimé</label>
-                            <select id="budget" name="budget" required>
-                                <option value="" disabled selected>Sélectionner</option>
-                                <option value="< 500€">&lt; 500 &euro;</option>
-                                <option value="500-1500€">500 – 1 500 &euro;</option>
-                                <option value="1500-5000€">1 500 – 5 000 &euro;</option>
-                                <option value="5000€+">5 000 &euro; +</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group form-group--full">
-                        <label for="projet">Description du projet</label>
-                        <textarea id="projet" name="projet" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="cta cta--submit">Envoyer ma demande <span class="cta-arrow">&rarr;</span></button>
-                </form>
-            </div>
-        </section>
-
-    </main>
+                <div class="form-group">
+                    <label for="projet-desc">Description du projet</label>
+                    <textarea id="projet-desc" name="projet" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Envoyer ma demande <span class="btn-arrow">&rarr;</span></button>
+            </form>
+        </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="footer" id="siteFooter">
+    <footer class="footer">
         <p>&copy; 2025 mon-agenceweb.fr &middot; Farouk</p>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>
