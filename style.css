@@ -42,7 +42,6 @@ body {
 
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; height: auto; }
-picture { display: block; }
 ::selection { background: var(--accent); color: #fff; }
 
 /* --- CURSOR --- */
@@ -316,15 +315,13 @@ picture { display: block; }
     border: 1px solid var(--glass-border);
     box-shadow: var(--shadow-md);
 }
-.projet-visual picture {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-}
-.projet-visual picture img {
+.projet-visual img {
+    position: absolute; top: 0; left: 0;
     width: 100%; height: 100%; max-width: none;
     object-fit: cover; object-position: top center;
     transition: transform 0.6s var(--ease-out);
 }
-.projet:hover .projet-visual img { transform: scale(1.04); }
+.projet:hover .projet-visual > img { transform: scale(1.04); }
 
 /* --- REALISATIONS GRID --- */
 .real-grid {
@@ -345,14 +342,12 @@ picture { display: block; }
     aspect-ratio: 16/10; overflow: hidden; position: relative;
     background: var(--bg-alt);
 }
-.card-img picture {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-}
-.card-img picture img {
+.card-img img {
+    position: absolute; top: 0; left: 0;
     width: 100%; height: 100%; max-width: none;
     object-fit: cover; transition: transform 0.6s var(--ease-out);
 }
-.card:hover .card-img img { transform: scale(1.05); }
+.card:hover .card-img > img { transform: scale(1.05); }
 
 .card-body { padding: 1.5rem; }
 .card-type {
