@@ -469,6 +469,13 @@ img { max-width: 100%; display: block; height: auto; }
     padding: 3rem; text-align: center;
     font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.05em;
 }
+.footer address {
+    font-style: normal; margin-top: 0.5rem;
+}
+.footer address a {
+    color: var(--accent); transition: opacity 0.3s;
+}
+.footer address a:hover { opacity: 0.7; }
 
 /* --- UTILITY --- */
 .sr-only {

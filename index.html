@@ -7,7 +7,9 @@
     <meta name="description" content="Développeur web indépendant — Sites sur mesure, SaaS, intégration IA. 5 ans d'expérience, du code propre et des résultats concrets.">
     <meta name="author" content="Farouk — mon-agenceweb.fr">
     <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mon-agenceweb.fr">
+    <link rel="alternate" hreflang="fr-FR" href="https://mon-agenceweb.fr">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mon-agenceweb.fr">
@@ -28,8 +30,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.css?v=4">
+    <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
     <script type="application/ld+json">
     {
@@ -39,18 +44,40 @@
                 "@type": "WebSite",
                 "name": "mon-agenceweb.fr",
                 "url": "https://mon-agenceweb.fr",
-                "description": "Développeur web indépendant — Sites sur mesure, SaaS, intégration IA."
+                "description": "Développeur web indépendant — Sites sur mesure, SaaS, intégration IA.",
+                "inLanguage": "fr-FR"
             },
             {
                 "@type": "ProfessionalService",
                 "name": "mon-agenceweb.fr",
                 "url": "https://mon-agenceweb.fr",
-                "description": "Développement web sur mesure — Laravel, WooCommerce, SaaS, intégration IA. 5 ans d'expérience.",
-                "founder": { "@type": "Person", "name": "Farouk" },
+                "image": "https://mon-agenceweb.fr/img/og-image.jpg",
+                "description": "Développement web sur mesure — Laravel, WooCommerce, SaaS, intégration IA. 5 ans d'expérience, 100+ projets livrés.",
+                "founder": {
+                    "@type": "Person",
+                    "name": "Farouk",
+                    "jobTitle": "Développeur web indépendant"
+                },
                 "foundingDate": "2021",
-                "areaServed": { "@type": "Country", "name": "France" },
-                "serviceType": ["Développement web sur mesure", "Création de sites e-commerce", "Développement SaaS", "Intégration IA"],
-                "knowsAbout": ["Laravel", "WooCommerce", "SaaS", "IA", "PHP", "Tailwind CSS", "Livewire", "Filament"]
+                "areaServed": [
+                    { "@type": "Country", "name": "France" },
+                    { "@type": "Country", "name": "Belgique" }
+                ],
+                "serviceType": ["Développement web sur mesure", "Création de sites e-commerce", "Développement SaaS", "Intégration IA", "Refonte de sites web", "Optimisation SEO"],
+                "knowsAbout": ["Laravel", "WooCommerce", "SaaS", "IA", "PHP", "Tailwind CSS", "Livewire", "Filament", "Claude API", "WordPress"],
+                "email": "contact@mon-agenceweb.fr",
+                "priceRange": "€€",
+                "paymentAccepted": "Virement bancaire, PayPal",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Services web",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site vitrine sur mesure" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce WooCommerce" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Application SaaS" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intégration Intelligence Artificielle" } }
+                    ]
+                }
             }
         ]
     }
@@ -77,6 +104,8 @@
         </div>
     </nav>
     <div class="nav-overlay" aria-hidden="true"></div>
+
+    <main>
 
     <!-- HERO -->
     <section class="hero" id="hero">
@@ -285,7 +314,7 @@
                         <span class="card-type">Société de livraison</span>
                         <h4 class="card-title">Trabexpress</h4>
                         <p class="card-desc">Site informatif et contact pour transport et livraison.</p>
-                        <a href="https://trabexepress.fr" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
+                        <a href="https://trabexpress.fr" target="_blank" rel="noopener" class="card-link">Voir &rarr;</a>
                     </div>
                 </article>
 
@@ -431,11 +460,16 @@
         </div>
     </section>
 
+    </main>
+
     <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2025 mon-agenceweb.fr &middot; Farouk</p>
+        <p>&copy; 2025–2026 mon-agenceweb.fr &middot; Farouk</p>
+        <address>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </address>
     </footer>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>
