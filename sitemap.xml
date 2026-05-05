@@ -7,6 +7,12 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://mon-agenceweb.fr/apropos.html</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://mon-agenceweb.fr/mentions-legales.html</loc>
         <lastmod>2026-05-04</lastmod>
         <changefreq>yearly</changefreq>

@@ -405,16 +405,108 @@ img { max-width: 100%; display: block; height: auto; }
 }
 .svc-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; max-width: 380px; }
 
-/* --- A PROPOS --- */
-.apropos { max-width: 750px; margin-bottom: 4rem; }
-.apropos-headline {
-    font-family: var(--font-display);
-    font-size: clamp(1.6rem, 3vw, 2.6rem);
-    font-weight: 600; line-height: 1.25;
-    letter-spacing: -0.02em; margin-bottom: 1.2rem;
-    color: var(--dark);
+/* --- A PROPOS — MAGAZINE CARD --- */
+.about-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 3.5rem 3rem;
+    margin-bottom: 4rem;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
 }
-.apropos-text { font-size: 1rem; color: var(--text-muted); line-height: 1.8; }
+.about-card-accent {
+    position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+    background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+    border-radius: 16px 0 0 16px;
+}
+.about-card-quote {
+    position: absolute; top: 1.5rem; right: 2.5rem;
+    font-family: var(--font-display);
+    font-size: 6rem; line-height: 1; color: rgba(198,153,62,0.08);
+    pointer-events: none;
+}
+.about-card-inner { position: relative; z-index: 1; }
+.about-card-header { margin-bottom: 2rem; }
+.about-card-label {
+    display: inline-block; font-size: 0.7rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.15em;
+    color: var(--accent); margin-bottom: 0.6rem;
+    padding: 0.25rem 0.7rem;
+    background: rgba(198,153,62,0.08);
+    border-radius: 6px;
+}
+.about-card-name {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700; color: var(--dark);
+    line-height: 1; margin-bottom: 0.4rem;
+}
+.about-card-role {
+    font-size: 1rem; color: var(--text-muted);
+    font-style: italic;
+}
+.about-card-content p {
+    font-size: 0.95rem; color: var(--text);
+    line-height: 1.8; margin-bottom: 1rem;
+}
+.about-card-content p:last-child { margin-bottom: 0; }
+.about-card-content strong { color: var(--dark); }
+.about-card-footer { margin-top: 2rem; }
+
+/* --- A PROPOS PAGE --- */
+.apropos-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+}
+.apropos-block p {
+    font-size: 0.95rem; color: var(--text);
+    line-height: 1.8; margin-bottom: 1rem;
+}
+.apropos-block p:last-child { margin-bottom: 0; }
+.apropos-block strong { color: var(--dark); }
+.apropos-block-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 700; color: var(--dark);
+    margin-bottom: 1.2rem;
+}
+
+/* --- TIMELINE --- */
+.timeline { position: relative; padding-left: 3rem; }
+.timeline::before {
+    content: ''; position: absolute; top: 0; left: 0.6rem;
+    width: 2px; height: 100%;
+    background: linear-gradient(to bottom, var(--accent), rgba(198,153,62,0.1));
+}
+.timeline-item {
+    position: relative; margin-bottom: 2.5rem;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-item::before {
+    content: ''; position: absolute;
+    left: -2.65rem; top: 0.35rem;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(198,153,62,0.15);
+}
+.timeline-year {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.85rem; font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.05em;
+}
+.timeline-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem; font-weight: 600;
+    color: var(--dark); margin-bottom: 0.3rem;
+}
+.timeline-content p {
+    font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;
+}
 
 .stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .stack-card {
@@ -534,6 +626,7 @@ img { max-width: 100%; display: block; height: auto; }
     .services-grid { grid-template-columns: 1fr; }
     .stack-grid { grid-template-columns: repeat(2, 1fr); }
     .blog-grid { grid-template-columns: 1fr; }
+    .apropos-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -566,5 +659,7 @@ img { max-width: 100%; display: block; height: auto; }
     .hero-actions .btn { text-align: center; justify-content: center; }
     .section-header { margin-bottom: 3rem; }
     .hero-glow, .hero-glow--2 { display: none; }
+    .about-card { padding: 2.5rem 1.5rem; }
+    .about-card-quote { display: none; }
     .footer { padding: 2rem 1.5rem; }
 }
