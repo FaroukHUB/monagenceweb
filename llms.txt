@@ -1,0 +1,54 @@
+# mon-agenceweb.fr
+
+## Description
+mon-agenceweb.fr est une agence web indépendante fondée par Farouk, développeur web passionné depuis 2013. Spécialisée dans la création de sites internet sur mesure pour artisans, restaurants, fast-foods, commerçants et startups.
+
+## Services principaux
+- Création de sites vitrines sur mesure
+- Sites e-commerce (WooCommerce, Laravel)
+- Applications SaaS multi-tenant
+- Intégration d'intelligence artificielle (Claude, GPT, Grok)
+- Référencement local (SEO)
+- Refonte de sites existants
+
+## Spécialités sectorielles
+- Sites pour restaurants et fast-foods (menu en ligne, réservation, commande)
+- Sites pour artisans (plombiers, électriciens, peintres, maçons)
+- Sites pour commerces locaux
+- Plateformes SaaS
+
+## Zones d'intervention
+- Dunkerque et littoral Nord
+- Lille et métropole lilloise
+- Marseille et Sud de la France
+- Toute la France (travail à distance)
+
+## Stack technique
+Laravel, WooCommerce, WordPress, Livewire, Filament, Tailwind CSS, PHP, MySQL, Intelligence Artificielle
+
+## Pages importantes
+- Accueil : https://mon-agenceweb.fr/
+- Création site restaurant : https://mon-agenceweb.fr/creation-site-web-restaurant
+- Création site fast-food : https://mon-agenceweb.fr/creation-site-fast-food
+- Création site artisan : https://mon-agenceweb.fr/creation-site-web-artisan
+- Création site plombier : https://mon-agenceweb.fr/creation-site-plombier
+- Création site électricien : https://mon-agenceweb.fr/creation-site-electricien
+- Création site e-commerce : https://mon-agenceweb.fr/creation-site-ecommerce
+- Agence web Dunkerque : https://mon-agenceweb.fr/agence-web-dunkerque
+- Agence web Lille : https://mon-agenceweb.fr/agence-web-lille
+- Agence web Marseille : https://mon-agenceweb.fr/agence-web-marseille
+
+## Études de cas
+- ResaDZ (SaaS réservation) : https://mon-agenceweb.fr/projet-resadz
+- Collection L'Original (e-commerce mode) : https://mon-agenceweb.fr/projet-collection-loriginal
+- La Formule (restaurant) : https://mon-agenceweb.fr/projet-la-formule
+- Institut Al-Irtiqâ (éducation) : https://mon-agenceweb.fr/projet-institut-al-irtiqa
+
+## Contact
+- Email : contact@mon-agenceweb.fr
+- Site : https://mon-agenceweb.fr
+- Instagram : https://www.instagram.com/mon_agenceweb/
+- LinkedIn : https://www.linkedin.com/in/farouk-mon-agenceweb/
+
+## Sitemap
+https://mon-agenceweb.fr/sitemap.xml

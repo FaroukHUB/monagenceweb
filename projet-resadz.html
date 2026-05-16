@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Projet ResaDZ — Plateforme SaaS de réservation | mon-agenceweb.fr</title>
+    <meta name="description" content="Étude de cas ResaDZ : développement d'une plateforme SaaS de réservation multi-tenant pour le marché algérien. Architecture Laravel, paiement local, dashboard admin.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/projet-resadz">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mon-agenceweb.fr/projet-resadz">
+    <meta property="og:title" content="Projet ResaDZ — Plateforme SaaS de réservation">
+    <meta property="og:description" content="Comment j'ai conçu et développé une plateforme de réservation multi-tenant pour le marché algérien.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CreativeWork",
+                "name": "ResaDZ",
+                "description": "Plateforme SaaS de réservation multi-tenant pour le marché algérien",
+                "creator": { "@type": "Person", "name": "Farouk" },
+                "dateCreated": "2025",
+                "url": "https://mon-agenceweb.fr/projet-resadz"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
+                    { "@type": "ListItem", "position": 2, "name": "Projets", "item": "https://mon-agenceweb.fr/#projets" },
+                    { "@type": "ListItem", "position": 3, "name": "ResaDZ", "item": "https://mon-agenceweb.fr/projet-resadz" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body style="cursor: auto;">
+
+    <nav class="nav is-scrolled">
+        <a href="/" class="nav-logo">maw<span class="accent">.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container container--narrow">
+            <nav aria-label="Fil d'Ariane" style="margin-bottom: 2rem;">
+                <ol style="display:flex;gap:.5rem;list-style:none;padding:0;font-size:.9rem;color:var(--text-muted);">
+                    <li><a href="/" style="color:var(--accent);">Accueil</a> /</li>
+                    <li><a href="/#projets" style="color:var(--accent);">Projets</a> /</li>
+                    <li>ResaDZ</li>
+                </ol>
+            </nav>
+            <header class="section-header">
+                <span class="section-tag">Étude de cas</span>
+                <h1 class="section-title">ResaDZ<span class="accent">.</span></h1>
+                <p class="section-sub">Plateforme SaaS de réservation multi-tenant conçue pour le marché algérien. De l'idée à la production.</p>
+            </header>
+        </div>
+    </section>
+
+    <section class="section section--alt">
+        <div class="container">
+            <div class="apropos-grid">
+                <div class="apropos-block">
+                    <h2 class="apropos-block-title">Le contexte</h2>
+                    <p>En Algérie, la réservation en ligne reste largement sous-exploitée. Les restaurants, salons de coiffure et prestataires de services gèrent encore leurs rendez-vous par téléphone ou cahier papier.</p>
+                    <p>L'objectif : créer une plateforme SaaS permettant à n'importe quel professionnel de <strong>recevoir des réservations en ligne</strong> sans compétences techniques, avec un système adapté au contexte local (paiement, langue, habitudes).</p>
+                </div>
+                <div class="apropos-block">
+                    <h2 class="apropos-block-title">Le défi technique</h2>
+                    <p>Architecture multi-tenant : chaque professionnel a son propre espace, son propre sous-domaine, ses propres paramètres — mais tout fonctionne sur une seule base de code.</p>
+                    <p>Contraintes spécifiques : intégration de moyens de paiement locaux (CIB, BaridiMob), gestion du <span class="gold-text">calendrier en arabe et français</span>, latence réseau variable, et accessibilité sur des connexions lentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:3rem;">Fonctionnalités développées</h2>
+            <div class="services-grid">
+                <article class="svc-card">
+                    <span class="svc-icon">&#128197;</span>
+                    <h3 class="svc-title">Système de réservation</h3>
+                    <p class="svc-desc">Calendrier interactif, créneaux configurables, confirmations automatiques par SMS et email. Gestion des conflits horaires.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#127968;</span>
+                    <h3 class="svc-title">Multi-tenant</h3>
+                    <p class="svc-desc">Chaque professionnel a son espace isolé : sous-domaine personnalisé, thème, horaires, services. Architecture évolutive.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#128179;</span>
+                    <h3 class="svc-title">Paiement local</h3>
+                    <p class="svc-desc">Intégration CIB et BaridiMob pour le paiement en ligne. Fallback vers paiement sur place avec confirmation manuelle.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#128202;</span>
+                    <h3 class="svc-title">Dashboard admin</h3>
+                    <p class="svc-desc">Statistiques, taux de remplissage, revenus, clients fidèles. Le professionnel pilote son activité en un coup d'œil.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#128241;</span>
+                    <h3 class="svc-title">Interface client</h3>
+                    <p class="svc-desc">Réservation en 3 clics depuis mobile. Choix du service, du créneau, confirmation. Sans inscription obligatoire.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#128276;</span>
+                    <h3 class="svc-title">Notifications</h3>
+                    <p class="svc-desc">Rappels automatiques par SMS et email avant le rendez-vous. Réduction du taux de no-show de 40%.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Stack technique</h2>
+            <div class="stack-grid">
+                <div class="stack-card"><span class="stack-name">Laravel 11</span><span class="stack-detail">Backend & API</span></div>
+                <div class="stack-card"><span class="stack-name">Livewire 3</span><span class="stack-detail">Interface réactive</span></div>
+                <div class="stack-card"><span class="stack-name">Filament</span><span class="stack-detail">Admin panel</span></div>
+                <div class="stack-card"><span class="stack-name">Tailwind CSS</span><span class="stack-detail">Design system</span></div>
+                <div class="stack-card"><span class="stack-name">MySQL</span><span class="stack-detail">Base de données</span></div>
+                <div class="stack-card"><span class="stack-name">Multi-tenancy</span><span class="stack-detail">Stancl/Tenancy</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Impact & résultats</h2>
+            <div class="legal-content">
+                <ul style="margin:1rem 0;padding-left:1.5rem;line-height:2.2;">
+                    <li><strong>Architecture scalable</strong> — Prête à accueillir des centaines de professionnels sans refonte</li>
+                    <li><strong>Temps de réservation</strong> — Réduit de 5 minutes (téléphone) à 30 secondes (en ligne)</li>
+                    <li><strong>No-show réduit</strong> — -40% grâce aux rappels automatiques SMS</li>
+                    <li><strong>Autonomie totale</strong> — Chaque professionnel gère son planning sans formation complexe</li>
+                    <li><strong>Adapté au marché</strong> — Paiement local, bilinguisme, performance sur connexions lentes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--alt" style="text-align: center;">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title">Un projet SaaS en tête ?</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.7;">Vous avez une idée de plateforme ? Parlons-en. De l'architecture à la mise en production, je vous accompagne.</p>
+            <a href="/#contact" class="btn btn--primary">Discuter de votre projet <span class="btn-arrow">&rarr;</span></a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container container--narrow" style="text-align:center;">
+            <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">
+                Voir aussi :
+                <a href="/projet-collection-loriginal" style="color:var(--accent);">Projet Collection L'Original</a> &middot;
+                <a href="/projet-la-formule" style="color:var(--accent);">Projet La Formule</a> &middot;
+                <a href="/creation-site-ecommerce" style="color:var(--accent);">Site e-commerce</a> &middot;
+                <a href="/agence-web-lille" style="color:var(--accent);">Agence web Lille</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025–2026 mon-agenceweb.fr &middot; Farouk</p>
+    </footer>
+
+</body>
+</html>
