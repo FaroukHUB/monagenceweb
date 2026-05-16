@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Démo site artisan — Artisan Pro Habitat | mon-agenceweb.fr</title>
+    <meta name="description" content="Démonstration d'un site web professionnel pour artisan : formulaire de devis, galerie avant/après, avis clients, zones d'intervention. Voyez ce que je peux créer pour vous.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/demo-site-artisan">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mon-agenceweb.fr/demo-site-artisan">
+    <meta property="og:title" content="Démo site artisan — Voyez le résultat avant de commander">
+    <meta property="og:description" content="Exemple concret d'un site professionnel pour artisan : design premium, devis en ligne, avis, réalisations. Un aperçu de ce que je crée.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+    <style>
+        .demo-banner{background:var(--accent);color:#fff;text-align:center;padding:.6rem 1rem;font-size:.85rem;position:fixed;top:0;left:0;right:0;z-index:9999;}
+        .demo-banner a{color:#fff;text-decoration:underline;font-weight:600;}
+        .demo-hero{background:linear-gradient(135deg,#1A1A2E 0%,#2d2d4e 100%);color:#fff;padding:6rem 1.5rem 4rem;text-align:center;margin-top:2.2rem;}
+        .demo-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1rem;font-weight:700;}
+        .demo-hero p{font-size:1.1rem;opacity:.85;max-width:600px;margin:0 auto 2rem;line-height:1.7;}
+        .demo-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+        .demo-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.8rem;border-radius:6px;font-weight:600;font-size:.95rem;text-decoration:none;transition:transform .2s;}
+        .demo-btn:hover{transform:translateY(-2px);}
+        .demo-btn--primary{background:var(--accent);color:#fff;}
+        .demo-btn--outline{border:2px solid rgba(255,255,255,.4);color:#fff;}
+        .demo-btn--whatsapp{background:#25D366;color:#fff;}
+        .demo-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;padding:3rem 1.5rem;max-width:800px;margin:0 auto;text-align:center;}
+        .demo-stat-number{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--accent);}
+        .demo-stat-label{font-size:.85rem;color:var(--text-muted);margin-top:.3rem;}
+        .demo-review{background:#fff;border:1px solid #eee;border-radius:12px;padding:1.5rem;margin-bottom:1rem;}
+        .demo-review-stars{color:var(--accent);font-size:1.2rem;margin-bottom:.5rem;}
+        .demo-review-text{font-style:italic;color:#555;line-height:1.6;margin-bottom:.5rem;}
+        .demo-review-author{font-weight:600;font-size:.9rem;}
+        .demo-ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
+        .demo-ba-item{background:#f0ede8;border-radius:8px;padding:3rem 1rem;text-align:center;font-weight:600;color:var(--text-muted);}
+        .demo-dashboard{background:#1A1A2E;border-radius:12px;padding:2rem;color:#fff;margin-top:2rem;}
+        .demo-dashboard h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:1.5rem;}
+        .demo-dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:1.5rem;}
+        .demo-dash-card{background:rgba(255,255,255,.08);border-radius:8px;padding:1rem;text-align:center;}
+        .demo-dash-card .num{font-size:1.8rem;font-weight:700;color:var(--accent);}
+        .demo-dash-card .lbl{font-size:.75rem;opacity:.7;margin-top:.3rem;}
+        .demo-dash-table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:1rem;}
+        .demo-dash-table th{text-align:left;padding:.5rem;border-bottom:1px solid rgba(255,255,255,.1);opacity:.6;font-weight:500;}
+        .demo-dash-table td{padding:.5rem;border-bottom:1px solid rgba(255,255,255,.05);}
+        .demo-dash-status{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600;}
+        .demo-dash-status--new{background:rgba(59,130,246,.2);color:#60a5fa;}
+        .demo-dash-status--progress{background:rgba(251,191,36,.2);color:#fbbf24;}
+        .demo-dash-status--done{background:rgba(34,197,94,.2);color:#22c55e;}
+        @media(max-width:640px){.demo-ba{grid-template-columns:1fr;}.demo-dash-grid{grid-template-columns:repeat(2,1fr);}}
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "name": "Démo site artisan — Artisan Pro Habitat",
+                "description": "Démonstration d'un site professionnel pour artisan créé par mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr/demo-site-artisan",
+                "creator": { "@type": "Person", "name": "Farouk" }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
+                    { "@type": "ListItem", "position": 2, "name": "Site artisan", "item": "https://mon-agenceweb.fr/creation-site-web-artisan" },
+                    { "@type": "ListItem", "position": 3, "name": "Démo artisan", "item": "https://mon-agenceweb.fr/demo-site-artisan" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body style="cursor: auto;">
+
+    <!-- DEMO BANNER -->
+    <div class="demo-banner">
+        Ceci est une démo — <a href="/creation-site-web-artisan">Je veux un site comme celui-ci</a>
+    </div>
+
+    <!-- HERO ARTISAN -->
+    <section class="demo-hero">
+        <p style="font-size:.85rem;opacity:.6;letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem;">Artisan Pro Habitat — Dunkerque & alentours</p>
+        <h1>Rénovation, peinture &amp; dépannage<br>à Dunkerque et environs</h1>
+        <p>Artisan multi-services depuis 15 ans. Travaux de rénovation, peinture intérieure/extérieure, plomberie, électricité légère et petits travaux. Intervention rapide, devis gratuit sous 24h.</p>
+        <div class="demo-actions">
+            <a href="#demo-devis" class="demo-btn demo-btn--primary">&#128221; Demander un devis</a>
+            <a href="tel:+33600000000" class="demo-btn demo-btn--outline">&#128222; 06 00 00 00 00</a>
+            <a href="#" class="demo-btn demo-btn--whatsapp">&#128172; WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- STATS CONFIANCE -->
+    <div class="demo-stats">
+        <div>
+            <div class="demo-stat-number">15 ans</div>
+            <div class="demo-stat-label">d'expérience</div>
+        </div>
+        <div>
+            <div class="demo-stat-number">500+</div>
+            <div class="demo-stat-label">chantiers réalisés</div>
+        </div>
+        <div>
+            <div class="demo-stat-number">4.9/5</div>
+            <div class="demo-stat-label">sur Google (87 avis)</div>
+        </div>
+        <div>
+            <div class="demo-stat-number">24h</div>
+            <div class="demo-stat-label">délai de réponse</div>
+        </div>
+    </div>
+
+    <main>
+
+    <!-- SERVICES -->
+    <section class="section">
+        <div class="container">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:3rem;">Nos services</h2>
+            <div class="services-grid">
+                <article class="svc-card">
+                    <span class="svc-icon">&#127912;</span>
+                    <h3 class="svc-title">Peinture intérieure &amp; extérieure</h3>
+                    <p class="svc-desc">Préparation des surfaces, peinture, enduits décoratifs, ravalement de façade. Finitions soignées garanties.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#128736;</span>
+                    <h3 class="svc-title">Rénovation complète</h3>
+                    <p class="svc-desc">Rénovation salle de bain, cuisine, appartement. Gestion de A à Z, un seul interlocuteur pour tout votre projet.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#128167;</span>
+                    <h3 class="svc-title">Plomberie</h3>
+                    <p class="svc-desc">Installation, réparation, remplacement. Fuite, robinetterie, chauffe-eau, raccordements. Intervention rapide.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#9889;</span>
+                    <h3 class="svc-title">Électricité légère</h3>
+                    <p class="svc-desc">Prises, interrupteurs, luminaires, petits dépannages. Mise en sécurité et conformité de base.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#128295;</span>
+                    <h3 class="svc-title">Petits travaux &amp; dépannage</h3>
+                    <p class="svc-desc">Montage meubles, étagères, fixations, serrurerie, débouchage. Tout ce qui facilite votre quotidien.</p>
+                </article>
+                <article class="svc-card">
+                    <span class="svc-icon">&#127968;</span>
+                    <h3 class="svc-title">Aménagement intérieur</h3>
+                    <p class="svc-desc">Pose de parquet, carrelage, faux plafond, cloisons. Transformation de vos espaces selon vos envies.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ZONES D'INTERVENTION -->
+    <section class="section section--alt">
+        <div class="container">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Zones d'intervention</h2>
+            <p style="text-align:center;color:var(--text-muted);margin-bottom:2rem;">Nous intervenons dans un rayon de 30 km autour de Dunkerque.</p>
+            <div class="stack-grid">
+                <div class="stack-card"><span class="stack-name">Dunkerque</span><span class="stack-detail">Centre & quartiers</span></div>
+                <div class="stack-card"><span class="stack-name">Grande-Synthe</span><span class="stack-detail">& Loon-Plage</span></div>
+                <div class="stack-card"><span class="stack-name">Gravelines</span><span class="stack-detail">& Petit-Fort-Philippe</span></div>
+                <div class="stack-card"><span class="stack-name">Coudekerque</span><span class="stack-detail">& Cappelle</span></div>
+                <div class="stack-card"><span class="stack-name">Malo-les-Bains</span><span class="stack-detail">& Rosendaël</span></div>
+                <div class="stack-card"><span class="stack-name">Bergues</span><span class="stack-detail">& Bourbourg</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RÉALISATIONS AVANT/APRÈS -->
+    <section class="section">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Nos réalisations</h2>
+            <div class="demo-ba">
+                <div class="demo-ba-item">AVANT<br><small style="font-weight:400;font-size:.8rem;">Photo du chantier initial</small></div>
+                <div class="demo-ba-item" style="background:#e8e4dc;">APRÈS<br><small style="font-weight:400;font-size:.8rem;">Résultat final</small></div>
+            </div>
+            <p style="text-align:center;font-weight:500;margin-bottom:.5rem;">Rénovation salle de bain — Dunkerque</p>
+            <p style="text-align:center;color:var(--text-muted);font-size:.9rem;">Remplacement baignoire par douche italienne, carrelage, peinture, plomberie. Durée : 5 jours.</p>
+
+            <div class="demo-ba" style="margin-top:2rem;">
+                <div class="demo-ba-item">AVANT<br><small style="font-weight:400;font-size:.8rem;">Photo du chantier initial</small></div>
+                <div class="demo-ba-item" style="background:#e8e4dc;">APRÈS<br><small style="font-weight:400;font-size:.8rem;">Résultat final</small></div>
+            </div>
+            <p style="text-align:center;font-weight:500;margin-bottom:.5rem;">Peinture intérieure appartement — Grande-Synthe</p>
+            <p style="text-align:center;color:var(--text-muted);font-size:.9rem;">Lessivage, rebouchage, 2 couches, finitions. 65m². Durée : 3 jours.</p>
+        </div>
+    </section>
+
+    <!-- AVIS CLIENTS -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Avis clients Google — 4.9/5</h2>
+            <div class="demo-review">
+                <div class="demo-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="demo-review-text">"Travail impeccable pour la rénovation de notre salle de bain. Ponctuel, propre et le résultat est exactement ce qu'on voulait. Je recommande !"</p>
+                <p class="demo-review-author">— Marie D., Dunkerque</p>
+            </div>
+            <div class="demo-review">
+                <div class="demo-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="demo-review-text">"Intervention rapide pour un dégât des eaux. Professionnel, réactif et tarif honnête. Merci encore !"</p>
+                <p class="demo-review-author">— Thomas L., Gravelines</p>
+            </div>
+            <div class="demo-review">
+                <div class="demo-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="demo-review-text">"Peinture de 3 pièces + pose parquet. Travail soigné, conseils pertinents sur les couleurs. Le rendu est magnifique."</p>
+                <p class="demo-review-author">— Sophie M., Grande-Synthe</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULAIRE DEVIS -->
+    <section class="section" id="demo-devis">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Demander un devis gratuit</h2>
+            <p style="text-align:center;color:var(--text-muted);margin-bottom:2rem;">Réponse sous 24h. Décrivez votre projet et nous vous recontactons rapidement.</p>
+            <form style="max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:1rem;" onsubmit="return false;">
+                <input type="text" placeholder="Votre nom" style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;">
+                <input type="tel" placeholder="Téléphone" style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;">
+                <input type="text" placeholder="Ville / Quartier" style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;">
+                <select style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;background:#fff;">
+                    <option>Type de travaux</option>
+                    <option>Peinture</option>
+                    <option>Rénovation salle de bain</option>
+                    <option>Plomberie</option>
+                    <option>Électricité</option>
+                    <option>Petits travaux</option>
+                    <option>Autre</option>
+                </select>
+                <textarea placeholder="Décrivez votre projet..." rows="4" style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;resize:vertical;"></textarea>
+                <button type="submit" class="btn btn--primary" style="width:100%;">Envoyer ma demande de devis</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
+            <div class="legal-content">
+                <h3>Quel est le délai d'intervention ?</h3>
+                <p>Pour un dépannage : sous 24-48h. Pour un chantier planifié : nous convenons ensemble d'une date qui vous arrange, généralement sous 1 à 2 semaines.</p>
+                <h3>Le devis est-il gratuit ?</h3>
+                <p>Oui, toujours. Nous nous déplaçons gratuitement pour évaluer votre projet et vous remettre un devis détaillé sans engagement.</p>
+                <h3>Êtes-vous assuré ?</h3>
+                <p>Oui. Assurance responsabilité civile professionnelle et garantie décennale pour tous nos travaux.</p>
+                <h3>Intervenez-vous le week-end ?</h3>
+                <p>Sur rendez-vous, le samedi matin est possible. Pour les urgences (fuite, etc.), nous sommes joignables 7j/7.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD DEMO -->
+    <section class="section">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:1rem;">Espace artisan inclus</h2>
+            <p style="text-align:center;color:var(--text-muted);margin-bottom:2rem;">En plus du site, vous pouvez avoir un espace de gestion pour suivre vos demandes et piloter votre activité.</p>
+
+            <div class="demo-dashboard">
+                <h3>&#128202; Tableau de bord — Mai 2026</h3>
+                <div class="demo-dash-grid">
+                    <div class="demo-dash-card">
+                        <div class="num">23</div>
+                        <div class="lbl">Demandes ce mois</div>
+                    </div>
+                    <div class="demo-dash-card">
+                        <div class="num">45</div>
+                        <div class="lbl">Appels générés</div>
+                    </div>
+                    <div class="demo-dash-card">
+                        <div class="num">18</div>
+                        <div class="lbl">Devis envoyés</div>
+                    </div>
+                    <div class="demo-dash-card">
+                        <div class="num">67%</div>
+                        <div class="lbl">Taux conversion</div>
+                    </div>
+                </div>
+
+                <h4 style="font-size:.9rem;opacity:.7;margin-bottom:.5rem;">Dernières demandes</h4>
+                <table class="demo-dash-table">
+                    <thead>
+                        <tr><th>Client</th><th>Prestation</th><th>Ville</th><th>Statut</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M. Dupont</td>
+                            <td>Rénovation SDB</td>
+                            <td>Dunkerque</td>
+                            <td><span class="demo-dash-status demo-dash-status--new">Nouveau</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mme. Laurent</td>
+                            <td>Peinture 2 pièces</td>
+                            <td>Gravelines</td>
+                            <td><span class="demo-dash-status demo-dash-status--progress">En cours</span></td>
+                        </tr>
+                        <tr>
+                            <td>M. Benali</td>
+                            <td>Fuite cuisine</td>
+                            <td>Grande-Synthe</td>
+                            <td><span class="demo-dash-status demo-dash-status--done">Accepté</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mme. Martin</td>
+                            <td>Pose parquet</td>
+                            <td>Coudekerque</td>
+                            <td><span class="demo-dash-status demo-dash-status--new">Nouveau</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;">
+                    <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:1rem;">
+                        <h4 style="font-size:.8rem;opacity:.6;margin-bottom:.5rem;">&#128197; Prochaines interventions</h4>
+                        <p style="font-size:.85rem;margin-bottom:.3rem;">Lun 19 — Peinture, Gravelines</p>
+                        <p style="font-size:.85rem;margin-bottom:.3rem;">Mar 20 — Rénovation SDB, Dunkerque</p>
+                        <p style="font-size:.85rem;">Jeu 22 — Pose parquet, Coudekerque</p>
+                    </div>
+                    <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:1rem;">
+                        <h4 style="font-size:.8rem;opacity:.6;margin-bottom:.5rem;">&#11088; Derniers avis</h4>
+                        <p style="font-size:.85rem;margin-bottom:.3rem;">&#9733;&#9733;&#9733;&#9733;&#9733; Marie D. — "Impeccable !"</p>
+                        <p style="font-size:.85rem;margin-bottom:.3rem;">&#9733;&#9733;&#9733;&#9733;&#9733; Thomas L. — "Rapide et pro"</p>
+                        <p style="font-size:.85rem;">&#9733;&#9733;&#9733;&#9733;&#9734; Jean P. — "Bon travail"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BACK TO MAW -->
+    <section class="section section--alt" style="text-align:center;">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title">Vous voulez un site comme celui-ci ?</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7;">Je crée ce type de site pour des artisans partout en France. Devis gratuit, livraison en 2-3 semaines.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="/#contact" class="btn btn--primary">Commander mon site artisan <span class="btn-arrow">&rarr;</span></a>
+                <a href="/creation-site-web-artisan" class="btn btn--outline">En savoir plus</a>
+            </div>
+            <p style="margin-top:1.5rem;font-size:.9rem;color:var(--text-muted);">
+                Voir aussi : <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">Site artisan + dashboard</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER (fictif artisan) -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/creation-site-web-artisan">Créé par mon-agenceweb.fr</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </div>
+        <p>&copy; 2026 Artisan Pro Habitat — Démonstration mon-agenceweb.fr</p>
+    </footer>
+
+</body>
+</html>

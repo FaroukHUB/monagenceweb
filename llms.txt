@@ -30,7 +30,9 @@ Laravel, WooCommerce, WordPress, Livewire, Filament, Tailwind CSS, PHP, MySQL, I
 - Accueil : https://mon-agenceweb.fr/
 - Création site restaurant : https://mon-agenceweb.fr/creation-site-web-restaurant
 - Création site fast-food : https://mon-agenceweb.fr/creation-site-fast-food
-- Création site artisan : https://mon-agenceweb.fr/creation-site-web-artisan
+- Création site artisan (page pilier) : https://mon-agenceweb.fr/creation-site-web-artisan
+- Démo site artisan : https://mon-agenceweb.fr/demo-site-artisan
+- Site artisan + dashboard : https://mon-agenceweb.fr/site-artisan-avec-dashboard
 - Création site plombier : https://mon-agenceweb.fr/creation-site-plombier
 - Création site électricien : https://mon-agenceweb.fr/creation-site-electricien
 - Création site e-commerce : https://mon-agenceweb.fr/creation-site-ecommerce
