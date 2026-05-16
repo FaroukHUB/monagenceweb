@@ -531,8 +531,87 @@
             font-size: .8rem;
         }
 
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 9998;
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+        }
+        .whatsapp-float-bubble {
+            background: var(--white);
+            border: 1px solid var(--sand-200);
+            border-radius: 12px 12px 0 12px;
+            padding: .7rem 1rem;
+            font-size: .82rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+            max-width: 200px;
+            line-height: 1.4;
+            animation: fadeInBubble .5s ease .5s both;
+        }
+        @keyframes fadeInBubble { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .whatsapp-float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25d366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37,211,102,.4);
+            transition: transform .2s, box-shadow .2s;
+        }
+        .whatsapp-float-btn:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(37,211,102,.5); }
+        .whatsapp-float-btn svg { width: 32px; height: 32px; fill: #fff; }
+
+        /* Bonus Dashboard Section (outside demo site) */
+        .bonus-separator {
+            background: linear-gradient(135deg, var(--copper) 0%, var(--copper-dark) 100%);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        .bonus-separator h2 {
+            color: var(--white);
+            font-size: 1.6rem;
+            margin-bottom: .5rem;
+        }
+        .bonus-separator p {
+            color: rgba(255,255,255,.8);
+            font-size: .95rem;
+        }
+        .bonus-section {
+            background: #f8fafc;
+            border-top: 4px solid var(--copper);
+            padding: 4rem 0;
+        }
+        .bonus-section .section-header p { color: var(--text-muted); }
+        .bonus-features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 3rem;
+        }
+        .bonus-feature {
+            background: var(--white);
+            border: 1px solid var(--sand-200);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all .2s;
+        }
+        .bonus-feature:hover { border-color: var(--copper); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,.06); }
+        .bonus-feature-icon { font-size: 2rem; margin-bottom: .8rem; }
+        .bonus-feature h4 { font-family: 'Inter', sans-serif; font-size: .9rem; font-weight: 700; margin-bottom: .3rem; }
+        .bonus-feature p { font-size: .8rem; color: var(--text-muted); line-height: 1.5; }
+
         /* Responsive */
         @media (max-width: 1024px) {
+            .bonus-features-grid { grid-template-columns: repeat(2, 1fr); }
             .services-grid, .ba-grid { grid-template-columns: repeat(2, 1fr); }
             .zones-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -554,6 +633,8 @@
             .dashboard-kpis { grid-template-columns: 1fr 1fr; }
             .dashboard-table { font-size: .78rem; }
             .footer-bottom { flex-direction: column; gap: .5rem; }
+            .bonus-features-grid { grid-template-columns: 1fr; }
+            .whatsapp-float-bubble { display: none; }
         }
     </style>
 </head>
@@ -659,7 +740,7 @@
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=75" alt="Rénovation énergétique" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=75" alt="Rénovation énergétique" loading="lazy">
                     <div class="service-card-body">
                         <h3>Rénovation énergétique</h3>
                         <p>Audit, isolation, remplacement chaudière. Accompagnement aides MaPrimeRénov' et CEE inclus.</p>
@@ -816,85 +897,6 @@
                     <h4>Bourbourg</h4>
                     <p>& Craywick</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dashboard Preview -->
-    <section class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2 style="color:#fff;">Votre espace client en ligne</h2>
-                <p>Suivez vos interventions, consultez vos factures et planifiez vos rendez-vous directement depuis votre tableau de bord.</p>
-            </div>
-            <div class="dashboard">
-                <div class="dashboard-header">
-                    <h3>Tableau de bord — Artisan Pro Habitat</h3>
-                    <span style="color:var(--green-500);font-size:.8rem;font-weight:600;">● En ligne</span>
-                </div>
-                <div class="dashboard-kpis">
-                    <div class="kpi-card">
-                        <div class="kpi-label">Ce mois</div>
-                        <div class="kpi-value">23</div>
-                        <div class="kpi-trend">↑ +12% vs mois dernier</div>
-                    </div>
-                    <div class="kpi-card">
-                        <div class="kpi-label">Devis envoyés</div>
-                        <div class="kpi-value">18</div>
-                        <div class="kpi-trend">↑ 78% taux d'acceptation</div>
-                    </div>
-                    <div class="kpi-card">
-                        <div class="kpi-label">CA mensuel</div>
-                        <div class="kpi-value">14 200€</div>
-                        <div class="kpi-trend">↑ +8% vs objectif</div>
-                    </div>
-                    <div class="kpi-card">
-                        <div class="kpi-label">Note Google</div>
-                        <div class="kpi-value">4.9/5</div>
-                        <div class="kpi-trend">187 avis collectés</div>
-                    </div>
-                </div>
-                <table class="dashboard-table">
-                    <thead>
-                        <tr>
-                            <th>Client</th>
-                            <th>Prestation</th>
-                            <th>Date</th>
-                            <th>Statut</th>
-                            <th>Montant</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>M. Lefebvre</td>
-                            <td>Remplacement chauffe-eau</td>
-                            <td>15 mai 2026</td>
-                            <td><span class="status status-done">Terminé</span></td>
-                            <td>1 850€</td>
-                        </tr>
-                        <tr>
-                            <td>Mme Dumont</td>
-                            <td>Rénovation salle de bain</td>
-                            <td>12 mai 2026</td>
-                            <td><span class="status status-progress">En cours</span></td>
-                            <td>6 400€</td>
-                        </tr>
-                        <tr>
-                            <td>M. Vandamme</td>
-                            <td>Fuite robinet cuisine</td>
-                            <td>10 mai 2026</td>
-                            <td><span class="status status-done">Terminé</span></td>
-                            <td>180€</td>
-                        </tr>
-                        <tr>
-                            <td>SCI Les Dunes</td>
-                            <td>Entretien chaudière x4</td>
-                            <td>18 mai 2026</td>
-                            <td><span class="status status-pending">Planifié</span></td>
-                            <td>480€</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>
@@ -1092,6 +1094,149 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <div class="whatsapp-float-bubble">
+            <strong>Une urgence ?</strong><br>Réponse en 5 min par WhatsApp
+        </div>
+        <a href="#" class="whatsapp-float-btn" aria-label="Contacter par WhatsApp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- BONUS : Tableau de bord artisan (hors démo) -->
+    <!-- ============================================ -->
+    <div class="bonus-separator">
+        <div class="container">
+            <h2>⬇ Ce qui suit n'est PAS le site de l'artisan</h2>
+            <p>C'est un aperçu du <strong>tableau de bord privé</strong> inclus avec votre site — pour gérer votre activité au quotidien.</p>
+        </div>
+    </div>
+
+    <section class="bonus-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Votre tableau de bord privé artisan</h2>
+                <p>En plus du site visible par vos clients, vous recevez un espace de gestion complet pour piloter votre activité : devis automatiques, gestion chantiers, clients et calendrier.</p>
+            </div>
+            <div class="bonus-features-grid">
+                <div class="bonus-feature">
+                    <div class="bonus-feature-icon">📋</div>
+                    <h4>Rédaction de devis automatique</h4>
+                    <p>Générez des devis professionnels en 2 clics grâce à l'IA. Envoi par email ou SMS au client.</p>
+                </div>
+                <div class="bonus-feature">
+                    <div class="bonus-feature-icon">🏗️</div>
+                    <h4>Gestion de chantiers</h4>
+                    <p>Suivi d'avancement, photos avant/après, notes par étape. Tout centralisé au même endroit.</p>
+                </div>
+                <div class="bonus-feature">
+                    <div class="bonus-feature-icon">👥</div>
+                    <h4>Gestion des clients</h4>
+                    <p>Fiche client avec historique, coordonnées, devis envoyés, interventions passées et à venir.</p>
+                </div>
+                <div class="bonus-feature">
+                    <div class="bonus-feature-icon">📅</div>
+                    <h4>Calendrier & planning</h4>
+                    <p>Vue semaine/mois, créneaux bloqués, rappels automatiques par SMS aux clients la veille.</p>
+                </div>
+                <div class="bonus-feature">
+                    <div class="bonus-feature-icon">📊</div>
+                    <h4>Statistiques & CA</h4>
+                    <p>Chiffre d'affaires mensuel, taux d'acceptation devis, nombre d'interventions, objectifs.</p>
+                </div>
+                <div class="bonus-feature">
+                    <div class="bonus-feature-icon">⭐</div>
+                    <h4>Collecte d'avis Google</h4>
+                    <p>Envoi automatique d'un lien avis Google après chaque intervention. Boostez votre réputation.</p>
+                </div>
+                <div class="bonus-feature">
+                    <div class="bonus-feature-icon">💬</div>
+                    <h4>Messagerie clients</h4>
+                    <p>Répondez aux demandes de devis directement depuis le dashboard. Notifications en temps réel.</p>
+                </div>
+                <div class="bonus-feature">
+                    <div class="bonus-feature-icon">📱</div>
+                    <h4>Application mobile</h4>
+                    <p>Accédez au tableau de bord depuis votre téléphone sur chantier. Tout fonctionne en responsive.</p>
+                </div>
+            </div>
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h3>Aperçu — Tableau de bord Artisan Pro Habitat</h3>
+                    <span style="color:var(--green-500);font-size:.8rem;font-weight:600;">● En ligne</span>
+                </div>
+                <div class="dashboard-kpis">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Interventions ce mois</div>
+                        <div class="kpi-value">23</div>
+                        <div class="kpi-trend">↑ +12% vs mois dernier</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Devis envoyés</div>
+                        <div class="kpi-value">18</div>
+                        <div class="kpi-trend">↑ 78% taux d'acceptation</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">CA mensuel</div>
+                        <div class="kpi-value">14 200€</div>
+                        <div class="kpi-trend">↑ +8% vs objectif</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Note Google</div>
+                        <div class="kpi-value">4.9/5</div>
+                        <div class="kpi-trend">187 avis collectés</div>
+                    </div>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Prestation</th>
+                            <th>Date</th>
+                            <th>Statut</th>
+                            <th>Montant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M. Lefebvre</td>
+                            <td>Remplacement chauffe-eau</td>
+                            <td>15 mai 2026</td>
+                            <td><span class="status status-done">Terminé</span></td>
+                            <td>1 850€</td>
+                        </tr>
+                        <tr>
+                            <td>Mme Dumont</td>
+                            <td>Rénovation salle de bain</td>
+                            <td>12 mai 2026</td>
+                            <td><span class="status status-progress">En cours</span></td>
+                            <td>6 400€</td>
+                        </tr>
+                        <tr>
+                            <td>M. Vandamme</td>
+                            <td>Fuite robinet cuisine</td>
+                            <td>10 mai 2026</td>
+                            <td><span class="status status-done">Terminé</span></td>
+                            <td>180€</td>
+                        </tr>
+                        <tr>
+                            <td>SCI Les Dunes</td>
+                            <td>Entretien chaudière x4</td>
+                            <td>18 mai 2026</td>
+                            <td><span class="status status-pending">Planifié</span></td>
+                            <td>480€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align:center;margin-top:2.5rem;">
+                <a href="/site-artisan-avec-dashboard" class="btn btn-primary">Découvrir l'offre site + dashboard à 1200€ →</a>
+            </div>
+        </div>
+    </section>
 
     <!-- FAQ Toggle Script -->
     <script>
