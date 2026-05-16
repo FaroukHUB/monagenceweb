@@ -5,369 +5,1180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
-    <title>Démo site artisan — Artisan Pro Habitat | mon-agenceweb.fr</title>
-    <meta name="description" content="Démonstration d'un site web professionnel pour artisan : formulaire de devis, galerie avant/après, avis clients, zones d'intervention. Voyez ce que je peux créer pour vous.">
-    <meta name="theme-color" content="#FAF7F2">
+    <title>Artisan Pro Habitat — Plomberie, Chauffage & Rénovation | Démo site artisan</title>
+    <meta name="description" content="Artisan Pro Habitat : votre artisan plombier-chauffagiste à Dunkerque. Devis gratuit en 24h, interventions 7j/7, 15 ans d'expérience. Découvrez cette démo de site professionnel pour artisan.">
+    <meta name="theme-color" content="#0f172a">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mon-agenceweb.fr/demo-site-artisan">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mon-agenceweb.fr/demo-site-artisan">
-    <meta property="og:title" content="Démo site artisan — Voyez le résultat avant de commander">
-    <meta property="og:description" content="Exemple concret d'un site professionnel pour artisan : design premium, devis en ligne, avis, réalisations. Un aperçu de ce que je crée.">
-    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:title" content="Artisan Pro Habitat — Plomberie, Chauffage & Rénovation à Dunkerque">
+    <meta property="og:description" content="Démo d'un site artisan premium : design moderne, formulaire de devis, avis clients, galerie avant/après. Voyez ce qu'un site professionnel peut faire pour votre activité.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-demo-artisan.jpg">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="style.min.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-        .demo-banner{background:var(--accent);color:#fff;text-align:center;padding:.6rem 1rem;font-size:.85rem;position:fixed;top:0;left:0;right:0;z-index:9999;}
-        .demo-banner a{color:#fff;text-decoration:underline;font-weight:600;}
-        .demo-hero{background:linear-gradient(135deg,#1A1A2E 0%,#2d2d4e 100%);color:#fff;padding:6rem 1.5rem 4rem;text-align:center;margin-top:2.2rem;}
-        .demo-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1rem;font-weight:700;}
-        .demo-hero p{font-size:1.1rem;opacity:.85;max-width:600px;margin:0 auto 2rem;line-height:1.7;}
-        .demo-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
-        .demo-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.8rem;border-radius:6px;font-weight:600;font-size:.95rem;text-decoration:none;transition:transform .2s;}
-        .demo-btn:hover{transform:translateY(-2px);}
-        .demo-btn--primary{background:var(--accent);color:#fff;}
-        .demo-btn--outline{border:2px solid rgba(255,255,255,.4);color:#fff;}
-        .demo-btn--whatsapp{background:#25D366;color:#fff;}
-        .demo-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;padding:3rem 1.5rem;max-width:800px;margin:0 auto;text-align:center;}
-        .demo-stat-number{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--accent);}
-        .demo-stat-label{font-size:.85rem;color:var(--text-muted);margin-top:.3rem;}
-        .demo-review{background:#fff;border:1px solid #eee;border-radius:12px;padding:1.5rem;margin-bottom:1rem;}
-        .demo-review-stars{color:var(--accent);font-size:1.2rem;margin-bottom:.5rem;}
-        .demo-review-text{font-style:italic;color:#555;line-height:1.6;margin-bottom:.5rem;}
-        .demo-review-author{font-weight:600;font-size:.9rem;}
-        .demo-ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
-        .demo-ba-item{background:#f0ede8;border-radius:8px;padding:3rem 1rem;text-align:center;font-weight:600;color:var(--text-muted);}
-        .demo-dashboard{background:#1A1A2E;border-radius:12px;padding:2rem;color:#fff;margin-top:2rem;}
-        .demo-dashboard h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:1.5rem;}
-        .demo-dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:1.5rem;}
-        .demo-dash-card{background:rgba(255,255,255,.08);border-radius:8px;padding:1rem;text-align:center;}
-        .demo-dash-card .num{font-size:1.8rem;font-weight:700;color:var(--accent);}
-        .demo-dash-card .lbl{font-size:.75rem;opacity:.7;margin-top:.3rem;}
-        .demo-dash-table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:1rem;}
-        .demo-dash-table th{text-align:left;padding:.5rem;border-bottom:1px solid rgba(255,255,255,.1);opacity:.6;font-weight:500;}
-        .demo-dash-table td{padding:.5rem;border-bottom:1px solid rgba(255,255,255,.05);}
-        .demo-dash-status{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600;}
-        .demo-dash-status--new{background:rgba(59,130,246,.2);color:#60a5fa;}
-        .demo-dash-status--progress{background:rgba(251,191,36,.2);color:#fbbf24;}
-        .demo-dash-status--done{background:rgba(34,197,94,.2);color:#22c55e;}
-        @media(max-width:640px){.demo-ba{grid-template-columns:1fr;}.demo-dash-grid{grid-template-columns:repeat(2,1fr);}}
+        :root {
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-100: #f1f5f9;
+            --copper: #c2703e;
+            --copper-dark: #a85d32;
+            --copper-light: #d4865a;
+            --sand-50: #faf8f5;
+            --sand-100: #f5f0ea;
+            --sand-200: #ebe4db;
+            --green-500: #22c55e;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--sand-50);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        img { max-width: 100%; height: auto; display: block; }
+
+        a { text-decoration: none; color: inherit; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Demo Banner */
+        .demo-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background: linear-gradient(135deg, var(--copper) 0%, var(--copper-dark) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: .6rem 1rem;
+            font-size: .82rem;
+            font-weight: 500;
+            letter-spacing: .02em;
+        }
+        .demo-banner a { color: var(--white); text-decoration: underline; font-weight: 700; }
+
+        /* Navigation */
+        .nav {
+            background: var(--slate-900);
+            padding: 1rem 0;
+            margin-top: 2rem;
+            position: sticky;
+            top: 2rem;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .nav-logo span { color: var(--copper); }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a {
+            color: rgba(255,255,255,.75);
+            font-size: .88rem;
+            font-weight: 500;
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--white); }
+        .nav-cta {
+            background: var(--copper) !important;
+            color: var(--white) !important;
+            padding: .55rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600 !important;
+            transition: background .2s;
+        }
+        .nav-cta:hover { background: var(--copper-dark) !important; }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600&q=80') center/cover no-repeat;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15,23,42,.88) 0%, rgba(30,41,59,.75) 50%, rgba(15,23,42,.65) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 4rem 1.5rem;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: rgba(194,112,62,.15);
+            border: 1px solid rgba(194,112,62,.4);
+            color: var(--copper-light);
+            padding: .4rem 1rem;
+            border-radius: 50px;
+            font-size: .78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            margin-bottom: 1.5rem;
+        }
+        .hero-badge::before { content: ''; width: 8px; height: 8px; background: var(--green-500); border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+        .hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            font-weight: 800;
+        }
+        .hero h1 span { color: var(--copper); }
+        .hero-sub {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,.7);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 550px;
+        }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .9rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: .95rem;
+            transition: all .25s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary { background: var(--copper); color: var(--white); }
+        .btn-primary:hover { background: var(--copper-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(194,112,62,.3); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,.3); }
+        .btn-outline:hover { border-color: var(--white); transform: translateY(-2px); }
+        .btn-whatsapp { background: #25d366; color: var(--white); }
+        .btn-whatsapp:hover { background: #1fb855; transform: translateY(-2px); }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,.1);
+        }
+        .hero-trust-item { color: rgba(255,255,255,.6); font-size: .82rem; }
+        .hero-trust-item strong { color: var(--white); font-size: 1.3rem; display: block; margin-bottom: .2rem; }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--white);
+            border-bottom: 1px solid var(--sand-200);
+            padding: 2.5rem 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--copper);
+        }
+        .stat-label { font-size: .85rem; color: var(--text-muted); margin-top: .3rem; }
+
+        /* Section Styling */
+        .section { padding: 5rem 0; }
+        .section-dark { background: var(--slate-900); color: var(--white); }
+        .section-alt { background: var(--white); }
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 3.5rem;
+        }
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            margin-bottom: .8rem;
+            line-height: 1.2;
+        }
+        .section-header p { color: var(--text-muted); font-size: 1.05rem; }
+        .section-dark .section-header p { color: rgba(255,255,255,.6); }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--sand-200);
+            transition: all .3s;
+        }
+        .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.08); }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .service-card-body { padding: 1.5rem; }
+        .service-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: .5rem;
+        }
+        .service-card p { font-size: .88rem; color: var(--text-muted); line-height: 1.6; }
+
+        /* Urgence Section */
+        .urgence {
+            background: linear-gradient(135deg, var(--slate-900) 0%, var(--slate-800) 100%);
+            border-radius: 16px;
+            padding: 3.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+        .urgence h2 { color: var(--white); font-size: 2rem; margin-bottom: 1rem; }
+        .urgence p { color: rgba(255,255,255,.7); line-height: 1.7; margin-bottom: 1.5rem; }
+        .urgence-features { list-style: none; }
+        .urgence-features li {
+            color: rgba(255,255,255,.8);
+            padding: .6rem 0;
+            font-size: .92rem;
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+        .urgence-features li::before { content: '✓'; color: var(--green-500); font-weight: 700; }
+        .urgence-form { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 2rem; }
+        .urgence-form input, .urgence-form select, .urgence-form textarea {
+            width: 100%;
+            padding: .75rem 1rem;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 8px;
+            background: rgba(255,255,255,.05);
+            color: var(--white);
+            font-size: .9rem;
+            margin-bottom: .8rem;
+            font-family: inherit;
+        }
+        .urgence-form input::placeholder, .urgence-form textarea::placeholder { color: rgba(255,255,255,.4); }
+        .urgence-form select { color: rgba(255,255,255,.7); }
+        .urgence-form select option { background: var(--slate-800); color: var(--white); }
+
+        /* Avant/Après */
+        .ba-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .ba-card {
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--white);
+            border: 1px solid var(--sand-200);
+        }
+        .ba-images { display: grid; grid-template-columns: 1fr 1fr; }
+        .ba-images img { height: 180px; object-fit: cover; width: 100%; }
+        .ba-images .ba-label {
+            position: absolute;
+            bottom: .5rem;
+            left: .5rem;
+            background: rgba(0,0,0,.7);
+            color: #fff;
+            font-size: .7rem;
+            padding: .2rem .5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .ba-img-wrap { position: relative; }
+        .ba-card-body { padding: 1.2rem; }
+        .ba-card-body h3 { font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700; margin-bottom: .3rem; }
+        .ba-card-body p { font-size: .82rem; color: var(--text-muted); }
+
+        /* Zones */
+        .zones-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        .zone-item {
+            background: var(--white);
+            border: 1px solid var(--sand-200);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all .2s;
+        }
+        .zone-item:hover { border-color: var(--copper); transform: translateY(-2px); }
+        .zone-item .zone-icon { font-size: 1.5rem; margin-bottom: .5rem; }
+        .zone-item h4 { font-family: 'Inter', sans-serif; font-size: .9rem; font-weight: 600; }
+        .zone-item p { font-size: .78rem; color: var(--text-muted); margin-top: .2rem; }
+
+        /* Dashboard Preview */
+        .dashboard {
+            background: var(--slate-800);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,.08);
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+        .dashboard-header h3 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; color: var(--white); }
+        .dashboard-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+        .kpi-card {
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 10px;
+            padding: 1.2rem;
+        }
+        .kpi-label { font-size: .75rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .05em; }
+        .kpi-value { font-size: 1.6rem; font-weight: 700; color: var(--white); margin-top: .3rem; }
+        .kpi-trend { font-size: .75rem; color: var(--green-500); margin-top: .2rem; }
+        .dashboard-table { width: 100%; border-collapse: collapse; }
+        .dashboard-table th {
+            text-align: left;
+            font-size: .75rem;
+            color: rgba(255,255,255,.4);
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            padding: .8rem .5rem;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+        .dashboard-table td {
+            padding: .8rem .5rem;
+            font-size: .85rem;
+            color: rgba(255,255,255,.8);
+            border-bottom: 1px solid rgba(255,255,255,.05);
+        }
+        .status {
+            display: inline-block;
+            padding: .2rem .6rem;
+            border-radius: 50px;
+            font-size: .72rem;
+            font-weight: 600;
+        }
+        .status-done { background: rgba(34,197,94,.15); color: #4ade80; }
+        .status-progress { background: rgba(194,112,62,.15); color: var(--copper-light); }
+        .status-pending { background: rgba(255,255,255,.08); color: rgba(255,255,255,.5); }
+
+        /* Reviews */
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .review-card {
+            background: var(--white);
+            border: 1px solid var(--sand-200);
+            border-radius: 12px;
+            padding: 1.8rem;
+        }
+        .review-stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: .8rem; }
+        .review-text { font-size: .92rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+        .review-author { display: flex; align-items: center; gap: .8rem; }
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .review-name { font-weight: 600; font-size: .88rem; }
+        .review-meta { font-size: .78rem; color: var(--text-muted); }
+
+        /* Form Section */
+        .form-section { background: var(--sand-100); }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .form-info h2 { margin-bottom: 1rem; }
+        .form-info p { color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+        .form-info-list { list-style: none; }
+        .form-info-list li { padding: .5rem 0; font-size: .9rem; display: flex; align-items: center; gap: .5rem; }
+        .form-info-list li::before { content: '→'; color: var(--copper); font-weight: 700; }
+        .form-container {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid var(--sand-200);
+            box-shadow: 0 4px 20px rgba(0,0,0,.04);
+        }
+        .form-container label {
+            display: block;
+            font-size: .82rem;
+            font-weight: 600;
+            margin-bottom: .4rem;
+            color: var(--text-dark);
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: .75rem 1rem;
+            border: 1px solid var(--sand-200);
+            border-radius: 8px;
+            font-size: .9rem;
+            margin-bottom: 1rem;
+            font-family: inherit;
+            background: var(--sand-50);
+            transition: border-color .2s;
+        }
+        .form-container input:focus, .form-container select:focus, .form-container textarea:focus {
+            outline: none;
+            border-color: var(--copper);
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+        /* FAQ */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            border-bottom: 1px solid var(--sand-200);
+            padding: 1.5rem 0;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after { content: '+'; font-size: 1.3rem; color: var(--copper); }
+        .faq-answer { padding-top: 1rem; color: var(--text-muted); line-height: 1.7; font-size: .92rem; display: none; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-item.active .faq-question::after { content: '−'; }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--copper) 0%, var(--copper-dark) 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: var(--white);
+        }
+        .cta-banner h2 { color: var(--white); margin-bottom: 1rem; font-size: 2rem; }
+        .cta-banner p { opacity: .85; margin-bottom: 2rem; font-size: 1.05rem; }
+        .btn-white { background: var(--white); color: var(--copper-dark); font-weight: 700; }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,.15); }
+
+        /* Footer */
+        .footer {
+            background: var(--slate-900);
+            color: rgba(255,255,255,.6);
+            padding: 4rem 0 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--white); margin-bottom: 1rem; }
+        .footer-brand span { color: var(--copper); }
+        .footer-desc { font-size: .85rem; line-height: 1.7; }
+        .footer h4 { color: var(--white); font-family: 'Inter', sans-serif; font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 1rem; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: .5rem; }
+        .footer-links a { font-size: .85rem; transition: color .2s; }
+        .footer-links a:hover { color: var(--copper); }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,.08);
+            display: flex;
+            justify-content: space-between;
+            font-size: .8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid, .ba-grid { grid-template-columns: repeat(2, 1fr); }
+            .zones-grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .dashboard-kpis { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero { min-height: 80vh; }
+            .hero h1 { font-size: 2rem; }
+            .hero-trust { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid, .ba-grid, .reviews-grid { grid-template-columns: 1fr; }
+            .zones-grid { grid-template-columns: repeat(2, 1fr); }
+            .urgence { grid-template-columns: 1fr; padding: 2rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .dashboard-kpis { grid-template-columns: 1fr 1fr; }
+            .dashboard-table { font-size: .78rem; }
+            .footer-bottom { flex-direction: column; gap: .5rem; }
+        }
     </style>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebPage",
-                "name": "Démo site artisan — Artisan Pro Habitat",
-                "description": "Démonstration d'un site professionnel pour artisan créé par mon-agenceweb.fr",
-                "url": "https://mon-agenceweb.fr/demo-site-artisan",
-                "creator": { "@type": "Person", "name": "Farouk" }
-            },
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
-                    { "@type": "ListItem", "position": 2, "name": "Site artisan", "item": "https://mon-agenceweb.fr/creation-site-web-artisan" },
-                    { "@type": "ListItem", "position": 3, "name": "Démo artisan", "item": "https://mon-agenceweb.fr/demo-site-artisan" }
-                ]
-            }
-        ]
-    }
-    </script>
 </head>
-<body style="cursor: auto;">
-
-    <!-- DEMO BANNER -->
+<body>
+    <!-- Demo Banner -->
     <div class="demo-banner">
-        Ceci est une démo — <a href="/creation-site-web-artisan">Je veux un site comme celui-ci</a>
+        ⚡ Ceci est une <strong>démonstration</strong> — Ce site fictif montre ce que je peux créer pour votre activité d'artisan.
+        <a href="/creation-site-web-artisan">Voir l'offre complète →</a>
     </div>
 
-    <!-- HERO ARTISAN -->
-    <section class="demo-hero">
-        <p style="font-size:.85rem;opacity:.6;letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem;">Artisan Pro Habitat — Dunkerque & alentours</p>
-        <h1>Rénovation, peinture &amp; dépannage<br>à Dunkerque et environs</h1>
-        <p>Artisan multi-services depuis 15 ans. Travaux de rénovation, peinture intérieure/extérieure, plomberie, électricité légère et petits travaux. Intervention rapide, devis gratuit sous 24h.</p>
-        <div class="demo-actions">
-            <a href="#demo-devis" class="demo-btn demo-btn--primary">&#128221; Demander un devis</a>
-            <a href="tel:+33600000000" class="demo-btn demo-btn--outline">&#128222; 06 00 00 00 00</a>
-            <a href="#" class="demo-btn demo-btn--whatsapp">&#128172; WhatsApp</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <div class="nav-logo">Artisan<span>Pro</span> Habitat</div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#realisations">Réalisations</a>
+                <a href="#zones">Zones</a>
+                <a href="#avis">Avis</a>
+                <a href="#devis" class="nav-cta">Devis gratuit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg" role="img" aria-label="Artisan plombier au travail"></div>
+        <div class="hero-content container">
+            <div class="hero-badge">Disponible 7j/7 — Intervention en 1h</div>
+            <h1>Votre artisan <span>plombier-chauffagiste</span> à Dunkerque</h1>
+            <p class="hero-sub">Dépannage, installation et rénovation. Devis gratuit en 24h, intervention rapide, 15 ans d'expérience au service des particuliers et professionnels.</p>
+            <div class="hero-buttons">
+                <a href="#devis" class="btn btn-primary">Demander un devis gratuit</a>
+                <a href="tel:+33600000000" class="btn btn-outline">📞 06 00 00 00 00</a>
+                <a href="#" class="btn btn-whatsapp">WhatsApp</a>
+            </div>
+            <div class="hero-trust">
+                <div class="hero-trust-item"><strong>15+</strong>ans d'expérience</div>
+                <div class="hero-trust-item"><strong>2 400+</strong>interventions réalisées</div>
+                <div class="hero-trust-item"><strong>4.9/5</strong>sur Google (187 avis)</div>
+            </div>
         </div>
     </section>
 
-    <!-- STATS CONFIANCE -->
-    <div class="demo-stats">
-        <div>
-            <div class="demo-stat-number">15 ans</div>
-            <div class="demo-stat-label">d'expérience</div>
-        </div>
-        <div>
-            <div class="demo-stat-number">500+</div>
-            <div class="demo-stat-label">chantiers réalisés</div>
-        </div>
-        <div>
-            <div class="demo-stat-number">4.9/5</div>
-            <div class="demo-stat-label">sur Google (87 avis)</div>
-        </div>
-        <div>
-            <div class="demo-stat-number">24h</div>
-            <div class="demo-stat-label">délai de réponse</div>
-        </div>
-    </div>
-
-    <main>
-
-    <!-- SERVICES -->
-    <section class="section">
+    <!-- Stats -->
+    <section class="stats-bar">
         <div class="container">
-            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:3rem;">Nos services</h2>
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">2 437</div>
+                    <div class="stat-label">Interventions réalisées</div>
+                </div>
+                <div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Clients satisfaits</div>
+                </div>
+                <div>
+                    <div class="stat-number">1h</div>
+                    <div class="stat-label">Délai d'intervention urgence</div>
+                </div>
+                <div>
+                    <div class="stat-number">15 ans</div>
+                    <div class="stat-label">D'expérience terrain</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos prestations plomberie & chauffage</h2>
+                <p>Un savoir-faire complet pour tous vos projets, du dépannage urgent à la rénovation complète.</p>
+            </div>
             <div class="services-grid">
-                <article class="svc-card">
-                    <span class="svc-icon">&#127912;</span>
-                    <h3 class="svc-title">Peinture intérieure &amp; extérieure</h3>
-                    <p class="svc-desc">Préparation des surfaces, peinture, enduits décoratifs, ravalement de façade. Finitions soignées garanties.</p>
-                </article>
-                <article class="svc-card">
-                    <span class="svc-icon">&#128736;</span>
-                    <h3 class="svc-title">Rénovation complète</h3>
-                    <p class="svc-desc">Rénovation salle de bain, cuisine, appartement. Gestion de A à Z, un seul interlocuteur pour tout votre projet.</p>
-                </article>
-                <article class="svc-card">
-                    <span class="svc-icon">&#128167;</span>
-                    <h3 class="svc-title">Plomberie</h3>
-                    <p class="svc-desc">Installation, réparation, remplacement. Fuite, robinetterie, chauffe-eau, raccordements. Intervention rapide.</p>
-                </article>
-                <article class="svc-card">
-                    <span class="svc-icon">&#9889;</span>
-                    <h3 class="svc-title">Électricité légère</h3>
-                    <p class="svc-desc">Prises, interrupteurs, luminaires, petits dépannages. Mise en sécurité et conformité de base.</p>
-                </article>
-                <article class="svc-card">
-                    <span class="svc-icon">&#128295;</span>
-                    <h3 class="svc-title">Petits travaux &amp; dépannage</h3>
-                    <p class="svc-desc">Montage meubles, étagères, fixations, serrurerie, débouchage. Tout ce qui facilite votre quotidien.</p>
-                </article>
-                <article class="svc-card">
-                    <span class="svc-icon">&#127968;</span>
-                    <h3 class="svc-title">Aménagement intérieur</h3>
-                    <p class="svc-desc">Pose de parquet, carrelage, faux plafond, cloisons. Transformation de vos espaces selon vos envies.</p>
-                </article>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&q=75" alt="Dépannage plomberie urgence" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Dépannage urgent</h3>
+                        <p>Fuite d'eau, canalisation bouchée, panne de chaudière. Intervention en 1h, 7j/7, jours fériés inclus.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=75" alt="Installation salle de bain" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Salle de bain complète</h3>
+                        <p>Création et rénovation de salle de bain. Douche à l'italienne, baignoire, meuble vasque sur mesure.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=75" alt="Installation chauffage" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Chauffage & climatisation</h3>
+                        <p>Installation, entretien et dépannage de chaudière gaz, pompe à chaleur, plancher chauffant.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=75" alt="Rénovation cuisine" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Plomberie cuisine</h3>
+                        <p>Raccordement évier, lave-vaisselle, installation d'un adoucisseur ou d'un système de filtration.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=75" alt="Rénovation énergétique" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Rénovation énergétique</h3>
+                        <p>Audit, isolation, remplacement chaudière. Accompagnement aides MaPrimeRénov' et CEE inclus.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=75" alt="Contrat entretien chaudière" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Contrat d'entretien</h3>
+                        <p>Entretien annuel chaudière gaz, vérification sécurité, certificat de conformité. À partir de 120€/an.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ZONES D'INTERVENTION -->
-    <section class="section section--alt">
-        <div class="container">
-            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Zones d'intervention</h2>
-            <p style="text-align:center;color:var(--text-muted);margin-bottom:2rem;">Nous intervenons dans un rayon de 30 km autour de Dunkerque.</p>
-            <div class="stack-grid">
-                <div class="stack-card"><span class="stack-name">Dunkerque</span><span class="stack-detail">Centre & quartiers</span></div>
-                <div class="stack-card"><span class="stack-name">Grande-Synthe</span><span class="stack-detail">& Loon-Plage</span></div>
-                <div class="stack-card"><span class="stack-name">Gravelines</span><span class="stack-detail">& Petit-Fort-Philippe</span></div>
-                <div class="stack-card"><span class="stack-name">Coudekerque</span><span class="stack-detail">& Cappelle</span></div>
-                <div class="stack-card"><span class="stack-name">Malo-les-Bains</span><span class="stack-detail">& Rosendaël</span></div>
-                <div class="stack-card"><span class="stack-name">Bergues</span><span class="stack-detail">& Bourbourg</span></div>
+    <!-- Urgence -->
+    <section class="section" style="padding-top:0;">
+        <div class="urgence container">
+            <div>
+                <h2>Urgence plomberie ?<br>On intervient en 1 heure.</h2>
+                <p>Fuite d'eau, dégât des eaux, canalisation bouchée, panne de chauffage en plein hiver… Ne restez pas sans solution.</p>
+                <ul class="urgence-features">
+                    <li>Disponible 7j/7, jours fériés inclus</li>
+                    <li>Intervention dans l'heure sur Dunkerque</li>
+                    <li>Devis avant intervention (sauf urgence absolue)</li>
+                    <li>Paiement en 3x sans frais possible</li>
+                    <li>Garantie décennale & assurance RC Pro</li>
+                </ul>
             </div>
-        </div>
-    </section>
-
-    <!-- RÉALISATIONS AVANT/APRÈS -->
-    <section class="section">
-        <div class="container container--narrow">
-            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Nos réalisations</h2>
-            <div class="demo-ba">
-                <div class="demo-ba-item">AVANT<br><small style="font-weight:400;font-size:.8rem;">Photo du chantier initial</small></div>
-                <div class="demo-ba-item" style="background:#e8e4dc;">APRÈS<br><small style="font-weight:400;font-size:.8rem;">Résultat final</small></div>
-            </div>
-            <p style="text-align:center;font-weight:500;margin-bottom:.5rem;">Rénovation salle de bain — Dunkerque</p>
-            <p style="text-align:center;color:var(--text-muted);font-size:.9rem;">Remplacement baignoire par douche italienne, carrelage, peinture, plomberie. Durée : 5 jours.</p>
-
-            <div class="demo-ba" style="margin-top:2rem;">
-                <div class="demo-ba-item">AVANT<br><small style="font-weight:400;font-size:.8rem;">Photo du chantier initial</small></div>
-                <div class="demo-ba-item" style="background:#e8e4dc;">APRÈS<br><small style="font-weight:400;font-size:.8rem;">Résultat final</small></div>
-            </div>
-            <p style="text-align:center;font-weight:500;margin-bottom:.5rem;">Peinture intérieure appartement — Grande-Synthe</p>
-            <p style="text-align:center;color:var(--text-muted);font-size:.9rem;">Lessivage, rebouchage, 2 couches, finitions. 65m². Durée : 3 jours.</p>
-        </div>
-    </section>
-
-    <!-- AVIS CLIENTS -->
-    <section class="section section--alt">
-        <div class="container container--narrow">
-            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Avis clients Google — 4.9/5</h2>
-            <div class="demo-review">
-                <div class="demo-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="demo-review-text">"Travail impeccable pour la rénovation de notre salle de bain. Ponctuel, propre et le résultat est exactement ce qu'on voulait. Je recommande !"</p>
-                <p class="demo-review-author">— Marie D., Dunkerque</p>
-            </div>
-            <div class="demo-review">
-                <div class="demo-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="demo-review-text">"Intervention rapide pour un dégât des eaux. Professionnel, réactif et tarif honnête. Merci encore !"</p>
-                <p class="demo-review-author">— Thomas L., Gravelines</p>
-            </div>
-            <div class="demo-review">
-                <div class="demo-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="demo-review-text">"Peinture de 3 pièces + pose parquet. Travail soigné, conseils pertinents sur les couleurs. Le rendu est magnifique."</p>
-                <p class="demo-review-author">— Sophie M., Grande-Synthe</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULAIRE DEVIS -->
-    <section class="section" id="demo-devis">
-        <div class="container container--narrow">
-            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Demander un devis gratuit</h2>
-            <p style="text-align:center;color:var(--text-muted);margin-bottom:2rem;">Réponse sous 24h. Décrivez votre projet et nous vous recontactons rapidement.</p>
-            <form style="max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:1rem;" onsubmit="return false;">
-                <input type="text" placeholder="Votre nom" style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;">
-                <input type="tel" placeholder="Téléphone" style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;">
-                <input type="text" placeholder="Ville / Quartier" style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;">
-                <select style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;background:#fff;">
-                    <option>Type de travaux</option>
-                    <option>Peinture</option>
-                    <option>Rénovation salle de bain</option>
-                    <option>Plomberie</option>
-                    <option>Électricité</option>
-                    <option>Petits travaux</option>
+            <div class="urgence-form">
+                <h3 style="color:#fff;font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem;">Demande d'intervention rapide</h3>
+                <input type="text" placeholder="Votre nom complet">
+                <input type="tel" placeholder="Téléphone (obligatoire)">
+                <select>
+                    <option>Type d'urgence</option>
+                    <option>Fuite d'eau</option>
+                    <option>Canalisation bouchée</option>
+                    <option>Panne chaudière</option>
+                    <option>Dégât des eaux</option>
                     <option>Autre</option>
                 </select>
-                <textarea placeholder="Décrivez votre projet..." rows="4" style="padding:.8rem 1rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;resize:vertical;"></textarea>
-                <button type="submit" class="btn btn--primary" style="width:100%;">Envoyer ma demande de devis</button>
-            </form>
+                <textarea rows="3" placeholder="Décrivez brièvement le problème..."></textarea>
+                <button class="btn btn-primary" style="width:100%;">Envoyer ma demande urgente</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avant/Après -->
+    <section class="section section-alt" id="realisations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos réalisations avant / après</h2>
+                <p>Découvrez quelques-unes de nos transformations récentes chez des particuliers de la région dunkerquoise.</p>
+            </div>
+            <div class="ba-grid">
+                <div class="ba-card">
+                    <div class="ba-images">
+                        <div class="ba-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&q=75" alt="Salle de bain avant rénovation" loading="lazy">
+                            <span class="ba-label">Avant</span>
+                        </div>
+                        <div class="ba-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=400&q=75" alt="Salle de bain après rénovation" loading="lazy">
+                            <span class="ba-label">Après</span>
+                        </div>
+                    </div>
+                    <div class="ba-card-body">
+                        <h3>Salle de bain — Coudekerque-Branche</h3>
+                        <p>Rénovation complète, douche italienne, carrelage grand format. Durée : 8 jours.</p>
+                    </div>
+                </div>
+                <div class="ba-card">
+                    <div class="ba-images">
+                        <div class="ba-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&q=75" alt="Chauffage ancien" loading="lazy">
+                            <span class="ba-label">Avant</span>
+                        </div>
+                        <div class="ba-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=75" alt="Chauffage moderne installé" loading="lazy">
+                            <span class="ba-label">Après</span>
+                        </div>
+                    </div>
+                    <div class="ba-card-body">
+                        <h3>Chauffage — Grande-Synthe</h3>
+                        <p>Remplacement chaudière fioul par pompe à chaleur air/eau. Économie 45%.</p>
+                    </div>
+                </div>
+                <div class="ba-card">
+                    <div class="ba-images">
+                        <div class="ba-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=75" alt="Cuisine avant travaux" loading="lazy">
+                            <span class="ba-label">Avant</span>
+                        </div>
+                        <div class="ba-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=400&q=75" alt="Cuisine après travaux" loading="lazy">
+                            <span class="ba-label">Après</span>
+                        </div>
+                    </div>
+                    <div class="ba-card-body">
+                        <h3>Plomberie cuisine — Dunkerque centre</h3>
+                        <p>Déplacement arrivées d'eau, nouvel évier, raccordement lave-vaisselle. 3 jours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zones d'intervention -->
+    <section class="section" id="zones">
+        <div class="container">
+            <div class="section-header">
+                <h2>Zones d'intervention</h2>
+                <p>Nous intervenons dans un rayon de 30 km autour de Dunkerque. Déplacement gratuit.</p>
+            </div>
+            <div class="zones-grid">
+                <div class="zone-item">
+                    <div class="zone-icon">📍</div>
+                    <h4>Dunkerque</h4>
+                    <p>Centre, Malo, Rosendaël</p>
+                </div>
+                <div class="zone-item">
+                    <div class="zone-icon">📍</div>
+                    <h4>Grande-Synthe</h4>
+                    <p>& Loon-Plage</p>
+                </div>
+                <div class="zone-item">
+                    <div class="zone-icon">📍</div>
+                    <h4>Coudekerque</h4>
+                    <p>Branche & Village</p>
+                </div>
+                <div class="zone-item">
+                    <div class="zone-icon">📍</div>
+                    <h4>Saint-Pol-sur-Mer</h4>
+                    <p>& Fort-Mardyck</p>
+                </div>
+                <div class="zone-item">
+                    <div class="zone-icon">📍</div>
+                    <h4>Gravelines</h4>
+                    <p>& Petit-Fort-Philippe</p>
+                </div>
+                <div class="zone-item">
+                    <div class="zone-icon">📍</div>
+                    <h4>Bergues</h4>
+                    <p>& Hondschoote</p>
+                </div>
+                <div class="zone-item">
+                    <div class="zone-icon">📍</div>
+                    <h4>Bray-Dunes</h4>
+                    <p>& Zuydcoote</p>
+                </div>
+                <div class="zone-item">
+                    <div class="zone-icon">📍</div>
+                    <h4>Bourbourg</h4>
+                    <p>& Craywick</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color:#fff;">Votre espace client en ligne</h2>
+                <p>Suivez vos interventions, consultez vos factures et planifiez vos rendez-vous directement depuis votre tableau de bord.</p>
+            </div>
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h3>Tableau de bord — Artisan Pro Habitat</h3>
+                    <span style="color:var(--green-500);font-size:.8rem;font-weight:600;">● En ligne</span>
+                </div>
+                <div class="dashboard-kpis">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Ce mois</div>
+                        <div class="kpi-value">23</div>
+                        <div class="kpi-trend">↑ +12% vs mois dernier</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Devis envoyés</div>
+                        <div class="kpi-value">18</div>
+                        <div class="kpi-trend">↑ 78% taux d'acceptation</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">CA mensuel</div>
+                        <div class="kpi-value">14 200€</div>
+                        <div class="kpi-trend">↑ +8% vs objectif</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Note Google</div>
+                        <div class="kpi-value">4.9/5</div>
+                        <div class="kpi-trend">187 avis collectés</div>
+                    </div>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Prestation</th>
+                            <th>Date</th>
+                            <th>Statut</th>
+                            <th>Montant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M. Lefebvre</td>
+                            <td>Remplacement chauffe-eau</td>
+                            <td>15 mai 2026</td>
+                            <td><span class="status status-done">Terminé</span></td>
+                            <td>1 850€</td>
+                        </tr>
+                        <tr>
+                            <td>Mme Dumont</td>
+                            <td>Rénovation salle de bain</td>
+                            <td>12 mai 2026</td>
+                            <td><span class="status status-progress">En cours</span></td>
+                            <td>6 400€</td>
+                        </tr>
+                        <tr>
+                            <td>M. Vandamme</td>
+                            <td>Fuite robinet cuisine</td>
+                            <td>10 mai 2026</td>
+                            <td><span class="status status-done">Terminé</span></td>
+                            <td>180€</td>
+                        </tr>
+                        <tr>
+                            <td>SCI Les Dunes</td>
+                            <td>Entretien chaudière x4</td>
+                            <td>18 mai 2026</td>
+                            <td><span class="status status-pending">Planifié</span></td>
+                            <td>480€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avis clients -->
+    <section class="section" id="avis">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ce que disent nos clients</h2>
+                <p>4.9/5 sur Google — 187 avis vérifiés. La satisfaction client est notre priorité n°1.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Intervention en moins d'une heure pour une fuite sous l'évier. Travail propre, prix correct, artisan très professionnel. Je recommande à 100%."</p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=75" alt="Photo client" class="review-avatar" loading="lazy">
+                        <div>
+                            <div class="review-name">Marc Lefebvre</div>
+                            <div class="review-meta">Dunkerque — il y a 2 semaines</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Rénovation complète de notre salle de bain. Le résultat est magnifique, dans les délais et le budget annoncé. Merci pour les conseils déco en plus !"</p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=75" alt="Photo cliente" class="review-avatar" loading="lazy">
+                        <div>
+                            <div class="review-name">Sophie Dumont</div>
+                            <div class="review-meta">Coudekerque — il y a 1 mois</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Installation pompe à chaleur impeccable. L'artisan a géré tout le dossier MaPrimeRénov'. On économise 45% sur notre facture de chauffage."</p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=75" alt="Photo client" class="review-avatar" loading="lazy">
+                        <div>
+                            <div class="review-name">Pierre Vandamme</div>
+                            <div class="review-meta">Grande-Synthe — il y a 3 semaines</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de devis -->
+    <section class="section form-section" id="devis">
+        <div class="container">
+            <div class="form-grid">
+                <div class="form-info">
+                    <h2>Demandez votre devis gratuit</h2>
+                    <p>Remplissez ce formulaire et recevez un devis détaillé sous 24h. Sans engagement, 100% gratuit.</p>
+                    <ul class="form-info-list">
+                        <li>Réponse garantie sous 24h (jours ouvrés)</li>
+                        <li>Devis détaillé et transparent, sans surprise</li>
+                        <li>Déplacement gratuit pour établir le devis</li>
+                        <li>Paiement en 3x ou 4x sans frais disponible</li>
+                        <li>Garantie décennale sur tous nos travaux</li>
+                    </ul>
+                </div>
+                <div class="form-container">
+                    <form action="https://formspree.io/f/mqegleqk" method="POST">
+                        <input type="hidden" name="_subject" value="[DEMO] Demande de devis artisan">
+                        <div class="form-row">
+                            <div>
+                                <label for="nom">Nom complet *</label>
+                                <input type="text" id="nom" name="nom" placeholder="Jean Dupont" required>
+                            </div>
+                            <div>
+                                <label for="telephone">Téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="jean@email.fr">
+                            </div>
+                            <div>
+                                <label for="ville">Ville *</label>
+                                <input type="text" id="ville" name="ville" placeholder="Dunkerque" required>
+                            </div>
+                        </div>
+                        <label for="prestation">Type de prestation</label>
+                        <select id="prestation" name="prestation">
+                            <option value="">Sélectionnez un service</option>
+                            <option>Dépannage urgence</option>
+                            <option>Rénovation salle de bain</option>
+                            <option>Installation chauffage</option>
+                            <option>Plomberie cuisine</option>
+                            <option>Entretien chaudière</option>
+                            <option>Autre</option>
+                        </select>
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget">
+                            <option value="">Fourchette de budget</option>
+                            <option>Moins de 500€</option>
+                            <option>500€ — 2 000€</option>
+                            <option>2 000€ — 5 000€</option>
+                            <option>5 000€ — 10 000€</option>
+                            <option>Plus de 10 000€</option>
+                        </select>
+                        <label for="message">Décrivez votre projet</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Décrivez votre besoin, les dimensions, l'urgence..."></textarea>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.5rem;">Envoyer ma demande de devis</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section section--alt">
-        <div class="container container--narrow">
-            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
-            <div class="legal-content">
-                <h3>Quel est le délai d'intervention ?</h3>
-                <p>Pour un dépannage : sous 24-48h. Pour un chantier planifié : nous convenons ensemble d'une date qui vous arrange, généralement sous 1 à 2 semaines.</p>
-                <h3>Le devis est-il gratuit ?</h3>
-                <p>Oui, toujours. Nous nous déplaçons gratuitement pour évaluer votre projet et vous remettre un devis détaillé sans engagement.</p>
-                <h3>Êtes-vous assuré ?</h3>
-                <p>Oui. Assurance responsabilité civile professionnelle et garantie décennale pour tous nos travaux.</p>
-                <h3>Intervenez-vous le week-end ?</h3>
-                <p>Sur rendez-vous, le samedi matin est possible. Pour les urgences (fuite, etc.), nous sommes joignables 7j/7.</p>
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions fréquentes</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- DASHBOARD DEMO -->
-    <section class="section">
-        <div class="container container--narrow">
-            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:1rem;">Espace artisan inclus</h2>
-            <p style="text-align:center;color:var(--text-muted);margin-bottom:2rem;">En plus du site, vous pouvez avoir un espace de gestion pour suivre vos demandes et piloter votre activité.</p>
-
-            <div class="demo-dashboard">
-                <h3>&#128202; Tableau de bord — Mai 2026</h3>
-                <div class="demo-dash-grid">
-                    <div class="demo-dash-card">
-                        <div class="num">23</div>
-                        <div class="lbl">Demandes ce mois</div>
-                    </div>
-                    <div class="demo-dash-card">
-                        <div class="num">45</div>
-                        <div class="lbl">Appels générés</div>
-                    </div>
-                    <div class="demo-dash-card">
-                        <div class="num">18</div>
-                        <div class="lbl">Devis envoyés</div>
-                    </div>
-                    <div class="demo-dash-card">
-                        <div class="num">67%</div>
-                        <div class="lbl">Taux conversion</div>
-                    </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">Quel est votre délai d'intervention en urgence ?</div>
+                    <div class="faq-answer">Pour les urgences (fuite, dégât des eaux, panne de chauffage), nous intervenons sous 1 heure dans un rayon de 15 km autour de Dunkerque. Pour les communes plus éloignées, comptez 1h30 maximum. Service disponible 7j/7.</div>
                 </div>
-
-                <h4 style="font-size:.9rem;opacity:.7;margin-bottom:.5rem;">Dernières demandes</h4>
-                <table class="demo-dash-table">
-                    <thead>
-                        <tr><th>Client</th><th>Prestation</th><th>Ville</th><th>Statut</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>M. Dupont</td>
-                            <td>Rénovation SDB</td>
-                            <td>Dunkerque</td>
-                            <td><span class="demo-dash-status demo-dash-status--new">Nouveau</span></td>
-                        </tr>
-                        <tr>
-                            <td>Mme. Laurent</td>
-                            <td>Peinture 2 pièces</td>
-                            <td>Gravelines</td>
-                            <td><span class="demo-dash-status demo-dash-status--progress">En cours</span></td>
-                        </tr>
-                        <tr>
-                            <td>M. Benali</td>
-                            <td>Fuite cuisine</td>
-                            <td>Grande-Synthe</td>
-                            <td><span class="demo-dash-status demo-dash-status--done">Accepté</span></td>
-                        </tr>
-                        <tr>
-                            <td>Mme. Martin</td>
-                            <td>Pose parquet</td>
-                            <td>Coudekerque</td>
-                            <td><span class="demo-dash-status demo-dash-status--new">Nouveau</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;">
-                    <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:1rem;">
-                        <h4 style="font-size:.8rem;opacity:.6;margin-bottom:.5rem;">&#128197; Prochaines interventions</h4>
-                        <p style="font-size:.85rem;margin-bottom:.3rem;">Lun 19 — Peinture, Gravelines</p>
-                        <p style="font-size:.85rem;margin-bottom:.3rem;">Mar 20 — Rénovation SDB, Dunkerque</p>
-                        <p style="font-size:.85rem;">Jeu 22 — Pose parquet, Coudekerque</p>
-                    </div>
-                    <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:1rem;">
-                        <h4 style="font-size:.8rem;opacity:.6;margin-bottom:.5rem;">&#11088; Derniers avis</h4>
-                        <p style="font-size:.85rem;margin-bottom:.3rem;">&#9733;&#9733;&#9733;&#9733;&#9733; Marie D. — "Impeccable !"</p>
-                        <p style="font-size:.85rem;margin-bottom:.3rem;">&#9733;&#9733;&#9733;&#9733;&#9733; Thomas L. — "Rapide et pro"</p>
-                        <p style="font-size:.85rem;">&#9733;&#9733;&#9733;&#9733;&#9734; Jean P. — "Bon travail"</p>
-                    </div>
+                <div class="faq-item">
+                    <div class="faq-question">Vos devis sont-ils vraiment gratuits ?</div>
+                    <div class="faq-answer">Oui, 100% gratuits et sans engagement. Nous nous déplaçons gratuitement pour évaluer vos travaux et vous remettre un devis détaillé sous 24h. Aucun frais caché.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Quelles garanties proposez-vous ?</div>
+                    <div class="faq-answer">Tous nos travaux sont couverts par la garantie décennale. Nous disposons également d'une assurance responsabilité civile professionnelle. Les équipements installés bénéficient de la garantie fabricant (2 à 5 ans selon les produits).</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Proposez-vous le paiement en plusieurs fois ?</div>
+                    <div class="faq-answer">Oui, pour les travaux supérieurs à 1 000€, nous proposons un paiement en 3x ou 4x sans frais. Pour les projets importants (rénovation complète), un échéancier sur mesure peut être mis en place.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Pouvez-vous m'aider avec les aides MaPrimeRénov' ?</div>
+                    <div class="faq-answer">Absolument ! En tant qu'artisan RGE (Reconnu Garant de l'Environnement), nous montons votre dossier MaPrimeRénov' et CEE gratuitement. Nous vous indiquons le montant exact des aides avant le début des travaux.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA BACK TO MAW -->
-    <section class="section section--alt" style="text-align:center;">
-        <div class="container container--narrow">
-            <h2 class="apropos-block-title">Vous voulez un site comme celui-ci ?</h2>
-            <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7;">Je crée ce type de site pour des artisans partout en France. Devis gratuit, livraison en 2-3 semaines.</p>
-            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-                <a href="/#contact" class="btn btn--primary">Commander mon site artisan <span class="btn-arrow">&rarr;</span></a>
-                <a href="/creation-site-web-artisan" class="btn btn--outline">En savoir plus</a>
-            </div>
-            <p style="margin-top:1.5rem;font-size:.9rem;color:var(--text-muted);">
-                Voir aussi : <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">Site artisan + dashboard</a>
-            </p>
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Vous voulez un site comme celui-ci ?</h2>
+            <p>Ce site est une démonstration créée par mon-agenceweb.fr. Je crée ce type de site pour les artisans à partir de 700€.</p>
+            <a href="/creation-site-web-artisan" class="btn btn-white">Découvrir l'offre site artisan →</a>
         </div>
     </section>
 
-    </main>
-
-    <!-- FOOTER (fictif artisan) -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="/creation-site-web-artisan">Créé par mon-agenceweb.fr</a>
-            <span class="footer-sep" aria-hidden="true">&middot;</span>
-            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">Artisan<span>Pro</span> Habitat</div>
+                    <p class="footer-desc">Artisan plombier-chauffagiste à Dunkerque. 15 ans d'expérience au service des particuliers et professionnels du littoral Nord.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Dépannage urgent</a></li>
+                        <li><a href="#services">Salle de bain</a></li>
+                        <li><a href="#services">Chauffage</a></li>
+                        <li><a href="#services">Entretien</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Zones</h4>
+                    <ul class="footer-links">
+                        <li><a href="#zones">Dunkerque</a></li>
+                        <li><a href="#zones">Grande-Synthe</a></li>
+                        <li><a href="#zones">Coudekerque</a></li>
+                        <li><a href="#zones">Gravelines</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+33600000000">06 00 00 00 00</a></li>
+                        <li><a href="#">contact@artisanpro-habitat.fr</a></li>
+                        <li><a href="#">12 rue du Port, Dunkerque</a></li>
+                        <li><a href="#devis">Devis gratuit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Artisan Pro Habitat — Tous droits réservés</span>
+                <span>Site fictif créé par <a href="/creation-site-web-artisan" style="color:var(--copper);">mon-agenceweb.fr</a></span>
+            </div>
         </div>
-        <p>&copy; 2026 Artisan Pro Habitat — Démonstration mon-agenceweb.fr</p>
     </footer>
 
+    <!-- FAQ Toggle Script -->
+    <script>
+    document.querySelectorAll('.faq-question').forEach(function(q){
+        q.addEventListener('click',function(){
+            var item=this.parentElement;
+            var wasActive=item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('active');});
+            if(!wasActive)item.classList.add('active');
+        });
+    });
+    </script>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Artisan Pro Habitat",
+        "description": "Artisan plombier-chauffagiste à Dunkerque. Dépannage, installation, rénovation salle de bain et chauffage. Devis gratuit, intervention 7j/7.",
+        "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80",
+        "telephone": "+33600000000",
+        "email": "contact@artisanpro-habitat.fr",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 rue du Port",
+            "addressLocality": "Dunkerque",
+            "postalCode": "59140",
+            "addressCountry": "FR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.0343,
+            "longitude": 2.3768
+        },
+        "areaServed": ["Dunkerque","Grande-Synthe","Coudekerque-Branche","Saint-Pol-sur-Mer","Gravelines","Bergues","Bray-Dunes","Bourbourg"],
+        "priceRange": "€€",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "187"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type":"ListItem","position":1,"name":"Accueil","item":"https://mon-agenceweb.fr/"},
+            {"@type":"ListItem","position":2,"name":"Création site artisan","item":"https://mon-agenceweb.fr/creation-site-web-artisan"},
+            {"@type":"ListItem","position":3,"name":"Démo site artisan","item":"https://mon-agenceweb.fr/demo-site-artisan"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quel est votre délai d'intervention en urgence ?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Pour les urgences (fuite, dégât des eaux, panne de chauffage), nous intervenons sous 1 heure dans un rayon de 15 km autour de Dunkerque. Pour les communes plus éloignées, comptez 1h30 maximum. Service disponible 7j/7."}
+            },
+            {
+                "@type": "Question",
+                "name": "Vos devis sont-ils vraiment gratuits ?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Oui, 100% gratuits et sans engagement. Nous nous déplaçons gratuitement pour évaluer vos travaux et vous remettre un devis détaillé sous 24h. Aucun frais caché."}
+            },
+            {
+                "@type": "Question",
+                "name": "Quelles garanties proposez-vous ?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Tous nos travaux sont couverts par la garantie décennale. Nous disposons également d'une assurance responsabilité civile professionnelle. Les équipements installés bénéficient de la garantie fabricant (2 à 5 ans selon les produits)."}
+            },
+            {
+                "@type": "Question",
+                "name": "Proposez-vous le paiement en plusieurs fois ?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Oui, pour les travaux supérieurs à 1 000€, nous proposons un paiement en 3x ou 4x sans frais. Pour les projets importants, un échéancier sur mesure peut être mis en place."}
+            },
+            {
+                "@type": "Question",
+                "name": "Pouvez-vous m'aider avec les aides MaPrimeRénov' ?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Absolument ! En tant qu'artisan RGE, nous montons votre dossier MaPrimeRénov' et CEE gratuitement. Nous vous indiquons le montant exact des aides avant le début des travaux."}
+            }
+        ]
+    }
+    </script>
 </body>
 </html>
