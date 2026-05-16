@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Site artisan avec dashboard — Gestion devis et prospects | mon-agenceweb.fr</title>
+    <meta name="description" content="Site internet pour artisan avec espace de gestion des devis. Suivez vos demandes, envoyez vos devis, planifiez vos interventions. Un outil métier simple et efficace.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/site-artisan-avec-dashboard">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mon-agenceweb.fr/site-artisan-avec-dashboard">
+    <meta property="og:title" content="Site artisan + dashboard — Gérez vos devis depuis votre téléphone">
+    <meta property="og:description" content="Plus qu'un site vitrine : un outil de gestion des demandes, devis et interventions. Conçu pour les artisans qui veulent structurer leur activité.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+    <style>
+        .dash-preview{background:#1A1A2E;border-radius:12px;padding:2rem;color:#fff;margin:2rem 0;}
+        .dash-preview h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:1.5rem;}
+        .dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;margin-bottom:1.5rem;}
+        .dash-kpi{background:rgba(255,255,255,.08);border-radius:8px;padding:1rem;text-align:center;}
+        .dash-kpi .num{font-size:1.6rem;font-weight:700;color:#C6993E;}
+        .dash-kpi .lbl{font-size:.75rem;opacity:.7;margin-top:.3rem;}
+        .dash-table{width:100%;border-collapse:collapse;font-size:.85rem;}
+        .dash-table th{text-align:left;padding:.5rem;border-bottom:1px solid rgba(255,255,255,.1);opacity:.6;font-weight:500;}
+        .dash-table td{padding:.5rem;border-bottom:1px solid rgba(255,255,255,.05);}
+        .status{display:inline-block;padding:.2rem .5rem;border-radius:4px;font-size:.7rem;font-weight:600;}
+        .status--new{background:rgba(59,130,246,.2);color:#60a5fa;}
+        .status--progress{background:rgba(251,191,36,.2);color:#fbbf24;}
+        .status--done{background:rgba(34,197,94,.2);color:#22c55e;}
+        .status--refused{background:rgba(239,68,68,.2);color:#f87171;}
+        .feature-check{list-style:none;padding:0;margin:1.5rem 0;}
+        .feature-check li{padding:.6rem 0;padding-left:1.8rem;position:relative;line-height:1.6;}
+        .feature-check li::before{content:"✓";position:absolute;left:0;color:#C6993E;font-weight:700;}
+        @media(max-width:640px){.dash-grid{grid-template-columns:repeat(2,1fr);}}
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ProfessionalService",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "description": "Site internet pour artisan avec espace de gestion des devis et interventions",
+                "serviceType": ["Site artisan avec dashboard", "Logiciel gestion devis artisan", "Site vitrine artisan professionnel"],
+                "areaServed": { "@type": "Country", "name": "France" },
+                "provider": { "@type": "Person", "name": "Farouk" },
+                "priceRange": "€€"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
+                    { "@type": "ListItem", "position": 2, "name": "Site artisan", "item": "https://mon-agenceweb.fr/creation-site-web-artisan" },
+                    { "@type": "ListItem", "position": 3, "name": "Site artisan + dashboard", "item": "https://mon-agenceweb.fr/site-artisan-avec-dashboard" }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "En quoi le dashboard est-il différent d'un logiciel de gestion classique ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "C'est un outil ultra-simple, intégré à votre site. Pas besoin de formation, pas d'interface complexe. Vous voyez vos demandes, changez leur statut, et planifiez vos interventions — le tout depuis votre téléphone en 10 secondes." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Combien coûte un site artisan avec dashboard ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "À partir de 1200€. Cela inclut le site vitrine complet (design, SEO, formulaire de devis, galerie) plus l'espace de gestion des demandes avec tableau de bord, suivi des statuts et calendrier d'interventions." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Puis-je accéder au dashboard depuis mon téléphone ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Oui. L'interface est responsive et conçue pour être utilisée sur mobile. Vous consultez vos demandes, mettez à jour les statuts et planifiez vos interventions directement depuis votre smartphone, entre deux chantiers." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body style="cursor: auto;">
+
+    <nav class="nav is-scrolled">
+        <a href="/" class="nav-logo">maw<span class="accent">.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container container--narrow">
+            <nav aria-label="Fil d'Ariane" style="margin-bottom: 2rem;">
+                <ol style="display:flex;gap:.5rem;list-style:none;padding:0;font-size:.9rem;color:var(--text-muted);">
+                    <li><a href="/" style="color:var(--accent);">Accueil</a> /</li>
+                    <li><a href="/creation-site-web-artisan" style="color:var(--accent);">Site artisan</a> /</li>
+                    <li>Site + Dashboard</li>
+                </ol>
+            </nav>
+            <header class="section-header">
+                <span class="section-tag">Offre premium</span>
+                <h1 class="section-title" style="font-size:clamp(1.7rem,4vw,2.6rem);">Site artisan + espace de gestion des devis<span class="accent">.</span></h1>
+                <p class="section-sub" style="max-width:640px;margin:1.5rem auto;">Plus qu'un site vitrine : un outil métier complet. Recevez des demandes, suivez vos devis, planifiez vos interventions — tout depuis votre téléphone.</p>
+            </header>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis <span class="btn-arrow">&rarr;</span></a>
+                <a href="/demo-site-artisan" class="btn btn--outline">Voir la démo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLÈME -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="apropos-grid">
+                <div class="apropos-block">
+                    <h2 class="apropos-block-title">Le problème des artisans aujourd'hui</h2>
+                    <p>Vous recevez des demandes par téléphone, SMS, WhatsApp, email, formulaire. Tout est éparpillé. Vous oubliez de rappeler un prospect, un devis traîne, un chantier n'est pas planifié.</p>
+                    <p>Résultat : vous perdez des clients, pas par manque de compétence — mais par <strong>manque d'organisation digitale</strong>.</p>
+                </div>
+                <div class="apropos-block">
+                    <h2 class="apropos-block-title">La solution : site + outil de gestion</h2>
+                    <p>Imaginez : chaque demande arrive au même endroit. Vous voyez le nom, le type de travaux, la ville, le montant estimé. Vous changez le statut en un clic : « Devis envoyé », « Accepté », « Planifié ».</p>
+                    <p>C'est exactement ça que je crée pour vous. <span class="gold-text">Un site qui génère des demandes + un outil qui vous aide à les convertir</span>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD PREVIEW -->
+    <section class="section">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Aperçu de votre espace de gestion</h2>
+
+            <div class="dash-preview">
+                <h3>&#128202; Tableau de bord — Mai 2026</h3>
+                <div class="dash-grid">
+                    <div class="dash-kpi">
+                        <div class="num">23</div>
+                        <div class="lbl">Demandes ce mois</div>
+                    </div>
+                    <div class="dash-kpi">
+                        <div class="num">45</div>
+                        <div class="lbl">Appels générés</div>
+                    </div>
+                    <div class="dash-kpi">
+                        <div class="num">18</div>
+                        <div class="lbl">Devis envoyés</div>
+                    </div>
+                    <div class="dash-kpi">
+                        <div class="num">67%</div>
+                        <div class="lbl">Taux conversion</div>
+                    </div>
+                </div>
+
+                <h4 style="font-size:.85rem;opacity:.6;margin-bottom:.5rem;">Demandes de devis</h4>
+                <table class="dash-table">
+                    <thead>
+                        <tr><th>Client</th><th>Prestation</th><th>Ville</th><th>Montant est.</th><th>Statut</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M. Dupont</td>
+                            <td>Rénovation SDB</td>
+                            <td>Dunkerque</td>
+                            <td>3 200€</td>
+                            <td><span class="status status--new">Nouveau</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mme. Laurent</td>
+                            <td>Peinture 2 pièces</td>
+                            <td>Gravelines</td>
+                            <td>1 800€</td>
+                            <td><span class="status status--progress">Devis envoyé</span></td>
+                        </tr>
+                        <tr>
+                            <td>M. Benali</td>
+                            <td>Fuite cuisine</td>
+                            <td>Grande-Synthe</td>
+                            <td>350€</td>
+                            <td><span class="status status--done">Accepté</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mme. Petit</td>
+                            <td>Pose carrelage</td>
+                            <td>Cappelle</td>
+                            <td>2 100€</td>
+                            <td><span class="status status--refused">Refusé</span></td>
+                        </tr>
+                        <tr>
+                            <td>M. Martin</td>
+                            <td>Pose parquet</td>
+                            <td>Coudekerque</td>
+                            <td>1 500€</td>
+                            <td><span class="status status--new">Nouveau</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;">
+                    <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:1rem;">
+                        <h4 style="font-size:.8rem;opacity:.6;margin-bottom:.5rem;">&#128197; Interventions planifiées</h4>
+                        <p style="font-size:.82rem;margin-bottom:.3rem;">Lun 19 — Peinture, Mme. Laurent</p>
+                        <p style="font-size:.82rem;margin-bottom:.3rem;">Mar 20 — SDB, M. Dupont</p>
+                        <p style="font-size:.82rem;">Jeu 22 — Parquet, M. Martin</p>
+                    </div>
+                    <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:1rem;">
+                        <h4 style="font-size:.8rem;opacity:.6;margin-bottom:.5rem;">&#11088; Derniers avis reçus</h4>
+                        <p style="font-size:.82rem;margin-bottom:.3rem;">&#9733;&#9733;&#9733;&#9733;&#9733; "Travail impeccable"</p>
+                        <p style="font-size:.82rem;margin-bottom:.3rem;">&#9733;&#9733;&#9733;&#9733;&#9733; "Rapide et pro"</p>
+                        <p style="font-size:.82rem;">&#9733;&#9733;&#9733;&#9733;&#9734; "Bon travail, ponctuel"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FONCTIONNALITÉS -->
+    <section class="section section--alt">
+        <div class="container">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:3rem;">Ce qui est inclus dans l'offre</h2>
+            <div class="apropos-grid">
+                <div class="apropos-block">
+                    <h3 class="apropos-block-title" style="font-size:1.1rem;">Le site vitrine (complet)</h3>
+                    <ul class="feature-check">
+                        <li>Design sur mesure, pas de template</li>
+                        <li>Formulaire de devis intelligent</li>
+                        <li>Galerie avant/après</li>
+                        <li>Avis Google intégrés</li>
+                        <li>Bouton appel + WhatsApp</li>
+                        <li>SEO local (artisan + ville)</li>
+                        <li>Zones d'intervention</li>
+                        <li>Mobile-first, score 90+</li>
+                    </ul>
+                </div>
+                <div class="apropos-block">
+                    <h3 class="apropos-block-title" style="font-size:1.1rem;">L'espace de gestion (dashboard)</h3>
+                    <ul class="feature-check">
+                        <li>Liste des demandes de devis reçues</li>
+                        <li>Statut : nouveau / en cours / accepté / refusé</li>
+                        <li>Infos client : nom, téléphone, ville, type</li>
+                        <li>Montant estimé par demande</li>
+                        <li>Bouton « Appeler » et « Envoyer devis »</li>
+                        <li>Statistiques mensuelles</li>
+                        <li>Mini calendrier d'interventions</li>
+                        <li>Ajout de réalisations avant/après</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POUR QUI -->
+    <section class="section">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Pour quels artisans ?</h2>
+            <div class="legal-content">
+                <p>Cette offre est idéale si vous êtes :</p>
+                <ul style="margin:1.5rem 0;padding-left:1.5rem;line-height:2.2;">
+                    <li>Un artisan qui reçoit <strong>5+ demandes par semaine</strong> et a du mal à tout suivre</li>
+                    <li>Un professionnel qui veut <strong>arrêter d'oublier de rappeler</strong> des prospects</li>
+                    <li>Un artisan qui veut <strong>connaître son taux de conversion</strong> et optimiser</li>
+                    <li>Une entreprise artisanale avec 2-5 personnes qui a besoin de <strong>centraliser les demandes</strong></li>
+                    <li>Un indépendant qui veut <strong>professionnaliser sa gestion</strong> sans logiciel complexe</li>
+                </ul>
+                <p>Si vous recevez moins de 5 demandes par semaine, le site vitrine classique suffit. L'espace de gestion prend tout son sens quand vous avez un flux régulier de prospects à gérer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARIF -->
+    <section class="section section--alt">
+        <div class="container container--narrow" style="text-align:center;">
+            <h2 class="apropos-block-title">À partir de 1 200€</h2>
+            <p style="color:var(--text-muted);margin-bottom:1.5rem;line-height:1.7;">Site vitrine complet + espace de gestion. Pas d'abonnement mensuel obligatoire.<br>Vous êtes propriétaire de tout. Formation incluse.</p>
+            <p style="font-size:.9rem;color:var(--text-muted);margin-bottom:2rem;">Option maintenance + évolutions : 50€/mois (facultatif)</p>
+            <a href="/#contact" class="btn btn--primary">Demander un devis personnalisé <span class="btn-arrow">&rarr;</span></a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
+            <div class="legal-content">
+                <h3>En quoi c'est différent d'un logiciel de gestion classique ?</h3>
+                <p>C'est un outil ultra-simple, intégré à votre site. Pas besoin de formation complexe. Vous voyez vos demandes, changez leur statut, planifiez vos interventions — le tout depuis votre téléphone en 10 secondes.</p>
+
+                <h3>Combien coûte cette offre ?</h3>
+                <p>À partir de 1200€. Cela inclut le site vitrine complet (design, SEO, formulaire, galerie) plus l'espace de gestion avec tableau de bord, suivi des statuts et calendrier.</p>
+
+                <h3>Puis-je y accéder depuis mon téléphone ?</h3>
+                <p>Oui. L'interface est responsive et conçue pour le mobile. Vous consultez et gérez vos demandes entre deux chantiers, depuis n'importe où.</p>
+
+                <h3>Y a-t-il un abonnement ?</h3>
+                <p>Non obligatoire. Le site et le dashboard sont livrés une fois, vous êtes propriétaire. Si vous souhaitez une maintenance + évolutions régulières, une option à 50€/mois est disponible mais pas imposée.</p>
+
+                <h3>C'est compliqué à utiliser ?</h3>
+                <p>Non. C'est conçu pour être utilisé par quelqu'un qui n'est pas à l'aise avec l'informatique. 3 boutons maximum par action : voir la demande, changer le statut, appeler le client. Pas de menu complexe.</p>
+
+                <h3>Puis-je commencer par le site seul et ajouter le dashboard plus tard ?</h3>
+                <p>Oui. Vous pouvez démarrer avec un site vitrine classique à 700€ et ajouter l'espace de gestion ultérieurement. L'architecture le permet sans tout refaire.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--alt" style="text-align:center;">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title">Structurez votre activité</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7;">Un site qui vous apporte des demandes + un outil pour les convertir en chantiers. Simple, efficace, sans usine à gaz.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis <span class="btn-arrow">&rarr;</span></a>
+                <a href="/demo-site-artisan" class="btn btn--outline">Voir la démo complète</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAILLAGE -->
+    <section class="section">
+        <div class="container container--narrow" style="text-align:center;">
+            <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">
+                Voir aussi :
+                <a href="/creation-site-web-artisan" style="color:var(--accent);">Création site artisan</a> &middot;
+                <a href="/creation-site-plombier" style="color:var(--accent);">Site pour plombier</a> &middot;
+                <a href="/creation-site-electricien" style="color:var(--accent);">Site pour électricien</a> &middot;
+                <a href="/agence-web-dunkerque" style="color:var(--accent);">Agence web Dunkerque</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025–2026 mon-agenceweb.fr &middot; Farouk</p>
+    </footer>
+
+</body>
+</html>
