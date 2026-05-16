@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Logiciel simple pour artisan : gérez devis, clients et planning | mon-agenceweb.fr</title>
+    <meta name="description" content="Un logiciel simple pour artisan, intégré à votre site internet. Gérez vos devis, vos clients et votre planning sans usine à gaz. Alternative légère à Batappli et EBP. À partir de 799€.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/logiciel-simple-artisan">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mon-agenceweb.fr/logiciel-simple-artisan">
+    <meta property="og:title" content="Logiciel simple pour artisan — Gérez devis, clients et planning sans usine à gaz">
+    <meta property="og:description" content="Fini les logiciels complexes. Un dashboard intégré à votre site pour gérer vos demandes, vos devis et votre planning. Conçu pour les artisans, pas pour les informaticiens.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+    <style>
+        .comparison-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:.9rem;}
+        .comparison-table th{background:#C6993E;color:#fff;padding:.8rem 1rem;text-align:left;font-weight:600;}
+        .comparison-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(0,0,0,.08);}
+        .comparison-table tr:nth-child(even){background:rgba(198,153,62,.04);}
+        .comparison-table tr:hover{background:rgba(198,153,62,.08);}
+        .comparison-table td:first-child{font-weight:500;}
+        .callout-box{background:linear-gradient(135deg,rgba(198,153,62,.08),rgba(198,153,62,.03));border-left:4px solid #C6993E;border-radius:8px;padding:1.5rem 2rem;margin:2rem 0;}
+        .callout-box h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:.8rem;color:#C6993E;}
+        .callout-box p{margin-bottom:.5rem;line-height:1.7;}
+        .workflow-steps{counter-reset:workflow;list-style:none;padding:0;margin:2rem 0;}
+        .workflow-steps li{counter-increment:workflow;position:relative;padding:1rem 1rem 1rem 3.5rem;margin-bottom:1rem;background:rgba(198,153,62,.03);border-radius:8px;border:1px solid rgba(198,153,62,.1);line-height:1.6;}
+        .workflow-steps li::before{content:counter(workflow);position:absolute;left:1rem;top:1rem;width:2rem;height:2rem;background:#C6993E;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;}
+        .feature-check{list-style:none;padding:0;margin:1.5rem 0;}
+        .feature-check li{padding:.6rem 0;padding-left:1.8rem;position:relative;line-height:1.6;}
+        .feature-check li::before{content:"\2713";position:absolute;left:0;color:#C6993E;font-weight:700;}
+        .feature-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0;}
+        .feature-card{background:#fff;border-radius:10px;padding:1.5rem;border:1px solid rgba(198,153,62,.12);box-shadow:0 2px 8px rgba(0,0,0,.04);}
+        .feature-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-bottom:.8rem;color:#1a1a1a;}
+        .feature-card p{font-size:.9rem;line-height:1.6;color:#555;}
+        .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin:2rem 0;}
+        .kpi-box{background:#fff;border-radius:8px;padding:1.2rem;text-align:center;border:1px solid rgba(198,153,62,.12);}
+        .kpi-box .kpi-num{font-size:1.8rem;font-weight:700;color:#C6993E;display:block;}
+        .kpi-box .kpi-lbl{font-size:.8rem;color:#777;margin-top:.3rem;}
+        @media(max-width:640px){
+            .comparison-table{font-size:.8rem;}
+            .comparison-table th,.comparison-table td{padding:.5rem .6rem;}
+            .callout-box{padding:1rem 1.2rem;}
+            .workflow-steps li{padding-left:3rem;}
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
+                    { "@type": "ListItem", "position": 2, "name": "Site artisan", "item": "https://mon-agenceweb.fr/creation-site-web-artisan" },
+                    { "@type": "ListItem", "position": 3, "name": "Logiciel simple artisan", "item": "https://mon-agenceweb.fr/logiciel-simple-artisan" }
+                ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "description": "Logiciel simple pour artisan intégré au site internet : gestion des devis, clients et planning",
+                "serviceType": ["Logiciel gestion artisan", "Dashboard artisan", "Site artisan avec outil de gestion"],
+                "areaServed": { "@type": "Country", "name": "France" },
+                "provider": { "@type": "Person", "name": "Farouk" },
+                "priceRange": "€€"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "En quoi votre dashboard est-il plus simple qu'un logiciel comme Batappli ou EBP ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Notre dashboard est intégré directement à votre site internet. Pas d'installation, pas de licence, pas de formation longue. Vous ouvrez votre navigateur, vous voyez vos demandes, vous changez un statut, vous appelez le client. Trois clics maximum par action. Batappli ou EBP sont des logiciels complets pensés pour des entreprises structurées avec comptable et secrétaire. Notre outil est pensé pour un artisan seul qui gère tout depuis son téléphone." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Puis-je quand même créer des devis avec votre outil ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le dashboard inclut un générateur de devis PDF simple : vous sélectionnez le client, les prestations dans votre catalogue, et le devis est prêt en 2 minutes. Ce n'est pas un logiciel de comptabilité complet, mais pour 80% des artisans qui font 5 à 15 devis par semaine, c'est largement suffisant." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Combien coûte cette solution ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Le site vitrine avec dashboard intégré est à 799€, paiement unique. Pas d'abonnement obligatoire. À titre de comparaison, un logiciel comme EBP Bâtiment coûte 30 à 80€ par mois, soit 360 à 960€ par an. Notre solution est rentabilisée dès la première année." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Est-ce que ça fonctionne sur téléphone ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est même conçu pour ça. L'interface est responsive et optimisée pour le mobile. Vous gérez vos demandes, vos devis et votre planning directement depuis votre smartphone, entre deux chantiers. Pas besoin d'ordinateur, pas d'application à télécharger." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav is-scrolled">
+        <a href="/" class="nav-logo">maw<span class="accent">.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <!-- INTRO -->
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container container--narrow">
+            <nav aria-label="Fil d'Ariane" style="margin-bottom: 2rem;">
+                <ol style="display:flex;gap:.5rem;list-style:none;padding:0;font-size:.9rem;color:var(--text-muted);">
+                    <li><a href="/" style="color:var(--accent);">Accueil</a> /</li>
+                    <li><a href="/creation-site-web-artisan" style="color:var(--accent);">Site artisan</a> /</li>
+                    <li>Logiciel simple artisan</li>
+                </ol>
+            </nav>
+            <header class="section-header">
+                <span class="section-tag">Outil métier</span>
+                <h1 class="section-title" style="font-size:clamp(1.6rem,4vw,2.5rem);">Un logiciel simple pour artisan : gérez devis, clients et planning sans usine à gaz<span class="accent">.</span></h1>
+                <p class="section-sub" style="max-width:640px;margin:1.5rem auto;">Vous n'avez pas besoin d'un ERP à 80&#8364;/mois. Vous avez besoin d'un outil qui fait trois choses bien : voir vos demandes, suivre vos devis, planifier vos chantiers.</p>
+            </header>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis <span class="btn-arrow">&rarr;</span></a>
+                <a href="/site-artisan-avec-dashboard" class="btn btn--outline">Découvrir le dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLÈME -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Pourquoi les logiciels classiques ne marchent pas pour les artisans</h2>
+
+                <p>Vous avez peut-être déjà essayé. <strong>Batappli</strong>, <strong>EBP Bâtiment</strong>, <strong>Sage</strong>, <strong>Henrri</strong>, <strong>Axonaut</strong>. Vous avez téléchargé le logiciel, créé un compte, regardé les 47 menus du tableau de bord. Et au bout de 20 minutes, vous avez fermé l'onglet pour toujours.</p>
+
+                <p>Ce n'est pas votre faute. Ces outils sont conçus pour des entreprises structurées avec un comptable, une secrétaire et un commercial. Pas pour un artisan seul qui a les mains dans le plâtre à 7h du matin et qui veut juste savoir <strong>qui rappeler ce soir</strong>.</p>
+
+                <p>Le résultat, je le vois chaque semaine chez les artisans que j'accompagne :</p>
+                <ul style="margin:1.5rem 0;padding-left:1.5rem;line-height:2.2;">
+                    <li>Des licences logicielles payées mais <strong>jamais utilisées</strong></li>
+                    <li>Un retour au carnet papier et aux messages WhatsApp éparpillés</li>
+                    <li>Des devis oubliés, des relances manquées, des prospects perdus</li>
+                    <li>Une frustration permanente : <em>« Je sais que je devrais m'organiser, mais je n'ai pas le temps d'apprendre un logiciel »</em></li>
+                </ul>
+
+                <p>La solution n'est pas un logiciel plus complet. C'est un logiciel <strong>plus simple</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARATIF -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Votre dashboard vs un logiciel complexe</h2>
+
+                <div style="overflow-x:auto;">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Critère</th>
+                                <th style="background:#C6993E;">Votre dashboard</th>
+                                <th>Logiciel classique (EBP, Batappli...)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Installation</td>
+                                <td style="color:#2d8a4e;font-weight:600;">Aucune &#8212; via navigateur</td>
+                                <td>Téléchargement + configuration</td>
+                            </tr>
+                            <tr>
+                                <td>Temps de prise en main</td>
+                                <td style="color:#2d8a4e;font-weight:600;">20 minutes</td>
+                                <td>Plusieurs heures à plusieurs jours</td>
+                            </tr>
+                            <tr>
+                                <td>Coût</td>
+                                <td style="color:#2d8a4e;font-weight:600;">799&#8364; une fois (site + dashboard)</td>
+                                <td>30 à 80&#8364;/mois (360&#8364; à 960&#8364;/an)</td>
+                            </tr>
+                            <tr>
+                                <td>Utilisation mobile</td>
+                                <td style="color:#2d8a4e;font-weight:600;">Optimisé smartphone</td>
+                                <td>Souvent limité ou app séparée</td>
+                            </tr>
+                            <tr>
+                                <td>Nombre de fonctionnalités</td>
+                                <td style="color:#2d8a4e;font-weight:600;">L'essentiel : devis, clients, planning</td>
+                                <td>200+ fonctions (90% inutilisées)</td>
+                            </tr>
+                            <tr>
+                                <td>Lié à votre site internet</td>
+                                <td style="color:#2d8a4e;font-weight:600;">Oui &#8212; les demandes arrivent directement</td>
+                                <td>Non &#8212; saisie manuelle nécessaire</td>
+                            </tr>
+                            <tr>
+                                <td>Abonnement obligatoire</td>
+                                <td style="color:#2d8a4e;font-weight:600;">Non</td>
+                                <td>Oui, mensuel ou annuel</td>
+                            </tr>
+                            <tr>
+                                <td>Support</td>
+                                <td style="color:#2d8a4e;font-weight:600;">Direct avec le créateur (moi)</td>
+                                <td>Hotline, ticket, délai 48h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout-box">
+                    <h4>Le principe est simple</h4>
+                    <p>Un logiciel complexe vous donne 200 fonctions dont vous utilisez 5. Mon dashboard vous donne <strong>les 5 fonctions qui comptent</strong>, et il les fait bien. Pas de menu caché, pas d'option incompréhensible, pas de formation obligatoire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOURNÉE TYPE -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Votre journée type avec le dashboard</h2>
+
+                <p>Voici à quoi ressemble concrètement une journée d'artisan équipé de l'outil :</p>
+
+                <ol class="workflow-steps">
+                    <li><strong>7h00 &#8212; Avant de partir sur le chantier</strong> : vous ouvrez le dashboard sur votre téléphone. En 10 secondes, vous voyez : 2 nouvelles demandes de devis reçues cette nuit, 1 devis en attente de réponse depuis 3 jours, 1 chantier planifié aujourd'hui chez Mme Laurent.</li>
+                    <li><strong>12h30 &#8212; Pause déjeuner</strong> : vous rappelez les 2 nouveaux prospects. Le premier veut une rénovation de salle de bain : vous générez le devis en 2 minutes depuis le dashboard, vous l'envoyez par email. Le second n'est pas qualifié : vous changez le statut en « Refusé » et vous passez à autre chose.</li>
+                    <li><strong>13h00 &#8212; Relance automatique</strong> : le dashboard vous rappelle que M. Benali n'a pas répondu à votre devis depuis 3 jours. Vous cliquez sur « Appeler ». En 2 minutes, c'est réglé : il accepte. Vous passez le statut en « Accepté » et vous planifiez le chantier.</li>
+                    <li><strong>18h00 &#8212; Fin de journée</strong> : vous jetez un coup d'&#339;il aux statistiques du mois. 18 demandes reçues, 12 devis envoyés, 8 acceptés. Taux de conversion : 67%. Vous savez exactement où vous en êtes.</li>
+                </ol>
+
+                <p>Tout ça <strong>depuis votre téléphone</strong>, entre deux chantiers, sans jamais ouvrir un ordinateur. C'est la différence entre un logiciel pensé pour un bureau et un outil pensé pour <strong>le terrain</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FONCTIONNALITÉS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Les fonctionnalités essentielles, sans le superflu</h2>
+
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>&#128203; Suivi des demandes</h3>
+                    <p>Chaque demande de devis arrive automatiquement dans votre dashboard. Nom, téléphone, type de travaux, ville. Vous changez le statut en un clic : nouveau, devis envoyé, accepté, planifié, terminé.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>&#128196; Génération de devis</h3>
+                    <p>Sélectionnez le client et les prestations dans votre catalogue. Le devis PDF est prêt en 2 minutes avec votre logo, vos conditions et le total TTC. Envoi par email ou téléchargement direct.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>&#128197; Planning visuel</h3>
+                    <p>Calendrier semaine et mois avec vos chantiers en blocs de couleur. Glisser-déposer pour déplacer une intervention. Rappel SMS automatique au client la veille du rendez-vous.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>&#128100; Fichier client</h3>
+                    <p>Chaque client a sa fiche : coordonnées, historique des interventions, devis envoyés, montant total facturé, notes personnelles. Recherche instantanée par nom.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>&#128200; Statistiques mensuelles</h3>
+                    <p>En haut du dashboard : nombre de demandes, devis envoyés, taux de conversion, chiffre d'affaires du mois. Vous savez exactement où vous en êtes, sans sortir la calculatrice.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>&#128241; 100% mobile</h3>
+                    <p>L'interface est conçue pour être utilisée avec le pouce, entre deux chantiers. Pas d'application à télécharger : tout fonctionne depuis le navigateur de votre smartphone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KPI -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Ce que ça change en chiffres</h2>
+
+            <div class="kpi-grid">
+                <div class="kpi-box">
+                    <span class="kpi-num">7h</span>
+                    <div class="kpi-lbl">gagnées par mois</div>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">2 min</span>
+                    <div class="kpi-lbl">par devis (vs 25 min)</div>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">0</span>
+                    <div class="kpi-lbl">prospect oublié</div>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">67%</span>
+                    <div class="kpi-lbl">taux de conversion moyen</div>
+                </div>
+            </div>
+
+            <div class="callout-box">
+                <h4>Rentabilité immédiate</h4>
+                <p>Le dashboard coûte 799&#8364; (inclus avec le site). Un logiciel comme EBP Bâtiment coûte 50&#8364;/mois minimum, soit <strong>600&#8364;/an</strong>. En 16 mois, vous avez déjà économisé par rapport à un abonnement logiciel. Et votre outil est <strong>intégré à votre site</strong>, ce qu'aucun logiciel classique ne propose.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARIF -->
+    <section class="section">
+        <div class="container container--narrow" style="text-align:center;">
+            <h2 class="apropos-block-title">Deux formules, zéro abonnement</h2>
+            <div class="apropos-grid" style="margin-top:2rem;">
+                <div class="apropos-block" style="text-align:center;">
+                    <h3 class="apropos-block-title" style="font-size:1.1rem;">Site vitrine</h3>
+                    <p style="font-size:2rem;font-weight:700;color:#C6993E;margin:.5rem 0;">399&#8364;</p>
+                    <p style="color:var(--text-muted);font-size:.9rem;">Design sur mesure, SEO local, formulaire de devis, galerie, avis Google. Idéal si vous recevez peu de demandes.</p>
+                </div>
+                <div class="apropos-block" style="text-align:center;border:2px solid #C6993E;border-radius:12px;">
+                    <h3 class="apropos-block-title" style="font-size:1.1rem;">Site + dashboard</h3>
+                    <p style="font-size:2rem;font-weight:700;color:#C6993E;margin:.5rem 0;">799&#8364;</p>
+                    <p style="color:var(--text-muted);font-size:.9rem;">Tout le site vitrine + espace de gestion : suivi devis, fichier client, planning, statistiques. Pour les artisans qui veulent structurer leur activité.</p>
+                </div>
+            </div>
+            <p style="color:var(--text-muted);margin-top:2rem;font-size:.9rem;">Paiement unique. Pas d'abonnement obligatoire. Option maintenance 50&#8364;/mois (facultatif).</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
+
+                <h3>En quoi votre dashboard est-il plus simple qu'un logiciel comme Batappli ou EBP ?</h3>
+                <p>Notre dashboard est intégré directement à votre site internet. Pas d'installation, pas de licence séparée, pas de formation longue. Vous ouvrez votre navigateur, vous voyez vos demandes, vous changez un statut, vous appelez le client. Trois clics maximum par action. Batappli ou EBP sont des logiciels complets pensés pour des entreprises structurées avec comptable et secrétaire. Mon outil est pensé pour un artisan seul qui gère tout depuis son téléphone.</p>
+
+                <h3>Puis-je quand même créer des devis avec votre outil ?</h3>
+                <p>Oui. Le dashboard inclut un générateur de devis PDF simple : vous sélectionnez le client, les prestations dans votre catalogue pré-défini, et le devis est prêt en 2 minutes. Ce n'est pas un logiciel de comptabilité complet, mais pour 80% des artisans qui font 5 à 15 devis par semaine, c'est largement suffisant.</p>
+
+                <h3>Combien coûte cette solution ?</h3>
+                <p>Le site vitrine avec dashboard intégré est à 799&#8364;, paiement unique. Pas d'abonnement obligatoire. À titre de comparaison, un logiciel comme EBP Bâtiment coûte 30 à 80&#8364; par mois, soit 360 à 960&#8364; par an. Notre solution est rentabilisée dès la première année, et elle inclut votre site internet professionnel.</p>
+
+                <h3>Est-ce que ça fonctionne sur téléphone ?</h3>
+                <p>Oui, c'est même conçu pour ça. L'interface est responsive et optimisée pour le mobile. Vous gérez vos demandes, vos devis et votre planning directement depuis votre smartphone, entre deux chantiers. Pas besoin d'un ordinateur, pas d'application à télécharger. Tout passe par le navigateur.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align:center;">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title">Simplifiez votre gestion dès maintenant</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7;">Un site qui vous apporte des clients + un outil simple pour les gérer. Pas de logiciel complexe, pas d'abonnement, pas de formation de 3 jours.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis <span class="btn-arrow">&rarr;</span></a>
+                <a href="/site-artisan-avec-dashboard" class="btn btn--outline">En savoir plus sur le dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAILLAGE -->
+    <section class="section section--alt">
+        <div class="container container--narrow" style="text-align:center;">
+            <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">
+                Voir aussi :
+                <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">Site artisan avec dashboard</a> &middot;
+                <a href="/site-artisan-avec-dashboard-et-suivi-client" style="color:var(--accent);">Dashboard et suivi client</a> &middot;
+                <a href="/prix-site-internet-artisan" style="color:var(--accent);">Prix site internet artisan</a> &middot;
+                <a href="/creation-site-web-artisan" style="color:var(--accent);">Création site artisan</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025–2026 mon-agenceweb.fr &middot; Farouk</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Site artisan avec calendrier intégré : organisez vos interventions sans stress | mon-agenceweb.fr</title>
+    <meta name="description" content="Un calendrier intégré à votre site artisan pour gérer vos chantiers, vos rendez-vous et vos rappels SMS clients. Planning visuel, zéro doublon, zéro oubli. Solution à 799€.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/site-artisan-avec-calendrier">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mon-agenceweb.fr/site-artisan-avec-calendrier">
+    <meta property="og:title" content="Site artisan avec calendrier intégré — Organisez vos interventions">
+    <meta property="og:description" content="Planning visuel, rappels SMS clients, synchronisation mobile. Un calendrier intégré qui organise votre quotidien d'artisan. Fini les oublis.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+    <style>
+        .article-meta{font-size:.85rem;color:var(--text-muted);margin-bottom:2rem;}
+        .article-meta time{color:var(--accent);font-weight:500;}
+        .callout-box{background:linear-gradient(135deg,rgba(198,153,62,.08),rgba(198,153,62,.03));border-left:4px solid #C6993E;border-radius:8px;padding:1.5rem 2rem;margin:2rem 0;}
+        .callout-box h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:.8rem;color:#C6993E;}
+        .callout-box p{margin-bottom:.5rem;line-height:1.7;}
+        .callout-box .big-number{font-size:2rem;font-weight:700;color:#C6993E;display:block;margin:.5rem 0;}
+        .feature-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0;}
+        .feature-card{background:#fff;border:1px solid rgba(198,153,62,.15);border-radius:12px;padding:1.8rem;transition:box-shadow .3s ease;}
+        .feature-card:hover{box-shadow:0 8px 30px rgba(198,153,62,.12);}
+        .feature-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-bottom:.8rem;color:#1a1a1a;}
+        .feature-card p{font-size:.92rem;line-height:1.7;color:var(--text-muted);}
+        .feature-card .card-icon{font-size:1.8rem;margin-bottom:.8rem;display:block;}
+        .highlight-box{background:#C6993E;color:#fff;border-radius:12px;padding:2rem;margin:2rem 0;text-align:center;}
+        .highlight-box h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:.8rem;}
+        .highlight-box p{font-size:1rem;line-height:1.7;opacity:.92;}
+        .calendar-mockup{background:#fff;border:1px solid rgba(198,153,62,.15);border-radius:12px;overflow:hidden;margin:2rem 0;font-size:.85rem;}
+        .calendar-mockup .cal-header{background:#C6993E;color:#fff;padding:.8rem 1rem;font-weight:600;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;}
+        .calendar-mockup .cal-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(0,0,0,.06);}
+        .calendar-mockup .cal-day{background:#fff;padding:.6rem;min-height:70px;}
+        .calendar-mockup .cal-day .day-num{font-weight:600;font-size:.75rem;color:var(--text-muted);margin-bottom:.3rem;}
+        .calendar-mockup .cal-event{background:rgba(198,153,62,.12);color:#C6993E;border-left:3px solid #C6993E;padding:.2rem .4rem;border-radius:3px;font-size:.7rem;font-weight:500;margin-bottom:.2rem;}
+        .calendar-mockup .cal-event.urgent{background:rgba(220,53,69,.1);color:#dc3545;border-left-color:#dc3545;}
+        .workflow-steps{counter-reset:workflow;list-style:none;padding:0;margin:2rem 0;}
+        .workflow-steps li{counter-increment:workflow;position:relative;padding:1rem 1rem 1rem 3.5rem;margin-bottom:1rem;background:rgba(198,153,62,.03);border-radius:8px;border:1px solid rgba(198,153,62,.1);line-height:1.6;}
+        .workflow-steps li::before{content:counter(workflow);position:absolute;left:1rem;top:1rem;width:2rem;height:2rem;background:#C6993E;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;}
+        .feature-check{list-style:none;padding:0;margin:1.5rem 0;}
+        .feature-check li{padding:.6rem 0;padding-left:1.8rem;position:relative;line-height:1.6;}
+        .feature-check li::before{content:"\2713";position:absolute;left:0;color:#C6993E;font-weight:700;}
+        @media(max-width:640px){
+            .callout-box{padding:1rem 1.2rem;}
+            .workflow-steps li{padding-left:3rem;}
+            .calendar-mockup .cal-grid{grid-template-columns:repeat(3,1fr);}
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
+                    { "@type": "ListItem", "position": 2, "name": "Site artisan avec dashboard", "item": "https://mon-agenceweb.fr/site-artisan-avec-dashboard" },
+                    { "@type": "ListItem", "position": 3, "name": "Calendrier intégré", "item": "https://mon-agenceweb.fr/site-artisan-avec-calendrier" }
+                ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "description": "Création de sites internet pour artisans avec calendrier intégré, planning visuel et rappels SMS clients. Site + dashboard à 799€.",
+                "areaServed": "France",
+                "priceRange": "399€ – 799€",
+                "telephone": "",
+                "email": "contact@mon-agenceweb.fr"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Le calendrier se synchronise-t-il avec Google Agenda ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le calendrier du dashboard peut être synchronisé avec Google Agenda, Apple Calendar ou tout autre outil compatible iCal. Les événements créés dans le dashboard apparaissent dans votre agenda habituel, et inversement. Vous gardez un seul calendrier unifié." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Les rappels SMS sont-ils inclus dans le prix ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Les rappels SMS utilisent un forfait de messages inclus dans votre hébergement. Pour la plupart des artisans (5 à 15 interventions par semaine), le coût SMS est négligeable — environ 2 à 5€ par mois. Ce coût est bien inférieur au prix d'un seul déplacement pour rien quand un client oublie son rendez-vous." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Puis-je gérer plusieurs techniciens sur le même calendrier ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Oui, si vous travaillez avec un ou deux collaborateurs. Chaque technicien a sa couleur sur le calendrier. Vous voyez d'un coup d'œil qui est où et quand. Cette fonctionnalité est incluse dans le dashboard à 799€ sans surcoût." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Est-ce que mes clients peuvent réserver directement un créneau ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est une option que je propose avec le module de prise de rendez-vous en ligne. Le client voit vos créneaux disponibles et réserve directement. Vous validez ou refusez depuis votre dashboard. C'est idéal pour les artisans qui veulent automatiser la prise de rendez-vous." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav is-scrolled">
+        <a href="/" class="nav-logo">maw<span class="accent">.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <!-- INTRO -->
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container container--narrow">
+            <nav aria-label="Fil d'Ariane" style="margin-bottom: 2rem;">
+                <ol style="display:flex;gap:.5rem;list-style:none;padding:0;font-size:.9rem;color:var(--text-muted);">
+                    <li><a href="/" style="color:var(--accent);">Accueil</a> /</li>
+                    <li><a href="/site-artisan-avec-dashboard" style="color:var(--accent);">Site artisan avec dashboard</a> /</li>
+                    <li>Calendrier intégré</li>
+                </ol>
+            </nav>
+            <header class="section-header">
+                <span class="section-tag">Productivité artisan</span>
+                <h1 class="section-title" style="font-size:clamp(1.6rem,4vw,2.5rem);">Site artisan avec calendrier intégré : organisez vos interventions sans stress<span class="accent">.</span></h1>
+            </header>
+            <div class="article-meta">
+                Par <strong>Farouk</strong> &middot; <time datetime="2026-05-16">16 mai 2026</time> &middot; 9 min de lecture
+            </div>
+            <div class="legal-content">
+                <p>"C'était prévu pour quand, déjà ?" — Si cette phrase revient plus de deux fois par semaine dans votre quotidien d'artisan, vous avez un problème d'organisation. Pas de compétence, pas de motivation — d'<strong>outil</strong>.</p>
+                <p>Un agenda papier, c'est bien pour noter un rendez-vous chez le médecin. Mais quand vous jonglez avec 8 chantiers en parallèle, 3 visites de diagnostic, 2 clients à relancer et un fournisseur à appeler, il vous faut quelque chose de plus solide.</p>
+                <p>Le calendrier intégré à votre <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">site artisan avec dashboard</a> remplace votre agenda papier, vos Post-it et votre mémoire. Planning visuel, rappels SMS automatiques pour vos clients, prévention des conflits d'horaires — tout est centralisé et accessible depuis votre téléphone.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LE PROBLÈME -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Le coût invisible de la désorganisation</h2>
+
+                <p>Combien de fois cette année avez-vous :</p>
+                <ul style="margin:1.5rem 0;padding-left:1.5rem;line-height:2.2;">
+                    <li>Oublié un rendez-vous et fait poireauter un client ?</li>
+                    <li>Planifié deux interventions au même moment ?</li>
+                    <li>Fait un déplacement pour rien parce que le client n'était pas là ?</li>
+                    <li>Perdu 20 minutes à retrouver l'adresse d'un chantier dans vos messages ?</li>
+                    <li>Refusé un travail parce que vous pensiez être complet alors que vous aviez un créneau libre ?</li>
+                </ul>
+
+                <div class="callout-box">
+                    <h4>Le coût réel de la désorganisation</h4>
+                    <p>Un déplacement inutile : <strong>45 minutes + essence + péage</strong></p>
+                    <p>Un client oublié : <strong>1 avis négatif + bouche-à-oreille négatif</strong></p>
+                    <p>Un créneau non exploité : <strong>200 à 500 € de CA perdu</strong></p>
+                    <p>Total estimé sur un mois : <span class="big-number">500 à 1 200 € perdus</span></p>
+                </div>
+
+                <p>Un calendrier intégré ne résout pas tout. Mais il élimine les oublis, les doublons et les déplacements inutiles. C'est un outil de productivité <strong>concret</strong> qui se rentabilise dès le premier mois.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VUE SEMAINE -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">La vue semaine : votre cockpit quotidien</h2>
+
+                <p>Voici à quoi ressemble votre semaine dans le calendrier du dashboard. Chaque chantier est un bloc coloré avec le nom du client, l'adresse et le type d'intervention. Vous voyez en un coup d'œil vos journées chargées et vos créneaux libres.</p>
+
+                <div class="calendar-mockup">
+                    <div class="cal-header">Semaine du 19 au 23 mai 2026</div>
+                    <div class="cal-grid">
+                        <div class="cal-day">
+                            <div class="day-num">Lun 19</div>
+                            <div class="cal-event">9h — M. Dupont<br>Salle de bain</div>
+                            <div class="cal-event">14h — Mme Martin<br>Diagnostic cuisine</div>
+                        </div>
+                        <div class="cal-day">
+                            <div class="day-num">Mar 20</div>
+                            <div class="cal-event">8h — M. Dupont<br>Salle de bain (suite)</div>
+                        </div>
+                        <div class="cal-day">
+                            <div class="day-num">Mer 21</div>
+                            <div class="cal-event urgent">9h — Mme Petit<br>Fuite urgente</div>
+                            <div class="cal-event">15h — M. Bernard<br>Devis terrasse</div>
+                        </div>
+                        <div class="cal-day">
+                            <div class="day-num">Jeu 22</div>
+                            <div class="cal-event">8h-17h<br>Chantier Leroy<br>Rénovation complète</div>
+                        </div>
+                        <div class="cal-day">
+                            <div class="day-num">Ven 23</div>
+                            <div class="cal-event">9h — Mme Roux<br>Installation VMC</div>
+                            <div class="cal-event">14h — Libre</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Ce que vous voyez immédiatement : lundi est chargé, mardi est léger (vous pouvez accepter une nouvelle demande), mercredi matin est une urgence (en rouge), et vendredi après-midi est libre pour une visite de diagnostic ou du repos.</p>
+
+                <p>Chaque bloc est cliquable : vous accédez à la fiche client avec l'adresse, le numéro de téléphone, les notes et l'historique. Tout est connecté à votre <a href="/logiciel-simple-artisan" style="color:var(--accent);">logiciel de gestion artisan</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RAPPELS SMS -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Rappels SMS automatiques : plus de clients absents</h2>
+
+                <p>C'est la fonctionnalité préférée de mes clients. La veille de chaque intervention, votre client reçoit automatiquement un SMS de rappel :</p>
+
+                <div class="callout-box">
+                    <h4>Exemple de SMS automatique</h4>
+                    <p><em>"Rappel : [Votre entreprise] intervient demain à 9h chez vous pour [type de travaux]. Merci de prévoir l'accès. En cas de changement, contactez-nous au [numéro]. À demain !"</em></p>
+                </div>
+
+                <p>Le résultat est immédiat :</p>
+
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <span class="card-icon">🚫</span>
+                        <h3>Zéro déplacement inutile</h3>
+                        <p>Plus de client absent quand vous arrivez. Le SMS de rappel divise par 5 les rendez-vous manqués. Un seul déplacement évité rembourse plusieurs mois de coût SMS.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="card-icon">👍</span>
+                        <h3>Image professionnelle</h3>
+                        <p>Un SMS de rappel, c'est ce que font les dentistes, les garages, les hôtels. Vos clients voient un artisan organisé et sérieux. Ça renforce la confiance avant même votre arrivée.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="card-icon">🔄</span>
+                        <h3>Confirmation automatique</h3>
+                        <p>Le client peut répondre au SMS pour confirmer, reporter ou annuler. Vous êtes informé immédiatement dans votre dashboard. Plus de zone grise, plus d'incertitude.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYNCHRONISATION -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Synchronisation avec vos outils existants</h2>
+
+                <p>Le calendrier du dashboard n'est pas un outil isolé. Il se connecte à votre écosystème existant :</p>
+
+                <ul class="feature-check">
+                    <li><strong>Google Agenda</strong> — Synchronisation bidirectionnelle. Les événements créés dans le dashboard apparaissent dans Google Agenda, et vice versa</li>
+                    <li><strong>Apple Calendar (iCal)</strong> — Même principe pour les utilisateurs iPhone. Votre calendrier professionnel et personnel cohabitent</li>
+                    <li><strong>Notifications push</strong> — Rappel sur votre téléphone 30 minutes avant chaque intervention</li>
+                    <li><strong>Lien avec le pipeline</strong> — Quand un devis est accepté, le chantier est automatiquement proposé au calendrier. Vous choisissez le créneau en un clic</li>
+                </ul>
+
+                <p>Le module de <a href="/site-artisan-avec-prise-de-rendez-vous" style="color:var(--accent);">prise de rendez-vous en ligne</a> va encore plus loin : vos clients choisissent eux-mêmes un créneau disponible sur votre site. Le rendez-vous apparaît automatiquement dans votre calendrier. Zéro échange téléphonique nécessaire.</p>
+
+                <div class="highlight-box">
+                    <h3>Un seul endroit pour tout gérer</h3>
+                    <p>Site + dashboard + calendrier + suivi client = un écosystème complet. Plus besoin de jongler entre 5 applications. Tout est connecté, tout est au même endroit, tout fonctionne depuis votre téléphone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CE QUE ÇA INCLUT -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Ce qui est inclus dans l'offre à 799 €</h2>
+
+                <p>Le calendrier intégré fait partie de l'offre <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">site artisan avec dashboard</a> à 799 €. Voici ce que vous recevez :</p>
+
+                <ul class="feature-check">
+                    <li>Calendrier visuel vue semaine et vue mois</li>
+                    <li>Blocs colorés par type d'intervention</li>
+                    <li>Glisser-déposer pour déplacer ou reprogrammer</li>
+                    <li>Rappels SMS automatiques à J-1 pour vos clients</li>
+                    <li>Notifications push 30 min avant chaque rendez-vous</li>
+                    <li>Synchronisation Google Agenda / Apple Calendar</li>
+                    <li>Détection de conflits d'horaires</li>
+                    <li>Fiche client accessible en un clic depuis chaque événement</li>
+                    <li>Support multi-techniciens (codes couleur par intervenant)</li>
+                    <li>Accessible sur mobile, tablette et ordinateur</li>
+                </ul>
+
+                <p>Si vous débutez avec un site vitrine à 399 €, vous pouvez toujours ajouter le dashboard et le calendrier plus tard. La migration est simple car l'architecture est déjà prévue pour.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
+
+                <h3>Le calendrier se synchronise-t-il avec Google Agenda ?</h3>
+                <p>Oui. Le calendrier du dashboard peut être synchronisé avec Google Agenda, Apple Calendar ou tout autre outil compatible iCal. Les événements créés dans le dashboard apparaissent dans votre agenda habituel, et inversement. Vous gardez un seul calendrier unifié, que ce soit sur votre téléphone, votre tablette ou votre ordinateur.</p>
+
+                <h3>Les rappels SMS sont-ils inclus dans le prix ?</h3>
+                <p>Les rappels SMS utilisent un forfait de messages inclus dans votre hébergement. Pour la plupart des artisans (5 à 15 interventions par semaine), le coût est négligeable — environ 2 à 5 € par mois. Ce coût est largement inférieur au prix d'un seul déplacement inutile quand un client oublie son rendez-vous. Un seul rendez-vous manqué évité rembourse une année de SMS.</p>
+
+                <h3>Puis-je gérer plusieurs techniciens sur le même calendrier ?</h3>
+                <p>Oui, si vous travaillez avec un ou deux collaborateurs. Chaque technicien a sa couleur sur le calendrier. Vous voyez d'un coup d'œil qui intervient où et quand. Vous pouvez assigner les interventions par glisser-déposer. Cette fonctionnalité est incluse dans le dashboard à 799 € sans surcoût.</p>
+
+                <h3>Est-ce que mes clients peuvent réserver directement un créneau ?</h3>
+                <p>Oui, c'est une option que je propose avec le module de prise de rendez-vous en ligne. Le client voit vos créneaux disponibles directement sur votre site et réserve celui qui lui convient. Vous validez ou refusez depuis votre dashboard. C'est idéal pour les artisans qui veulent automatiser la prise de rendez-vous sans passer 30 minutes au téléphone chaque jour.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--alt" style="text-align:center;">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title">Fini les oublis, les doublons et les déplacements pour rien</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7;">Un site artisan avec calendrier intégré, rappels SMS et planning visuel. Tout ce dont vous avez besoin pour gérer vos interventions sereinement. 799 €, sans abonnement obligatoire.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis personnalisé <span class="btn-arrow">&rarr;</span></a>
+                <a href="/demo-site-artisan" class="btn btn--outline">Voir la démo en ligne</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAILLAGE INTERNE -->
+    <section class="section">
+        <div class="container container--narrow" style="text-align:center;">
+            <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">
+                Articles liés :
+                <a href="/site-artisan-avec-prise-de-rendez-vous" style="color:var(--accent);">Prise de rendez-vous en ligne</a> &middot;
+                <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">Site artisan avec dashboard</a> &middot;
+                <a href="/logiciel-simple-artisan" style="color:var(--accent);">Logiciel simple pour artisan</a> &middot;
+                <a href="/site-artisan-avec-suivi-client" style="color:var(--accent);">Suivi client artisan</a> &middot;
+                <a href="/demo-site-artisan" style="color:var(--accent);">Démo site artisan</a> &middot;
+                <a href="/creation-site-web-artisan" style="color:var(--accent);">Création site artisan</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025&#8211;2026 mon-agenceweb.fr &middot; Farouk</p>
+    </footer>
+
+</body>
+</html>

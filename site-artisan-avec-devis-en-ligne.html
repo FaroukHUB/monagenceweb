@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Site artisan avec formulaire de devis en ligne | mon-agenceweb.fr</title>
+    <meta name="description" content="Créez un formulaire de devis en ligne qui convertit vos visiteurs en clients. Champs optimisés, UX mobile, psychologie de conversion. Guide complet pour artisans.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/site-artisan-avec-devis-en-ligne">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mon-agenceweb.fr/site-artisan-avec-devis-en-ligne">
+    <meta property="og:title" content="Formulaire de devis en ligne pour artisan — Convertir visiteurs en clients">
+    <meta property="og:description" content="Le formulaire de devis est l'élément le plus important de votre site artisan. Découvrez les champs essentiels, l'UX mobile et la psychologie qui fait remplir.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[
+        {"@type":"BreadcrumbList","itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Accueil","item":"https://mon-agenceweb.fr/"},
+            {"@type":"ListItem","position":2,"name":"Création site artisan","item":"https://mon-agenceweb.fr/creation-site-web-artisan"},
+            {"@type":"ListItem","position":3,"name":"Devis en ligne","item":"https://mon-agenceweb.fr/site-artisan-avec-devis-en-ligne"}
+        ]},
+        {"@type":"ProfessionalService","name":"mon-agenceweb.fr","url":"https://mon-agenceweb.fr","description":"Formulaire de devis en ligne pour artisans : conception UX, champs optimisés, conversion mobile. Intégré aux sites artisans mon-agenceweb.fr.","serviceType":["Formulaire de devis artisan","Site artisan avec devis en ligne","Conversion web artisan"],"areaServed":{"@type":"Country","name":"France"},"priceRange":"€€"},
+        {"@type":"FAQPage","mainEntity":[
+            {"@type":"Question","name":"Quels champs mettre dans un formulaire de devis pour artisan ?","acceptedAnswer":{"@type":"Answer","text":"Les champs essentiels sont : nom, téléphone, type de travaux (liste déroulante), ville/code postal, et une description libre. Les champs optionnels utiles : photos du chantier, surface estimée, niveau d'urgence. Plus le formulaire est court, plus le taux de complétion est élevé."}},
+            {"@type":"Question","name":"Un formulaire de devis remplace-t-il le bouton d'appel ?","acceptedAnswer":{"@type":"Answer","text":"Non, les deux sont complémentaires. Le bouton d'appel capte les urgences (le client veut quelqu'un maintenant). Le formulaire capte les projets réfléchis (rénovation, installation). Environ 40% des prospects préfèrent écrire plutôt qu'appeler. Ne pas avoir de formulaire, c'est perdre 40% de vos prospects."}},
+            {"@type":"Question","name":"Comment augmenter le taux de remplissage du formulaire ?","acceptedAnswer":{"@type":"Answer","text":"Trois leviers principaux : réduire le nombre de champs obligatoires (5 maximum), placer le formulaire en haut de page et le répéter en bas, et ajouter des éléments de réassurance à proximité (devis gratuit, réponse sous 24h, pas d'engagement). Le design mobile est crucial : les champs doivent être assez grands pour le pouce."}},
+            {"@type":"Question","name":"Où arrivent les demandes de devis envoyées via le formulaire ?","acceptedAnswer":{"@type":"Answer","text":"Avec le site vitrine (399€), les demandes arrivent directement dans votre boîte email avec tous les détails. Avec le site + dashboard (799€), les demandes sont aussi centralisées dans un tableau de bord accessible depuis votre téléphone, avec notification instantanée et suivi du statut de chaque demande."}}
+        ]}
+    ]}
+    </script>
+    <style>
+    .form-mockup{background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:16px;padding:2rem 2.5rem;margin:2rem 0;box-shadow:0 8px 30px rgba(0,0,0,0.06);}
+    .form-mockup__title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#1A1A2E;margin-bottom:0.3rem;}
+    .form-mockup__sub{font-size:0.85rem;color:#8A8A9A;margin-bottom:1.5rem;}
+    .mock-field{background:#FAF7F2;border:1px solid rgba(0,0,0,0.08);border-radius:8px;padding:0.9rem 1rem;margin-bottom:0.8rem;font-size:0.9rem;color:#8A8A9A;display:flex;justify-content:space-between;align-items:center;}
+    .mock-field.required::after{content:"Obligatoire";font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#C6993E;background:rgba(198,153,62,0.1);padding:0.2rem 0.6rem;border-radius:4px;}
+    .mock-field.optional::after{content:"Facultatif";font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#8A8A9A;background:rgba(0,0,0,0.04);padding:0.2rem 0.6rem;border-radius:4px;}
+    .mock-btn{background:linear-gradient(135deg,#C6993E,#DBAF56);color:#fff;border:none;border-radius:8px;padding:1rem;font-size:0.9rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;width:100%;text-align:center;margin-top:0.5rem;}
+    .mock-trust{display:flex;gap:1.5rem;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(0,0,0,0.04);font-size:0.75rem;color:#8A8A9A;}
+    .conversion-tip{background:linear-gradient(135deg,rgba(198,153,62,0.06),rgba(198,153,62,0.02));border-left:4px solid #C6993E;border-radius:0 12px 12px 0;padding:1.5rem 2rem;margin:1.5rem 0;}
+    .conversion-tip__title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.1rem;color:#C6993E;margin-bottom:0.5rem;}
+    .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0;}
+    .field-card{background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:12px;padding:1.5rem;}
+    .field-card__label{font-weight:700;color:#1A1A2E;margin-bottom:0.3rem;font-size:0.95rem;}
+    .field-card__why{font-size:0.85rem;color:#8A8A9A;line-height:1.6;}
+    .field-card__tag{display:inline-block;font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.5rem;}
+    .field-card__tag--required{background:rgba(198,153,62,0.1);color:#C6993E;}
+    .field-card__tag--optional{background:rgba(0,0,0,0.04);color:#8A8A9A;}
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;background:rgba(250,247,242,0.95);backdrop-filter:blur(10px);border-top:1px solid rgba(0,0,0,0.06);padding:0.8rem 1.5rem;display:none;justify-content:center;align-items:center;gap:1rem;z-index:400;}
+    @media(max-width:640px){
+        .field-grid{grid-template-columns:1fr;}
+        .sticky-cta{display:flex;}
+        .form-mockup{padding:1.5rem;}
+    }
+    </style>
+</head>
+<body>
+<main>
+    <section class="section" style="padding-top:4rem;">
+    <div class="container container--narrow">
+        <nav aria-label="Fil d'Ariane" style="margin-bottom:2rem;font-size:.85rem;color:#888;">
+            <a href="/" style="color:#C6993E;text-decoration:none;">Accueil</a> <span style="margin:0 .4rem;">›</span>
+            <a href="/creation-site-web-artisan" style="color:#C6993E;text-decoration:none;">Site artisan</a> <span style="margin:0 .4rem;">›</span>
+            <span>Devis en ligne</span>
+        </nav>
+
+        <header class="section-header">
+            <span class="section-tag">Conversion</span>
+            <h1 class="section-title" style="font-size:clamp(1.8rem,4vw,2.8rem);">Site artisan avec formulaire de devis en ligne : transformez vos visiteurs en clients<span class="accent">.</span></h1>
+            <p class="section-sub" style="max-width:640px;">Le formulaire de devis est l'élément le plus rentable de votre site. Bien conçu, il transforme un simple visiteur en demande qualifiée. Mal conçu, il fait fuir 80% de vos prospects.</p>
+        </header>
+    </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-inner">
+            <div class="stat">
+                <span class="stat-number">40<span class="accent">%</span></span>
+                <span class="stat-label">des prospects préfèrent écrire plutôt qu'appeler</span>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+                <span class="stat-number">5<span class="accent">s</span></span>
+                <span class="stat-label">temps max pour remplir un formulaire efficace</span>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+                <span class="stat-number">3<span class="accent">x</span></span>
+                <span class="stat-label">plus de devis avec un formulaire optimisé</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENU -->
+    <section class="section">
+    <div class="container container--narrow">
+        <div class="legal-content">
+            <h2>Pourquoi le formulaire de devis est l'élément le plus important de votre site</h2>
+
+            <p>Un site artisan sans formulaire de devis, c'est un magasin sans caisse. Vous attirez des visiteurs grâce au SEO, vous les rassurez avec vos réalisations et vos avis, et au moment de passer à l'action... il n'y a qu'un numéro de téléphone. Résultat : <strong>40% de vos prospects repartent sans vous contacter</strong>.</p>
+
+            <p>Tous les visiteurs ne veulent pas appeler. Certains consultent votre site le soir, après le travail, quand appeler un artisan serait déplacé. D'autres comparent plusieurs devis et préfèrent envoyer la même description à trois prestataires. D'autres encore sont simplement introvertis — ils préfèrent écrire.</p>
+
+            <p>Le formulaire de devis capte cette audience silencieuse. C'est la deuxième porte d'entrée de votre activité, aussi importante que le bouton d'appel. Et sur un <a href="/creation-site-web-artisan">site artisan bien conçu</a>, ces deux éléments travaillent ensemble pour maximiser vos demandes.</p>
+
+            <h2>L'anatomie du formulaire de devis parfait</h2>
+
+            <p>Un bon formulaire de devis n'est ni trop court (vous recevez des demandes vagues et inutilisables), ni trop long (le prospect abandonne à mi-chemin). Voici la structure optimale, testée sur des dizaines de sites d'artisans :</p>
+
+            <div class="form-mockup">
+                <div class="form-mockup__title">Demandez votre devis gratuit</div>
+                <div class="form-mockup__sub">Réponse sous 24h &middot; Sans engagement</div>
+                <div class="mock-field required">Votre nom</div>
+                <div class="mock-field required">Votre téléphone</div>
+                <div class="mock-field required">Type de travaux (liste déroulante)</div>
+                <div class="mock-field required">Ville / Code postal</div>
+                <div class="mock-field optional">Description du projet</div>
+                <div class="mock-field optional">Photos du chantier (glisser-déposer)</div>
+                <div class="mock-field optional">Niveau d'urgence</div>
+                <div class="mock-btn">Envoyer ma demande de devis &rarr;</div>
+                <div class="mock-trust">
+                    <span>&#10003; Devis 100% gratuit</span>
+                    <span>&#10003; Réponse sous 24h</span>
+                    <span>&#10003; Sans engagement</span>
+                </div>
+            </div>
+
+            <h2>Champs obligatoires vs facultatifs : le bon équilibre</h2>
+
+            <p>Chaque champ supplémentaire dans un formulaire réduit le taux de complétion d'environ <strong>10 à 15%</strong>. C'est pour cela que la distinction entre champs obligatoires et facultatifs est cruciale :</p>
+
+            <div class="field-grid">
+                <div class="field-card">
+                    <span class="field-card__tag field-card__tag--required">Obligatoire</span>
+                    <div class="field-card__label">Nom</div>
+                    <p class="field-card__why">Indispensable pour personnaliser votre réponse. Un « Bonjour M. Martin » vaut mieux qu'un « Bonjour ».</p>
+                </div>
+                <div class="field-card">
+                    <span class="field-card__tag field-card__tag--required">Obligatoire</span>
+                    <div class="field-card__label">Téléphone</div>
+                    <p class="field-card__why">Le moyen le plus rapide de recontacter le prospect. Un rappel dans l'heure convertit 3x mieux qu'un email.</p>
+                </div>
+                <div class="field-card">
+                    <span class="field-card__tag field-card__tag--required">Obligatoire</span>
+                    <div class="field-card__label">Type de travaux</div>
+                    <p class="field-card__why">Liste déroulante avec vos prestations principales. Permet de qualifier la demande avant même de rappeler.</p>
+                </div>
+                <div class="field-card">
+                    <span class="field-card__tag field-card__tag--required">Obligatoire</span>
+                    <div class="field-card__label">Ville / Code postal</div>
+                    <p class="field-card__why">Vérifie que le prospect est dans votre zone d'intervention. Évite les demandes hors secteur.</p>
+                </div>
+                <div class="field-card">
+                    <span class="field-card__tag field-card__tag--optional">Facultatif</span>
+                    <div class="field-card__label">Description du projet</div>
+                    <p class="field-card__why">Champ texte libre. Les prospects motivés décrivent leur besoin — ceux pressés passent directement.</p>
+                </div>
+                <div class="field-card">
+                    <span class="field-card__tag field-card__tag--optional">Facultatif</span>
+                    <div class="field-card__label">Photos du chantier</div>
+                    <p class="field-card__why">Un bouton d'upload simple. Quand le prospect envoie des photos, la demande est 2x plus qualifiée.</p>
+                </div>
+            </div>
+
+            <div class="conversion-tip">
+                <div class="conversion-tip__title">Astuce conversion</div>
+                <p>Ne demandez jamais l'adresse email en champ obligatoire. Le téléphone suffit pour recontacter le prospect. L'email est une barrière supplémentaire : certaines personnes hésitent à le donner par peur du spam. Moins de friction = plus de formulaires envoyés.</p>
+            </div>
+
+            <h2>La psychologie qui fait remplir un formulaire</h2>
+
+            <p>Un formulaire n'est pas qu'une question de champs et de boutons. C'est un <strong>exercice de psychologie</strong>. Voici les principes qui multiplient les taux de complétion :</p>
+
+            <p><strong>La réciprocité</strong> — Avant de demander des informations, donnez quelque chose. Vos réalisations, vos avis clients, vos fourchettes de prix. Le prospect qui a reçu de la valeur est naturellement enclin à remplir votre formulaire. C'est pour cela que le formulaire fonctionne mieux quand il est placé <em>après</em> la galerie de réalisations.</p>
+
+            <p><strong>La réassurance immédiate</strong> — Sous le formulaire, affichez trois éléments clés : « Devis gratuit », « Réponse sous 24h », « Sans engagement ». Ces micro-textes réduisent l'anxiété du prospect. Il ne s'engage à rien en envoyant sa demande.</p>
+
+            <p><strong>La preuve sociale</strong> — Placer un avis client à proximité du formulaire augmente le taux de complétion de 15 à 25%. Le prospect voit que d'autres ont fait la démarche et en sont satisfaits.</p>
+
+            <p><strong>L'urgence calibrée</strong> — Un compteur « 3 demandes reçues aujourd'hui dans votre ville » crée une urgence naturelle sans être agressif. Le prospect comprend que l'artisan est sollicité et qu'il a intérêt à envoyer sa demande rapidement.</p>
+
+            <h2>L'UX mobile : 70% de vos formulaires seront remplis sur téléphone</h2>
+
+            <p>La majorité de vos prospects remplissent le formulaire depuis leur smartphone. L'expérience mobile conditionne directement le nombre de demandes que vous recevez. Voici les règles non négociables :</p>
+
+            <p><strong>Des champs assez grands pour le pouce</strong> — Minimum 48 pixels de hauteur. Un champ trop petit sur mobile, c'est un champ que le prospect ne remplira pas. Sur les sites que je crée pour les artisans, chaque champ est dimensionné pour les doigts, pas pour une souris.</p>
+
+            <p><strong>Le bon clavier au bon moment</strong> — Quand le prospect tape dans le champ « téléphone », le clavier numérique s'affiche automatiquement. Pour le champ « email », c'est le clavier avec le @. Ce détail technique semble anodin, mais il réduit le temps de saisie de 30%.</p>
+
+            <p><strong>Pas de scroll horizontal</strong> — Deux champs côte à côte sur desktop, mais empilés sur mobile. Le formulaire doit être lisible et remplissable en scrollant uniquement vers le bas.</p>
+
+            <p><strong>Un bouton d'envoi impossible à rater</strong> — Pleine largeur, couleur contrastée, texte explicite (« Envoyer ma demande de devis », pas « Envoyer »). C'est le bouton le plus important de votre site.</p>
+
+            <p>Pour voir ces principes en action, consultez notre <a href="/demo-site-artisan">démo de site artisan</a> sur votre téléphone.</p>
+
+            <h2>Où placer le formulaire sur votre site</h2>
+
+            <p>La position du formulaire influence directement le nombre de demandes. Voici la stratégie qui fonctionne le mieux sur les sites artisans :</p>
+
+            <p><strong>En haut de la page d'accueil</strong> — Un premier formulaire visible sans scroller. Il capte les prospects qui savent déjà ce qu'ils veulent et ne veulent pas perdre de temps.</p>
+
+            <p><strong>Après la galerie de réalisations</strong> — Le prospect vient de voir votre travail. Il est convaincu. C'est le moment optimal pour lui proposer de passer à l'action. Le taux de complétion est le plus élevé à cet endroit.</p>
+
+            <p><strong>En bas de chaque page</strong> — Un rappel systématique. Quelle que soit la page par laquelle le prospect arrive (via Google, un lien, une recommandation), il trouve toujours un formulaire sans avoir à chercher.</p>
+
+            <p>Cette approche est exactement celle que nous utilisons sur nos <a href="/site-artisan-qui-genere-des-devis">sites artisans conçus pour générer des devis</a>.</p>
+
+            <h2>FAQ — Questions fréquentes sur le formulaire de devis</h2>
+
+            <h3>Quels champs mettre dans un formulaire de devis pour artisan ?</h3>
+            <p>Les champs essentiels sont : <strong>nom, téléphone, type de travaux</strong> (liste déroulante adaptée à votre métier), <strong>ville/code postal</strong>, et une <strong>description libre</strong> (facultative). Les champs optionnels les plus utiles sont les photos du chantier et le niveau d'urgence. La règle d'or : 4 champs obligatoires maximum pour un taux de complétion optimal.</p>
+
+            <h3>Un formulaire de devis remplace-t-il le bouton d'appel ?</h3>
+            <p>Jamais. Les deux sont complémentaires et indispensables. Le bouton d'appel capte les urgences — le client a une fuite, il veut quelqu'un maintenant. Le formulaire capte les projets réfléchis — le client planifie une rénovation, il compare des devis. <strong>Sans formulaire, vous perdez environ 40% de vos prospects potentiels.</strong></p>
+
+            <h3>Comment augmenter le taux de remplissage du formulaire ?</h3>
+            <p>Trois leviers principaux : réduire le nombre de champs obligatoires (5 maximum), placer le formulaire à plusieurs endroits stratégiques de la page, et ajouter des éléments de réassurance juste en dessous (devis gratuit, réponse rapide, pas d'engagement). Le design mobile est crucial : les champs doivent être adaptés au pouce, pas à la souris.</p>
+
+            <h3>Où arrivent les demandes de devis ?</h3>
+            <p>Avec le site vitrine à 399€, chaque demande arrive directement dans votre boîte email avec tous les détails (nom, téléphone, type de travaux, ville, description, photos). Avec le <a href="/site-artisan-avec-dashboard">site + dashboard à 799€</a>, les demandes sont aussi centralisées dans un tableau de bord accessible depuis votre téléphone, avec notification instantanée et suivi du statut.</p>
+        </div>
+    </div>
+    </section>
+
+    <!-- MAILLAGE -->
+    <section class="section section--alt">
+    <div class="container container--narrow">
+        <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">À lire aussi</h2>
+        <div class="services-grid" style="grid-template-columns:repeat(3,1fr);">
+            <a href="/creation-site-web-artisan" class="svc-card" style="text-decoration:none;">
+                <span class="svc-icon">&#128736;</span>
+                <span class="svc-title" style="display:block;">Création site artisan</span>
+                <span class="svc-desc">Le système digital complet pour artisans</span>
+            </a>
+            <a href="/demo-site-artisan" class="svc-card" style="text-decoration:none;">
+                <span class="svc-icon">&#128065;</span>
+                <span class="svc-title" style="display:block;">Voir la démo</span>
+                <span class="svc-desc">Testez le formulaire en conditions réelles</span>
+            </a>
+            <a href="/site-artisan-qui-genere-des-devis" class="svc-card" style="text-decoration:none;">
+                <span class="svc-icon">&#128200;</span>
+                <span class="svc-title" style="display:block;">Générer des devis</span>
+                <span class="svc-desc">Le système complet SEO + design + formulaire</span>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+    <div class="container container--narrow" style="text-align:center;">
+        <h2 class="apropos-block-title">Prêt à recevoir des demandes de devis qualifiées ?</h2>
+        <p style="font-size:1.1rem;max-width:600px;margin:1rem auto 2rem;color:var(--text-muted);">Votre formulaire de devis optimisé peut être en ligne dans 7 jours. Chaque jour sans, ce sont des prospects qui repartent sans vous contacter.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="/#contact" class="btn btn--primary">Créer mon site avec formulaire de devis <span class="btn-arrow">&rarr;</span></a>
+            <a href="/demo-site-artisan" class="btn btn--outline">Voir la démo</a>
+        </div>
+        <p style="margin-top:1.5rem;font-size:0.85rem;color:#888;">Site vitrine 399€ &middot; Site + dashboard 799€ &middot; Paiement unique &middot; Sans abonnement</p>
+    </div>
+    </section>
+</main>
+
+<div class="sticky-cta">
+    <span style="font-size:0.85rem;font-weight:600;color:#1A1A2E;">Site + devis en ligne</span>
+    <a href="/#contact" class="btn btn--primary btn--sm">Devis gratuit <span class="btn-arrow">&rarr;</span></a>
+</div>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <span class="footer-sep" aria-hidden="true">&middot;</span>
+        <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+    </div>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+        <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    </div>
+    <p>&copy; 2025–2026 mon-agenceweb.fr &middot; Farouk</p>
+</footer>
+</body>
+</html>

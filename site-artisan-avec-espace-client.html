@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Site artisan avec espace client : suivi professionnel pour vos clients | mon-agenceweb.fr</title>
+    <meta name="description" content="Offrez à vos clients un espace de suivi professionnel : statut du devis, dates d'intervention, téléchargement de factures. Un site artisan qui inspire confiance. À partir de 799€.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/site-artisan-avec-espace-client">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mon-agenceweb.fr/site-artisan-avec-espace-client">
+    <meta property="og:title" content="Site artisan avec espace client — Offrez un suivi professionnel à vos clients">
+    <meta property="og:description" content="Vos clients suivent leur devis, voient les dates d'intervention et téléchargent leurs factures. Un portail client intégré à votre site artisan.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+    <style>
+        .client-portal{background:#1A1A2E;border-radius:12px;padding:2rem;color:#fff;margin:2rem 0;}
+        .client-portal h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:1.5rem;}
+        .portal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;}
+        .portal-header .client-name{font-size:1.1rem;font-weight:600;}
+        .portal-header .client-badge{background:rgba(198,153,62,.2);color:#C6993E;padding:.3rem .8rem;border-radius:4px;font-size:.8rem;font-weight:600;}
+        .portal-card{background:rgba(255,255,255,.06);border-radius:8px;padding:1.2rem;margin-bottom:1rem;}
+        .portal-card h4{font-size:.85rem;opacity:.6;margin-bottom:.8rem;font-weight:500;}
+        .portal-status{display:inline-block;padding:.25rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600;}
+        .portal-status--accepted{background:rgba(34,197,94,.2);color:#22c55e;}
+        .portal-status--progress{background:rgba(251,191,36,.2);color:#fbbf24;}
+        .portal-status--scheduled{background:rgba(59,130,246,.2);color:#60a5fa;}
+        .callout-box{background:linear-gradient(135deg,rgba(198,153,62,.08),rgba(198,153,62,.03));border-left:4px solid #C6993E;border-radius:8px;padding:1.5rem 2rem;margin:2rem 0;}
+        .callout-box h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:.8rem;color:#C6993E;}
+        .callout-box p{margin-bottom:.5rem;line-height:1.7;}
+        .feature-check{list-style:none;padding:0;margin:1.5rem 0;}
+        .feature-check li{padding:.6rem 0;padding-left:1.8rem;position:relative;line-height:1.6;}
+        .feature-check li::before{content:"\2713";position:absolute;left:0;color:#C6993E;font-weight:700;}
+        .benefit-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0;}
+        .benefit-card{background:#fff;border-radius:10px;padding:1.5rem;border:1px solid rgba(198,153,62,.12);box-shadow:0 2px 8px rgba(0,0,0,.04);}
+        .benefit-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-bottom:.8rem;color:#1a1a1a;}
+        .benefit-card p{font-size:.9rem;line-height:1.6;color:#555;}
+        .workflow-steps{counter-reset:workflow;list-style:none;padding:0;margin:2rem 0;}
+        .workflow-steps li{counter-increment:workflow;position:relative;padding:1rem 1rem 1rem 3.5rem;margin-bottom:1rem;background:rgba(198,153,62,.03);border-radius:8px;border:1px solid rgba(198,153,62,.1);line-height:1.6;}
+        .workflow-steps li::before{content:counter(workflow);position:absolute;left:1rem;top:1rem;width:2rem;height:2rem;background:#C6993E;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;}
+        @media(max-width:640px){
+            .client-portal{padding:1.2rem;}
+            .callout-box{padding:1rem 1.2rem;}
+            .workflow-steps li{padding-left:3rem;}
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
+                    { "@type": "ListItem", "position": 2, "name": "Site artisan", "item": "https://mon-agenceweb.fr/creation-site-web-artisan" },
+                    { "@type": "ListItem", "position": 3, "name": "Site artisan avec espace client", "item": "https://mon-agenceweb.fr/site-artisan-avec-espace-client" }
+                ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "description": "Site artisan avec espace client pour un suivi professionnel des devis et interventions",
+                "serviceType": ["Site artisan avec espace client", "Portail client artisan", "Suivi devis artisan en ligne"],
+                "areaServed": { "@type": "Country", "name": "France" },
+                "provider": { "@type": "Person", "name": "Farouk" },
+                "priceRange": "€€"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Qu'est-ce que l'espace client concrètement ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "C'est un espace sécurisé sur votre site où vos clients peuvent se connecter pour voir le statut de leur devis, les dates d'intervention prévues, et télécharger leurs factures. Ils n'ont plus besoin de vous appeler pour savoir où ça en est. C'est comme le suivi d'un colis, mais pour des travaux." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Mes clients doivent-ils créer un compte ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Non, c'est plus simple. Quand vous créez un dossier client dans votre dashboard, un lien de suivi unique est généré automatiquement. Vous l'envoyez par SMS ou email. Le client clique sur le lien et accède à son espace sans inscription ni mot de passe." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Est-ce inclus dans l'offre à 799€ ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "L'espace client est une option du dashboard. L'offre de base à 799€ inclut le site vitrine et le dashboard de gestion. L'espace client est intégré sans surcoût dans cette offre. Vous bénéficiez du portail client dès la livraison de votre site." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "En quoi ça améliore ma relation client ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Un client qui peut suivre l'avancement de son projet en autonomie est un client rassuré. Il ne vous appelle plus pour demander où en est son devis. Il voit que vous êtes organisé, professionnel. Et un client satisfait de l'expérience laisse un avis 5 étoiles et recommande votre travail." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav is-scrolled">
+        <a href="/" class="nav-logo">maw<span class="accent">.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <!-- INTRO -->
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container container--narrow">
+            <nav aria-label="Fil d'Ariane" style="margin-bottom: 2rem;">
+                <ol style="display:flex;gap:.5rem;list-style:none;padding:0;font-size:.9rem;color:var(--text-muted);">
+                    <li><a href="/" style="color:var(--accent);">Accueil</a> /</li>
+                    <li><a href="/creation-site-web-artisan" style="color:var(--accent);">Site artisan</a> /</li>
+                    <li>Espace client</li>
+                </ol>
+            </nav>
+            <header class="section-header">
+                <span class="section-tag">Portail client</span>
+                <h1 class="section-title" style="font-size:clamp(1.6rem,4vw,2.5rem);">Site artisan avec espace client : offrez à vos clients un suivi professionnel<span class="accent">.</span></h1>
+                <p class="section-sub" style="max-width:640px;margin:1.5rem auto;">Vos clients suivent l'avancement de leur projet, consultent les dates d'intervention et téléchargent leurs factures. Sans vous appeler toutes les 5 minutes.</p>
+            </header>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis <span class="btn-arrow">&rarr;</span></a>
+                <a href="/demo-site-artisan" class="btn btn--outline">Voir la démo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLÈME -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Vos clients vous appellent trop souvent pour les mêmes questions</h2>
+
+                <p>Si vous êtes artisan, vous connaissez ces appels par c&#339;ur :</p>
+                <ul style="margin:1.5rem 0;padding-left:1.5rem;line-height:2.2;">
+                    <li><em>« Bonjour, je voulais savoir où en est mon devis ? »</em></li>
+                    <li><em>« C'est pour quand l'intervention ? »</em></li>
+                    <li><em>« Vous pouvez me renvoyer la facture ? »</em></li>
+                    <li><em>« Vous passez bien mardi à 9h ? »</em></li>
+                </ul>
+
+                <p>Ces appels ne sont pas des problèmes en soi. Ce sont des <strong>symptômes</strong>. Vos clients ne vous font pas confiance aveuglément : ils veulent savoir où ça en est. Et c'est normal. Mais chaque appel vous coûte 5 à 10 minutes, souvent en plein chantier, les mains dans le ciment.</p>
+
+                <p>L'espace client résout ce problème à la source : <strong>le client trouve la réponse tout seul</strong>, sur votre site, en 10 secondes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APERÇU PORTAIL -->
+    <section class="section">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Aperçu de l'espace client</h2>
+
+            <div class="client-portal">
+                <div class="portal-header">
+                    <div>
+                        <span class="client-name">&#128100; Espace de Mme Laurent</span>
+                    </div>
+                    <span class="client-badge">Chantier en cours</span>
+                </div>
+
+                <div class="portal-card">
+                    <h4>&#128196; Mon devis</h4>
+                    <p style="font-size:.9rem;margin-bottom:.5rem;">Rénovation salle de bain complète</p>
+                    <p style="font-size:.85rem;opacity:.7;margin-bottom:.5rem;">Montant : 4 200&#8364; TTC</p>
+                    <span class="portal-status portal-status--accepted">&#10003; Accepté le 12 mai 2026</span>
+                    <p style="font-size:.8rem;margin-top:.8rem;opacity:.5;"><a href="#" style="color:#C6993E;">Télécharger le devis PDF</a></p>
+                </div>
+
+                <div class="portal-card">
+                    <h4>&#128197; Dates d'intervention</h4>
+                    <p style="font-size:.9rem;margin-bottom:.3rem;">&#9679; <strong>Lundi 19 mai</strong> &#8212; Démolition et évacuation</p>
+                    <p style="font-size:.9rem;margin-bottom:.3rem;">&#9679; <strong>Mardi 20 mai</strong> &#8212; Plomberie</p>
+                    <p style="font-size:.9rem;margin-bottom:.3rem;">&#9679; <strong>Mercredi 21 mai</strong> &#8212; Carrelage</p>
+                    <p style="font-size:.9rem;">&#9679; <strong>Jeudi 22 mai</strong> &#8212; Finitions et nettoyage</p>
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;">
+                    <div class="portal-card">
+                        <h4>&#128176; Paiements</h4>
+                        <p style="font-size:.85rem;margin-bottom:.3rem;">Acompte 30% : <span style="color:#22c55e;">Payé</span></p>
+                        <p style="font-size:.85rem;">Solde 70% : <span class="portal-status portal-status--scheduled">À la fin du chantier</span></p>
+                    </div>
+                    <div class="portal-card">
+                        <h4>&#128206; Documents</h4>
+                        <p style="font-size:.85rem;margin-bottom:.3rem;"><a href="#" style="color:#C6993E;">&#8594; Devis signé.pdf</a></p>
+                        <p style="font-size:.85rem;"><a href="#" style="color:#C6993E;">&#8594; Facture acompte.pdf</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="text-align:center;font-size:.85rem;color:var(--text-muted);margin-top:1rem;">Aperçu simulé de l'interface client. Le design réel est adapté à votre charte graphique.</p>
+        </div>
+    </section>
+
+    <!-- BÉNÉFICES -->
+    <section class="section section--alt">
+        <div class="container">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Ce que l'espace client change pour vous et vos clients</h2>
+
+            <div class="benefit-cards">
+                <div class="benefit-card">
+                    <h3>&#128386; Moins d'appels inutiles</h3>
+                    <p>Vos clients consultent eux-mêmes le statut de leur devis et les dates d'intervention. Vous n'êtes plus dérangé en plein chantier pour des questions qui ont déjà une réponse.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>&#11088; Image professionnelle</h3>
+                    <p>Un artisan qui offre un espace de suivi en ligne, c'est rare. Vos clients sont impressionnés. Ils en parlent autour d'eux. C'est un marqueur de sérieux qui vous différencie de tous vos concurrents.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>&#128170; Confiance renforcée</h3>
+                    <p>La transparence crée la confiance. Un client qui voit exactement où en est son projet ne doute pas de votre travail. Il sait que vous êtes organisé et fiable. Résultat : plus d'avis positifs, plus de recommandations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMENT ÇA MARCHE -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Comment ça fonctionne concrètement</h2>
+
+                <ol class="workflow-steps">
+                    <li><strong>Vous créez le dossier client dans votre dashboard</strong> : nom, coordonnées, type de travaux, montant du devis. Un lien de suivi unique est généré automatiquement.</li>
+                    <li><strong>Vous envoyez le lien au client</strong> par SMS ou email. Pas de compte à créer, pas de mot de passe. Le client clique et accède à son espace en une seconde.</li>
+                    <li><strong>Vous mettez à jour le dossier normalement</strong> : quand vous changez le statut du devis, ajoutez des dates d'intervention ou uploadez une facture, le client voit les changements en temps réel.</li>
+                    <li><strong>Le client consulte son espace en autonomie</strong> : statut du devis, planning des interventions, documents à télécharger. Plus besoin de vous appeler.</li>
+                </ol>
+
+                <div class="callout-box">
+                    <h4>Zéro effort supplémentaire pour vous</h4>
+                    <p>L'espace client se remplit automatiquement à partir de ce que vous saisissez dans votre <a href="/site-artisan-avec-dashboard" style="color:#C6993E;">dashboard</a>. Vous ne faites rien de plus que votre gestion habituelle. Le portail client est juste une <strong>vue partagée</strong> de ce que vous avez déjà saisi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POUR QUI -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Pour quels artisans ?</h2>
+                <p>L'espace client est particulièrement utile si vous êtes :</p>
+                <ul class="feature-check">
+                    <li>Un artisan qui gère des chantiers sur <strong>plusieurs jours</strong> (rénovation, construction, aménagement)</li>
+                    <li>Un professionnel dont les clients attendent un <strong>devis formel</strong> avant de valider</li>
+                    <li>Un artisan qui travaille avec des <strong>particuliers exigeants</strong> (rénovation haut de gamme, architecture d'intérieur)</li>
+                    <li>Un professionnel qui veut se <strong>différencier</strong> de la concurrence locale</li>
+                    <li>Un artisan qui en a marre de <strong>répondre 10 fois par jour</strong> aux mêmes questions</li>
+                </ul>
+
+                <p>Si vos interventions sont courtes (dépannage, réparation ponctuelle), l'espace client est moins indispensable. Dans ce cas, le <a href="/site-artisan-avec-dashboard-et-suivi-client" style="color:var(--accent);">dashboard avec suivi client classique</a> suffit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
+
+                <h3>Qu'est-ce que l'espace client concrètement ?</h3>
+                <p>C'est un espace sécurisé sur votre site où vos clients peuvent se connecter pour voir le statut de leur devis, les dates d'intervention prévues, et télécharger leurs factures. Ils n'ont plus besoin de vous appeler pour savoir où ça en est. C'est comme le suivi d'un colis, mais pour des travaux.</p>
+
+                <h3>Mes clients doivent-ils créer un compte ?</h3>
+                <p>Non, c'est plus simple que ça. Quand vous créez un dossier client dans votre dashboard, un lien de suivi unique est généré automatiquement. Vous l'envoyez par SMS ou email. Le client clique sur le lien et accède à son espace sans inscription ni mot de passe. Simple et rapide.</p>
+
+                <h3>Est-ce inclus dans l'offre à 799&#8364; ?</h3>
+                <p>Oui. L'espace client est intégré au dashboard sans surcoût. L'offre à 799&#8364; inclut le site vitrine complet, le dashboard de gestion, et le portail client. Pas de module supplémentaire à acheter.</p>
+
+                <h3>En quoi ça améliore ma relation client ?</h3>
+                <p>Un client qui peut suivre l'avancement de son projet en autonomie est un client rassuré. Il ne vous appelle plus pour demander où en est son devis. Il voit que vous êtes organisé, professionnel. Et un client satisfait de l'expérience laisse un avis 5 étoiles et recommande votre travail à son entourage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--alt" style="text-align:center;">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title">Impressionnez vos clients dès le premier devis</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7;">Un site professionnel + un espace client qui inspire confiance. Vos clients sauront que vous êtes l'artisan le plus organisé qu'ils aient jamais rencontré.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis <span class="btn-arrow">&rarr;</span></a>
+                <a href="/demo-site-artisan" class="btn btn--outline">Voir la démo en ligne</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAILLAGE -->
+    <section class="section">
+        <div class="container container--narrow" style="text-align:center;">
+            <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">
+                Voir aussi :
+                <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">Site artisan avec dashboard</a> &middot;
+                <a href="/demo-site-artisan" style="color:var(--accent);">Démo site artisan</a> &middot;
+                <a href="/site-artisan-avec-dashboard-et-suivi-client" style="color:var(--accent);">Dashboard et suivi client</a> &middot;
+                <a href="/creation-site-web-artisan" style="color:var(--accent);">Création site artisan</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025–2026 mon-agenceweb.fr &middot; Farouk</p>
+    </footer>
+
+</body>
+</html>

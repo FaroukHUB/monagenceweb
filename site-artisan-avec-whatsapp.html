@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Site artisan avec bouton WhatsApp : recevez des demandes instantanément | mon-agenceweb.fr</title>
+    <meta name="description" content="Intégrez un bouton WhatsApp sur votre site artisan pour recevoir des demandes de devis instantanément. Photos, messages vocaux, devis rapides. Guide complet d'intégration.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/site-artisan-avec-whatsapp">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mon-agenceweb.fr/site-artisan-avec-whatsapp">
+    <meta property="og:title" content="Site artisan avec bouton WhatsApp — Demandes instantanées">
+    <meta property="og:description" content="WhatsApp comme canal de conversion pour artisans : contact immédiat, photos du client, devis rapides. Intégration complète sur votre site.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+    <style>
+        .article-meta{font-size:.85rem;color:var(--text-muted);margin-bottom:2rem;}
+        .article-meta time{color:var(--accent);font-weight:500;}
+        .callout-box{background:linear-gradient(135deg,rgba(198,153,62,.08),rgba(198,153,62,.03));border-left:4px solid #C6993E;border-radius:8px;padding:1.5rem 2rem;margin:2rem 0;}
+        .callout-box h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:.8rem;color:#C6993E;}
+        .callout-box p{margin-bottom:.5rem;line-height:1.7;}
+        .callout-box .big-number{font-size:2rem;font-weight:700;color:#C6993E;display:block;margin:.5rem 0;}
+        .feature-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0;}
+        .feature-card{background:#fff;border:1px solid rgba(198,153,62,.15);border-radius:12px;padding:1.8rem;transition:box-shadow .3s ease;}
+        .feature-card:hover{box-shadow:0 8px 30px rgba(198,153,62,.12);}
+        .feature-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-bottom:.8rem;color:#1a1a1a;}
+        .feature-card p{font-size:.92rem;line-height:1.7;color:var(--text-muted);}
+        .feature-card .card-icon{font-size:1.8rem;margin-bottom:.8rem;display:block;}
+        .highlight-box{background:#C6993E;color:#fff;border-radius:12px;padding:2rem;margin:2rem 0;text-align:center;}
+        .highlight-box h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:.8rem;}
+        .highlight-box p{font-size:1rem;line-height:1.7;opacity:.92;}
+        .whatsapp-mockup{background:#e5ddd5;border-radius:12px;padding:1.5rem;margin:2rem 0;font-family:'DM Sans',sans-serif;max-width:400px;}
+        .whatsapp-mockup .wa-msg{background:#fff;border-radius:8px;padding:.8rem 1rem;margin-bottom:.8rem;font-size:.88rem;line-height:1.5;position:relative;max-width:85%;}
+        .whatsapp-mockup .wa-msg.sent{background:#dcf8c6;margin-left:auto;}
+        .whatsapp-mockup .wa-msg .wa-time{font-size:.7rem;color:#999;text-align:right;margin-top:.3rem;}
+        .workflow-steps{counter-reset:workflow;list-style:none;padding:0;margin:2rem 0;}
+        .workflow-steps li{counter-increment:workflow;position:relative;padding:1rem 1rem 1rem 3.5rem;margin-bottom:1rem;background:rgba(198,153,62,.03);border-radius:8px;border:1px solid rgba(198,153,62,.1);line-height:1.6;}
+        .workflow-steps li::before{content:counter(workflow);position:absolute;left:1rem;top:1rem;width:2rem;height:2rem;background:#C6993E;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;}
+        .feature-check{list-style:none;padding:0;margin:1.5rem 0;}
+        .feature-check li{padding:.6rem 0;padding-left:1.8rem;position:relative;line-height:1.6;}
+        .feature-check li::before{content:"\2713";position:absolute;left:0;color:#C6993E;font-weight:700;}
+        @media(max-width:640px){
+            .callout-box{padding:1rem 1.2rem;}
+            .workflow-steps li{padding-left:3rem;}
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
+                    { "@type": "ListItem", "position": 2, "name": "Création site artisan", "item": "https://mon-agenceweb.fr/creation-site-web-artisan" },
+                    { "@type": "ListItem", "position": 3, "name": "Site artisan avec WhatsApp", "item": "https://mon-agenceweb.fr/site-artisan-avec-whatsapp" }
+                ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "description": "Création de sites internet pour artisans avec bouton WhatsApp intégré. Contact instantané, réception de photos, devis rapides. Sites à partir de 399€.",
+                "areaServed": "France",
+                "priceRange": "399€ – 799€",
+                "telephone": "",
+                "email": "contact@mon-agenceweb.fr"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Le bouton WhatsApp fonctionne-t-il sur ordinateur aussi ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Sur mobile, le bouton ouvre directement l'application WhatsApp. Sur ordinateur, il ouvre WhatsApp Web ou propose de télécharger l'application. Dans les deux cas, le message pré-rempli est prêt — le prospect n'a qu'à appuyer sur Envoyer." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Est-ce que je dois utiliser WhatsApp Business ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Je le recommande, oui. WhatsApp Business est gratuit et offre des fonctionnalités utiles : profil professionnel avec vos horaires et adresse, réponses rapides pré-enregistrées, message d'absence automatique, et statistiques de messages. Mais le bouton fonctionne aussi avec WhatsApp classique." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Je ne veux pas être dérangé le soir et le week-end. C'est gérable ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Absolument. WhatsApp Business permet de configurer un message d'absence automatique en dehors de vos heures de travail. Exemple : 'Merci pour votre message. Je suis actuellement indisponible. Je vous répondrai demain dès 8h.' Le prospect reçoit une réponse immédiate, et vous gérez à votre rythme." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Faut-il un numéro professionnel dédié ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Idéalement oui, pour séparer vie professionnelle et personnelle. Mais beaucoup d'artisans utilisent leur numéro personnel et ça fonctionne très bien. Si vous préférez un numéro dédié, une carte SIM professionnelle coûte environ 5€/mois. Le bouton fonctionne avec n'importe quel numéro." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav is-scrolled">
+        <a href="/" class="nav-logo">maw<span class="accent">.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <!-- INTRO -->
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container container--narrow">
+            <nav aria-label="Fil d'Ariane" style="margin-bottom: 2rem;">
+                <ol style="display:flex;gap:.5rem;list-style:none;padding:0;font-size:.9rem;color:var(--text-muted);">
+                    <li><a href="/" style="color:var(--accent);">Accueil</a> /</li>
+                    <li><a href="/creation-site-web-artisan" style="color:var(--accent);">Création site artisan</a> /</li>
+                    <li>Bouton WhatsApp</li>
+                </ol>
+            </nav>
+            <header class="section-header">
+                <span class="section-tag">Contact instantané</span>
+                <h1 class="section-title" style="font-size:clamp(1.6rem,4vw,2.5rem);">Site artisan avec bouton WhatsApp : recevez des demandes instantanément<span class="accent">.</span></h1>
+            </header>
+            <div class="article-meta">
+                Par <strong>Farouk</strong> &middot; <time datetime="2026-05-16">16 mai 2026</time> &middot; 8 min de lecture
+            </div>
+            <div class="legal-content">
+                <p>Votre prospect a une fuite d'eau. Il est sur son téléphone, stressé, et il vient de trouver votre site. Il veut vous contacter <strong>maintenant</strong>. Pas remplir un formulaire et attendre 24 heures. Pas chercher votre numéro pour vous appeler (il n'aime pas téléphoner). Il veut un moyen rapide, simple, familier.</p>
+                <p>Ce moyen, c'est <strong>WhatsApp</strong>. L'application que 38 millions de Français utilisent tous les jours. Un bouton vert sur votre site, un message pré-rempli, et en 5 secondes le prospect est dans votre boîte de réception. Avec des photos de son problème, en bonus.</p>
+                <p>Dans cet article, je vous explique pourquoi WhatsApp est devenu le canal de conversion le plus efficace pour les artisans, comment l'intégrer proprement sur votre site, et quels messages-types utiliser pour transformer chaque conversation en chantier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI WHATSAPP -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Pourquoi WhatsApp est le canal n°1 pour les artisans</h2>
+
+                <p>Oubliez les formulaires de contact classiques. Le taux de remplissage moyen d'un formulaire web est de 3 à 5 %. Celui d'un bouton WhatsApp ? <strong>12 à 18 %.</strong> C'est 3 à 4 fois plus de demandes, sans rien changer d'autre sur votre site.</p>
+
+                <div class="callout-box">
+                    <h4>WhatsApp vs formulaire classique</h4>
+                    <p>Taux de conversion formulaire : <strong>3 à 5 %</strong></p>
+                    <p>Taux de conversion WhatsApp : <strong>12 à 18 %</strong></p>
+                    <p><span class="big-number">×4 plus de demandes</span></p>
+                </div>
+
+                <p>Pourquoi cette différence ? Parce que WhatsApp supprime toutes les frictions :</p>
+
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <span class="card-icon">⚡</span>
+                        <h3>Instantanéité</h3>
+                        <p>Un clic, une conversation. Pas de formulaire à remplir, pas d'email à rédiger, pas d'attente. Le prospect passe de "intéressé" à "en contact" en 5 secondes. Cette rapidité est décisive pour les demandes urgentes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="card-icon">📷</span>
+                        <h3>Photos du problème</h3>
+                        <p>Le prospect peut vous envoyer directement des photos de sa fuite, de son mur fissuré, de sa prise électrique défaillante. Vous évaluez la situation avant même de vous déplacer. Ça vous fait gagner du temps et ça rassure le client.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="card-icon">🤝</span>
+                        <h3>Familiarité</h3>
+                        <p>Tout le monde utilise WhatsApp. Votre prospect l'utilise 50 fois par jour. Il n'a pas besoin de réfléchir, de se connecter, ni de vérifier ses emails. Le message arrive dans une app qu'il ouvre déjà par réflexe. Zéro apprentissage.</p>
+                    </div>
+                </div>
+
+                <p>Et l'avantage pour vous : chaque message WhatsApp contient automatiquement le <strong>numéro de téléphone</strong> du prospect. Plus besoin de demander ses coordonnées — vous les avez. Vous pouvez rappeler, envoyer un devis, relancer. Le contact est établi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMENT ÇA MARCHE -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Comment ça marche concrètement sur votre site</h2>
+
+                <p>L'intégration est simple et élégante. Voici le parcours que vit votre prospect :</p>
+
+                <ol class="workflow-steps">
+                    <li><strong>Le prospect arrive sur votre site</strong> — Il vous a trouvé sur Google en cherchant un artisan dans sa ville. Il consulte vos réalisations, lit vos avis.</li>
+                    <li><strong>Il voit le bouton WhatsApp</strong> — Fixe en bas à droite de l'écran, toujours visible. Vert, reconnaissable, avec une micro-animation qui attire l'œil sans être agressive.</li>
+                    <li><strong>Il clique</strong> — WhatsApp s'ouvre avec un message pré-rempli : "Bonjour, je vous contacte depuis votre site. J'aurais besoin d'un devis pour…" Le prospect n'a qu'à compléter et envoyer.</li>
+                    <li><strong>Vous recevez la notification</strong> — Sur votre téléphone, immédiatement. Vous voyez le message, les éventuelles photos, et le numéro du prospect. Vous répondez dans la minute.</li>
+                </ol>
+
+                <div class="whatsapp-mockup">
+                    <div class="wa-msg">
+                        Bonjour, je vous contacte depuis votre site. J'aurais besoin d'un devis pour une rénovation de salle de bain. Voici les photos :
+                        <div class="wa-time">10:32</div>
+                    </div>
+                    <div class="wa-msg">
+                        📷 <em>[3 photos jointes]</em>
+                        <div class="wa-time">10:32</div>
+                    </div>
+                    <div class="wa-msg sent">
+                        Bonjour ! Merci pour les photos, c'est très clair. Je peux passer faire un état des lieux jeudi matin si ça vous convient. Le devis est gratuit.
+                        <div class="wa-time">10:35</div>
+                    </div>
+                </div>
+
+                <p>3 minutes entre le premier contact et le rendez-vous pris. C'est ça, la puissance de WhatsApp. Pendant que votre concurrent vérifie ses emails de la veille, vous avez déjà décroché le chantier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MESSAGES-TYPES -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Messages-types qui convertissent</h2>
+
+                <p>Avec WhatsApp Business, vous pouvez configurer des <strong>réponses rapides</strong> pré-enregistrées. Trois touches sur le clavier et le message est envoyé. Voici les modèles que je recommande à mes clients artisans.</p>
+
+                <div class="callout-box">
+                    <h4>Message d'accueil automatique</h4>
+                    <p><em>"Merci pour votre message ! Je suis [Prénom], [métier] à [Ville]. Je vous réponds personnellement dans l'heure. En attendant, n'hésitez pas à m'envoyer des photos de votre projet — ça m'aide à préparer un devis plus précis."</em></p>
+                </div>
+
+                <div class="callout-box">
+                    <h4>Réponse rapide pour demande de devis</h4>
+                    <p><em>"Merci pour votre demande ! Pour vous établir un devis précis, j'aurais besoin de quelques infos : 1) Type de travaux souhaités 2) Votre adresse 3) Photos si possible 4) Délai souhaité. Le devis est gratuit et sans engagement."</em></p>
+                </div>
+
+                <div class="callout-box">
+                    <h4>Message d'absence (soir/week-end)</h4>
+                    <p><em>"Merci pour votre message. Je suis actuellement sur un chantier / en dehors de mes heures de travail. Je vous répondrai dès demain matin à 8h. Pour une urgence, vous pouvez m'appeler au [numéro]."</em></p>
+                </div>
+
+                <p>Ces messages font le travail à votre place. Le prospect reçoit une réponse <strong>immédiate</strong> même quand vous êtes sur un chantier. Il sait que vous avez reçu sa demande, il sait quand vous allez répondre. Ça le rassure et ça l'empêche d'aller voir ailleurs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT SUR LE TEMPS DE RÉPONSE -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">L'impact du temps de réponse sur vos conversions</h2>
+
+                <p>Voici un chiffre qui devrait vous convaincre : un prospect contacté dans les <strong>5 premières minutes</strong> a 21 fois plus de chances de devenir client qu'un prospect contacté après 30 minutes. Vingt et une fois.</p>
+
+                <div class="highlight-box">
+                    <h3>5 minutes = ×21 de chances de signer</h3>
+                    <p>WhatsApp est le seul canal qui vous permet de répondre en moins de 5 minutes, même depuis votre chantier, même avec les mains sales. Un message vocal de 15 secondes suffit.</p>
+                </div>
+
+                <p>Le problème des formulaires classiques : le prospect remplit le formulaire à 10h, vous recevez un email que vous ne voyez pas avant 18h, vous répondez le lendemain matin. 24 heures se sont écoulées. Le prospect a contacté 3 autres artisans entre-temps. Celui qui a répondu le plus vite a gagné.</p>
+
+                <p>Avec WhatsApp : la notification arrive instantanément sur votre téléphone. Vous jetez un coup d'œil entre deux interventions, vous envoyez un message vocal rapide : "Bonjour, bien reçu, je vous rappelle à midi pour en discuter." 30 secondes de votre temps. Le prospect est verrouillé.</p>
+
+                <p>C'est cette réactivité qui fait la différence. Et c'est pourquoi je recommande WhatsApp en complément du formulaire sur tous mes <a href="/creation-site-web-artisan" style="color:var(--accent);">sites artisans</a>. Pour les situations urgentes, je recommande aussi de consulter notre page dédiée au <a href="/site-artisan-pour-urgence" style="color:var(--accent);">site artisan pour dépannage d'urgence</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CE QUE J'INTÈGRE -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Ce que j'intègre dans votre site</h2>
+
+                <p>L'intégration WhatsApp est incluse dans tous mes sites artisans, que ce soit le site vitrine à 399 € ou le site + dashboard à 799 €. Voici ce que vous recevez :</p>
+
+                <ul class="feature-check">
+                    <li>Bouton WhatsApp flottant (fixe en bas à droite, toujours accessible)</li>
+                    <li>Message pré-rempli personnalisé avec votre métier et votre ville</li>
+                    <li>Ouverture native sur mobile (app) et web (WhatsApp Web)</li>
+                    <li>Design intégré à votre charte graphique (pas un widget générique)</li>
+                    <li>Configuration de WhatsApp Business avec vos réponses rapides</li>
+                    <li>Message d'absence automatique configuré</li>
+                    <li>Bouton WhatsApp additionnel sur la page de <a href="/site-artisan-avec-devis-en-ligne" style="color:var(--accent);">devis en ligne</a></li>
+                    <li>Tracking des clics (Google Analytics) pour mesurer la performance</li>
+                </ul>
+
+                <p>Le bouton WhatsApp ne remplace pas le formulaire de devis — il le <strong>complète</strong>. Certains prospects préfèrent le formulaire (plus structuré), d'autres préfèrent WhatsApp (plus rapide). En offrant les deux, vous ne perdez personne.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
+
+                <h3>Le bouton WhatsApp fonctionne-t-il sur ordinateur aussi ?</h3>
+                <p>Oui. Sur mobile, le bouton ouvre directement l'application WhatsApp. Sur ordinateur, il ouvre WhatsApp Web dans le navigateur ou propose de télécharger l'application de bureau. Dans les deux cas, le message pré-rempli est prêt — le prospect n'a qu'à appuyer sur Envoyer. L'expérience est fluide quel que soit l'appareil.</p>
+
+                <h3>Est-ce que je dois utiliser WhatsApp Business ?</h3>
+                <p>Je le recommande fortement. WhatsApp Business est gratuit et offre des fonctionnalités très utiles pour un artisan : profil professionnel avec vos horaires et adresse, réponses rapides pré-enregistrées (3 touches = message envoyé), message d'absence automatique, étiquettes pour classer vos conversations, et statistiques de messages. Le bouton fonctionne aussi avec WhatsApp classique, mais vous passez à côté de ces outils.</p>
+
+                <h3>Je ne veux pas être dérangé le soir et le week-end. C'est gérable ?</h3>
+                <p>Absolument. WhatsApp Business permet de configurer un message d'absence automatique en dehors de vos heures de travail. Le prospect reçoit immédiatement : "Merci pour votre message. Je suis actuellement indisponible. Je vous répondrai demain dès 8h." Il sait que vous avez reçu sa demande, il est rassuré, et vous gérez à votre rythme sans stress.</p>
+
+                <h3>Faut-il un numéro professionnel dédié ?</h3>
+                <p>Idéalement oui, pour séparer vie professionnelle et personnelle. Mais beaucoup de mes clients artisans utilisent leur numéro personnel avec WhatsApp Business, et ça fonctionne très bien. Si vous préférez un numéro dédié, une carte SIM professionnelle coûte environ 5 € par mois chez la plupart des opérateurs. Le bouton fonctionne avec n'importe quel numéro français.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--alt" style="text-align:center;">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title">Recevez vos demandes là où vous êtes déjà</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7;">Un site artisan avec bouton WhatsApp, messages pré-remplis et tracking de performance. Plus de demandes, moins de friction. À partir de 399 €.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis personnalisé <span class="btn-arrow">&rarr;</span></a>
+                <a href="/demo-site-artisan" class="btn btn--outline">Voir la démo en ligne</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAILLAGE INTERNE -->
+    <section class="section">
+        <div class="container container--narrow" style="text-align:center;">
+            <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">
+                Articles liés :
+                <a href="/site-artisan-pour-urgence" style="color:var(--accent);">Site artisan pour urgence</a> &middot;
+                <a href="/creation-site-web-artisan" style="color:var(--accent);">Création site artisan</a> &middot;
+                <a href="/site-artisan-avec-devis-en-ligne" style="color:var(--accent);">Site artisan avec devis en ligne</a> &middot;
+                <a href="/site-artisan-avec-avis-clients" style="color:var(--accent);">Avis clients intégrés</a> &middot;
+                <a href="/demo-site-artisan" style="color:var(--accent);">Démo site artisan</a> &middot;
+                <a href="/creation-site-plombier" style="color:var(--accent);">Site pour plombier</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025&#8211;2026 mon-agenceweb.fr &middot; Farouk</p>
+    </footer>
+
+</body>
+</html>

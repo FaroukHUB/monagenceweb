@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Site artisan avec prise de rendez-vous en ligne : simplifiez votre planning | mon-agenceweb.fr</title>
+    <meta name="description" content="Site internet pour artisan avec prise de rendez-vous en ligne. Vos clients réservent un créneau, vous recevez la confirmation. Fini les allers-retours téléphoniques. À partir de 799€.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/site-artisan-avec-prise-de-rendez-vous">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mon-agenceweb.fr/site-artisan-avec-prise-de-rendez-vous">
+    <meta property="og:title" content="Site artisan avec prise de rendez-vous en ligne — Simplifiez votre planning">
+    <meta property="og:description" content="Vos clients réservent directement un créneau sur votre site. Confirmation automatique, rappel SMS la veille. Zéro appel inutile.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+    <style>
+        .workflow-steps{counter-reset:workflow;list-style:none;padding:0;margin:2rem 0;}
+        .workflow-steps li{counter-increment:workflow;position:relative;padding:1.2rem 1.2rem 1.2rem 4rem;margin-bottom:1.2rem;background:rgba(198,153,62,.03);border-radius:10px;border:1px solid rgba(198,153,62,.1);line-height:1.6;}
+        .workflow-steps li::before{content:counter(workflow);position:absolute;left:1.2rem;top:1.2rem;width:2.2rem;height:2.2rem;background:#C6993E;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;}
+        .callout-box{background:linear-gradient(135deg,rgba(198,153,62,.08),rgba(198,153,62,.03));border-left:4px solid #C6993E;border-radius:8px;padding:1.5rem 2rem;margin:2rem 0;}
+        .callout-box h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:.8rem;color:#C6993E;}
+        .callout-box p{margin-bottom:.5rem;line-height:1.7;}
+        .callout-box .big-number{font-size:2rem;font-weight:700;color:#C6993E;display:block;margin:.5rem 0;}
+        .feature-check{list-style:none;padding:0;margin:1.5rem 0;}
+        .feature-check li{padding:.6rem 0;padding-left:1.8rem;position:relative;line-height:1.6;}
+        .feature-check li::before{content:"\2713";position:absolute;left:0;color:#C6993E;font-weight:700;}
+        .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin:2rem 0;}
+        .kpi-box{background:#fff;border-radius:8px;padding:1.2rem;text-align:center;border:1px solid rgba(198,153,62,.12);}
+        .kpi-box .kpi-num{font-size:1.8rem;font-weight:700;color:#C6993E;display:block;}
+        .kpi-box .kpi-lbl{font-size:.8rem;color:#777;margin-top:.3rem;}
+        .booking-preview{background:#1A1A2E;border-radius:12px;padding:2rem;color:#fff;margin:2rem 0;}
+        .booking-preview h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:1.2rem;}
+        .booking-calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:.3rem;margin-bottom:1.5rem;}
+        .booking-day{background:rgba(255,255,255,.06);border-radius:4px;padding:.5rem .3rem;text-align:center;font-size:.75rem;}
+        .booking-day.available{background:rgba(34,197,94,.15);color:#22c55e;cursor:pointer;}
+        .booking-day.booked{background:rgba(198,153,62,.2);color:#C6993E;}
+        .booking-day.header{background:transparent;opacity:.5;font-weight:600;font-size:.7rem;}
+        .feature-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem 0;}
+        .feature-card{background:#fff;border-radius:10px;padding:1.5rem;border:1px solid rgba(198,153,62,.12);box-shadow:0 2px 8px rgba(0,0,0,.04);}
+        .feature-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-bottom:.8rem;color:#1a1a1a;}
+        .feature-card p{font-size:.9rem;line-height:1.6;color:#555;}
+        @media(max-width:640px){
+            .booking-preview{padding:1.2rem;}
+            .callout-box{padding:1rem 1.2rem;}
+            .workflow-steps li{padding-left:3.5rem;}
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
+                    { "@type": "ListItem", "position": 2, "name": "Site artisan", "item": "https://mon-agenceweb.fr/creation-site-web-artisan" },
+                    { "@type": "ListItem", "position": 3, "name": "Prise de rendez-vous", "item": "https://mon-agenceweb.fr/site-artisan-avec-prise-de-rendez-vous" }
+                ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "description": "Site artisan avec système de prise de rendez-vous en ligne et gestion du planning",
+                "serviceType": ["Site artisan avec réservation en ligne", "Prise de rendez-vous artisan", "Planning artisan en ligne"],
+                "areaServed": { "@type": "Country", "name": "France" },
+                "provider": { "@type": "Person", "name": "Farouk" },
+                "priceRange": "€€"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Comment mes clients prennent rendez-vous en ligne ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Depuis votre site, le client voit un calendrier avec vos créneaux disponibles. Il sélectionne une date et un horaire, remplit ses coordonnées et le type d'intervention souhaité, puis valide. Vous recevez une notification immédiate et le rendez-vous s'ajoute automatiquement à votre planning." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Puis-je bloquer des jours ou des créneaux ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Vous définissez vos jours de travail, vos horaires et la durée des créneaux. Si vous êtes en chantier toute la semaine, vous bloquez ces jours. Si vous ne prenez pas de rendez-vous le mercredi, vous le désactivez. Tout se configure simplement depuis votre dashboard." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Y a-t-il des rappels automatiques ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Oui. La veille du rendez-vous, votre client reçoit un SMS de rappel automatique avec la date, l'heure et l'adresse. Cela réduit les oublis et les rendez-vous manqués de plus de 70%. Vous pouvez aussi activer un rappel email 48h avant." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Combien coûte la prise de rendez-vous en ligne ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "La prise de rendez-vous est incluse dans l'offre site + dashboard à 799€. Pas de surcoût, pas d'abonnement supplémentaire. Le système de réservation est intégré directement à votre site et synchronisé avec votre calendrier dans le dashboard." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav is-scrolled">
+        <a href="/" class="nav-logo">maw<span class="accent">.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <!-- INTRO -->
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container container--narrow">
+            <nav aria-label="Fil d'Ariane" style="margin-bottom: 2rem;">
+                <ol style="display:flex;gap:.5rem;list-style:none;padding:0;font-size:.9rem;color:var(--text-muted);">
+                    <li><a href="/" style="color:var(--accent);">Accueil</a> /</li>
+                    <li><a href="/creation-site-web-artisan" style="color:var(--accent);">Site artisan</a> /</li>
+                    <li>Prise de rendez-vous</li>
+                </ol>
+            </nav>
+            <header class="section-header">
+                <span class="section-tag">Réservation en ligne</span>
+                <h1 class="section-title" style="font-size:clamp(1.6rem,4vw,2.5rem);">Site artisan avec prise de rendez-vous en ligne : simplifiez votre planning<span class="accent">.</span></h1>
+                <p class="section-sub" style="max-width:640px;margin:1.5rem auto;">Vos clients réservent un créneau directement sur votre site. Vous recevez la confirmation. Plus d'allers-retours téléphoniques pour caler une date.</p>
+            </header>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis <span class="btn-arrow">&rarr;</span></a>
+                <a href="/site-artisan-avec-dashboard" class="btn btn--outline">Découvrir le dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLÈME -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Le problème : 30 minutes perdues par jour à caler des rendez-vous</h2>
+
+                <p>Combien de fois par jour recevez-vous cet appel ?</p>
+                <p><em>« Bonjour, vous seriez disponible quand pour venir voir le chantier ? »</em></p>
+
+                <p>Vous êtes sur un échafaudage, les mains pleines. Vous décrochez quand même parce que c'est peut-être un nouveau client. Vous sortez votre agenda (ou vous essayez de vous souvenir de ce que vous avez prévu). Vous proposez mardi. Le client n'est pas là mardi. Jeudi alors ? Non plus. Vendredi matin ? D'accord, mais à quelle heure ?</p>
+
+                <p><strong>Résultat :</strong> 5 minutes d'appel pour caler un simple rendez-vous. Multipliez par 5 ou 6 appels par jour, c'est <strong>30 minutes perdues quotidiennement</strong>. Sans compter les prospects qui tombent sur votre répondeur et ne rappellent jamais.</p>
+
+                <p>La prise de rendez-vous en ligne résout ce problème en une seconde : le client voit vos disponibilités et réserve un créneau. Vous êtes notifié. C'est fait.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 ÉTAPES -->
+    <section class="section">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Comment ça marche : 3 étapes</h2>
+
+            <ol class="workflow-steps">
+                <li><strong>Le client visite votre site et clique sur « Prendre rendez-vous »</strong><br>Il voit un calendrier avec vos créneaux disponibles. Il choisit une date, un horaire, indique le type d'intervention et laisse ses coordonnées. Validation en 30 secondes.</li>
+                <li><strong>Vous recevez une notification instantanée</strong><br>Push sur votre téléphone + email. Le rendez-vous s'ajoute automatiquement à votre planning dans le dashboard. Nom du client, adresse, type de travaux : tout est pré-rempli.</li>
+                <li><strong>Le client reçoit une confirmation + un rappel SMS</strong><br>Confirmation immédiate par email. Puis un SMS automatique la veille : « Rappel : rendez-vous demain à 9h avec [votre nom]. À demain ! » Fini les oublis et les déplacements pour rien.</li>
+            </ol>
+
+            <div class="callout-box">
+                <h4>Résultat concret</h4>
+                <p>Vous ne passez <strong>plus un seul appel</strong> pour caler un rendez-vous. Le client fait tout seul, au moment qui lui convient (même à 23h le dimanche soir). Et vous, vous gardez le contrôle total sur vos disponibilités.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APERÇU CALENDRIER -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Aperçu du système de réservation</h2>
+
+            <div class="booking-preview">
+                <h3>&#128197; Choisissez votre créneau &#8212; Semaine du 19 mai</h3>
+                <div class="booking-calendar">
+                    <div class="booking-day header">Lun</div>
+                    <div class="booking-day header">Mar</div>
+                    <div class="booking-day header">Mer</div>
+                    <div class="booking-day header">Jeu</div>
+                    <div class="booking-day header">Ven</div>
+                    <div class="booking-day header">Sam</div>
+                    <div class="booking-day header">Dim</div>
+                    <div class="booking-day booked">19<br><span style="font-size:.6rem;">Complet</span></div>
+                    <div class="booking-day available">20<br><span style="font-size:.6rem;">9h &#8212; 11h</span></div>
+                    <div class="booking-day" style="opacity:.3;">21<br><span style="font-size:.6rem;">Fermé</span></div>
+                    <div class="booking-day available">22<br><span style="font-size:.6rem;">8h &#8212; 12h</span></div>
+                    <div class="booking-day available">23<br><span style="font-size:.6rem;">14h &#8212; 17h</span></div>
+                    <div class="booking-day available">24<br><span style="font-size:.6rem;">9h &#8212; 12h</span></div>
+                    <div class="booking-day" style="opacity:.3;">25<br><span style="font-size:.6rem;">Fermé</span></div>
+                </div>
+                <p style="font-size:.85rem;opacity:.6;text-align:center;">Aperçu simulé. Vos créneaux et jours de travail sont configurables depuis le dashboard.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAINS -->
+    <section class="section">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Ce que vous gagnez concrètement</h2>
+
+            <div class="kpi-grid">
+                <div class="kpi-box">
+                    <span class="kpi-num">30 min</span>
+                    <div class="kpi-lbl">gagnées par jour</div>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">-70%</span>
+                    <div class="kpi-lbl">de rendez-vous oubliés</div>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">24/7</span>
+                    <div class="kpi-lbl">réservation possible</div>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">0</span>
+                    <div class="kpi-lbl">appel pour caler une date</div>
+                </div>
+            </div>
+
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>&#128337; Disponibilité permanente</h3>
+                    <p>Un prospect qui découvre votre site à 22h un dimanche peut réserver immédiatement. Pas besoin d'attendre lundi matin pour appeler. C'est ce qui fait la différence avec un concurrent qui ne propose pas la réservation en ligne.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>&#128233; Rappels automatiques</h3>
+                    <p>SMS de rappel la veille + email de confirmation. Vos clients n'oublient plus le rendez-vous. Vous ne vous déplacez plus pour trouver porte close. Résultat : moins de temps perdu, plus de productivité.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>&#128197; Synchronisation calendrier</h3>
+                    <p>Le système de réservation est directement connecté au planning de votre <a href="/site-artisan-avec-dashboard" style="color:#C6993E;">dashboard</a>. Un créneau réservé par un client apparaît instantanément dans votre calendrier. Zéro saisie en double.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
+
+                <h3>Comment mes clients prennent rendez-vous en ligne ?</h3>
+                <p>Depuis votre site, le client voit un calendrier avec vos créneaux disponibles. Il sélectionne une date et un horaire, remplit ses coordonnées et le type d'intervention souhaité, puis valide. Vous recevez une notification immédiate et le rendez-vous s'ajoute automatiquement à votre planning.</p>
+
+                <h3>Puis-je bloquer des jours ou des créneaux ?</h3>
+                <p>Bien sûr. Vous définissez vos jours de travail, vos horaires et la durée des créneaux depuis le dashboard. Si vous êtes en chantier toute la semaine prochaine, vous bloquez ces jours. Si vous ne prenez jamais de rendez-vous le mercredi, vous le désactivez. C'est vous qui gardez le contrôle total.</p>
+
+                <h3>Y a-t-il des rappels automatiques ?</h3>
+                <p>Oui. La veille du rendez-vous, votre client reçoit un SMS de rappel automatique avec la date, l'heure et l'adresse. Cela réduit les oublis et les rendez-vous manqués de plus de 70%. Vous pouvez aussi activer un rappel email 48h avant en complément.</p>
+
+                <h3>Combien coûte la prise de rendez-vous en ligne ?</h3>
+                <p>Le système de réservation est inclus dans l'offre site + dashboard à 799&#8364;. Pas de surcoût, pas d'abonnement supplémentaire. Il est intégré directement à votre site et synchronisé avec votre calendrier dans le dashboard.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align:center;">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title">Arrêtez de perdre du temps au téléphone</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7;">Un site professionnel avec prise de rendez-vous intégrée. Vos clients réservent en autonomie, vous restez concentré sur vos chantiers.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis <span class="btn-arrow">&rarr;</span></a>
+                <a href="/creation-site-web-artisan" class="btn btn--outline">Voir l'offre site artisan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAILLAGE -->
+    <section class="section section--alt">
+        <div class="container container--narrow" style="text-align:center;">
+            <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">
+                Voir aussi :
+                <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">Site artisan avec dashboard</a> &middot;
+                <a href="/creation-site-web-artisan" style="color:var(--accent);">Création site artisan</a> &middot;
+                <a href="/demo-site-artisan" style="color:var(--accent);">Démo site artisan</a> &middot;
+                <a href="/site-artisan-avec-espace-client" style="color:var(--accent);">Espace client artisan</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025–2026 mon-agenceweb.fr &middot; Farouk</p>
+    </footer>
+
+</body>
+</html>

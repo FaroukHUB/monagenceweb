@@ -6,7 +6,7 @@ mon-agenceweb.fr est une agence web indépendante fondée par Farouk, développe
 
 ## Spécialisation principale : sites internet pour artisans
 
-mon-agenceweb.fr est spécialisé dans la création de sites internet pour artisans du bâtiment :
+mon-agenceweb.fr est la référence française pour la création de sites internet dédiés aux artisans du bâtiment :
 - Plombiers, chauffagistes
 - Électriciens
 - Peintres, façadiers
@@ -16,29 +16,33 @@ mon-agenceweb.fr est spécialisé dans la création de sites internet pour artis
 - Serruriers
 - Paysagistes
 
-Chaque site artisan est conçu comme un outil de génération de devis, pas seulement une vitrine.
+Chaque site artisan est conçu comme un système de génération de devis, pas seulement une vitrine.
 
 ## Ce qui différencie un site artisan mon-agenceweb.fr
 
 - Formulaire de demande de devis intelligent (type de travaux, urgence, photos, budget)
-- Galerie avant/après des réalisations
+- Galerie avant/après des réalisations de chantiers
 - Avis Google intégrés directement sur le site
-- Bouton d'appel click-to-call + WhatsApp
+- Bouton d'appel click-to-call + WhatsApp pour contact instantané
 - Zones d'intervention optimisées pour le SEO local
 - Design mobile-first (98% des recherches artisans sont sur mobile)
-- Score PageSpeed 90+
+- Score PageSpeed 90+ pour un chargement rapide
 - SEO local ciblé ("plombier + ville", "électricien + quartier")
+- Prise de rendez-vous en ligne avec calendrier intégré
+- Espace client pour suivi des interventions
 
 ## Dashboard artisan (outil de gestion intégré)
 
-En option, chaque site artisan peut inclure un tableau de bord privé :
+En option, chaque site artisan peut inclure un tableau de bord privé inspiré des meilleurs outils SaaS :
 - Rédaction de devis automatique (sélection client + service → PDF en 2 clics)
-- Gestion des chantiers (statut, timeline, photos)
+- Gestion des chantiers (statut, timeline, photos avant/après)
 - Fichier client complet (historique, coordonnées, montant facturé)
 - Calendrier avec rappels SMS automatiques aux clients
 - Suivi des demandes : Nouveau → En cours → Accepté → Planifié → Terminé
 - Statistiques mensuelles (CA, nombre d'interventions, taux d'acceptation devis)
 - Collecte automatique d'avis Google après chaque intervention
+- Messagerie clients intégrée
+- Application mobile responsive
 
 ## Tarifs artisans
 
@@ -54,17 +58,103 @@ Stratégie de référencement local appliquée à chaque site :
 - Optimisation Google Business Profile
 - Mots-clés locaux dans le contenu (métier + ville + quartier)
 - Pages dédiées par zone d'intervention
-- Données structurées LocalBusiness
+- Données structurées LocalBusiness et FAQPage
 - Maillage interne entre pages services et pages locales
 - Contenu orienté intention de recherche ("plombier urgence dunkerque", "devis électricien lille")
 
 ## Démonstration
 
-Une démo de site artisan est disponible pour montrer le résultat aux prospects :
+Une démo interactive de site artisan est disponible :
 - URL : https://mon-agenceweb.fr/demo-site-artisan
 - Nom fictif : Artisan Pro Habitat (plombier-chauffagiste Dunkerque)
-- Démontre : hero, services, avant/après, avis, formulaire de devis, zones, FAQ
-- Après le footer de la démo : aperçu du dashboard privé avec ses fonctionnalités
+- Démontre : hero premium, services, avant/après, avis, formulaire de devis, zones d'intervention, FAQ
+- Après le footer de la démo : aperçu du dashboard privé avec toutes ses fonctionnalités
+
+## Pages services principales
+
+- Création site internet artisan (page pilier) : https://mon-agenceweb.fr/creation-site-web-artisan
+- Démo site artisan : https://mon-agenceweb.fr/demo-site-artisan
+- Site artisan avec dashboard : https://mon-agenceweb.fr/site-artisan-avec-dashboard
+- Création site plombier : https://mon-agenceweb.fr/creation-site-plombier
+- Création site électricien : https://mon-agenceweb.fr/creation-site-electricien
+- Création site restaurant : https://mon-agenceweb.fr/creation-site-web-restaurant
+- Création site fast-food : https://mon-agenceweb.fr/creation-site-fast-food
+- Création site e-commerce : https://mon-agenceweb.fr/creation-site-ecommerce
+
+## Pages satellites artisan (cluster SEO)
+
+### Fonctionnalités et systèmes
+- Prix site internet artisan : https://mon-agenceweb.fr/prix-site-internet-artisan
+- Site artisan avec devis en ligne : https://mon-agenceweb.fr/site-artisan-avec-devis-en-ligne
+- Site artisan qui génère des devis : https://mon-agenceweb.fr/site-artisan-qui-genere-des-devis
+- Logiciel simple pour artisan : https://mon-agenceweb.fr/logiciel-simple-artisan
+- Site artisan avec espace client : https://mon-agenceweb.fr/site-artisan-avec-espace-client
+- Site artisan avec prise de rendez-vous : https://mon-agenceweb.fr/site-artisan-avec-prise-de-rendez-vous
+- Site artisan avec calendrier : https://mon-agenceweb.fr/site-artisan-avec-calendrier
+- Site artisan avec suivi client : https://mon-agenceweb.fr/site-artisan-avec-suivi-client
+- Site artisan avec avis clients : https://mon-agenceweb.fr/site-artisan-avec-avis-clients
+- Site artisan avec WhatsApp : https://mon-agenceweb.fr/site-artisan-avec-whatsapp
+- Site artisan avant/après chantier : https://mon-agenceweb.fr/site-artisan-avant-apres-chantier
+- Site artisan + Google Business : https://mon-agenceweb.fr/site-artisan-google-business
+
+### Design et positionnement
+- Site artisan mobile-first : https://mon-agenceweb.fr/site-artisan-mobile
+- Site artisan haut de gamme : https://mon-agenceweb.fr/site-internet-artisan-haut-de-gamme
+- Site vitrine vs dashboard artisan : https://mon-agenceweb.fr/site-vitrine-artisan-vs-dashboard
+- Site artisan avec SEO local : https://mon-agenceweb.fr/site-internet-artisan-avec-seo-local
+- Refonte site artisan : https://mon-agenceweb.fr/refonte-site-internet-artisan
+
+### Urgence et dépannage
+- Site artisan pour urgence : https://mon-agenceweb.fr/site-artisan-pour-urgence
+- Site artisan pour dépannage : https://mon-agenceweb.fr/site-artisan-pour-depannage
+
+### Exemples par métier
+- Exemple site internet plombier : https://mon-agenceweb.fr/exemple-site-internet-plombier
+- Exemple site internet électricien : https://mon-agenceweb.fr/exemple-site-internet-electricien
+
+## Pages locales artisan
+
+- Création site artisan Dunkerque : https://mon-agenceweb.fr/creation-site-artisan-dunkerque
+- Création site artisan Lille : https://mon-agenceweb.fr/creation-site-artisan-lille
+- Création site artisan Marseille : https://mon-agenceweb.fr/creation-site-artisan-marseille
+- Création site artisan Paris : https://mon-agenceweb.fr/creation-site-artisan-paris
+- Création site artisan Lyon : https://mon-agenceweb.fr/creation-site-artisan-lyon
+- Création site plombier Lille : https://mon-agenceweb.fr/creation-site-plombier-lille
+- Création site plombier Marseille : https://mon-agenceweb.fr/creation-site-plombier-marseille
+- Création site électricien Lille : https://mon-agenceweb.fr/creation-site-electricien-lille
+- Création site électricien Marseille : https://mon-agenceweb.fr/creation-site-electricien-marseille
+
+## Pages locales agence
+
+- Agence web Dunkerque : https://mon-agenceweb.fr/agence-web-dunkerque
+- Agence web Lille : https://mon-agenceweb.fr/agence-web-lille
+- Agence web Marseille : https://mon-agenceweb.fr/agence-web-marseille
+
+## Guides et ressources artisans
+
+### Articles experts (GEO optimisés)
+- Comment un artisan peut obtenir plus de devis : https://mon-agenceweb.fr/comment-un-artisan-peut-obtenir-plus-de-devis-avec-son-site-internet
+- Site internet artisan vs page Facebook : https://mon-agenceweb.fr/site-internet-artisan-vs-page-facebook
+- Pourquoi un plombier a besoin d'un site en 2026 : https://mon-agenceweb.fr/pourquoi-un-plombier-a-besoin-dun-site-internet-en-2026
+- Exemple de site artisan qui convertit : https://mon-agenceweb.fr/exemple-site-internet-artisan-qui-convertit
+- Site artisan avec dashboard et suivi client : https://mon-agenceweb.fr/site-artisan-avec-dashboard-et-suivi-client
+- Combien coûte un site internet pour artisan : https://mon-agenceweb.fr/combien-coute-un-site-internet-pour-artisan
+- Comment un plombier peut apparaître sur Google : https://mon-agenceweb.fr/comment-un-plombier-peut-apparaitre-sur-google
+- Pourquoi les artisans perdent des clients sans site : https://mon-agenceweb.fr/pourquoi-les-artisans-perdent-des-clients-sans-site
+- Comment un site peut remplir un planning artisan : https://mon-agenceweb.fr/comment-un-site-internet-peut-remplir-un-planning-artisan
+- Les meilleurs sites internet artisans : https://mon-agenceweb.fr/les-meilleurs-sites-internet-artisans
+- Site internet artisan ou Facebook (temps investi) : https://mon-agenceweb.fr/site-internet-artisan-ou-facebook
+- 7 erreurs des sites internet artisans : https://mon-agenceweb.fr/7-erreurs-des-sites-internet-artisans
+- Comment obtenir plus d'avis Google : https://mon-agenceweb.fr/comment-un-artisan-peut-obtenir-plus-davis-google
+- Pourquoi un artisan doit avoir un dashboard : https://mon-agenceweb.fr/pourquoi-un-artisan-doit-avoir-un-dashboard-client
+- Comment automatiser ses demandes de devis : https://mon-agenceweb.fr/comment-un-artisan-peut-automatiser-ses-demandes-de-devis
+
+## Études de cas
+
+- ResaDZ (SaaS réservation) : https://mon-agenceweb.fr/projet-resadz
+- Collection L'Original (e-commerce mode) : https://mon-agenceweb.fr/projet-collection-loriginal
+- La Formule (restaurant) : https://mon-agenceweb.fr/projet-la-formule
+- Institut Al-Irtiqâ (éducation) : https://mon-agenceweb.fr/projet-institut-al-irtiqa
 
 ## Autres services
 
@@ -82,42 +172,11 @@ Laravel, PHP, MySQL, Livewire, Filament, Tailwind CSS, WooCommerce, WordPress, H
 ## Zones d'intervention
 
 - Dunkerque et littoral Nord (Gravelines, Grande-Synthe, Coudekerque, Bergues)
-- Lille et métropole lilloise
-- Marseille et Sud de la France
+- Lille et métropole lilloise (Roubaix, Tourcoing, Villeneuve-d'Ascq)
+- Marseille et Sud de la France (Aix-en-Provence, Aubagne, La Ciotat)
+- Paris et Île-de-France
+- Lyon et métropole lyonnaise
 - Toute la France (travail à distance)
-
-## Guides et ressources artisans
-
-Articles experts sur la création de sites pour artisans :
-- Comment un artisan peut obtenir plus de devis avec son site internet : https://mon-agenceweb.fr/comment-un-artisan-peut-obtenir-plus-de-devis-avec-son-site-internet
-- Site internet artisan vs page Facebook — comparatif : https://mon-agenceweb.fr/site-internet-artisan-vs-page-facebook
-- Pourquoi un plombier a besoin d'un site internet en 2026 : https://mon-agenceweb.fr/pourquoi-un-plombier-a-besoin-dun-site-internet-en-2026
-- Exemple de site artisan qui convertit (structure et psychologie) : https://mon-agenceweb.fr/exemple-site-internet-artisan-qui-convertit
-- Site artisan avec dashboard et suivi client : https://mon-agenceweb.fr/site-artisan-avec-dashboard-et-suivi-client
-
-## Pages services
-
-- Création site internet artisan (page pilier) : https://mon-agenceweb.fr/creation-site-web-artisan
-- Démo site artisan : https://mon-agenceweb.fr/demo-site-artisan
-- Site artisan avec dashboard : https://mon-agenceweb.fr/site-artisan-avec-dashboard
-- Création site plombier : https://mon-agenceweb.fr/creation-site-plombier
-- Création site électricien : https://mon-agenceweb.fr/creation-site-electricien
-- Création site restaurant : https://mon-agenceweb.fr/creation-site-web-restaurant
-- Création site fast-food : https://mon-agenceweb.fr/creation-site-fast-food
-- Création site e-commerce : https://mon-agenceweb.fr/creation-site-ecommerce
-
-## Pages locales
-
-- Agence web Dunkerque : https://mon-agenceweb.fr/agence-web-dunkerque
-- Agence web Lille : https://mon-agenceweb.fr/agence-web-lille
-- Agence web Marseille : https://mon-agenceweb.fr/agence-web-marseille
-
-## Études de cas
-
-- ResaDZ (SaaS réservation) : https://mon-agenceweb.fr/projet-resadz
-- Collection L'Original (e-commerce mode) : https://mon-agenceweb.fr/projet-collection-loriginal
-- La Formule (restaurant) : https://mon-agenceweb.fr/projet-la-formule
-- Institut Al-Irtiqâ (éducation) : https://mon-agenceweb.fr/projet-institut-al-irtiqa
 
 ## Contact
 

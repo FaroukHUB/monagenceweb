@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>Site artisan avec suivi client : ne perdez plus jamais une demande de devis | mon-agenceweb.fr</title>
+    <meta name="description" content="Un CRM léger intégré à votre site artisan pour suivre chaque prospect du premier contact au chantier terminé. Pipeline visuel, relances automatiques, zéro oubli. 799€.">
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr/site-artisan-avec-suivi-client">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mon-agenceweb.fr/site-artisan-avec-suivi-client">
+    <meta property="og:title" content="Site artisan avec suivi client — Ne perdez plus une demande">
+    <meta property="og:description" content="Pipeline visuel pour artisans : Nouveau → Contact → Devis → Accepté → Planifié → Terminé. Suivez chaque demande, relancez au bon moment, ne perdez plus rien.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.min.css?v=5">
+    <style>
+        .article-meta{font-size:.85rem;color:var(--text-muted);margin-bottom:2rem;}
+        .article-meta time{color:var(--accent);font-weight:500;}
+        .callout-box{background:linear-gradient(135deg,rgba(198,153,62,.08),rgba(198,153,62,.03));border-left:4px solid #C6993E;border-radius:8px;padding:1.5rem 2rem;margin:2rem 0;}
+        .callout-box h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:.8rem;color:#C6993E;}
+        .callout-box p{margin-bottom:.5rem;line-height:1.7;}
+        .callout-box .big-number{font-size:2rem;font-weight:700;color:#C6993E;display:block;margin:.5rem 0;}
+        .feature-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0;}
+        .feature-card{background:#fff;border:1px solid rgba(198,153,62,.15);border-radius:12px;padding:1.8rem;transition:box-shadow .3s ease;}
+        .feature-card:hover{box-shadow:0 8px 30px rgba(198,153,62,.12);}
+        .feature-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-bottom:.8rem;color:#1a1a1a;}
+        .feature-card p{font-size:.92rem;line-height:1.7;color:var(--text-muted);}
+        .feature-card .card-icon{font-size:1.8rem;margin-bottom:.8rem;display:block;}
+        .highlight-box{background:#C6993E;color:#fff;border-radius:12px;padding:2rem;margin:2rem 0;text-align:center;}
+        .highlight-box h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:.8rem;}
+        .highlight-box p{font-size:1rem;line-height:1.7;opacity:.92;}
+        .status-pipeline{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0;justify-content:center;}
+        .status-pipeline .step{background:rgba(198,153,62,.1);color:#C6993E;padding:.6rem 1rem;border-radius:6px;font-size:.85rem;font-weight:600;text-align:center;min-width:80px;}
+        .status-pipeline .step.active{background:#C6993E;color:#fff;}
+        .status-pipeline .arrow{color:var(--text-muted);font-size:.9rem;}
+        .pipeline-detail{background:#fff;border:1px solid rgba(198,153,62,.15);border-radius:12px;padding:1.5rem;margin:1rem 0;}
+        .pipeline-detail h4{font-family:'Cormorant Garamond',serif;color:#C6993E;margin-bottom:.5rem;}
+        .pipeline-detail p{font-size:.9rem;line-height:1.6;color:var(--text-muted);}
+        .workflow-steps{counter-reset:workflow;list-style:none;padding:0;margin:2rem 0;}
+        .workflow-steps li{counter-increment:workflow;position:relative;padding:1rem 1rem 1rem 3.5rem;margin-bottom:1rem;background:rgba(198,153,62,.03);border-radius:8px;border:1px solid rgba(198,153,62,.1);line-height:1.6;}
+        .workflow-steps li::before{content:counter(workflow);position:absolute;left:1rem;top:1rem;width:2rem;height:2rem;background:#C6993E;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;}
+        .feature-check{list-style:none;padding:0;margin:1.5rem 0;}
+        .feature-check li{padding:.6rem 0;padding-left:1.8rem;position:relative;line-height:1.6;}
+        .feature-check li::before{content:"\2713";position:absolute;left:0;color:#C6993E;font-weight:700;}
+        @media(max-width:640px){
+            .callout-box{padding:1rem 1.2rem;}
+            .workflow-steps li{padding-left:3rem;}
+            .status-pipeline .step{min-width:60px;font-size:.75rem;padding:.4rem .6rem;}
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mon-agenceweb.fr" },
+                    { "@type": "ListItem", "position": 2, "name": "Site artisan avec dashboard", "item": "https://mon-agenceweb.fr/site-artisan-avec-dashboard" },
+                    { "@type": "ListItem", "position": 3, "name": "Suivi client", "item": "https://mon-agenceweb.fr/site-artisan-avec-suivi-client" }
+                ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "description": "Création de sites internet pour artisans avec suivi client intégré. Pipeline visuel, relances automatiques, fichier client complet. Site + dashboard à 799€.",
+                "areaServed": "France",
+                "priceRange": "399€ – 799€",
+                "telephone": "",
+                "email": "contact@mon-agenceweb.fr"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "C'est quoi exactement un pipeline de suivi client ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Un pipeline est une vue visuelle de toutes vos demandes de devis, organisées par étape : Nouveau, Contacté, Devis envoyé, Accepté, Planifié, Terminé. Chaque demande est une carte que vous déplacez d'une colonne à l'autre. Vous voyez en un coup d'œil où en est chaque prospect et ce que vous devez faire ensuite." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Ça remplace un logiciel CRM comme HubSpot ou Axonaut ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Pour un artisan, oui. Les CRM classiques sont conçus pour des équipes commerciales de 10 personnes. Le suivi client que je propose est pensé pour un artisan seul ou avec 1-2 collaborateurs. Interface simplifiée, 3 clics maximum par action, accessible depuis le téléphone. Pas de formation complexe, pas de fonctionnalités inutiles." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Je reçois peu de demandes, ça vaut quand même le coup ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Justement, c'est quand vous recevez peu de demandes qu'il ne faut en perdre aucune. Si vous recevez 10 demandes par mois et que vous en oubliez 2, c'est 20 % de votre chiffre d'affaires potentiel qui disparaît. Le suivi client garantit que chaque demande est traitée, relancée et convertie." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Les relances sont-elles automatiques ?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Le dashboard vous alerte quand un devis est en attente depuis trop longtemps (par défaut 3 jours). La relance elle-même peut être semi-automatique : un clic génère un message pré-rédigé que vous envoyez par email ou WhatsApp. C'est vous qui décidez, mais le système vous rappelle de le faire." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav is-scrolled">
+        <a href="/" class="nav-logo">maw<span class="accent">.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="/#projets">Projets</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <!-- INTRO -->
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container container--narrow">
+            <nav aria-label="Fil d'Ariane" style="margin-bottom: 2rem;">
+                <ol style="display:flex;gap:.5rem;list-style:none;padding:0;font-size:.9rem;color:var(--text-muted);">
+                    <li><a href="/" style="color:var(--accent);">Accueil</a> /</li>
+                    <li><a href="/site-artisan-avec-dashboard" style="color:var(--accent);">Site artisan avec dashboard</a> /</li>
+                    <li>Suivi client</li>
+                </ol>
+            </nav>
+            <header class="section-header">
+                <span class="section-tag">Gestion des demandes</span>
+                <h1 class="section-title" style="font-size:clamp(1.6rem,4vw,2.5rem);">Site artisan avec suivi client : ne perdez plus jamais une demande de devis<span class="accent">.</span></h1>
+            </header>
+            <div class="article-meta">
+                Par <strong>Farouk</strong> &middot; <time datetime="2026-05-16">16 mai 2026</time> &middot; 9 min de lecture
+            </div>
+            <div class="legal-content">
+                <p>Vous recevez une demande de devis le lundi. Vous vous dites "je rappelle demain". Mardi, vous êtes sur un chantier toute la journée. Mercredi, vous avez oublié. Jeudi, le prospect a signé avec votre concurrent. <strong>Vous venez de perdre un chantier à 3 000 €.</strong></p>
+                <p>Ce scénario se répète chaque semaine chez la majorité des artisans que je rencontre. Pas par manque de sérieux — par manque de <strong>système</strong>. Quand tout est dans votre tête, dans WhatsApp et sur des Post-it, les oublis sont inévitables.</p>
+                <p>Le suivi client intégré à votre <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">site artisan avec dashboard</a> résout ce problème. Chaque demande est suivie du premier contact jusqu'au chantier terminé. Rien ne passe entre les mailles du filet. Plus jamais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LE PIPELINE -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Le pipeline : votre vue d'ensemble en temps réel</h2>
+
+                <p>Imaginez un tableau avec 6 colonnes. Chaque colonne représente une étape. Chaque demande de devis est une carte que vous déplacez d'une colonne à l'autre au fur et à mesure. C'est simple, visuel, et incroyablement efficace.</p>
+
+                <div class="status-pipeline">
+                    <span class="step active">Nouveau</span>
+                    <span class="arrow">&rarr;</span>
+                    <span class="step">Contacté</span>
+                    <span class="arrow">&rarr;</span>
+                    <span class="step">Devis envoyé</span>
+                    <span class="arrow">&rarr;</span>
+                    <span class="step">Accepté</span>
+                    <span class="arrow">&rarr;</span>
+                    <span class="step">Planifié</span>
+                    <span class="arrow">&rarr;</span>
+                    <span class="step">Terminé</span>
+                </div>
+
+                <p>Voici ce que signifie chaque étape et ce qui se passe concrètement.</p>
+
+                <div class="pipeline-detail">
+                    <h4>1. Nouveau</h4>
+                    <p>La demande vient d'arriver via votre formulaire ou WhatsApp. Vous recevez une notification push. La carte apparaît dans la colonne "Nouveau" avec les coordonnées du prospect, le type de travaux et éventuellement des photos. Action : rappeler dans l'heure.</p>
+                </div>
+
+                <div class="pipeline-detail">
+                    <h4>2. Contacté</h4>
+                    <p>Vous avez échangé avec le prospect. Vous avez les informations nécessaires pour préparer un devis. Vous notez les détails dans la fiche (surface, matériaux, contraintes). Action : préparer et envoyer le devis.</p>
+                </div>
+
+                <div class="pipeline-detail">
+                    <h4>3. Devis envoyé</h4>
+                    <p>Le devis PDF est généré et envoyé. Le chronomètre démarre : si le prospect ne répond pas dans 3 jours, le dashboard vous alerte pour une relance. Action : attendre la réponse, relancer si nécessaire.</p>
+                </div>
+
+                <div class="pipeline-detail">
+                    <h4>4. Accepté</h4>
+                    <p>Le devis est signé. Le prospect devient client. La carte passe automatiquement dans votre calendrier pour planification. Action : fixer une date d'intervention.</p>
+                </div>
+
+                <div class="pipeline-detail">
+                    <h4>5. Planifié</h4>
+                    <p>Le chantier a une date dans votre calendrier. Le client recevra un rappel SMS automatique la veille. Action : réaliser le chantier.</p>
+                </div>
+
+                <div class="pipeline-detail">
+                    <h4>6. Terminé</h4>
+                    <p>Le chantier est fait, le client est satisfait. Le dashboard vous propose d'envoyer un lien pour un avis Google. L'historique est conservé dans la fiche client pour référence future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CE QUE ÇA CHANGE -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Ce que le suivi client change concrètement</h2>
+
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <span class="card-icon">🎯</span>
+                        <h3>Zéro oubli</h3>
+                        <p>Chaque demande est enregistrée automatiquement. Impossible de la perdre dans WhatsApp ou de l'oublier sur un bout de papier. Le dashboard vous montre tout ce qui attend une action de votre part.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="card-icon">⏰</span>
+                        <h3>Relances au bon moment</h3>
+                        <p>Un devis sans réponse depuis 3 jours ? Le dashboard vous alerte. En un clic, vous envoyez un message de relance pré-rédigé. Les artisans qui relancent systématiquement convertissent 30 % de plus.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="card-icon">📈</span>
+                        <h3>Visibilité totale</h3>
+                        <p>En un coup d'œil : combien de demandes ce mois, combien de devis envoyés, combien acceptés, quel chiffre d'affaires prévu. Des chiffres concrets au lieu d'une vague impression.</p>
+                    </div>
+                </div>
+
+                <div class="callout-box">
+                    <h4>L'impact mesuré chez mes clients</h4>
+                    <p>Avant le suivi client : <strong>2 à 3 demandes oubliées par mois</strong></p>
+                    <p>Après le suivi client : <strong>zéro oubli, relances systématiques</strong></p>
+                    <p>Résultat : <span class="big-number">+25 % de chantiers signés</span></p>
+                    <p>Ce n'est pas parce que vous avez plus de demandes. C'est parce que vous n'en perdez plus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FICHE CLIENT -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">La fiche client : votre mémoire professionnelle</h2>
+
+                <p>Chaque client a sa fiche complète dans le dashboard. Pas juste un nom et un numéro — un vrai dossier professionnel :</p>
+
+                <ul class="feature-check">
+                    <li>Coordonnées complètes (téléphone, email, adresse)</li>
+                    <li>Historique de toutes les interactions (appels, messages, devis)</li>
+                    <li>Devis envoyés avec statut (accepté, refusé, en attente)</li>
+                    <li>Chantiers réalisés avec dates et montants</li>
+                    <li>Photos du chantier (avant, pendant, après)</li>
+                    <li>Notes personnelles libres</li>
+                    <li>Montant total facturé à ce client</li>
+                </ul>
+
+                <p>Quand un client vous rappelle 6 mois plus tard, vous ouvrez sa fiche en 3 secondes. Vous savez tout : ce que vous avez fait, combien il a payé, quelle était sa particularité. Vous reprenez la conversation comme si c'était hier. C'est ça, le <strong>professionnalisme</strong> qui fidélise.</p>
+
+                <p>Cette fiche client est connectée au <a href="/site-artisan-avec-espace-client" style="color:var(--accent);">module espace client</a> : votre client peut consulter ses devis et l'avancement de son chantier depuis son propre espace. Transparence totale.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFRE -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title">Inclus dans l'offre site + dashboard à 799 €</h2>
+
+                <p>Le suivi client fait partie intégrante du <a href="/site-artisan-avec-dashboard-et-suivi-client" style="color:var(--accent);">site artisan avec dashboard et suivi client</a> à 799 €. Voici l'ensemble de ce que vous recevez :</p>
+
+                <ul class="feature-check">
+                    <li>Pipeline visuel 6 colonnes personnalisable</li>
+                    <li>Création automatique de fiche à chaque nouvelle demande</li>
+                    <li>Alertes de relance à J+3 pour les devis sans réponse</li>
+                    <li>Messages de relance pré-rédigés (email + WhatsApp)</li>
+                    <li>Fiche client complète avec historique et notes</li>
+                    <li>Statistiques de conversion (demandes → devis → chantiers)</li>
+                    <li>Connexion au calendrier pour planification en un clic</li>
+                    <li>Générateur de devis PDF intégré</li>
+                    <li>Export des données client à tout moment</li>
+                    <li>Formation de 20 minutes à la livraison</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>Pas de logiciel supplémentaire à payer</h3>
+                    <p>Le suivi client est intégré à votre site. Pas d'abonnement CRM à 30-80 €/mois. Pas de logiciel séparé. Un seul outil, un seul paiement de 799 €, et tout est à vous.</p>
+                </div>
+
+                <p>Si vous démarrez avec le site vitrine à 399 €, vous pourrez ajouter le dashboard et le suivi client plus tard sans refaire votre site. L'architecture est prévue pour cette évolution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt">
+        <div class="container container--narrow">
+            <div class="legal-content">
+                <h2 class="apropos-block-title" style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
+
+                <h3>C'est quoi exactement un pipeline de suivi client ?</h3>
+                <p>Un pipeline est une vue visuelle de toutes vos demandes de devis, organisées par étape : Nouveau, Contacté, Devis envoyé, Accepté, Planifié, Terminé. Chaque demande est une carte que vous déplacez d'une colonne à l'autre au fur et à mesure de l'avancement. Vous voyez en un coup d'œil où en est chaque prospect et ce que vous devez faire ensuite. C'est le même principe que les tableaux Kanban utilisés dans l'industrie, mais simplifié pour les artisans.</p>
+
+                <h3>Ça remplace un logiciel CRM comme HubSpot ou Axonaut ?</h3>
+                <p>Pour un artisan seul ou avec 1 à 2 collaborateurs, oui. Les CRM classiques sont conçus pour des équipes commerciales de 10 personnes avec des processus complexes. Le suivi client que j'intègre est pensé pour un artisan qui travaille depuis son téléphone entre deux chantiers. Interface simplifiée, 3 clics maximum par action, pas de formation complexe, pas de fonctionnalités inutiles. Juste l'essentiel, bien fait.</p>
+
+                <h3>Je reçois peu de demandes, ça vaut quand même le coup ?</h3>
+                <p>Justement, c'est quand vous recevez peu de demandes qu'il ne faut en perdre aucune. Si vous recevez 10 demandes par mois et que vous en oubliez 2, c'est 20 % de votre chiffre d'affaires potentiel qui disparaît. Le suivi client garantit que chaque demande est traitée, relancée et convertie. Il vous aide aussi à identifier pourquoi certains prospects ne signent pas, pour améliorer votre taux de conversion.</p>
+
+                <h3>Les relances sont-elles automatiques ?</h3>
+                <p>Le dashboard vous alerte quand un devis est en attente de réponse depuis trop longtemps (par défaut 3 jours, personnalisable). La relance elle-même est semi-automatique : un clic génère un message pré-rédigé que vous pouvez envoyer par email ou par WhatsApp. C'est vous qui décidez du moment et du ton, mais le système vous rappelle de le faire pour que rien ne tombe dans l'oubli.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align:center;">
+        <div class="container container--narrow">
+            <h2 class="apropos-block-title">Chaque demande mérite une réponse. Chaque prospect mérite un suivi.</h2>
+            <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7;">Un site artisan avec suivi client intégré, pipeline visuel et relances automatiques. Ne perdez plus un seul chantier. 799 €, sans abonnement obligatoire.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="/#contact" class="btn btn--primary">Demander un devis personnalisé <span class="btn-arrow">&rarr;</span></a>
+                <a href="/demo-site-artisan" class="btn btn--outline">Voir la démo en ligne</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAILLAGE INTERNE -->
+    <section class="section section--alt">
+        <div class="container container--narrow" style="text-align:center;">
+            <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;">
+                Articles liés :
+                <a href="/site-artisan-avec-dashboard" style="color:var(--accent);">Site artisan avec dashboard</a> &middot;
+                <a href="/site-artisan-avec-espace-client" style="color:var(--accent);">Espace client artisan</a> &middot;
+                <a href="/site-artisan-avec-dashboard-et-suivi-client" style="color:var(--accent);">Dashboard et suivi client</a> &middot;
+                <a href="/site-artisan-avec-calendrier" style="color:var(--accent);">Calendrier intégré</a> &middot;
+                <a href="/demo-site-artisan" style="color:var(--accent);">Démo site artisan</a> &middot;
+                <a href="/creation-site-web-artisan" style="color:var(--accent);">Création site artisan</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <span class="footer-sep" aria-hidden="true">&middot;</span>
+            <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025&#8211;2026 mon-agenceweb.fr &middot; Farouk</p>
+    </footer>
+
+</body>
+</html>
