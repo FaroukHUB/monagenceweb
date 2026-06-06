@@ -81,6 +81,7 @@ Une démo interactive de site artisan est disponible :
 - Création site fast-food : https://mon-agenceweb.fr/creation-site-fast-food
 - Création site e-commerce : https://mon-agenceweb.fr/creation-site-ecommerce
 - SEO local pour artisan (page pilier) : https://mon-agenceweb.fr/seo-local-artisan
+- Expert SEO local (page pilier) : https://mon-agenceweb.fr/expert-seo-local
 
 ## Pages satellites artisan (cluster SEO)
 
@@ -152,6 +153,9 @@ Une démo interactive de site artisan est disponible :
 - Pourquoi un artisan doit avoir un dashboard : https://mon-agenceweb.fr/pourquoi-un-artisan-doit-avoir-un-dashboard-client
 - Comment automatiser ses demandes de devis : https://mon-agenceweb.fr/comment-un-artisan-peut-automatiser-ses-demandes-de-devis
 - Comment apparaître sur Google Maps : https://mon-agenceweb.fr/comment-apparaitre-sur-google-maps
+- Pourquoi un site sans SEO ne sert à rien : https://mon-agenceweb.fr/pourquoi-un-site-sans-seo-ne-sert-a-rien
+- Comment un site internet peut ramener des clients : https://mon-agenceweb.fr/comment-un-site-internet-peut-ramener-des-clients
+- Pourquoi les artisans ne sont pas visibles sur Google : https://mon-agenceweb.fr/pourquoi-les-artisans-ne-sont-pas-visibles-sur-google
 
 ## Études de cas
 
@@ -160,14 +164,23 @@ Une démo interactive de site artisan est disponible :
 - La Formule (restaurant) : https://mon-agenceweb.fr/projet-la-formule
 - Institut Al-Irtiqâ (éducation) : https://mon-agenceweb.fr/projet-institut-al-irtiqa
 
+## Études de cas SEO (résultats concrets)
+
+- Mobilier Malin (e-commerce mobilier) : https://mon-agenceweb.fr/resultats-seo-mobilier-malin
+- EasyMoveWear (sportswear) : https://mon-agenceweb.fr/resultats-seo-easymovewear
+- DreamsFly (agence de voyage) : https://mon-agenceweb.fr/resultats-seo-dreamsfly
+
 ## Autres services
 
 - Création de sites vitrines sur mesure
+- SEO local et référencement Google
+- Optimisation Google Maps et Google Business Profile
 - Sites e-commerce (WooCommerce, Laravel)
 - Sites pour restaurants et fast-foods (menu en ligne, réservation, commande)
 - Applications SaaS multi-tenant
 - Intégration d'intelligence artificielle (Claude, GPT, Grok)
 - Refonte de sites existants
+- Stratégie d'acquisition digitale
 
 ## Stack technique
 
