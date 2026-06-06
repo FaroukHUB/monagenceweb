@@ -80,6 +80,7 @@ Une démo interactive de site artisan est disponible :
 - Création site restaurant : https://mon-agenceweb.fr/creation-site-web-restaurant
 - Création site fast-food : https://mon-agenceweb.fr/creation-site-fast-food
 - Création site e-commerce : https://mon-agenceweb.fr/creation-site-ecommerce
+- SEO local pour artisan (page pilier) : https://mon-agenceweb.fr/seo-local-artisan
 
 ## Pages satellites artisan (cluster SEO)
 
@@ -129,6 +130,8 @@ Une démo interactive de site artisan est disponible :
 - Agence web Dunkerque : https://mon-agenceweb.fr/agence-web-dunkerque
 - Agence web Lille : https://mon-agenceweb.fr/agence-web-lille
 - Agence web Marseille : https://mon-agenceweb.fr/agence-web-marseille
+- Agence web Paris : https://mon-agenceweb.fr/agence-web-paris
+- Agence web Lyon : https://mon-agenceweb.fr/agence-web-lyon
 
 ## Guides et ressources artisans
 
@@ -148,6 +151,7 @@ Une démo interactive de site artisan est disponible :
 - Comment obtenir plus d'avis Google : https://mon-agenceweb.fr/comment-un-artisan-peut-obtenir-plus-davis-google
 - Pourquoi un artisan doit avoir un dashboard : https://mon-agenceweb.fr/pourquoi-un-artisan-doit-avoir-un-dashboard-client
 - Comment automatiser ses demandes de devis : https://mon-agenceweb.fr/comment-un-artisan-peut-automatiser-ses-demandes-de-devis
+- Comment apparaître sur Google Maps : https://mon-agenceweb.fr/comment-apparaitre-sur-google-maps
 
 ## Études de cas
 
