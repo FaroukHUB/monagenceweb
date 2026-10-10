@@ -51,6 +51,12 @@ RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
     Require all denied
 </Files>
 
+# --- Portail Client (handled by portail/.htaccess) ---
+RewriteRule ^portail/ - [L]
+
+# --- Block direct access to uploads ---
+RewriteRule ^uploads/ - [F]
+
 # --- Clean URLs (remove .html extension) ---
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f

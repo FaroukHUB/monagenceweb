@@ -1,0 +1,36 @@
+RewriteEngine On
+
+# Login
+RewriteRule ^login$ login.php [L]
+RewriteRule ^logout$ logout.php [L]
+
+# Invitation
+RewriteRule ^invitation/([a-f0-9]{64})$ invitation.php?token=$1 [L,QSA]
+
+# Dashboard
+RewriteRule ^dashboard$ dashboard.php [L]
+
+# Questionnaire
+RewriteRule ^questionnaire$ questionnaire.php [L]
+RewriteRule ^questionnaire/etape/([0-9]{1,2})$ questionnaire.php?step=$1 [L]
+
+# Documents
+RewriteRule ^documents$ documents.php [L]
+
+# Devis
+RewriteRule ^devis$ devis.php [L]
+RewriteRule ^devis/([0-9]+)/accepter$ devis.php?id=$1&action=accepter [L]
+
+# Profil
+RewriteRule ^profil$ profil.php [L]
+
+# API routes
+RewriteRule ^api/(.+)$ api/$1.php [L,QSA]
+
+# Block direct access to templates
+<Files "*.php">
+    # Allow PHP processing
+</Files>
+<IfModule mod_rewrite.c>
+    RewriteRule ^templates/ - [F]
+</IfModule>
