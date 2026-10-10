@@ -1,6 +1,11 @@
 <?php
 require_once __DIR__ . '/../config.php';
-requireClientAuth();
+
+header('Content-Type: application/json');
+
+if (!isClientLoggedIn()) {
+    jsonResponse(['error' => 'Non connecté'], 401);
+}
 
 $clientId = getClientId();
 $db = getDB();

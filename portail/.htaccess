@@ -1,4 +1,5 @@
 RewriteEngine On
+RewriteBase /portail/
 
 # Login
 RewriteRule ^login$ login.php [L]

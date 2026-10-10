@@ -1,12 +1,15 @@
 <?php
 require_once __DIR__ . '/../config.php';
-requireClientAuth();
+
+header('Content-Type: application/json');
+
+if (!isClientLoggedIn()) {
+    jsonResponse(['error' => 'Non connecté'], 401);
+}
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     jsonResponse(['error' => 'POST uniquement'], 405);
 }
-
-verifyCSRF();
 
 $input = json_decode(file_get_contents('php://input'), true);
 $stepNumber = (int)($input['step'] ?? 0);

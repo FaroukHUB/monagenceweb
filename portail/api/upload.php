@@ -1,14 +1,14 @@
 <?php
 require_once __DIR__ . '/../config.php';
-requireClientAuth();
+
+header('Content-Type: application/json');
+
+if (!isClientLoggedIn()) {
+    jsonResponse(['error' => 'Non connecté'], 401);
+}
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     jsonResponse(['error' => 'POST uniquement'], 405);
-}
-
-$csrfToken = $_POST['csrf_token'] ?? $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
-if (!hash_equals($_SESSION['csrf_token'] ?? '', $csrfToken)) {
-    jsonResponse(['error' => 'Session expirée'], 403);
 }
 
 $project = getClientProject();
