@@ -21,7 +21,7 @@
 
     // Notification polling
     function checkNotifications() {
-        fetch('/portail/api/notifications')
+        fetch('/portail/api/notifications.php')
             .then(function(r) { return r.json(); })
             .then(function(data) {
                 var badge = document.getElementById('notifBadge');
@@ -56,7 +56,7 @@
             }
         });
 
-        fetch('/portail/api/save-step', {
+        fetch('/portail/api/save-step.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

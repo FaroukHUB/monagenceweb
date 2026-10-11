@@ -106,7 +106,7 @@ function saveStep(completed) {
         }
     });
 
-    fetch('/portail/api/save-step', {
+    fetch('/portail/api/save-step.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

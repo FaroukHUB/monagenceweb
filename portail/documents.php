@@ -64,7 +64,7 @@ require_once __DIR__ . '/templates/header.php';
                             <td style="color:var(--portal-gray-500)"><?= $f['step_number'] ? 'Étape ' . $f['step_number'] : '—' ?></td>
                             <td style="color:var(--portal-gray-500)"><?= date('d/m/Y', strtotime($f['created_at'])) ?></td>
                             <td style="text-align:right">
-                                <a href="/portail/api/download?id=<?= $f['id'] ?>" class="portal-btn portal-btn--sm portal-btn--secondary" style="text-decoration:none">Télécharger</a>
+                                <a href="/portail/api/download.php?id=<?= $f['id'] ?>" class="portal-btn portal-btn--sm portal-btn--secondary" style="text-decoration:none">Télécharger</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -123,7 +123,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
     status.textContent = 'Envoi en cours...';
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/portail/api/upload');
+    xhr.open('POST', '/portail/api/upload.php');
 
     xhr.upload.onprogress = function(e) {
         if (e.lengthComputable) {
