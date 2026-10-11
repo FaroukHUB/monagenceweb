@@ -87,3 +87,33 @@ function addNotification(int $projectId, string $recipientType, ?int $recipientI
     $stmt = $db->prepare('INSERT INTO notifications (project_id, recipient_type, recipient_id, type, message) VALUES (?, ?, ?, ?, ?)');
     $stmt->execute([$projectId, $recipientType, $recipientId, $type, $message]);
 }
+
+function notifyAdmin(string $subject, string $body): void {
+    require_once __DIR__ . '/../admin/config.php';
+    if (!defined('MAIL_API_KEY') || !MAIL_API_KEY) return;
+
+    $html = '<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:32px;color:#333">';
+    $html .= '<div style="text-align:center;margin-bottom:24px"><span style="font-size:1.5rem;font-weight:700;color:#111">maw<span style="color:#FFA000">.</span></span></div>';
+    $html .= nl2br(htmlspecialchars($body));
+    $html .= '<hr style="border:none;border-top:1px solid #eee;margin:24px 0">';
+    $html .= '<p style="text-align:center"><a href="https://mon-agenceweb.fr/admin/projets.php" style="display:inline-block;padding:12px 24px;background:#FFA000;color:#fff;text-decoration:none;border-radius:8px;font-weight:600">Voir dans l\'admin</a></p>';
+    $html .= '</div>';
+
+    $payload = [
+        'sender' => ['name' => MAIL_FROM_NAME, 'email' => MAIL_FROM_EMAIL],
+        'to' => [['email' => MAIL_FROM_EMAIL]],
+        'subject' => '[Portail] ' . $subject,
+        'htmlContent' => $html,
+    ];
+
+    $ch = curl_init('https://api.brevo.com/v3/smtp/email');
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'api-key: ' . MAIL_API_KEY, 'accept: application/json'],
+        CURLOPT_POSTFIELDS => json_encode($payload),
+        CURLOPT_TIMEOUT => 10,
+    ]);
+    curl_exec($ch);
+    curl_close($ch);
+}
