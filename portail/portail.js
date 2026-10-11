@@ -4,15 +4,6 @@
 (function() {
     'use strict';
 
-    // Mobile burger menu
-    var burger = document.getElementById('portalBurger');
-    var nav = document.querySelector('.portal-nav');
-    if (burger && nav) {
-        burger.addEventListener('click', function() {
-            nav.classList.toggle('open');
-        });
-    }
-
     // CSRF token
     window.portalCSRF = document.querySelector('meta[name="csrf-token"]');
     window.getCSRF = function() {
@@ -40,6 +31,14 @@
     if (document.querySelector('.portal-nav')) {
         checkNotifications();
         setInterval(checkNotifications, 60000);
+    }
+
+    // Auto-scroll active step into view (mobile horizontal scroll)
+    var activeStep = document.querySelector('.portal-step-item.active');
+    if (activeStep) {
+        setTimeout(function() {
+            activeStep.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }, 100);
     }
 
     // Auto-save for questionnaire steps

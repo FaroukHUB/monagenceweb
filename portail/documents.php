@@ -76,11 +76,11 @@ require_once __DIR__ . '/templates/header.php';
 
 <!-- Upload Modal -->
 <?php if ($project): ?>
-<div id="uploadModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:2000;align-items:center;justify-content:center;padding:24px">
-    <div style="background:var(--portal-white);border-radius:var(--portal-radius);padding:32px;max-width:480px;width:100%">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
-            <h2 style="font-size:1.1rem;font-weight:700">Ajouter un document</h2>
-            <button onclick="document.getElementById('uploadModal').style.display='none'" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--portal-gray-500)">&times;</button>
+<div id="uploadModal" class="portal-modal-overlay" style="display:none">
+    <div class="portal-modal-sheet">
+        <div class="portal-modal-header">
+            <h2>Ajouter un document</h2>
+            <button onclick="document.getElementById('uploadModal').style.display='none'" class="portal-modal-close">&times;</button>
         </div>
         <form id="uploadForm" enctype="multipart/form-data">
             <input type="hidden" name="csrf_token" value="<?= generateCSRFToken() ?>">
