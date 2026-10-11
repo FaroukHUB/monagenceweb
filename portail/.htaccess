@@ -25,7 +25,8 @@ RewriteRule ^devis/([0-9]+)/accepter$ devis.php?id=$1&action=accepter [L]
 # Profil
 RewriteRule ^profil$ profil.php [L]
 
-# API routes
+# API routes — skip if file already has .php extension
+RewriteCond %{REQUEST_URI} !\.php$
 RewriteRule ^api/(.+)$ api/$1.php [L,QSA]
 
 # Block direct access to templates
