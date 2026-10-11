@@ -19,12 +19,12 @@ require_once __DIR__ . '/templates/header.php';
 ?>
 
 <div style="max-width:900px">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
-        <h1 style="font-size:1.5rem;font-weight:700">Mes documents</h1>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+        <h1 class="app-page-title" style="margin-bottom:0">Mes documents</h1>
         <?php if ($project): ?>
             <button class="portal-btn portal-btn--primary portal-btn--sm" onclick="document.getElementById('uploadModal').style.display='flex'">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                Ajouter un document
+                Ajouter
             </button>
         <?php endif; ?>
     </div>

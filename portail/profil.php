@@ -59,7 +59,14 @@ require_once __DIR__ . '/templates/header.php';
 ?>
 
 <div style="max-width:600px">
-    <h1 style="font-size:1.5rem;font-weight:700;margin-bottom:24px">Mon profil</h1>
+    <!-- Avatar + name header -->
+    <div class="app-profile-header">
+        <div class="app-avatar"><?= strtoupper(mb_substr($client['first_name'], 0, 1) . mb_substr($client['last_name'], 0, 1)) ?></div>
+        <div>
+            <h1 class="app-page-title" style="margin-bottom:2px"><?= sanitize($client['first_name'] . ' ' . $client['last_name']) ?></h1>
+            <p style="color:var(--portal-gray-500);font-size:0.88rem"><?= sanitize($client['email']) ?></p>
+        </div>
+    </div>
 
     <?php if ($success): ?>
         <div class="portal-alert portal-alert--success"><?= sanitize($success) ?></div>
@@ -97,7 +104,7 @@ require_once __DIR__ . '/templates/header.php';
         </form>
     </div>
 
-    <div class="portal-card">
+    <div class="portal-card" style="margin-bottom:24px">
         <h2 style="margin-bottom:20px">Changer le mot de passe</h2>
         <form method="POST">
             <input type="hidden" name="csrf_token" value="<?= generateCSRFToken() ?>">
@@ -117,6 +124,11 @@ require_once __DIR__ . '/templates/header.php';
             <button type="submit" class="portal-btn portal-btn--primary">Modifier le mot de passe</button>
         </form>
     </div>
+
+    <a href="/portail/logout" class="portal-btn portal-btn--full" style="background:var(--portal-gray-100);color:var(--portal-red);margin-bottom:24px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Se déconnecter
+    </a>
 </div>
 
 <?php require_once __DIR__ . '/templates/footer.php'; ?>

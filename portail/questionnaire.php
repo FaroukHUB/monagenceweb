@@ -35,7 +35,7 @@ require_once __DIR__ . '/templates/header.php';
 <meta name="csrf-token" content="<?= $csrf ?>">
 
 <div class="portal-questionnaire-layout">
-    <!-- Sidebar steps -->
+    <!-- Desktop sidebar (hidden on mobile via CSS) -->
     <div class="portal-steps-sidebar">
         <ul class="portal-steps-list">
             <?php foreach (QUESTIONNAIRE_STEPS as $num => $label): ?>
@@ -46,7 +46,19 @@ require_once __DIR__ . '/templates/header.php';
                 </a>
             <?php endforeach; ?>
         </ul>
-        <div class="portal-save-indicator" style="margin-top:12px;padding:0 12px"></div>
+    </div>
+
+    <!-- Mobile step dots (shown on mobile via CSS) -->
+    <div class="app-step-progress">
+        <div class="app-step-dots">
+            <?php foreach (QUESTIONNAIRE_STEPS as $num => $label): ?>
+                <a href="/portail/questionnaire/etape/<?= $num ?>"
+                   class="app-step-dot<?= $num === $currentStep ? ' app-step-dot--active' : '' ?><?= in_array($num, $completedSteps) ? ' app-step-dot--completed' : '' ?>"
+                   title="<?= $label ?>"></a>
+            <?php endforeach; ?>
+        </div>
+        <div class="app-step-label"><strong>Étape <?= $currentStep ?></strong> / 10 — <?= QUESTIONNAIRE_STEPS[$currentStep] ?></div>
+        <div class="portal-save-indicator"></div>
     </div>
 
     <!-- Step content -->
@@ -75,7 +87,7 @@ require_once __DIR__ . '/templates/header.php';
                         </button>
                     <?php else: ?>
                         <button type="button" class="portal-btn portal-btn--primary" onclick="saveStep(true)" style="background:var(--portal-green)">
-                            Terminer le cahier des charges
+                            Terminer
                         </button>
                     <?php endif; ?>
                 </div>

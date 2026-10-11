@@ -62,7 +62,7 @@ require_once __DIR__ . '/templates/header.php';
 ?>
 
 <div style="max-width:900px">
-    <h1 style="font-size:1.5rem;font-weight:700;margin-bottom:24px">Mes devis</h1>
+    <h1 class="app-page-title">Mes devis</h1>
 
     <?php if (isset($_GET['accepted'])): ?>
         <div class="portal-alert portal-alert--success">Devis accepté ! Nous revenons vers vous rapidement.</div>
