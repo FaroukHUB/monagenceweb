@@ -37,7 +37,7 @@
                 });
             }
         });
-    }, { threshold: 0.3, rootMargin: '-80px 0px' });
+    }, { threshold: 0.2, rootMargin: '-80px 0px' });
 
     sections.forEach(function(s) { sectionObserver.observe(s); });
 
@@ -52,6 +52,30 @@
         });
     });
 
+    // =========== CURSOR GLOW ===========
+    var cursorGlow = document.getElementById('cursorGlow');
+    var mouseX = 0, mouseY = 0;
+    var glowX = 0, glowY = 0;
+    var rafId;
+
+    if (cursorGlow && window.matchMedia('(pointer: fine)').matches) {
+        document.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        }, { passive: true });
+
+        function updateGlow() {
+            glowX += (mouseX - glowX) * 0.08;
+            glowY += (mouseY - glowY) * 0.08;
+            cursorGlow.style.left = glowX + 'px';
+            cursorGlow.style.top = glowY + 'px';
+            rafId = requestAnimationFrame(updateGlow);
+        }
+        updateGlow();
+    } else if (cursorGlow) {
+        cursorGlow.style.display = 'none';
+    }
+
     // =========== REVEAL ===========
     var revealObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
@@ -59,18 +83,52 @@
                 entry.target.classList.add('is-visible');
             }
         });
-    }, { threshold: 0.12, rootMargin: '-30px' });
+    }, { threshold: 0.1, rootMargin: '-20px' });
 
     document.querySelectorAll('.reveal').forEach(function(el) {
         revealObserver.observe(el);
     });
 
-    // Fallback: make everything visible after 4s
+    // Fallback
     setTimeout(function() {
         document.querySelectorAll('.reveal:not(.is-visible)').forEach(function(el) {
             el.classList.add('is-visible');
         });
-    }, 4000);
+    }, 5000);
+
+    // =========== PROJECT PHONE ANIMATIONS ===========
+    var projObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && !entry.target.classList.contains('is-animated')) {
+                entry.target.classList.add('is-animated');
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.proj').forEach(function(proj) {
+        projObserver.observe(proj);
+    });
+
+    // =========== PHONE 3D TILT ===========
+    document.querySelectorAll('[data-tilt]').forEach(function(el) {
+        var phone = el.querySelector('.phone');
+        if (!phone || !window.matchMedia('(pointer: fine)').matches) return;
+
+        el.addEventListener('mousemove', function(e) {
+            var rect = el.getBoundingClientRect();
+            var x = (e.clientX - rect.left) / rect.width;
+            var y = (e.clientY - rect.top) / rect.height;
+            var tiltX = (y - 0.5) * 8;
+            var tiltY = (x - 0.5) * -8;
+            phone.style.transform = 'perspective(1200px) rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg)';
+        });
+
+        el.addEventListener('mouseleave', function() {
+            phone.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            phone.style.transform = 'perspective(1200px) rotateX(0) rotateY(0)';
+            setTimeout(function() { phone.style.transition = 'transform 0.1s linear'; }, 600);
+        });
+    });
 
     // =========== TERMINAL ANIMATION ===========
     var terminalLines = [
@@ -89,13 +147,12 @@
         terminalStarted = true;
 
         var lineIndex = 0;
-        var totalDelay = 400;
 
         function processLine() {
             if (lineIndex >= terminalLines.length) {
-                // Show hero actions after terminal completes
                 setTimeout(function() {
-                    document.getElementById('heroActions').classList.add('visible');
+                    var actions = document.getElementById('heroActions');
+                    if (actions) actions.classList.add('visible');
                 }, 400);
                 return;
             }
@@ -128,7 +185,7 @@
             }, config.delay);
         }
 
-        setTimeout(processLine, totalDelay);
+        setTimeout(processLine, 500);
     }
 
     function typeText(el, text, i, callback) {
@@ -136,13 +193,12 @@
             el.textContent += text.charAt(i);
             setTimeout(function() {
                 typeText(el, text, i + 1, callback);
-            }, 28 + Math.random() * 30);
+            }, 25 + Math.random() * 28);
         } else {
             if (callback) callback();
         }
     }
 
-    // Start terminal when the terminal becomes visible
     var terminalEl = document.querySelector('.terminal');
     if (terminalEl) {
         var termObserver = new IntersectionObserver(function(entries) {
@@ -150,8 +206,41 @@
                 startTerminal();
                 termObserver.disconnect();
             }
-        }, { threshold: 0.5 });
+        }, { threshold: 0.4 });
         termObserver.observe(terminalEl);
+    }
+
+    // =========== NUMBER COUNTING ===========
+    var statsCounted = false;
+    var statsObserver = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !statsCounted) {
+            statsCounted = true;
+            document.querySelectorAll('.stat-num[data-target]').forEach(function(el) {
+                var target = parseInt(el.getAttribute('data-target'), 10);
+                var duration = 2000;
+                var start = 0;
+                var startTime = null;
+
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var progress = Math.min((timestamp - startTime) / duration, 1);
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.floor(eased * target);
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        el.textContent = target;
+                    }
+                }
+
+                requestAnimationFrame(step);
+            });
+        }
+    }, { threshold: 0.5 });
+
+    var statsStrip = document.querySelector('.stats-strip');
+    if (statsStrip) {
+        statsObserver.observe(statsStrip);
     }
 
     // =========== FORM ===========
