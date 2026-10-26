@@ -826,7 +826,7 @@ footer { border-top: 1px solid var(--line); padding: 50px 0 40px; margin-top: 40
     filter: blur(30px);
 }
 .live-rig {
-    --pw: clamp(210px, 18.5vw, 272px);
+    --pw: clamp(220px, 19.5vw, 290px);
     position: relative; display: flex; justify-content: center; align-items: flex-start;
     gap: clamp(18px, 4vw, 64px);
     transform-style: preserve-3d;
@@ -836,7 +836,7 @@ footer { border-top: 1px solid var(--line); padding: 50px 0 40px; margin-top: 40
 .phone--client { transform: rotateY(16deg) rotateZ(-1.5deg) translateZ(10px); }
 .phone--resto { transform: rotateY(-16deg) rotateZ(1.5deg) translateY(36px) translateZ(10px); }
 .phone figcaption {
-    margin-top: 18px; text-align: center;
+    margin-top: 18px; white-space: nowrap; text-align: center;
     font-family: var(--f-mono); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3);
 }
 .phone-frame {
@@ -940,6 +940,97 @@ footer { border-top: 1px solid var(--line); padding: 50px 0 40px; margin-top: 40
 .wa-input span { flex: 1; padding: 2.6cqw 4cqw; border-radius: 999px; background: #202c33; color: #8696a0; font-size: 3.6cqw; }
 .wa-input i { width: 10cqw; height: 10cqw; border-radius: 50%; background: #00a884; flex-shrink: 0; }
 
+
+/* Ticket qui se construit en direct (écran de droite pendant la commande) */
+.tk {
+    --red: #e11d2e;
+    position: absolute; z-index: 4; inset: 10cqw 0 0 0;
+    display: flex; flex-direction: column;
+    background:
+        radial-gradient(120% 60% at 100% 0%, rgba(225,29,46,.28), transparent 60%),
+        radial-gradient(90% 50% at 0% 100%, rgba(139,92,246,.22), transparent 60%),
+        #0e0b13;
+    color: #f4f2ff; font-family: 'Inter Tight', system-ui, sans-serif;
+    transition: opacity .5s var(--ease), transform .7s var(--ease), filter .5s;
+}
+.live:is(.is-notif, .is-typing, .is-received) .tk { opacity: 0; transform: scale(.94) translateY(-4cqw); filter: blur(4px); pointer-events: none; }
+.live.is-sending .tk { transform: scale(.97); }
+.tk-head { display: flex; align-items: center; gap: 2.6cqw; padding: 2.4cqw 4cqw 3cqw; border-bottom: 1px solid rgba(255,255,255,.07); }
+.tk-head .wa-ava { background: var(--red); }
+.tk-who { display: flex; flex-direction: column; line-height: 1.15; flex: 1; min-width: 0; }
+.tk-who b { font-size: 4.2cqw; font-weight: 700; }
+.tk-who small { font-size: 3cqw; color: rgba(244,242,255,.55); font-family: var(--f-mono); }
+.tk-live {
+    display: inline-flex; align-items: center; gap: 1.2cqw;
+    font-family: var(--f-mono); font-size: 2.6cqw; font-weight: 700; letter-spacing: .08em;
+    padding: 1.2cqw 2.2cqw; border-radius: 999px; background: rgba(225,29,46,.16); color: #ff6b77;
+}
+.tk-live i { width: 1.6cqw; height: 1.6cqw; border-radius: 50%; background: #ff3b4a; animation: blinkLive 1.2s infinite; }
+@keyframes blinkLive { 50% { opacity: .25; } }
+.tk-client {
+    display: none; margin: 2.6cqw 3.4cqw 0; padding: 2.2cqw 3cqw; border-radius: 2.6cqw;
+    background: rgba(37,211,102,.12); border: 1px solid rgba(37,211,102,.35); font-size: 3.4cqw; color: #c8f7d9;
+}
+.tk-client.on { display: block; animation: tkIn .6s var(--ease) both; }
+.tk-list {
+    flex: 1; min-height: 0; overflow: hidden; scroll-behavior: smooth;
+    display: flex; flex-direction: column; gap: 2.4cqw; padding: 3cqw 3.4cqw;
+}
+.tk-item {
+    display: none; flex-shrink: 0;
+    padding: 3.2cqw 3.4cqw; border-radius: 3.4cqw;
+    background: linear-gradient(160deg, rgba(255,255,255,.09), rgba(255,255,255,.03));
+    border: 1px solid rgba(255,255,255,.1);
+}
+.tk-item.on { display: block; animation: tkIn .7s var(--ease) both; }
+.tk-item.flash { animation: tkIn .7s var(--ease) both, tkFlash 1.4s ease-out; }
+@keyframes tkIn { from { opacity: 0; transform: translateY(5cqw) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes tkFlash { 0% { box-shadow: 0 0 0 0 rgba(225,29,46,.7); border-color: rgba(255,107,119,.9); } 100% { box-shadow: 0 0 0 4cqw rgba(225,29,46,0); border-color: rgba(255,255,255,.1); } }
+.tk-row { display: flex; align-items: center; gap: 2.2cqw; }
+.tk-ic { width: 8.6cqw; height: 8.6cqw; border-radius: 2.2cqw; display: grid; place-items: center; font-size: 4.2cqw; background: rgba(255,255,255,.08); flex-shrink: 0;
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif; }
+.tk-name { flex: 1; min-width: 0; font-size: 3.6cqw; color: rgba(244,242,255,.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tk-name b { color: #fff; font-size: 4.3cqw; font-weight: 700; margin-right: .8cqw; }
+.tk-price { font-family: var(--f-display); font-weight: 700; font-size: 4.3cqw; white-space: nowrap; }
+.tk-chips { display: flex; flex-wrap: wrap; gap: 1.2cqw; margin-top: 2.2cqw; }
+.tk-chips span { font-size: 3cqw; line-height: 1; padding: 1.4cqw 2.3cqw; border-radius: 999px; background: rgba(255,255,255,.07); color: rgba(244,242,255,.82); }
+.tk-chips span.x { background: rgba(225,29,46,.18); color: #ffb3ba; }
+.tk-item.on .tk-chips span { animation: chipIn .45s var(--ease) both; }
+.tk-item.on .tk-chips span:nth-child(2) { animation-delay: .05s; } .tk-item.on .tk-chips span:nth-child(3) { animation-delay: .1s; }
+.tk-item.on .tk-chips span:nth-child(4) { animation-delay: .15s; } .tk-item.on .tk-chips span:nth-child(5) { animation-delay: .2s; }
+.tk-item.on .tk-chips span:nth-child(6) { animation-delay: .25s; } .tk-item.on .tk-chips span:nth-child(7) { animation-delay: .3s; }
+.tk-item.on .tk-chips span:nth-child(8) { animation-delay: .35s; } .tk-item.on .tk-chips span:nth-child(n+9) { animation-delay: .4s; }
+@keyframes chipIn { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+.tk-draft { border-style: dashed; border-color: rgba(255,107,119,.45); background: rgba(225,29,46,.06); }
+.tk-draft .tk-name { color: #ff9aa3; font-style: italic; }
+.tk-dots { display: inline-flex; gap: .9cqw; }
+.tk-dots i { width: 1.4cqw; height: 1.4cqw; border-radius: 50%; background: #ff6b77; animation: typing 1s infinite; }
+.tk-dots i:nth-child(2) { animation-delay: .15s; } .tk-dots i:nth-child(3) { animation-delay: .3s; }
+.tk-skel { display: flex; flex-wrap: wrap; gap: 1.2cqw; margin-top: 2.2cqw; }
+.tk-skel i { height: 4cqw; border-radius: 999px; width: 14cqw;
+    background: linear-gradient(90deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.16) 50%, rgba(255,255,255,.06) 100%) 0 0 / 200% 100%;
+    animation: shimmer 1.3s linear infinite; }
+.tk-skel i:nth-child(2) { width: 18cqw; } .tk-skel i:nth-child(3) { width: 11cqw; } .tk-skel i:nth-child(4) { width: 20cqw; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.tk-foot {
+    padding: 3cqw 4cqw 6cqw; border-top: 1px solid rgba(255,255,255,.08);
+    background: linear-gradient(0deg, rgba(14,11,19,1), rgba(14,11,19,.85));
+}
+.tk-status { display: flex; align-items: center; gap: 1.6cqw; font-size: 3.3cqw; color: rgba(244,242,255,.6); }
+.tk-status i { width: 1.6cqw; height: 1.6cqw; border-radius: 50%; background: #fbbf24; box-shadow: 0 0 2cqw #fbbf24; }
+.tk.ready .tk-status i { background: var(--wa); box-shadow: 0 0 2cqw var(--wa); }
+.tk.ready .tk-status { color: #c8f7d9; }
+.tk-total { display: flex; align-items: baseline; justify-content: space-between; margin-top: 1.6cqw; }
+.tk-total span { font-size: 3.4cqw; color: rgba(244,242,255,.55); }
+.tk-total b {
+    font-family: var(--f-display); font-weight: 800; font-size: 9cqw; letter-spacing: -.03em; line-height: 1;
+    background: linear-gradient(100deg, #ff8a95, #fff 60%); -webkit-background-clip: text; background-clip: text; color: transparent;
+    font-variant-numeric: tabular-nums;
+}
+.tk-total b.bump { animation: bump .5s var(--ease); }
+@keyframes bump { 40% { transform: scale(1.12); } }
+.tk-total b { display: inline-block; transform-origin: right bottom; }
+
 .wa-notif {
     position: absolute; z-index: 7; left: 3cqw; right: 3cqw; top: 2.5cqw;
     display: flex; align-items: center; gap: 2.6cqw;
@@ -1003,6 +1094,7 @@ footer { border-top: 1px solid var(--line); padding: 50px 0 40px; margin-top: 40
     .live-facts b { font-size: 1.1rem; }
     .live-facts span { font-size: .7rem; }
     .live-steps li { padding: 10px 12px; font-size: .9rem; }
+    .phone figcaption { font-size: .62rem; letter-spacing: .06em; }
     body { font-size: 16px; }
     .nav { top: 10px; padding-left: 18px; }
     .nav-cta .btn { display: none; }
