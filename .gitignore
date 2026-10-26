@@ -17,3 +17,6 @@ npm-debug.log*
 
 # env files
 .env*
+
+# aperçu local
+/preview-v3.html
