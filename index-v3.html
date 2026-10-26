@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L05LFJ6XSV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L05LFJ6XSV');</script>
+    <title>mon-agenceweb.fr — Sites web qui impressionnent et sortent sur Google</title>
+    <meta name="description" content="Agence web & SEO local : des sites sur mesure au design 3D qui impressionnent vos clients et apparaissent en tête sur Google et Google Maps. Lille, Dunkerque, toute la France. Audit gratuit.">
+    <meta name="author" content="Farouk — mon-agenceweb.fr">
+    <meta name="theme-color" content="#05040b">
+    <!-- Version de prévisualisation : à passer en "index, follow" quand elle remplace index.html -->
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://mon-agenceweb.fr">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mon-agenceweb.fr">
+    <meta property="og:title" content="mon-agenceweb.fr — Des sites qui impressionnent. Et qui sortent sur Google.">
+    <meta property="og:description" content="Design 3D sur mesure, code solide et SEO local. Des sites qui bluffent vos clients et ramènent des demandes.">
+    <meta property="og:image" content="https://mon-agenceweb.fr/img/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="mon-agenceweb.fr">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="dns-prefetch" href="https://formspree.io">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-v3.css?v=1">
+    <script>document.documentElement.classList.add('js');</script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "inLanguage": "fr-FR"
+            },
+            {
+                "@type": "ProfessionalService",
+                "name": "mon-agenceweb.fr",
+                "url": "https://mon-agenceweb.fr",
+                "image": "https://mon-agenceweb.fr/img/og-image.jpg",
+                "description": "Agence web & SEO local — sites sur mesure au design moderne, conçus pour apparaître sur Google et générer des clients.",
+                "founder": { "@type": "Person", "name": "Farouk", "jobTitle": "Développeur web & expert SEO local" },
+                "foundingDate": "2020",
+                "areaServed": [ { "@type": "Country", "name": "France" }, { "@type": "Country", "name": "Belgique" } ],
+                "serviceType": ["Création de site internet sur mesure", "SEO local", "Référencement Google", "Optimisation Google Maps", "E-commerce", "Développement SaaS", "Intégration IA", "Refonte de site web"],
+                "email": "contact@mon-agenceweb.fr",
+                "sameAs": ["https://www.instagram.com/mon_agenceweb/", "https://www.linkedin.com/in/farouk-mon-agenceweb/"],
+                "priceRange": "€€"
+            }
+        ]
+    }
+    </script>
+
+    <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+    </script>
+</head>
+<body>
+
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="gl-fallback" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="#top" class="nav-logo" aria-label="mon-agenceweb.fr — accueil">maw<span class="dot">.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#resultats">Résultats</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#methode">Méthode</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#apropos">À propos</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="#contact" class="btn btn--primary btn--sm" data-magnetic>Audit gratuit</a>
+            <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#projets">Projets</a>
+        <a href="#resultats">Résultats</a>
+        <a href="#services">Services</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact" class="grad-text">Audit gratuit →</a>
+    </div>
+
+    <main id="top">
+
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow reveal"><span class="pulse"></span>Studio web &amp; SEO local · disponible</span>
+                    <h1 class="hero-title split">
+                        <span class="line">Des sites qui</span>
+                        <span class="line"><em class="grad-hot">bluffent.</em></span>
+                        <span class="line">Et qui sortent</span>
+                        <span class="line">sur <em class="grad-text">Google.</em></span>
+                    </h1>
+                    <p class="hero-sub reveal">Design sur mesure, effets 3D, code solide — <strong>et un référencement pensé dès la première ligne.</strong> Vos clients vous trouvent, et ils restent.</p>
+                    <div class="hero-actions reveal">
+                        <a href="#contact" class="btn btn--primary" data-magnetic>Auditer ma visibilité <span class="arrow">→</span></a>
+                        <a href="#projets" class="btn btn--ghost" data-magnetic>Voir les projets</a>
+                    </div>
+                    <div class="hero-proof reveal">
+                        <span class="stars" aria-hidden="true">★★★★★</span>
+                        <span><b>100+ projets livrés</b> · artisans, restaurants, e-commerce, SaaS</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal" id="heroVisual">
+                    <div class="float-chip float-chip--a" aria-hidden="true">
+                        <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+                        <span><small>Impressions Google</small><b>+2 800 / mois</b></span>
+                    </div>
+                    <div class="terminal" id="terminal" role="img" aria-label="Terminal animé : création et mise en ligne d'un site optimisé pour Google">
+                        <div class="terminal-bar" aria-hidden="true">
+                            <span class="terminal-dot terminal-dot--r"></span>
+                            <span class="terminal-dot terminal-dot--y"></span>
+                            <span class="terminal-dot terminal-dot--g"></span>
+                            <span class="terminal-title">maw — zsh</span>
+                        </div>
+                        <div class="terminal-body" id="terminalBody" aria-hidden="true"></div>
+                    </div>
+                    <div class="float-chip float-chip--b" aria-hidden="true">
+                        <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+                        <span><small>PageSpeed mobile</small><b>98 / 100</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-hint" aria-hidden="true">SCROLL</div>
+        </section>
+
+        <!-- ================= STACK ================= -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span class="marquee-item">Design 3D</span><span class="marquee-item out">SEO local</span><span class="marquee-item">Google Maps</span><span class="marquee-item out">Laravel</span><span class="marquee-item">WooCommerce</span><span class="marquee-item out">Three.js</span><span class="marquee-item">IA · Claude · GPT</span><span class="marquee-item out">Core Web Vitals</span><span class="marquee-item">SaaS</span><span class="marquee-item out">Filament</span>
+                <span class="marquee-item">Design 3D</span><span class="marquee-item out">SEO local</span><span class="marquee-item">Google Maps</span><span class="marquee-item out">Laravel</span><span class="marquee-item">WooCommerce</span><span class="marquee-item out">Three.js</span><span class="marquee-item">IA · Claude · GPT</span><span class="marquee-item out">Core Web Vitals</span><span class="marquee-item">SaaS</span><span class="marquee-item out">Filament</span>
+            </div>
+        </div>
+
+        <!-- ================= CHIFFRES ================= -->
+        <section class="container" aria-labelledby="stats-h">
+            <h2 id="stats-h" class="sr-only">Chiffres clés</h2>
+            <div class="stats reveal">
+                <div class="stat"><div class="stat-num"><span data-count="12">0</span></div><div class="stat-label">ans à coder pour le web</div></div>
+                <div class="stat"><div class="stat-num"><span data-count="100">0</span><span class="grad-text">+</span></div><div class="stat-label">projets livrés</div></div>
+                <div class="stat"><div class="stat-num"><span data-count="95">0</span><span class="grad-text">/100</span></div><div class="stat-label">score SEO moyen</div></div>
+                <div class="stat"><div class="stat-num"><span data-count="24">0</span><span class="grad-text">h</span></div><div class="stat-label">pour vous répondre</div></div>
+            </div>
+        </section>
+
+        <!-- ================= PROJETS PHARES (3D) ================= -->
+        <section class="showcase" id="projets" aria-labelledby="projets-h">
+            <div class="showcase-pin" id="showcasePin">
+                <div class="container showcase-head">
+                    <div>
+                        <span class="eyebrow">01 — Projets phares</span>
+                        <h2 class="h2 split" id="projets-h">Ce qu'on construit.</h2>
+                    </div>
+                    <div class="showcase-progress" aria-hidden="true"><span id="showcaseCount">01 / 04</span><span class="bar"><i id="showcaseBar"></i></span></div>
+                </div>
+                <div class="showcase-stage">
+                    <div class="showcase-track" id="showcaseTrack">
+
+                        <article class="p-card" style="--shot: linear-gradient(135deg,#4c1d95,#1e3a8a); --c1: rgba(139,92,246,.45)">
+                            <div class="p-card-glow"></div>
+                            <div class="p-browser">
+                                <div class="p-browser-bar"><i></i><i></i><i></i><span>resadz.com</span></div>
+                                <div class="p-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/resadz.webp" alt="Plateforme ResaDZ" loading="lazy" width="1280" height="720"><div class="p-fallback">ResaDZ</div></div>
+                            </div>
+                            <div class="p-body">
+                                <div>
+                                    <div class="p-kicker">SaaS · Marketplace</div>
+                                    <h3 class="p-title">ResaDZ</h3>
+                                    <p class="p-desc">La première plateforme algérienne de location de voitures entre particuliers. Réservations, contrats et paiement en ligne, IA intégrée.</p>
+                                    <div class="tags"><span class="tag">Laravel</span><span class="tag">Filament</span><span class="tag">IA Grok</span><span class="tag">Tailwind</span></div>
+                                </div>
+                                <a class="p-link" href="https://resadz.com" target="_blank" rel="noopener" aria-label="Voir ResaDZ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                            </div>
+                        </article>
+
+                        <article class="p-card" style="--shot: linear-gradient(135deg,#9d174d,#7c2d12); --c1: rgba(244,114,182,.4)">
+                            <div class="p-card-glow"></div>
+                            <div class="p-browser">
+                                <div class="p-browser-bar"><i></i><i></i><i></i><span>marvelous.mon-agenceweb.fr</span></div>
+                                <div class="p-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/marvelous.webp" alt="Système de commande Marvelous" loading="lazy" width="1280" height="720"><div class="p-fallback">Marvelous</div></div>
+                            </div>
+                            <div class="p-body">
+                                <div>
+                                    <div class="p-kicker">SaaS · Restauration</div>
+                                    <h3 class="p-title">Marvelous</h3>
+                                    <p class="p-desc">Un système de commande en ligne multi-restaurants : commandes, notifications client et dispatch livreur avec GPS.</p>
+                                    <div class="tags"><span class="tag">Laravel</span><span class="tag">Multi-tenant</span><span class="tag">Livewire</span><span class="tag">GPS</span></div>
+                                </div>
+                                <a class="p-link" href="https://marvelous.mon-agenceweb.fr" target="_blank" rel="noopener" aria-label="Voir Marvelous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                            </div>
+                        </article>
+
+                        <article class="p-card" style="--shot: linear-gradient(135deg,#78350f,#3b0764); --c1: rgba(251,191,36,.3)">
+                            <div class="p-card-glow"></div>
+                            <div class="p-browser">
+                                <div class="p-browser-bar"><i></i><i></i><i></i><span>collectionloriginal.com</span></div>
+                                <div class="p-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/collection-loriginal.webp" alt="Boutique Collection L'Original" loading="lazy" width="1280" height="720"><div class="p-fallback">Collection L'Original</div></div>
+                            </div>
+                            <div class="p-body">
+                                <div>
+                                    <div class="p-kicker">E-commerce · Parfums</div>
+                                    <h3 class="p-title">Collection L'Original</h3>
+                                    <p class="p-desc">Une boutique de parfums WooCommerce enrichie de code sur mesure : fiches produits optimisées et tunnel d'achat fluide.</p>
+                                    <div class="tags"><span class="tag">WooCommerce</span><span class="tag">PHP</span><span class="tag">SEO</span></div>
+                                </div>
+                                <a class="p-link" href="https://collectionloriginal.com" target="_blank" rel="noopener" aria-label="Voir Collection L'Original"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                            </div>
+                        </article>
+
+                        <article class="p-card" style="--shot: linear-gradient(135deg,#0e7490,#312e81); --c1: rgba(34,211,238,.4)">
+                            <div class="p-card-glow"></div>
+                            <div class="p-browser">
+                                <div class="p-browser-bar"><i></i><i></i><i></i><span>personnaly.fr</span></div>
+                                <div class="p-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/personnaly.webp" alt="Site Personnaly" loading="lazy" width="1280" height="720"><div class="p-fallback">Personnaly</div></div>
+                            </div>
+                            <div class="p-body">
+                                <div>
+                                    <div class="p-kicker">E-commerce · Sur mesure</div>
+                                    <h3 class="p-title">Personnaly</h3>
+                                    <p class="p-desc">Personnalisation de vêtements avec back-office complet : commandes, catalogue, blog et tableau de bord, codé de A à Z.</p>
+                                    <div class="tags"><span class="tag">PHP</span><span class="tag">Admin</span><span class="tag">E-commerce</span></div>
+                                </div>
+                                <a class="p-link" href="https://personnaly.fr" target="_blank" rel="noopener" aria-label="Voir Personnaly"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= RÉSULTATS SEO ================= -->
+        <section class="section" id="resultats" aria-labelledby="res-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow reveal">02 — Résultats</span>
+                    <h2 class="h2 split" id="res-h">Beau, c'est bien.<br><span class="grad-text">Premier sur Google</span>, c'est mieux.</h2>
+                    <p class="lead reveal">Chaque site est construit pour le référencement : architecture, contenus, vitesse, Google Maps. Et on le prouve avec les vrais chiffres de la Search Console.</p>
+                </div>
+
+                <div class="results-grid">
+                    <div class="glass spot serp reveal" id="serp">
+                        <div class="serp-search">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                            <span class="q" id="serpQuery">plombier lille</span>
+                        </div>
+                        <div class="serp-rank"><span>Position de votre site</span><span>#<b id="serpPos">9</b></span></div>
+                        <div class="serp-list" id="serpList" aria-hidden="true">
+                            <div class="serp-item" data-i="0"><div class="u">pagesjaunes.fr › plombier</div><div class="t">Plombiers à Lille — annuaire</div><div class="d">Trouvez un plombier près de chez vous…</div></div>
+                            <div class="serp-item" data-i="1"><div class="u">concurrent-plomberie.fr</div><div class="t">Plomberie générale — Lille et environs</div><div class="d">Dépannage, installation, devis…</div></div>
+                            <div class="serp-item" data-i="2"><div class="u">annuaire-artisans.com</div><div class="t">Les 10 meilleurs plombiers de Lille</div><div class="d">Classement mis à jour…</div></div>
+                            <div class="serp-item" data-i="3"><div class="u">autre-artisan.fr</div><div class="t">Artisan plombier chauffagiste</div><div class="d">Intervention rapide sur la métropole…</div></div>
+                            <div class="serp-item you" data-i="4"><div class="u">votre-site.fr</div><div class="t">Plombier à Lille — Dépannage 7j/7, devis gratuit</div><div class="d">★★★★★ 4,9 · 127 avis · Intervention en 1 h</div><span class="badge">VOUS</span></div>
+                        </div>
+                    </div>
+
+                    <div class="results-side">
+                        <div class="glass spot chart-card reveal">
+                            <div class="chart-top">
+                                <div>
+                                    <div class="chart-label">Mobilier Malin · impressions / mois</div>
+                                    <div class="chart-big"><span data-count="2800" data-sep="1">0</span></div>
+                                </div>
+                                <span class="chart-up">▲ partis de 0</span>
+                            </div>
+                            <svg class="chart-svg" viewBox="0 0 400 140" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="cg" x1="0" x2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+                                    <linearGradient id="cf" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".35"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></linearGradient>
+                                </defs>
+                                <g stroke="rgba(255,255,255,.06)"><line x1="0" y1="35" x2="400" y2="35"/><line x1="0" y1="70" x2="400" y2="70"/><line x1="0" y1="105" x2="400" y2="105"/></g>
+                                <path id="chartFill" d="M0 136 C40 134 60 132 90 128 S150 118 180 108 S240 92 270 70 S330 40 360 26 S390 12 400 8 L400 140 L0 140Z" fill="url(#cf)" opacity="0"/>
+                                <path id="chartLine" d="M0 136 C40 134 60 132 90 128 S150 118 180 108 S240 92 270 70 S330 40 360 26 S390 12 400 8" fill="none" stroke="url(#cg)" stroke-width="3" stroke-linecap="round"/>
+                                <circle id="chartDot" cx="400" cy="8" r="5" fill="#22d3ee" opacity="0"/>
+                            </svg>
+                            <div class="chart-foot"><span>Search Console · données réelles</span><a href="/resultats-seo-mobilier-malin">L'étude de cas →</a></div>
+                        </div>
+                        <div class="glass spot speed-card reveal">
+                            <div class="gauge">
+                                <svg viewBox="0 0 120 120" aria-hidden="true">
+                                    <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="9"/>
+                                    <circle id="gaugeArc" cx="60" cy="60" r="52" fill="none" stroke="#4ade80" stroke-width="9" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7"/>
+                                </svg>
+                                <div class="gauge-num"><span data-count="75" data-from="37">37</span></div>
+                            </div>
+                            <div>
+                                <h3>Rentalift Moving : PageSpeed de 37 à 75</h3>
+                                <p>Refonte complète et optimisation technique. Un site rapide, c'est un site que Google pousse.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES ================= -->
+        <section class="section" id="services" aria-labelledby="serv-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow reveal">03 — Services</span>
+                    <h2 class="h2 split" id="serv-h">Du design qui marque.<br>Du code qui <span class="grad-text">rapporte.</span></h2>
+                </div>
+                <div class="services-grid">
+                    <article class="glass spot service reveal" data-tilt>
+                        <span class="service-num">01</span>
+                        <div class="service-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.2-7-12a7 7 0 1114 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+                        <h3>SEO local &amp; Google Maps</h3>
+                        <p>Fiche Google Business, référencement naturel, pages locales. Vous apparaissez quand vos clients cherchent, là où ils cherchent.</p>
+                    </article>
+                    <article class="glass spot service reveal" data-tilt>
+                        <span class="service-num">02</span>
+                        <div class="service-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></div>
+                        <h3>Sites vitrines &amp; e-commerce 3D</h3>
+                        <p>Des sites sur mesure qui marquent les esprits : animations, effets 3D, parcours pensés pour transformer les visiteurs en demandes de devis.</p>
+                    </article>
+                    <article class="glass spot service reveal" data-tilt>
+                        <span class="service-num">03</span>
+                        <div class="service-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                        <h3>Performance &amp; technique</h3>
+                        <p>PageSpeed 90+, Core Web Vitals au vert, données structurées. La base technique invisible qui fait toute la différence sur Google.</p>
+                    </article>
+                    <article class="glass spot service reveal" data-tilt>
+                        <span class="service-num">04</span>
+                        <div class="service-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
+                        <h3>SaaS, IA &amp; outils métier</h3>
+                        <p>Plateformes SaaS, dashboards, assistants IA (Claude, GPT, Grok) branchés sur votre activité. La technologie au service de votre croissance.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MÉTHODE ================= -->
+        <section class="section" id="methode" aria-labelledby="meth-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow reveal">04 — Méthode</span>
+                    <h2 class="h2 split" id="meth-h">De l'idée au top de Google.</h2>
+                </div>
+                <div class="steps" id="steps">
+                    <div class="steps-line" aria-hidden="true"><i id="stepsLine"></i></div>
+                    <div class="step reveal"><div class="step-dot">01</div><h3>Audit</h3><p>On analyse votre marché, vos concurrents et les recherches de vos clients sur Google.</p><span class="when">Gratuit · 48 h</span></div>
+                    <div class="step reveal"><div class="step-dot">02</div><h3>Design</h3><p>Une maquette sur mesure qui vous ressemble et qui fait dire « ah ouais, quand même ».</p><span class="when">Semaine 1</span></div>
+                    <div class="step reveal"><div class="step-dot">03</div><h3>Développement</h3><p>Code propre, rapide et sécurisé. Chaque page optimisée pour le référencement.</p><span class="when">Semaines 2–3</span></div>
+                    <div class="step reveal"><div class="step-dot">04</div><h3>Mise en orbite</h3><p>Mise en ligne, Google Business, suivi Search Console et ajustements chaque mois.</p><span class="when">Et après</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= RÉALISATIONS ================= -->
+        <section class="section" id="realisations" aria-labelledby="real-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow reveal">05 — Réalisations</span>
+                    <h2 class="h2 split" id="real-h">Ils nous ont fait confiance.</h2>
+                    <p class="lead reveal">Restaurants, artisans, e-commerce, instituts : chaque projet est unique, chaque ligne de code est pensée pour performer.</p>
+                </div>
+                <div class="real-grid">
+                    <a class="glass spot r-card reveal" data-tilt href="https://institut-al-irtiqa.com/" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#065f46,#1e3a8a)">
+                        <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/irtiqa.webp" alt="Institut Al-Irtiqâ" loading="lazy" width="800" height="500"><div class="r-fallback">Al-Irtiqâ</div></div>
+                        <div class="r-info"><div><div class="r-kicker">Institut de langue arabe</div><div class="r-title">Institut Al-Irtiqâ</div><div class="r-desc">Panel admin et test de niveau intelligent avec l'API Claude.</div></div><span class="r-arrow">↗</span></div>
+                    </a>
+                    <a class="glass spot r-card reveal" data-tilt href="https://rentaliftmoving.com/" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#1e40af,#0f766e)">
+                        <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/rentalift.webp" alt="Rentalift Moving" loading="lazy" width="800" height="500"><div class="r-fallback">Rentalift</div></div>
+                        <div class="r-info"><div><div class="r-kicker">Déménagement · Bruxelles</div><div class="r-title">Rentalift Moving</div><div class="r-desc">Refonte WordPress, SEO et performance de 37 à 75.</div></div><span class="r-arrow">↗</span></div>
+                    </a>
+                    <a class="glass spot r-card reveal" data-tilt href="https://laformule59.mon-agenceweb.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#b91c1c,#92400e)">
+                        <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/la-formule-59.webp" alt="La Formule 59" loading="lazy" width="800" height="500"><div class="r-fallback">La Formule 59</div></div>
+                        <div class="r-info"><div><div class="r-kicker">Fast food</div><div class="r-title">La Formule 59</div><div class="r-desc">Commandes envoyées directement sur le WhatsApp du restaurant.</div></div><span class="r-arrow">↗</span></div>
+                    </a>
+                    <a class="glass spot r-card reveal" data-tilt href="https://mbcarsdzrouiba.com" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#334155,#4c1d95)">
+                        <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/mbcars.webp" alt="MBcars DZ" loading="lazy" width="800" height="500"><div class="r-fallback">MBcars DZ</div></div>
+                        <div class="r-info"><div><div class="r-kicker">Location de voitures · Algérie</div><div class="r-title">MBcars DZ</div><div class="r-desc">Consultation et réservation de véhicules en ligne.</div></div><span class="r-arrow">↗</span></div>
+                    </a>
+                    <a class="glass spot r-card reveal" data-tilt href="https://solarinnov34.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#ca8a04,#0369a1)">
+                        <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/solarinnov34.webp" alt="Solarinnov34" loading="lazy" width="800" height="500"><div class="r-fallback">Solarinnov34</div></div>
+                        <div class="r-info"><div><div class="r-kicker">Panneaux solaires</div><div class="r-title">Solarinnov34</div><div class="r-desc">Site artisan photovoltaïque : devis et infos techniques.</div></div><span class="r-arrow">↗</span></div>
+                    </a>
+                    <a class="glass spot r-card reveal" data-tilt href="https://atelier-pizza-roubaix.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#c2410c,#7f1d1d)">
+                        <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/atelier-pizza.webp" alt="Atelier Pizza Roubaix" loading="lazy" width="800" height="500"><div class="r-fallback">Atelier Pizza</div></div>
+                        <div class="r-info"><div><div class="r-kicker">Pizzeria · Roubaix</div><div class="r-title">Atelier Pizza</div><div class="r-desc">Menu avec prix, avis Google intégrés, géolocalisation.</div></div><span class="r-arrow">↗</span></div>
+                    </a>
+                    <a class="glass spot r-card reveal" data-tilt href="https://www.omrafrancesud.fr/" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#0f766e,#713f12)">
+                        <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/dinaomra.webp" alt="Omra France Sud" loading="lazy" width="800" height="500"><div class="r-fallback">Omra France Sud</div></div>
+                        <div class="r-info"><div><div class="r-kicker">Omra &amp; voyages</div><div class="r-title">Omra France Sud</div><div class="r-desc">Refonte complète, sliders et grilles de prix.</div></div><span class="r-arrow">↗</span></div>
+                    </a>
+                    <a class="glass spot r-card reveal" data-tilt href="https://dinaetmalou.com" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#be185d,#6d28d9)">
+                        <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/dinamalou.webp" alt="Dina et Malou" loading="lazy" width="800" height="500"><div class="r-fallback">Dina et Malou</div></div>
+                        <div class="r-info"><div><div class="r-kicker">E-commerce enfants</div><div class="r-title">Dina et Malou</div><div class="r-desc">Personnalisation de vêtements avec assistant IA.</div></div><span class="r-arrow">↗</span></div>
+                    </a>
+                    <a class="glass spot r-card reveal" data-tilt href="https://trabexpress.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#1d4ed8,#0e7490)">
+                        <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/trabexpress.webp" alt="Trabexpress" loading="lazy" width="800" height="500"><div class="r-fallback">Trabexpress</div></div>
+                        <div class="r-info"><div><div class="r-kicker">Transport &amp; livraison</div><div class="r-title">Trabexpress</div><div class="r-desc">Site informatif et prise de contact.</div></div><span class="r-arrow">↗</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= À PROPOS ================= -->
+        <section class="section" id="apropos" aria-labelledby="about-h">
+            <div class="container about">
+                <div class="about-card reveal" data-tilt>
+                    <div class="about-mono" aria-hidden="true">F.</div>
+                    <div class="who">Farouk</div>
+                    <div class="role">Fondateur · Développeur web &amp; expert SEO local</div>
+                </div>
+                <div>
+                    <span class="eyebrow reveal">06 — À propos</span>
+                    <h2 class="sr-only" id="about-h">À propos de mon-agenceweb.fr</h2>
+                    <p class="about-quote split">On ne crée pas « un site internet ». <span class="dim">On crée un système qui vous rend visible — et qui donne envie de vous appeler.</span></p>
+                    <div class="about-text reveal">
+                        <p>Depuis 2020, j'accompagne artisans, restaurants et PME avec une double exigence : <strong>un design qui marque</strong> et <strong>une visibilité Google concrète</strong>.</p>
+                        <p>Chaque semaine, j'analyse les données Search Console de mes clients : positions, impressions, clics. Des métriques réelles, pas des promesses.</p>
+                    </div>
+                    <div class="skills reveal"><span class="tag">SEO local</span><span class="tag">Google Maps</span><span class="tag">Laravel</span><span class="tag">WooCommerce</span><span class="tag">Three.js</span><span class="tag">IA</span><span class="tag">Search Console</span></div>
+                    <div class="reveal" style="margin-top:30px"><a href="apropos.html" class="btn btn--ghost" data-magnetic>En savoir plus <span class="arrow">→</span></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BLOG ================= -->
+        <section class="section" id="blog" aria-labelledby="blog-h">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow reveal">07 — Blog</span>
+                    <h2 class="h2 split" id="blog-h">Guides &amp; études de cas.</h2>
+                </div>
+                <div class="blog-grid">
+                    <a class="glass spot b-card reveal" href="/comment-apparaitre-sur-google-maps">
+                        <span class="b-cat">SEO local</span>
+                        <h3>Comment apparaître sur Google Maps en 2026</h3>
+                        <p>Fiche Google Business, avis, posts : la méthode pour entrer dans le pack local.</p>
+                        <span class="b-more">Lire l'article <span class="arrow">→</span></span>
+                    </a>
+                    <a class="glass spot b-card reveal" href="/comment-un-artisan-peut-obtenir-plus-de-devis-avec-son-site-internet">
+                        <span class="b-cat">Artisans</span>
+                        <h3>Comment un artisan peut obtenir plus de devis</h3>
+                        <p>7 leviers concrets pour transformer votre site en machine à devis.</p>
+                        <span class="b-more">Lire l'article <span class="arrow">→</span></span>
+                    </a>
+                    <a class="glass spot b-card reveal" href="/resultats-seo-mobilier-malin">
+                        <span class="b-cat">Résultats SEO</span>
+                        <h3>De 0 à 2 800 impressions : Mobilier Malin</h3>
+                        <p>Comment un e-commerce est passé de l'invisible à 2 800 impressions par mois.</p>
+                        <span class="b-more">Lire l'étude <span class="arrow">→</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section class="section contact" id="contact" aria-labelledby="contact-h">
+            <div class="orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="container">
+                <h2 class="contact-title split" id="contact-h">On lance<br><span class="grad-hot">votre projet ?</span></h2>
+                <p class="contact-sub reveal">Audit de visibilité gratuit, réponse sous 24&nbsp;h. Dites-nous où vous en êtes, on vous dit comment passer devant.</p>
+
+                <div class="contact-wrap">
+                    <div class="glass contact-info reveal">
+                        <h3>Ce que vous recevez</h3>
+                        <ul>
+                            <li>Un audit de votre visibilité Google actuelle</li>
+                            <li>Les mots-clés que cherchent vos clients</li>
+                            <li>Ce que font vos concurrents mieux que vous</li>
+                            <li>Un plan d'action et un devis clair</li>
+                        </ul>
+                        <div class="contact-mail">Ou directement : <a href="mailto:contact@mon-agenceweb.fr">contact@mon-agenceweb.fr</a></div>
+                    </div>
+
+                    <form class="glass form reveal" action="https://formspree.io/f/mqegleqk" method="POST">
+                        <div class="field"><label for="f-name">Prénom</label><input id="f-name" name="prenom" type="text" autocomplete="given-name" required></div>
+                        <div class="field"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+                        <div class="field"><label for="f-tel">Téléphone (optionnel)</label><input id="f-tel" name="telephone" type="tel" autocomplete="tel"></div>
+                        <div class="field">
+                            <label for="f-budget">Budget estimé</label>
+                            <select id="f-budget" name="budget">
+                                <option value="">Sélectionner</option>
+                                <option>&lt; 500 €</option>
+                                <option>500 – 1 500 €</option>
+                                <option>1 500 – 5 000 €</option>
+                                <option>5 000 € +</option>
+                            </select>
+                        </div>
+                        <div class="field field--full"><label for="f-msg">Votre projet</label><textarea id="f-msg" name="message" placeholder="Votre activité, votre ville, ce que vous voulez améliorer…" required></textarea></div>
+                        <input type="hidden" name="_subject" value="Nouvelle demande — mon-agenceweb.fr">
+                        <button type="submit" class="btn btn--primary" data-magnetic>Envoyer ma demande <span class="arrow">→</span></button>
+                        <p class="form-note">Vos informations restent confidentielles et ne servent qu'à vous répondre.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="foot">
+                <a href="#top" class="nav-logo">maw<span class="dot">.</span></a>
+                <nav class="foot-links" aria-label="Liens de bas de page">
+                    <a href="expert-seo-local.html">SEO local</a>
+                    <a href="creation-site-web-artisan.html">Sites artisans</a>
+                    <a href="agence-web-lille.html">Agence web Lille</a>
+                    <a href="agence-web-dunkerque.html">Agence web Dunkerque</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="https://www.instagram.com/mon_agenceweb/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.linkedin.com/in/farouk-mon-agenceweb/" target="_blank" rel="noopener">LinkedIn</a>
+                </nav>
+                <span class="foot-copy">© 2025–2026 mon-agenceweb.fr · Farouk</span>
+            </div>
+            <div class="foot-big" aria-hidden="true">maw.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="script-v3.js?v=1" defer></script>
+    <script type="module" src="scene-v3.js?v=1"></script>
+</body>
+</html>
