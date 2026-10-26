@@ -24,6 +24,7 @@
         lenis.on('scroll', ST.update);
         gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
         gsap.ticker.lagSmoothing(0);
+        window.__lenis = lenis;
     }
 
     // Ancres internes
@@ -196,56 +197,6 @@
                 gsap.to(obj, { v: to, duration: 2, ease: 'power3.out', onUpdate: function () { el.textContent = fmt(Math.round(obj.v), el.dataset.sep); } });
             }
         });
-    });
-
-    // ---------- Showcase horizontal 3D ----------
-    var track = document.getElementById('showcaseTrack');
-    var cards = Array.prototype.slice.call(track.querySelectorAll('.p-card'));
-    var countEl = document.getElementById('showcaseCount');
-    var barEl = document.getElementById('showcaseBar');
-
-    function cardDepth() {
-        var vc = window.innerWidth / 2;
-        var active = 0, best = 1e9;
-        cards.forEach(function (c, i) {
-            var r = c.getBoundingClientRect();
-            var d = (r.left + r.width / 2 - vc) / window.innerWidth; // -1..1
-            var ad = Math.abs(d);
-            if (ad < best) { best = ad; active = i; }
-            gsap.set(c, {
-                rotationY: gsap.utils.clamp(-38, 38, -d * 55),
-                z: -ad * 420,
-                opacity: gsap.utils.clamp(0.25, 1, 1 - ad * 0.9),
-                transformOrigin: d > 0 ? 'left center' : 'right center'
-            });
-        });
-        countEl.textContent = '0' + (active + 1) + ' / 0' + cards.length;
-    }
-
-    ST.matchMedia({
-        '(min-width: 901px)': function () {
-            var pin = document.getElementById('showcasePin');
-            var tween = gsap.to(track, {
-                x: function () { return -(track.scrollWidth - window.innerWidth); },
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: pin, pin: true, scrub: 1,
-                    start: 'top top',
-                    end: function () { return '+=' + (track.scrollWidth - window.innerWidth) * 1.1; },
-                    invalidateOnRefresh: true,
-                    onUpdate: function (self) { barEl.style.width = (self.progress * 100) + '%'; }
-                },
-                onUpdate: cardDepth
-            });
-            cardDepth();
-            return function () { tween.kill(); gsap.set(cards, { clearProps: 'all' }); gsap.set(track, { clearProps: 'all' }); };
-        },
-        '(max-width: 900px)': function () {
-            cards.forEach(function (c) {
-                gsap.fromTo(c, { rotationX: 18, y: 60, opacity: 0, transformPerspective: 900, transformOrigin: 'center top' },
-                    { rotationX: 0, y: 0, opacity: 1, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: c, start: 'top 88%' } });
-            });
-        }
     });
 
     // ---------- SERP : votre site grimpe en position 1 ----------

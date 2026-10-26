@@ -248,7 +248,7 @@ function init() {
         const out = smooth(0.2, 1.4, scrollS);
         // Il passe d'un bord à l'autre au fil des sections : il s'éteint pendant la bascule, jamais sous le texte
         const side = Math.cos(Math.max(0, scrollS - 0.6) * 0.45);
-        const fadeK = THREE.MathUtils.lerp(1, Math.min(1, Math.abs(side) * 3), out);
+        const fadeK = THREE.MathUtils.lerp(1, Math.min(1, Math.abs(side) * 3), out) * (1 - (window.__studioCover || 0));
         const x = THREE.MathUtils.lerp(layout.x, layout.edge * (side >= 0 ? 1 : -1), out);
         const y = THREE.MathUtils.lerp(layout.y, 0.4, out);
         const s = layout.s * THREE.MathUtils.lerp(1, 0.85, out) * (0.35 + 0.65 * fadeK);

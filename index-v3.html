@@ -64,7 +64,7 @@
     </script>
 
     <script type="importmap">
-    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/" } }
     </script>
 </head>
 <body>
@@ -166,87 +166,57 @@
             </div>
         </section>
 
-        <!-- ================= PROJETS PHARES (3D) ================= -->
-        <section class="showcase" id="projets" aria-labelledby="projets-h">
-            <div class="showcase-pin" id="showcasePin">
-                <div class="container showcase-head">
-                    <div>
+        <!-- ================= PROJETS PHARES : STUDIO 3D ================= -->
+        <section class="studio" id="projets" aria-labelledby="projets-h" style="--n: 4">
+            <div class="studio-sticky">
+                <canvas class="studio-gl" id="studioGl" aria-hidden="true"></canvas>
+                <div class="studio-fallback" aria-hidden="true"><img id="studioFallback" src="media/projets/resadz-desktop.jpg" alt="" width="1280" height="800"></div>
+                <div class="container studio-ui">
+                    <div class="studio-head">
                         <span class="eyebrow">01 — Projets phares</span>
                         <h2 class="h2 split" id="projets-h">Ce qu'on construit.</h2>
                     </div>
-                    <div class="showcase-progress" aria-hidden="true"><span id="showcaseCount">01 / 04</span><span class="bar"><i id="showcaseBar"></i></span></div>
-                </div>
-                <div class="showcase-stage">
-                    <div class="showcase-track" id="showcaseTrack">
-
-                        <article class="p-card" style="--shot: linear-gradient(135deg,#4c1d95,#1e3a8a); --c1: rgba(139,92,246,.45)">
-                            <div class="p-card-glow"></div>
-                            <div class="p-browser">
-                                <div class="p-browser-bar"><i></i><i></i><i></i><span>resadz.com</span></div>
-                                <div class="p-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/resadz.webp" alt="Plateforme ResaDZ" loading="lazy" width="1280" height="720"><div class="p-fallback">ResaDZ</div></div>
-                            </div>
-                            <div class="p-body">
-                                <div>
-                                    <div class="p-kicker">SaaS · Marketplace</div>
-                                    <h3 class="p-title">ResaDZ</h3>
-                                    <p class="p-desc">La première plateforme algérienne de location de voitures entre particuliers. Réservations, contrats et paiement en ligne, IA intégrée.</p>
-                                    <div class="tags"><span class="tag">Laravel</span><span class="tag">Filament</span><span class="tag">IA Grok</span><span class="tag">Tailwind</span></div>
-                                </div>
-                                <a class="p-link" href="https://resadz.com" target="_blank" rel="noopener" aria-label="Voir ResaDZ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-                            </div>
+                    <div class="studio-panels">
+                        <article class="studio-panel is-active" data-accent="#8b5cf6"
+                            data-video-d="media/projets/resadz-desktop.mp4" data-poster-d="media/projets/resadz-desktop.jpg"
+                            data-video-m="media/projets/resadz-mobile.mp4" data-poster-m="media/projets/resadz-mobile.jpg">
+                            <div class="p-kicker">SaaS · Marketplace</div>
+                            <h3 class="p-title">ResaDZ</h3>
+                            <p class="p-desc">La première plateforme algérienne de location de voitures entre particuliers. Réservations, contrats et paiement en ligne, IA intégrée.</p>
+                            <div class="tags"><span class="tag">Laravel</span><span class="tag">Filament</span><span class="tag">IA Grok</span><span class="tag">Tailwind</span></div>
+                            <a class="studio-link" href="https://resadz.com" target="_blank" rel="noopener">Voir le site <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
                         </article>
-
-                        <article class="p-card" style="--shot: linear-gradient(135deg,#9d174d,#7c2d12); --c1: rgba(244,114,182,.4)">
-                            <div class="p-card-glow"></div>
-                            <div class="p-browser">
-                                <div class="p-browser-bar"><i></i><i></i><i></i><span>marvelous.mon-agenceweb.fr</span></div>
-                                <div class="p-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/marvelous.webp" alt="Système de commande Marvelous" loading="lazy" width="1280" height="720"><div class="p-fallback">Marvelous</div></div>
-                            </div>
-                            <div class="p-body">
-                                <div>
-                                    <div class="p-kicker">SaaS · Restauration</div>
-                                    <h3 class="p-title">Marvelous</h3>
-                                    <p class="p-desc">Un système de commande en ligne multi-restaurants : commandes, notifications client et dispatch livreur avec GPS.</p>
-                                    <div class="tags"><span class="tag">Laravel</span><span class="tag">Multi-tenant</span><span class="tag">Livewire</span><span class="tag">GPS</span></div>
-                                </div>
-                                <a class="p-link" href="https://marvelous.mon-agenceweb.fr" target="_blank" rel="noopener" aria-label="Voir Marvelous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-                            </div>
+                        <article class="studio-panel" data-accent="#f472b6"
+                            data-video-d="media/projets/marvelous-desktop.mp4" data-poster-d="media/projets/marvelous-desktop.jpg"
+                            data-video-m="media/projets/marvelous-mobile.mp4" data-poster-m="media/projets/marvelous-mobile.jpg">
+                            <div class="p-kicker">SaaS · Restauration</div>
+                            <h3 class="p-title">Marvelous</h3>
+                            <p class="p-desc">Un système de commande en ligne multi-restaurants : commandes, notifications client et dispatch livreur avec GPS.</p>
+                            <div class="tags"><span class="tag">Laravel</span><span class="tag">Multi-tenant</span><span class="tag">Livewire</span><span class="tag">GPS</span></div>
+                            <a class="studio-link" href="https://marvelous.mon-agenceweb.fr" target="_blank" rel="noopener">Voir le site <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
                         </article>
-
-                        <article class="p-card" style="--shot: linear-gradient(135deg,#78350f,#3b0764); --c1: rgba(251,191,36,.3)">
-                            <div class="p-card-glow"></div>
-                            <div class="p-browser">
-                                <div class="p-browser-bar"><i></i><i></i><i></i><span>collectionloriginal.com</span></div>
-                                <div class="p-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/collection-loriginal.webp" alt="Boutique Collection L'Original" loading="lazy" width="1280" height="720"><div class="p-fallback">Collection L'Original</div></div>
-                            </div>
-                            <div class="p-body">
-                                <div>
-                                    <div class="p-kicker">E-commerce · Parfums</div>
-                                    <h3 class="p-title">Collection L'Original</h3>
-                                    <p class="p-desc">Une boutique de parfums WooCommerce enrichie de code sur mesure : fiches produits optimisées et tunnel d'achat fluide.</p>
-                                    <div class="tags"><span class="tag">WooCommerce</span><span class="tag">PHP</span><span class="tag">SEO</span></div>
-                                </div>
-                                <a class="p-link" href="https://collectionloriginal.com" target="_blank" rel="noopener" aria-label="Voir Collection L'Original"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-                            </div>
+                        <article class="studio-panel" data-accent="#e0b25e"
+                            data-video-d="media/projets/collection-desktop.mp4" data-poster-d="media/projets/collection-desktop.jpg"
+                            data-video-m="media/projets/collection-mobile.mp4" data-poster-m="media/projets/collection-mobile.jpg">
+                            <div class="p-kicker">E-commerce · Parfums</div>
+                            <h3 class="p-title">Collection L'Original</h3>
+                            <p class="p-desc">Une boutique de parfums WooCommerce enrichie de code sur mesure : fiches produits optimisées et tunnel d'achat fluide.</p>
+                            <div class="tags"><span class="tag">WooCommerce</span><span class="tag">PHP</span><span class="tag">SEO</span></div>
+                            <a class="studio-link" href="https://collectionloriginal.com" target="_blank" rel="noopener">Voir le site <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
                         </article>
-
-                        <article class="p-card" style="--shot: linear-gradient(135deg,#0e7490,#312e81); --c1: rgba(34,211,238,.4)">
-                            <div class="p-card-glow"></div>
-                            <div class="p-browser">
-                                <div class="p-browser-bar"><i></i><i></i><i></i><span>personnaly.fr</span></div>
-                                <div class="p-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/personnaly.webp" alt="Site Personnaly" loading="lazy" width="1280" height="720"><div class="p-fallback">Personnaly</div></div>
-                            </div>
-                            <div class="p-body">
-                                <div>
-                                    <div class="p-kicker">E-commerce · Sur mesure</div>
-                                    <h3 class="p-title">Personnaly</h3>
-                                    <p class="p-desc">Personnalisation de vêtements avec back-office complet : commandes, catalogue, blog et tableau de bord, codé de A à Z.</p>
-                                    <div class="tags"><span class="tag">PHP</span><span class="tag">Admin</span><span class="tag">E-commerce</span></div>
-                                </div>
-                                <a class="p-link" href="https://personnaly.fr" target="_blank" rel="noopener" aria-label="Voir Personnaly"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-                            </div>
+                        <article class="studio-panel" data-accent="#22d3ee"
+                            data-video-d="media/projets/personnaly-desktop.mp4" data-poster-d="media/projets/personnaly-desktop.jpg"
+                            data-video-m="media/projets/personnaly-mobile.mp4" data-poster-m="media/projets/personnaly-mobile.jpg">
+                            <div class="p-kicker">E-commerce · Sur mesure</div>
+                            <h3 class="p-title">Personnaly</h3>
+                            <p class="p-desc">Personnalisation de vêtements avec back-office complet : commandes, catalogue, blog et tableau de bord, codé de A à Z.</p>
+                            <div class="tags"><span class="tag">PHP</span><span class="tag">Admin</span><span class="tag">E-commerce</span></div>
+                            <a class="studio-link" href="https://personnaly.fr" target="_blank" rel="noopener">Voir le site <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
                         </article>
-
+                    </div>
+                    <div class="studio-nav">
+                        <span class="studio-count" id="studioCount" aria-hidden="true">01 <i>/ 04</i></span>
+                        <div class="studio-dots"><button class="studio-dot is-active" type="button" aria-label="Projet 1 : ResaDZ"></button><button class="studio-dot" type="button" aria-label="Projet 2 : Marvelous"></button><button class="studio-dot" type="button" aria-label="Projet 3 : Collection L'Original"></button><button class="studio-dot" type="button" aria-label="Projet 4 : Personnaly"></button></div>
                     </div>
                 </div>
             </div>
@@ -538,5 +508,6 @@
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
     <script src="script-v3.js?v=1" defer></script>
     <script type="module" src="scene-v3.js?v=1"></script>
+    <script type="module" src="studio-v3.js?v=1"></script>
 </body>
 </html>
