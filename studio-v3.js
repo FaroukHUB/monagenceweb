@@ -83,9 +83,9 @@ function build() {
     const key = new THREE.DirectionalLight(0xffffff, 1.4);
     key.position.set(3, 6, 5);
     scene.add(key);
-    const rimL = new THREE.PointLight(0x8b5cf6, 30, 20);
+    const rimL = new THREE.PointLight(0x8ab4f8, 14, 20);
     rimL.position.set(-5, 3, -2);
-    const rimR = new THREE.PointLight(0x22d3ee, 22, 20);
+    const rimR = new THREE.PointLight(0xffffff, 10, 20);
     rimR.position.set(5, 2, -3);
     scene.add(rimL, rimR);
 
@@ -303,7 +303,7 @@ function build() {
         // Couleur d'accent des lumières
         accentT.set(panels[proj].dataset.accent);
         accent.lerp(accentT, k2);
-        rimL.color.copy(accent);
+        rimL.color.copy(accent).lerp(new THREE.Color(0xffffff), 0.5);
 
         // Écrans : poster ou vidéo
         const tD = texFor(media[proj].d), tM = texFor(media[proj].m);
@@ -359,10 +359,10 @@ function build() {
         const c = document.createElement('canvas'); c.width = 512; c.height = 232;
         const g = c.getContext('2d');
         const gr = g.createLinearGradient(80, 0, 430, 0);
-        gr.addColorStop(0, '#f472b6'); gr.addColorStop(0.5, '#a78bfa'); gr.addColorStop(1, '#22d3ee');
-        g.font = '800 150px Syne, "Inter Tight", system-ui, sans-serif';
+        gr.addColorStop(0, '#dfe8fb'); gr.addColorStop(1, '#8ab4f8');
+        g.font = '800 150px Manrope, "Inter Tight", system-ui, sans-serif';
         g.textAlign = 'center'; g.textBaseline = 'middle';
-        g.shadowColor = 'rgba(167,139,250,.9)'; g.shadowBlur = 28;
+        g.shadowColor = 'rgba(138,180,248,.5)'; g.shadowBlur = 14;
         g.fillStyle = gr; g.fillText('maw.', 256, 120);
         const tex = new THREE.CanvasTexture(c);
         tex.colorSpace = THREE.SRGBColorSpace;

@@ -103,7 +103,7 @@
                 var r = el.getBoundingClientRect();
                 var px = (e.clientX - r.left) / r.width - 0.5;
                 var py = (e.clientY - r.top) / r.height - 0.5;
-                ry(px * 12); rx(-py * 12);
+                ry(px * 5); rx(-py * 5);
             });
             el.addEventListener('mouseleave', function () { rx(0); ry(0); });
         });
@@ -258,29 +258,29 @@
         startTerminal.done = true;
         var body = document.getElementById('terminalBody');
         if (!body) return;
-        var P = '<span class="t-prompt">➜</span> <span class="t-path">~/maw</span> ';
+        var P = '<span class="t-prompt">›</span> ';
         var scenes = [
             [
-                { cmd: 'maw create plombier-lille --design=3d' },
-                { out: '<span class="t-info">  ◦ Maquette sur mesure… </span><span class="t-ok">ok</span>' },
-                { out: '<span class="t-info">  ◦ Effets 3D &amp; animations… </span><span class="t-ok">ok</span>' },
-                { out: '<span class="t-info">  ◦ SEO local · Google Maps… </span><span class="t-ok">ok</span>' },
-                { out: '<span class="t-info">  ◦ PageSpeed mobile </span><span class="t-hl">98/100</span>' },
-                { out: '<span class="t-ok">✔ En ligne — #1 sur « plombier lille »</span>' }
+                { cmd: 'Créer le site de votre plomberie' },
+                { out: '<span class="t-info">  ◦ Maquette à votre image… </span><span class="t-ok">prête</span>' },
+                { out: '<span class="t-info">  ◦ Textes et photos de vos chantiers… </span><span class="t-ok">ok</span>' },
+                { out: '<span class="t-info">  ◦ Fiche Google Maps… </span><span class="t-ok">complétée</span>' },
+                { out: '<span class="t-info">  ◦ Vitesse sur mobile </span><span class="t-hl">98/100</span>' },
+                { out: '<span class="t-ok">✔ Votre site est en ligne</span>' }
             ],
             [
-                { cmd: 'maw deploy resadz.com --production' },
-                { out: '<span class="t-info">  ◦ Laravel 11 + Livewire 3… </span><span class="t-ok">ok</span>' },
-                { out: '<span class="t-info">  ◦ Multi-tenant · Filament… </span><span class="t-ok">ok</span>' },
-                { out: '<span class="t-info">  ◦ IA intégrée (API) … </span><span class="t-ok">ok</span>' },
-                { out: '<span class="t-ok">✔ resadz.com est en ligne</span>' }
+                { cmd: 'Ajouter la réservation en ligne' },
+                { out: '<span class="t-info">  ◦ Calendrier des disponibilités… </span><span class="t-ok">ok</span>' },
+                { out: '<span class="t-info">  ◦ Paiement sécurisé… </span><span class="t-ok">ok</span>' },
+                { out: '<span class="t-info">  ◦ Confirmation par SMS ou WhatsApp… </span><span class="t-ok">ok</span>' },
+                { out: '<span class="t-ok">✔ Vos clients réservent seuls, même la nuit</span>' }
             ],
             [
-                { cmd: 'maw audit votre-site.fr' },
-                { out: '<span class="t-info">  ◦ Positions Google… </span><span class="t-hl">page 3</span>' },
-                { out: '<span class="t-info">  ◦ Fiche Google Maps… </span><span style="color:#f87171">incomplète</span>' },
-                { out: '<span class="t-info">  ◦ Concurrents analysés… </span><span class="t-ok">12</span>' },
-                { out: '<span class="t-ok">✔ Plan d\'action prêt → </span><span class="t-cmd">#contact</span>' }
+                { cmd: 'Analyser votre visibilité sur Google' },
+                { out: '<span class="t-info">  ◦ Votre position sur Google… </span><span class="t-hl">page 3</span>' },
+                { out: '<span class="t-info">  ◦ Votre fiche Google Maps… </span><span style="color:#f87171">incomplète</span>' },
+                { out: '<span class="t-info">  ◦ Concurrents étudiés… </span><span class="t-ok">12</span>' },
+                { out: '<span class="t-ok">✔ Plan d\'action prêt, on en parle ?</span>' }
             ]
         ];
         var sceneIdx = 0;
