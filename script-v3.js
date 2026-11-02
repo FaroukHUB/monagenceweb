@@ -40,6 +40,21 @@
         });
     });
 
+
+    // Bouton WhatsApp : masqué tout en haut et quand la section contact est à l'écran
+    (function () {
+        var wa = document.getElementById('waFloat');
+        var contact = document.getElementById('contact');
+        if (!wa) return;
+        var contactVisible = false;
+        if (contact && 'IntersectionObserver' in window) {
+            new IntersectionObserver(function (e) { contactVisible = e[0].isIntersecting; update(); }, { threshold: 0.15 }).observe(contact);
+        }
+        function update() { wa.classList.toggle('is-hidden', window.scrollY < 200 || contactVisible); }
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+    })();
+
     // ---------- Navigation ----------
     var nav = document.getElementById('nav');
     var burger = document.querySelector('.nav-burger');
