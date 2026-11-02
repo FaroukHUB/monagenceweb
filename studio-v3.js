@@ -200,7 +200,7 @@ function build() {
     }));
     function ensure(slot) {
         if (!slot.poster && slot.posterSrc) {
-            slot.poster = loader.load(slot.posterSrc, (t) => { t.colorSpace = THREE.SRGBColorSpace; });
+            slot.poster = loader.load(slot.posterSrc, (t) => { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = renderer.capabilities.getMaxAnisotropy(); t.minFilter = THREE.LinearMipmapLinearFilter; t.needsUpdate = true; });
         }
         if (!slot.video && slot.src) {
             const v = document.createElement('video');
