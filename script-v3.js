@@ -214,41 +214,28 @@
         });
     });
 
-    // ---------- SERP : votre site grimpe en position 1 ----------
+    // ---------- Recherche Google : votre site remonte parmi les premiers résultats ----------
     var serpItems = Array.prototype.slice.call(document.querySelectorAll('.serp-item'));
     var youItem = document.querySelector('.serp-item.you');
-    var posEl = document.getElementById('serpPos');
-    function rowH() { return window.innerWidth <= 640 ? 80 : 84; }
+    function rowH() { return window.innerWidth <= 640 ? 104 : 96; }
     function layoutSerp(p) {
-        var you = 4 * (1 - p);
+        var you = 4 - Math.round(3 * p);   // de la 5e à la 2e place, une place à la fois
         serpItems.forEach(function (it) {
             var i = +it.dataset.i;
             var slot = it === youItem ? you : i + gsap.utils.clamp(0, 1, i + 1 - you);
-            it.style.transform = 'translateY(' + (slot * rowH()) + 'px)' + (it === youItem ? ' scale(' + (1 + 0.03 * Math.sin(p * Math.PI)) + ')' : '');
+            it.style.transform = 'translateY(' + (slot * rowH()) + 'px)';
         });
-        posEl.textContent = Math.max(1, Math.round(9 - p * 8));
     }
-    layoutSerp(0);
-    var serpState = { p: 0 };
-    gsap.to(serpState, {
-        p: 1, ease: 'none',
-        scrollTrigger: { trigger: '#serp', start: 'top 75%', end: 'bottom 45%', scrub: 0.8 },
-        onUpdate: function () { layoutSerp(serpState.p); }
-    });
-
-    // ---------- Courbe & jauge ----------
-    var line = document.getElementById('chartLine');
-    var len = line.getTotalLength();
-    gsap.set(line, { strokeDasharray: len, strokeDashoffset: len });
-    gsap.timeline({ scrollTrigger: { trigger: line, start: 'top 85%' } })
-        .to(line, { strokeDashoffset: 0, duration: 2, ease: 'power3.inOut' })
-        .to('#chartFill', { opacity: 1, duration: 1 }, 0.8)
-        .to('#chartDot', { opacity: 1, duration: 0.3 }, 1.8);
-
-    gsap.to('#gaugeArc', {
-        strokeDashoffset: 326.7 * (1 - 0.75), duration: 2, ease: 'power3.out',
-        scrollTrigger: { trigger: '#gaugeArc', start: 'top 90%' }
-    });
+    if (youItem) {
+        layoutSerp(0);
+        var serpState = { p: 0 };
+        gsap.to(serpState, {
+            p: 1, ease: 'none',
+            scrollTrigger: { trigger: '#serp', start: 'top 75%', end: 'bottom 45%', scrub: 0.8 },
+            onUpdate: function () { layoutSerp(serpState.p); }
+        });
+        window.addEventListener('resize', function () { layoutSerp(serpState.p); });
+    }
 
     // ---------- Méthode ----------
     var steps = document.querySelectorAll('.step');
