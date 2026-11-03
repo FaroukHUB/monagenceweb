@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style-v3.css?v=5">
+    <link rel="stylesheet" href="style-v3.css?v=6">
     <script>document.documentElement.classList.add('js');</script>
 
     <script type="application/ld+json">
@@ -711,45 +711,51 @@
                 <div class="section-head">
                     <span class="eyebrow reveal">Réalisations</span>
                     <h2 class="h2 split" id="real-h">Ils nous ont fait confiance.</h2>
-                    <p class="lead reveal">Restaurants, artisans, e-commerce, instituts : chaque projet est unique, chaque ligne de code est pensée pour performer.</p>
+                    <p class="lead reveal">Restaurants, artisans, boutiques, instituts : chaque site est fait sur mesure, pour l'activité de chaque client.</p>
                 </div>
-                <div class="real-grid">
-                    <a class="glass spot r-card reveal" data-tilt href="https://institut-al-irtiqa.com/" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#065f46,#1e3a8a)">
+                <div class="carousel" data-carousel>
+                    <div class="car-bar">
+                        <span class="car-count" aria-live="polite"><b data-car-cur>1</b> / <span data-car-total>9</span></span>
+                        <div class="car-btns"><button class="car-btn" type="button" data-dir="-1" aria-label="Réalisation précédente" aria-controls="realTrack"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button class="car-btn" type="button" data-dir="1" aria-label="Réalisation suivante" aria-controls="realTrack"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
+                    </div>
+                <div class="real-grid" id="realTrack" data-lenis-prevent tabindex="0" aria-label="Réalisations, utilisez les flèches pour défiler">
+                    <a class="glass spot r-card" href="https://institut-al-irtiqa.com/" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#065f46,#1e3a8a)">
                         <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/irtiqa.webp" alt="Institut Al-Irtiqâ" loading="lazy" width="800" height="500"><div class="r-fallback">Al-Irtiqâ</div></div>
                         <div class="r-info"><div><div class="r-kicker">Institut de langue arabe</div><div class="r-title">Institut Al-Irtiqâ</div><div class="r-desc">Espace de gestion et test de niveau en ligne avec un assistant intelligent.</div></div><span class="r-arrow">↗</span></div>
                     </a>
-                    <a class="glass spot r-card reveal" data-tilt href="https://rentaliftmoving.com/" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#1e40af,#0f766e)">
+                    <a class="glass spot r-card" href="https://rentaliftmoving.com/" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#1e40af,#0f766e)">
                         <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/rentalift.webp" alt="Rentalift Moving" loading="lazy" width="800" height="500"><div class="r-fallback">Rentalift</div></div>
                         <div class="r-info"><div><div class="r-kicker">Déménagement · Bruxelles</div><div class="r-title">Rentalift Moving</div><div class="r-desc">Site refait de A à Z, deux fois plus rapide.</div></div><span class="r-arrow">↗</span></div>
                     </a>
-                    <a class="glass spot r-card reveal" data-tilt href="https://laformule59.mon-agenceweb.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#b91c1c,#92400e)">
+                    <a class="glass spot r-card" href="https://laformule59.mon-agenceweb.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#b91c1c,#92400e)">
                         <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/la-formule-59.webp" alt="La Formule 59" loading="lazy" width="800" height="500"><div class="r-fallback">La Formule 59</div></div>
                         <div class="r-info"><div><div class="r-kicker">Fast food</div><div class="r-title">La Formule 59</div><div class="r-desc">Commandes envoyées directement sur le WhatsApp du restaurant.</div></div><span class="r-arrow">↗</span></div>
                     </a>
-                    <a class="glass spot r-card reveal" data-tilt href="https://mbcarsdzrouiba.com" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#334155,#4c1d95)">
+                    <a class="glass spot r-card" href="https://mbcarsdzrouiba.com" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#334155,#4c1d95)">
                         <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/mbcars.webp" alt="MBcars DZ" loading="lazy" width="800" height="500"><div class="r-fallback">MBcars DZ</div></div>
                         <div class="r-info"><div><div class="r-kicker">Location de voitures · Algérie</div><div class="r-title">MBcars DZ</div><div class="r-desc">Consultation et réservation de véhicules en ligne.</div></div><span class="r-arrow">↗</span></div>
                     </a>
-                    <a class="glass spot r-card reveal" data-tilt href="https://solarinnov34.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#ca8a04,#0369a1)">
+                    <a class="glass spot r-card" href="https://solarinnov34.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#ca8a04,#0369a1)">
                         <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/solarinnov34.webp" alt="Solarinnov34" loading="lazy" width="800" height="500"><div class="r-fallback">Solarinnov34</div></div>
                         <div class="r-info"><div><div class="r-kicker">Panneaux solaires</div><div class="r-title">Solarinnov34</div><div class="r-desc">Site artisan photovoltaïque : devis et infos techniques.</div></div><span class="r-arrow">↗</span></div>
                     </a>
-                    <a class="glass spot r-card reveal" data-tilt href="https://atelier-pizza-roubaix.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#c2410c,#7f1d1d)">
+                    <a class="glass spot r-card" href="https://atelier-pizza-roubaix.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#c2410c,#7f1d1d)">
                         <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/atelier-pizza.webp" alt="Atelier Pizza Roubaix" loading="lazy" width="800" height="500"><div class="r-fallback">Atelier Pizza</div></div>
                         <div class="r-info"><div><div class="r-kicker">Pizzeria · Roubaix</div><div class="r-title">Atelier Pizza</div><div class="r-desc">Menu avec prix, avis Google intégrés, géolocalisation.</div></div><span class="r-arrow">↗</span></div>
                     </a>
-                    <a class="glass spot r-card reveal" data-tilt href="https://www.omrafrancesud.fr/" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#0f766e,#713f12)">
+                    <a class="glass spot r-card" href="https://www.omrafrancesud.fr/" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#0f766e,#713f12)">
                         <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/dinaomra.webp" alt="Omra France Sud" loading="lazy" width="800" height="500"><div class="r-fallback">Omra France Sud</div></div>
                         <div class="r-info"><div><div class="r-kicker">Omra &amp; voyages</div><div class="r-title">Omra France Sud</div><div class="r-desc">Refonte complète, sliders et grilles de prix.</div></div><span class="r-arrow">↗</span></div>
                     </a>
-                    <a class="glass spot r-card reveal" data-tilt href="https://dinaetmalou.com" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#be185d,#6d28d9)">
+                    <a class="glass spot r-card" href="https://dinaetmalou.com" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#be185d,#6d28d9)">
                         <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/dinamalou.webp" alt="Dina et Malou" loading="lazy" width="800" height="500"><div class="r-fallback">Dina et Malou</div></div>
                         <div class="r-info"><div><div class="r-kicker">E-commerce enfants</div><div class="r-title">Dina et Malou</div><div class="r-desc">Personnalisation de vêtements avec assistant IA.</div></div><span class="r-arrow">↗</span></div>
                     </a>
-                    <a class="glass spot r-card reveal" data-tilt href="https://trabexpress.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#1d4ed8,#0e7490)">
+                    <a class="glass spot r-card" href="https://trabexpress.fr" target="_blank" rel="noopener" style="--shot: linear-gradient(135deg,#1d4ed8,#0e7490)">
                         <div class="r-shot"><img onerror="this.parentNode.classList.add('noimg')" src="img/trabexpress.webp" alt="Trabexpress" loading="lazy" width="800" height="500"><div class="r-fallback">Trabexpress</div></div>
                         <div class="r-info"><div><div class="r-kicker">Transport &amp; livraison</div><div class="r-title">Trabexpress</div><div class="r-desc">Site informatif et prise de contact.</div></div><span class="r-arrow">↗</span></div>
                     </a>
+                </div>
                 </div>
             </div>
         </section>
@@ -930,7 +936,7 @@
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
     <script src="script-v3.js?v=4" defer></script>
     <script src="live-v3.js?v=1" defer></script>
-    <script src="app-v3.js?v=1" defer></script>
+    <script src="app-v3.js?v=2" defer></script>
     <script type="module">
         if (window.matchMedia('(min-width: 901px)').matches) import('./studio-v3.js?v=3');
     </script>
