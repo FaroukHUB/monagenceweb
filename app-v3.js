@@ -42,7 +42,7 @@
     var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
     var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabbar .tab[data-tab]'));
     // Sections regroupées sous chaque onglet
-    var tabOf = { top: 'top', hero: 'top', projets: 'projets', direct: 'projets', realisations: 'projets',
+    var tabOf = { top: 'top', hero: 'top', realisations: 'realisations', direct: 'realisations',
         pourqui: 'tarifs', resultats: 'tarifs', services: 'tarifs', tarifs: 'tarifs', methode: 'tarifs',
         apropos: 'faq', faq: 'faq', blog: 'faq', contact: 'faq' };
     var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
@@ -65,6 +65,23 @@
     }
     setActive('hero');
 
+
+
+    // ---------- Animation d'entrée : « Ils nous ont fait confiance » ----------
+    (function () {
+        var sec = document.getElementById('realisations');
+        if (!sec) return;
+        var cards = sec.querySelectorAll('.r-card');
+        Array.prototype.forEach.call(cards, function (c, i) { c.style.setProperty('--i', Math.min(i, 5)); });
+        if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { sec.classList.add('is-in'); return; }
+        sec.classList.add('will-in');
+        var io = new IntersectionObserver(function (e) {
+            if (e[0].isIntersecting) { sec.classList.add('is-in'); io.disconnect(); }
+        }, { threshold: 0.2 });
+        io.observe(sec.querySelector('.carousel') || sec);
+        // filet de sécurité : jamais de cartes invisibles
+        setTimeout(function () { sec.classList.add('is-in'); }, 6000);
+    })();
 
     // ---------- Carrousels avec flèches ----------
     document.querySelectorAll('[data-carousel]').forEach(function (car) {
