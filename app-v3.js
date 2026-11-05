@@ -43,7 +43,7 @@
     var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabbar .tab[data-tab]'));
     // Sections regroupées sous chaque onglet
     var tabOf = { top: 'top', hero: 'top', realisations: 'realisations', direct: 'realisations',
-        pourqui: 'tarifs', resultats: 'tarifs', services: 'tarifs', tarifs: 'tarifs', methode: 'tarifs',
+        pourqui: 'top', resultats: 'top', services: 'top', tarifs: 'top', methode: 'top',
         apropos: 'faq', faq: 'faq', blog: 'faq', contact: 'faq' };
     var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
     function setActive(id) {
