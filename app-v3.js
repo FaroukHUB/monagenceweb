@@ -51,7 +51,8 @@
         var t = tabOf[id] || 'top';
         tabs.forEach(function (a) { a.classList.toggle('is-active', a.dataset.tab === t); });
     }
-    if ('IntersectionObserver' in window && sections.length) {
+    var isHome = !document.body.classList.contains('tp-page');
+    if (isHome && 'IntersectionObserver' in window && sections.length) {
         var visible = {};
         var io = new IntersectionObserver(function (entries) {
             entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting; });
@@ -63,7 +64,7 @@
         }, { rootMargin: '-45% 0px -50% 0px' });
         sections.forEach(function (s) { io.observe(s); });
     }
-    setActive('hero');
+    if (isHome) setActive('hero');
 
 
 
